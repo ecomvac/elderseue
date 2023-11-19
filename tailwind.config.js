@@ -24,6 +24,10 @@ module.exports = {
         xl: "1440px",
         xl2: "2000px"
       },
+      boxShadow: {
+        shadowOne: "11px 16px 42px 0px rgba(85, 52, 221, 0.15)",
+        shadowTwo: "0px 4px 15px 0px rgba(0, 0, 0, 0.08)",
+      },
     },
   },
   plugins: [],
