@@ -1,0 +1,158 @@
+
+/* 
+#root {
+  margin: 0;
+  padding: 0;
+} */
+
+body{
+  width: 100%;
+    /* font-family: "Poppins", "sans-serif", "roboto"; */
+    font-family: 'Roboto', sans-serif;
+}
+
+.css-h0q0iv-MuiButtonBase-root-MuiTab-root{
+  padding: 12px 26px !important;
+  font-size: 14px !important;
+  text-transform: capitalize !important;
+  font-weight: 400 !important;
+}
+
+
+.swiper {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.swiper-slide {
+
+  width: 100%;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.custom-select {
+  position: relative;
+  display: inline-block;
+}
+
+.custom-select select {
+  appearance: none;
+  -webkit-appearance: none;
+  padding-left: 30px; /* Space for icon */
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16"><path d="M8 0a4 4 0 0 0-4 4c0 3 4 8 4 8s4-5 4-8a4 4 0 0 0-4-4zm0 6a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/></svg>') no-repeat right center;
+  background-size: 20px 20px; /* Size of icon */
+}
+
+
+.css-19kzrtu {
+  padding: 0px !important;
+}
+
+
+.border__item{
+  border:8px solid transparent;
+}
+#supportAgent-p-bar .ant-progress-text{
+  color:white;
+  font-weight:600;
+  font-size: 16px;
+}
+.ant-table-cell{
+  color:#5D6670
+}
+
+/* ---------style for ant design table pagination----------- */
+.ant-pagination .ant-pagination-item{
+  border: none;
+  color:#5D6670
+}
+.ant-pagination .ant-pagination-item-active a{
+  color:black;
+  background:#E7E8EA;
+  border-radius: 4px;
+
+}
+.MuiBox-root .css-19kzrtu{
+  padding:0px;
+}
+
+/* -----------support agent > dashboard > activity > elderly conditions date picker------------- */
+
+#elderlyDatePicker .ant-picker-input > input{
+  color:white !important;
+}
+#elderlyDatePicker .ant-picker-input > span{
+  color:white !important;
+}
+
+#elderlyDatePicker input::placeholder {
+  color: rgb(248, 248, 248); 
+
+}
+
+#suspendAdmin__swiper .mySwiper2  .swiper{
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* this is audio track*/
+#waveform > div{
+  margin-bottom: 64px !important;
+}
+
+
+.ant-table-thead .ant-table-cell {
+  background-color: #fff !important;
+  }
+
+
+
+
+/* its use for divice finding--------------- */
+ @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .circle-container {
+    position: relative;
+    width: 218px;
+    height: 217px;
+    animation: rotate 1s linear infinite;
+  }
+
+  .animated-circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+/* end its use for divice finding--------------- */
+
+
+/* ----------start rounded checkbox ----------- */
+.rounded-checkbox .ant-checkbox-wrapper {
+  border-radius: 50%;
+}
+.rounded-checkbox .ant-checkbox-inner {
+  border-radius: 50%;
+}
+/* ----------end rounded checkbox ----------- */
+
+
+/*---------- Report page shadow-------- */
+#reportPage-shadow{
+  box-shadow: 9px 13px 13px -13px black;
+}
