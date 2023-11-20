@@ -5,7 +5,8 @@ import CustomButton from "../../Shared/button/CustomButton";
 import { Icon } from "@iconify/react";
 import SuperAdminUserTable from "../../Components/SuperAdmin/superAdmin/SuperAdminUserTable";
 import { superAdmin } from "../../assets/admin/data";
-import CustomModal from "../../Shared/modal/CustomModal";
+import CreateAdminModal from "../../Components/SuperAdmin/superAdmin/CreateAdminModal";
+
 
 const SuperAdminDashboardHome = () => {
   const [search, setSearch] = React.useState("");
@@ -43,9 +44,8 @@ const SuperAdminDashboardHome = () => {
           </div>
         </div>
       </div>
-
-
-      <CustomModal setModalOpen={setModalOpen} modalOPen={modalOPen} title={"Create An Admin"}/>
+        {/* ---------Create new admin Modal-------- */}
+        <CreateAdminModal modalOPen={modalOPen} setModalOpen={setModalOpen}/>
     </>
   );
 };
