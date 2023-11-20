@@ -5,14 +5,15 @@ module.exports = {
     extend: {
       colors: {
         primary: "#9039FF",
+        "text-primary":"#1B2559",
         "light-primary": "#8ABDF8",
-        "dark-black": "#2B3674",
+        "dark-black": "#2B3674", 
         "light-black": "#68709C",
         secondary: "#3D4854",
         danger: "#FF4747",
         lightGray: "#8386A8",
         black: "#3D4854",
-        success: "01BE4F",
+        success: "#01BE4F",
         white: "#fff",
         "sidebar-bg":"linear-gradient(90deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.00) 104.88%)"
       },

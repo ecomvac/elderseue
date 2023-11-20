@@ -46,18 +46,13 @@ const SuperAdminSidebar = () => {
             </section >
 
             <div>
-                {/* <SidebarApexChart /> */}
-                <div className='flex justify-between items-center p-4'>
-                    <div className='flex gap-2 items-center'>
-                        <img src="/image/profile.png" alt="profile" />
-                        <div>
-                            <p className='text-sm font-bold'>Jeon Sha</p>
-                            <p className='text-xs text-[#3D4854]'>Super Admin</p>
-                        </div>
-                    </div>
-                    {/* <IconButton onClick={()=>navigate("/login")}>
-                        <Icon icon="ic:baseline-logout" className='cursor-pointer text-[20px] hover:text-primary' />
-                    </IconButton> */}
+                <div className='flex justify-between items-center group p-4'>
+                    <button onClick={()=>navigate("/")} className='flex gap-2 w-full py-1 cursor-pointer justify-between rounded-[8px] px-3 bg_color_gradient  items-center'>
+                        <p className='text-[16px] font-[500] text-white'>Log out</p>
+                        <span className=' text-white w-[40px] flex items-center justify-center rounded-full h-[40px]'>
+                        <Icon icon="humbleicons:logout" className=' text-[25px]'/>
+                    </span>
+                    </button>
                 </div>
             </div>
 
