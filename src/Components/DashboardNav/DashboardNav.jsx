@@ -4,7 +4,7 @@ import React from 'react'
 
 const DashboardNav = () => {
   return (
-    <div className='w-full py-[45px] flex items-center justify-end'>
+    <div className='w-full pt-[45px] flex items-center justify-end'>
         <div className=' bg-white lg2:w-[600px] w-full md:w-[450px] p-[10px] pr-5 flex items-center justify-between gap-5 rounded-full'>
             <div className=' relative w-[90%]'>
                 <Icon icon="iconamoon:search-bold" className=' absolute top-[14px] left-[14px] text-[#2B3674] text-[16px]'/>

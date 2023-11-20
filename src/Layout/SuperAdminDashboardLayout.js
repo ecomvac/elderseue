@@ -6,12 +6,12 @@ import DashboardNav from '../Components/DashboardNav/DashboardNav';
 const SuperAdminDashboardLayout = () => {
     return (
         <div className="flex bg-[#F4F7FE]">
-        <div className='w-[280px] md2:block hidden'>
+        <div className='w-[280px] lg:block hidden'>
             {/* ----------------admin Dashboard sidebar here----------------- */}
             <SuperAdminSidebar />
     
         </div>
-        <div className='bg-[#F4F7FE] w-full min-h-[100vh] px-5'>
+        <div className='bg-[#F4F7FE] w-full min-h-[100vh] px-[30px]'>
             {/* Admin dashboard outlet create */}
             <DashboardNav />
             <Outlet></Outlet>

@@ -87,6 +87,43 @@ body{
   border-radius: 4px;
 
 }
+
+.ant-table-thead .ant-table-cell {
+  background-color: green !important;
+  }
+
+#reportPage-shadow{
+  box-shadow: 9px 13px 13px -13px black;
+}
+
+
+.ant-table-thead >tr >th{
+  color:#68709C !important;
+  font-size:13px !important;
+  font-weight: 700 !important;
+  background: red !important;
+}
+
+.support-agent-dashboard .ant-table-cell{
+  padding: 16px 27px !important;
+}
+
+.ant-pagination-options{
+  display:none !important;
+}
+.admin__Table .ant-table-cell{
+  padding: 15px 22px !important;
+}
+
+
+.ant-table-wrapper .ant-table-pagination.ant-pagination {
+  margin: 20px 32px !important;
+}
+
+/* -----for user table-------- */
+#user-table .css-11xur9t-MuiPaper-root-MuiTableContainer-root{
+  box-shadow: 0px 0px 0px 0px !important;
+}
 .MuiBox-root .css-19kzrtu{
   padding:0px;
 }
@@ -117,7 +154,8 @@ body{
 
 
 .ant-table-thead .ant-table-cell {
-  background-color: #fff !important;
+  background-color: #F7F7F9 !important;
+  border-radius: 0px !important;
   }
 
 
