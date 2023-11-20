@@ -14,6 +14,7 @@ module.exports = {
         black: "#3D4854",
         success: "01BE4F",
         white: "#fff",
+        "sidebar-bg":"linear-gradient(90deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.00) 104.88%)"
       },
       screens: {
         sm: "320px",

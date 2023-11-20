@@ -6,7 +6,7 @@ const SuperAdminSidebar = () => {
     const path = useLocation()
     const menus = [
         {
-            label: 'Admin', path: '/super-admin/dashboard', icon: <Icon className=' w-5 h-5' icon="basil:chart-pie-outline" />, child: []
+            label: 'Admin', path: '/super-admin/dashboard', icon: <Icon className=' w-5 h-5' icon="basil:chart-pie-solid" />, child: []
         },
         {
             label: 'Suspended Admin', path: '/super-admin/dashboard/suspended-admin', icon: <Icon className=' w-5 h-5' Icon icon="basil:folder-block-outline" />, child: []
@@ -16,19 +16,20 @@ const SuperAdminSidebar = () => {
     ]
 
     const activeStyle = {
-        backgroundColor: "#0070F0",
         color: "#fff",
-        borderRadius: "12px",
+        borderLeft: "2px solid #FFF",
+        background: "linear-gradient(90deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.00) 104.88%)"
     };
     return (
-        <div className='flex flex-col justify-between h-[100vh] sticky top-0'>
-            <section className='w-[280px]'>
-                <div className='h-[80px] flex items-center justify-center'> <img src="/logo.png" alt="logo" className='max-w-[143px] mx-auto' /></div>
+        <div className='flex flex-col justify-between bg-[#2C0064] h-[100vh] sticky top-0'>
+            <section className='w-[280px] '>
+                <div className='h-[80px] flex mt-5 items-center justify-center'> <img src="/images/sidebarlogo.png" alt="logo" className='max-w-[143px] mx-auto' /></div>
                 {/* sidebar menu bar */}
-                <div className='p-4 grid gap-1'>
+                <div className='py-4 grid gap-1'>
                     {menus.map(menu => {
                         return <NavLink to={menu.path}
-                            className='block rounded-[10px] hover:bg-primary p-4 hover:text-white duration-150 text-[#90969D]'
+                            id='sidebar_hover'
+                            className='block p-4 duration-150 text-white/60'
                             style={(menu.path === path.pathname ? activeStyle : undefined)}
                         >
                             <div className='flex item-center gap-2 font-bold'>

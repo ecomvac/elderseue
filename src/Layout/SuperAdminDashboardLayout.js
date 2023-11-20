@@ -4,13 +4,13 @@ import { Outlet } from 'react-router-dom';
 
 const SuperAdminDashboardLayout = () => {
     return (
-        <div className="flex gap-5">
+        <div className="flex gap-5 bg-[#F4F7FE]">
         <div className='w-[280px] md2:block hidden'>
             {/* ----------------admin Dashboard sidebar here----------------- */}
             <SuperAdminSidebar />
     
         </div>
-        <div className='bg-[#F1F5F9] w-full min-h-[100vh]'>
+        <div className='bg-[#F4F7FE] w-full min-h-[100vh]'>
             {/* Admin dashboard outlet create */}
             {/* <DashboardNav /> */}
             <Outlet></Outlet>

@@ -29,6 +29,11 @@ body{
   width: 100%;
 }
 
+#sidebar_hover:hover{
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.00) 104.88%) !important;
+  color: #fff;
+}
+
 .swiper-slide img {
   display: block;
   width: 100%;
