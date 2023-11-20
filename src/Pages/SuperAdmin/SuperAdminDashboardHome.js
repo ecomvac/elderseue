@@ -1,13 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import TopHeading from "../../Shared/TopHeading/TopHeading";
 import SearchInput from "../../Shared/Search/SearchInput";
 import CustomButton from "../../Shared/button/CustomButton";
 import { Icon } from "@iconify/react";
 import SuperAdminUserTable from "../../Components/SuperAdmin/superAdmin/SuperAdminUserTable";
 import { superAdmin } from "../../assets/admin/data";
+import CustomModal from "../../Shared/modal/CustomModal";
 
 const SuperAdminDashboardHome = () => {
   const [search, setSearch] = React.useState("");
+  const [modalOPen,setModalOpen] = useState(false)
+
+
+  const handelOpenModal = ()=>{
+    setModalOpen(true)
+  }
 
   return (
     <>
@@ -23,7 +30,7 @@ const SuperAdminDashboardHome = () => {
                 setSearch={setSearch}
                 placeholder="Search Admin"
               />
-              <CustomButton>
+              <CustomButton onClick={()=>handelOpenModal()}>
                 <Icon icon="ic:baseline-add" className=" text-[20px] mr-1" />{" "}
                 Add New Admin
               </CustomButton>
@@ -36,6 +43,9 @@ const SuperAdminDashboardHome = () => {
           </div>
         </div>
       </div>
+
+
+      <CustomModal setModalOpen={setModalOpen} modalOPen={modalOPen} title={"Create An Admin"}/>
     </>
   );
 };

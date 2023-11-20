@@ -1,5 +1,5 @@
 import { Icon } from "@iconify/react";
-import { Button, Popover } from "antd";
+import { Popover } from "antd";
 import React from "react";
 
 const SuperAdminUserTableAction = ({data}) => {
