@@ -11,7 +11,7 @@ const SuperAdminDashboardLayout = () => {
             <SuperAdminSidebar />
     
         </div>
-        <div className='bg-[#F4F7FE] w-full min-h-[100vh] px-[30px]'>
+        <div className='bg-[#F4F7FE] w-full min-h-[100vh] md:px-[30px] px-4'>
             {/* Admin dashboard outlet create */}
             <DashboardNav />
             <Outlet></Outlet>

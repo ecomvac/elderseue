@@ -5,12 +5,12 @@ const CustomInput = ({ label, type, register, error, placeholder }) => {
     <div className="flex flex-col items-start w-full mt-5">
       <label
         htmlFor="otp"
-        className="mb-1 font-[500] text-[13px] text-[#1B2559]"
+        className="mb-1 font-medium text-[13px] text-[#1B2559]"
       >
         {label}
       </label>
       <input
-        className="py-3 px-2 text-[#A3AED0] placeholder:text-[#A3AED0]  rounded-[16px] w-full text-[16px] outline-none border-[#90969D] border-[1px] focus:border-primary"
+        className="py-3 px-2 text-[#A3AED0] placeholder:text-[#A3AED0]  rounded-[16px] w-full text-base outline-none border-[#90969D] border-[1px] focus:border-primary"
         type={type}
         placeholder={placeholder}
         id="otp"

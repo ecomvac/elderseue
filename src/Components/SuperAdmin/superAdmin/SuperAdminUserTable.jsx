@@ -15,15 +15,15 @@ const SuperAdminUserTable = ({tableData}) => {
         },
         {
             title: 'CONTACT PERSON',
-            render: (row) => <span className='text-[16px] font-[400] text-text-body'>{row.contactPerson}</span>,
+            render: (row) => <span className=' text-base font-normal text-text-secondary'>{row.contactPerson}</span>,
         },
         {
             title: 'BUSINESS NAME',
-            render: (row) => <span className='text-[16px] font-[400] text-text-body'>{row.businessName}</span>,
+            render: (row) => <span className='text-base font-normal text-text-secondary'>{row.businessName}</span>,
         },
         {
             title: 'BUSINESS ADDRESS',
-            render: (row) => <span className='text-[16px] font-[400] text-text-body'>{row.businessAdress}</span>,
+            render: (row) => <span className='text-base font-normal text-text-secondary'>{row.businessAdress}</span>,
         },
         {
             title: <Icon icon="basil:other-2-outline" className=" text-[35px]"/>,

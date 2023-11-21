@@ -20,26 +20,34 @@ const SuperAdminDashboardHome = () => {
   return (
     <>
       <TopHeading/>
-      <div className=" mt-[-30px] mb-[30px]">
-        <div className=" bg-white rounded-[16px]">
-          <div className="px-[22px] py-[24px] flex items-center justify-between">
-            <h2 className=" text-[24px] font-[700] text-text-primary">Admin</h2>
-            <div className=" flex items-center gap-[20px]">
+      <div className=" lg:mt-[-30px] mb-[30px]">
+        <div className=" bg-white rounded-2xl">
+          <div className=" px-[22px] py-6 flex items-start flex-col lg:flex-row justify-between gap-2">
+            <div className=" flex items-center justify-between w-full">
+              <h2 className=" text-2xl font-bold text-text-primary">Admin</h2>
+
+              {/* ========show button mobile view===== */}
+              <CustomButton onClick={()=>handelOpenModal()} className={" lg:hidden flex"}>
+                <Icon icon="ic:baseline-add" className=" text-xl mr-1" />{" "}
+                Add New Admin
+              </CustomButton>
+            </div>
+            <div className=" flex items-center justify-end gap-5 w-full">
               {/* =====Search sort and add admin button===== */}
               <SearchInput
                 search={search}
                 setSearch={setSearch}
                 placeholder="Search Admin"
               />
-              <CustomButton onClick={()=>handelOpenModal()}>
-                <Icon icon="ic:baseline-add" className=" text-[20px] mr-1" />{" "}
+              <CustomButton onClick={()=>handelOpenModal()} className={" hidden lg:flex min-w-[150px]"}>
+                <Icon icon="ic:baseline-add" className=" text-xl mr-1" />{" "}
                 Add New Admin
               </CustomButton>
             </div>
           </div>
 
           {/* ---------admin Data table-------- */}
-          <div>
+          <div className=" grid grid-cols-1"> 
             <SuperAdminUserTable tableData={superAdmin} />
           </div>
         </div>

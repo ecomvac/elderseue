@@ -16,8 +16,8 @@ const PasswordInput = ({label,label2,register,placeholder}) => {
             id="otp"
             {...register}
             />
-            <div className=' absolute top-[33%] right-0'>
-                <button onClick={()=>setShow(pre=>!pre)}>
+            <div className=' absolute top-[33%] right-[10px]'>
+                <button type='button' onClick={()=>setShow(pre=>!pre)}>
                     {
                         show ? <Icon icon="ic:outline-visibility" className='text-[20px] text-black'/> : <Icon icon="mdi:visibility-off-outline" className='text-[20px] text-black'/>
                     }

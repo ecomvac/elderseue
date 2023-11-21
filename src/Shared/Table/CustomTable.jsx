@@ -18,7 +18,7 @@ const CustomTable = ({ tableData, columns, scroll }) => {
   };
 
   return (
-    <div className="lg:relative text-secondary text-[16px] w-full">
+    <div className="lg:relative text-secondary text-base w-full">
       <Table
         columns={columns}
         className="admin__Table"
@@ -26,7 +26,7 @@ const CustomTable = ({ tableData, columns, scroll }) => {
         pagination={paginationOptions}
         scroll={scroll}
       />
-      <div className="lg:block text-[#90969D] font-medium text-[13px] lg:absolute bottom-[25px] left-6 hidden ">
+      <div className="lg:block text-light-black font-medium text-[13px] lg:absolute bottom-[25px] left-6 hidden ">
         Showing{start} to {end} of {tableData?.length} entries
       </div>
     </div>

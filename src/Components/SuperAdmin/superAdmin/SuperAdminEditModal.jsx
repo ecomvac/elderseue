@@ -29,7 +29,7 @@ const SuperAdminEditModal = ({item,setModalOpen,modalOPen}) => {
           // Simulate an API call
           // Replace this with your actual API call
           // await apiCallFunction(data);
-    
+          setModalOpen(false)
     
           // Display the success toast
           toast.custom((t) => <CustomToast t={t} text="Changes has been successfully made" />);
