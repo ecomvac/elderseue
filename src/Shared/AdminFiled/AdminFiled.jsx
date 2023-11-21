@@ -26,7 +26,7 @@ const AdminFiled = ({data}) => {
   return (
     <div className='flex items-center gap-2.5 w-full'>
       <div style={{background:stringToColor(data?.firstName),backgroundOpacity: "0.05" }}  className={`w-[40px] h-[40px] rounded-[11px] flex items-center justify-center bg-opacity-30`}>
-            <h2  className=" text-[19px] text-red-500 font-[400]">{data?.firstName?.slice(0,1)}{data?.lastName?.slice(0,1)}</h2>
+            <p  className=" text-[19px] font-[400] AkayaTelivigala-Regular">{data?.firstName?.slice(0,1)}{data?.lastName?.slice(0,1)}</p>
       </div>
       <div>
         <h3 className="text-[16px] text-text-primary font-[500]">

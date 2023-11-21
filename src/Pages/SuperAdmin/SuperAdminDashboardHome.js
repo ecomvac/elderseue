@@ -6,11 +6,14 @@ import { Icon } from "@iconify/react";
 import SuperAdminUserTable from "../../Components/SuperAdmin/superAdmin/SuperAdminUserTable";
 import { superAdmin } from "../../assets/admin/data";
 import CreateAdminModal from "../../Components/SuperAdmin/superAdmin/CreateAdminModal";
+import Sort from "../../Shared/sort/Sort";
 
 
 const SuperAdminDashboardHome = () => {
   const [search, setSearch] = React.useState("");
   const [modalOPen,setModalOpen] = useState(false)
+  const [selected, setSelected] = useState("");
+  const data = ["Sort", "name", "type"]
 
 
   const handelOpenModal = ()=>{
@@ -39,6 +42,7 @@ const SuperAdminDashboardHome = () => {
                 setSearch={setSearch}
                 placeholder="Search Admin"
               />
+              <Sort selected={selected} setSelected={setSelected} data={data}/>
               <CustomButton onClick={()=>handelOpenModal()} className={" hidden lg:flex min-w-[150px]"}>
                 <Icon icon="ic:baseline-add" className=" text-xl mr-1" />{" "}
                 Add New Admin
