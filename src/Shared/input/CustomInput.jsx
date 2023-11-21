@@ -10,7 +10,7 @@ const CustomInput = ({ label, type, register, error, placeholder }) => {
         {label}
       </label>
       <input
-        className="py-3 px-2 text-[#3D4854] placeholder:text-[#A3AED0]  rounded-[16px] w-full text-[16px] outline-none border-[#90969D] border-[1px] focus:border-primary"
+        className="py-3 px-2 text-[#A3AED0] placeholder:text-[#A3AED0]  rounded-[16px] w-full text-[16px] outline-none border-[#90969D] border-[1px] focus:border-primary"
         type={type}
         placeholder={placeholder}
         id="otp"

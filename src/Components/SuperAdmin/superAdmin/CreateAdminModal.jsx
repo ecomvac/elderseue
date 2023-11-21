@@ -42,7 +42,7 @@ const CreateAdminModal = ({ modalOPen, setModalOpen }) => {
       title="Create An Admin"
       buttonText={"Create Admin"}
     >
-                    <div className='flex items-center gap-4'>
+        <div className='flex items-center gap-4'>
             <CustomInput
               label={"First Name"}
               type={"text"}
