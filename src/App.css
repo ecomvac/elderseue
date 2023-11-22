@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&display=swap');
 /* 
 #root {
   margin: 0;
@@ -8,7 +8,16 @@
 body{
   width: 100%;
     /* font-family: "Poppins", "sans-serif", "roboto"; */
-    font-family: 'Roboto', sans-serif;
+    font-family: 'DM Sans', sans-serif;
+}
+
+@font-face {
+  font-family: "normal";
+  src: local('normal'), url("../public/font/AkayaTelivigala-Regular.ttf") format('opentype');
+}
+
+.AkayaTelivigala-Regular {
+  font-family: "normal";
 }
 
 .css-h0q0iv-MuiButtonBase-root-MuiTab-root{
@@ -27,6 +36,15 @@ body{
 .swiper-slide {
 
   width: 100%;
+}
+
+#sidebar_hover:hover{
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.00) 104.88%) !important;
+  color: #fff;
+}
+
+.bg_color_gradient {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.00) 104.88%) !important;
 }
 
 .swiper-slide img {
@@ -78,6 +96,43 @@ body{
   border-radius: 4px;
 
 }
+
+.ant-table-thead .ant-table-cell {
+  background-color: green !important;
+  }
+
+#reportPage-shadow{
+  box-shadow: 9px 13px 13px -13px black;
+}
+
+
+.ant-table-thead >tr >th{
+  color:#68709C !important;
+  font-size:13px !important;
+  font-weight: 700 !important;
+  background: red !important;
+}
+
+.support-agent-dashboard .ant-table-cell{
+  padding: 16px 27px !important;
+}
+
+.ant-pagination-options{
+  display:none !important;
+}
+.admin__Table .ant-table-cell{
+  padding: 15px 22px !important;
+}
+
+
+.ant-table-wrapper .ant-table-pagination.ant-pagination {
+  margin: 20px 32px !important;
+}
+
+/* -----for user table-------- */
+#user-table .css-11xur9t-MuiPaper-root-MuiTableContainer-root{
+  box-shadow: 0px 0px 0px 0px !important;
+}
 .MuiBox-root .css-19kzrtu{
   padding:0px;
 }
@@ -108,10 +163,24 @@ body{
 
 
 .ant-table-thead .ant-table-cell {
-  background-color: #fff !important;
+  background-color: #F7F7F9 !important;
+  border-radius: 0px !important;
   }
 
 
+
+/* ===========ant modal css========== */
+
+
+.ant-modal {
+  border-radius: 30px !important;
+  /* Only border-radius here */
+}
+
+.ant-modal-content {
+  border-radius: 30px !important;
+  /* border: 10px solid black; */
+}
 
 
 /* its use for divice finding--------------- */

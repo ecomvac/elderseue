@@ -1,182 +1,236 @@
-import React, { useState } from 'react';
-import selectRoleImg from '../../../assets/sellectRole.svg'
-import logo from '../../../assets/logo.png'
-import { useNavigate } from "react-router-dom";
-import { Icon } from '@iconify/react';
-import { Radio } from 'antd';
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { Icon } from "@iconify/react";
+import CustomButton from "../../../Shared/button/CustomButton";
+import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
+import CustomToast from "../../../Shared/Tosat/CustomToast";
+import CustomErrorToast from "../../../Shared/Tosat/CustomErrorToast";
+import { Checkbox } from "antd";
 
 const SelectRolePage = () => {
+  const navigate = useNavigate();
+  const [active, setActive] = useState("super-admin");
+  const [show, setShow] = useState(false);
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm();
 
-    const navigate = useNavigate();
-    const [value, setValue] = useState('');
-    const [error, setError] = useState('');
-    const handleRole = (e) => {
-        console.log('radio checked', e);
-        setValue(e);
-    };
+  const UserRole = [
+    {
+      title: "Supper Admin",
+      icon: (
+        <Icon
+          className="text-primary text-3xl font-bold"
+          icon="mingcute:user-security-line"
+        />
+      ),
+      roll: "super-admin",
+    },
+    {
+      title: "Admin",
+      icon: (
+        <Icon
+          className="text-primary text-3xl font-bold"
+          icon="mingcute:user-3-line"
+        />
+      ),
+      roll: "admin",
+    },
+    {
+      title: "Support Agent",
+      icon: (
+        <Icon
+          className="text-primary text-3xl font-bold"
+          icon="streamline:interface-help-customer-support-human-1-customer-headphones-help-headset-person-profile-suuport"
+        />
+      ),
+      roll: "support-agent",
+    },
+  ];
 
+  const onSubmit = (data) => {
+    console.log(data);
 
-    const onSubmit = () => {
+    if (
+      data.email === "admin@gmail.com" ||
+      data.email === "support@gmail.com" ||
+      data.email === "super@gmail.com"
+    ) {
+      if (data.email === "admin@gmail.com") {
+        navigate("/admin/dashboard");
+      }
+      if (data.email === "support@gmail.com") {
+        navigate("/support-agent/dashboard");
+      }
+      if (data.email === "super@gmail.com") {
+        navigate("/super-admin/dashboard");
+      }
+      reset();
+      toast.custom((t) => (
+        <CustomToast
+          t={t}
+          text={"Admin successfully logged into the admin dashboard."}
+        />
+      ));
+    } else {
+      toast.custom((t) => (
+        <CustomErrorToast
+          t={t}
+          text={"There are items that require your attention"}
+          title={"Error"}
+        />
+      ));
+    }
+  };
 
-        if (value) {
-            navigate("/login");
-        } else {
-            setError('Please Select your role!')
-        }
-    };
+  return (
+    <div className="md:flex w-full items-center justify-between ">
+      <div className="flex items-center h-[100vh] md:w-[50%] w-full justify-center">
+        <div className="lg:w-[470px] h-full flex items-center justify-center px-5">
+          <div className="">
+            <h1 className="font-bold text-[36px] text-secondary">Sign In</h1>
+            <p className=" text-light-black text-[16px] font-[400] mt-2">
+              Select Your Role And Enter Additional Information To Sign In To
+              Your Account
+            </p>
 
-    return (
-        // <div className='lg:flex items-center h-screen'>
-        //     <div className="lg:max-w-[632px] sm:w-full sm:px-5 md:px-10 mx-auto lg:px-24">
-        //         <div>
-        //             <img src={logo} alt="logo" className="sm:mt-4 md:mt-6 lg:mt-0 w-52" />
-        //             <div className="mt-16">
-        //                 <h1 className="font-bold text-2xl">Select Your Role</h1>
-        //                 <p className="text-[#6b6b6b] mt-2">
-        //                     Choose your role to access the platform: Super Admin, Admin, or Support Agent.
-        //                 </p>
-        //                 <div>
-        //                     {error && <h1 className='text-rose-600 font-bold mt-3'>{error}</h1>}
-        //                 </div>
-        //                 <Radio.Group  className="my-11 w-full" value={value}>
-        //                     <div onClick={() => handleRole('supperAdmin')} className={`border cursor-pointer rounded-xl flex justify-between p-7 mb-6  ${value === 'supperAdmin' ? 'bg-[#e6f1fe] border-primary' : ''}`}>
-        //                         <div className='flex items-center'>
-        //                             <Icon className='text-primary text-3xl font-bold mr-4' icon="mingcute:user-security-line" />
-        //                             <h1 class="text-secondary font-medium text-lg">Supper Admin</h1>
-
-
-        //                         </div>
-        //                         <div className='flex items-center'>
-        //                             <Radio value={'supperAdmin'}></Radio>
-        //                         </div>
-
-        //                     </div>
-        //                     <div onClick={() => handleRole('admin')} className={`border cursor-pointer rounded-xl flex justify-between p-7 my-6 ${value === 'admin' ? 'bg-[#e6f1fe] border-primary' : ''}`}>
-        //                         <div className='flex items-center'>
-        //                             <Icon className='text-primary text-3xl font-bold mr-4' icon="mingcute:user-3-line"/>
-        //                             <h1 class="text-secondary font-medium text-lg">Admin</h1>
-
-        //                         </div>
-
-        //                         <div className='flex items-center'>
-        //                             <Radio value={'admin'}></Radio>
-        //                         </div>
-
-        //                     </div>
-        //                     <div onClick={() => handleRole('supportAgent')} className={`border cursor-pointer rounded-xl flex justify-between p-7 mt-6 ${value === 'supportAgent' ? 'bg-[#e6f1fe] border-primary' : ''}`}>
-        //                         <div className='flex items-center'>
-        //                             <Icon className='text-primary text-3xl font-bold mr-4' icon="streamline:interface-help-customer-support-human-1-customer-headphones-help-headset-person-profile-suuport" />
-        //                             <h1 class="text-secondary font-medium text-lg">Support Agent</h1>
-
-        //                         </div>
-
-        //                         <div className='flex items-center'>
-        //                             <Radio value={'supportAgent'}></Radio>
-        //                         </div>
-
-        //                     </div>
-
-        //                 </Radio.Group>
-        //                 <div className=" flex justify-between">
-        //                     <div className='flex items-center'>
-        //                         <div className='bg-primary w-[30px] h-[13px] rounded-xl mr-2.5'></div>
-        //                         <div className='bg-gray-400 w-[13px] h-[13px] rounded-xl'></div>
-
-        //                     </div>
-        //                     <div className=''>
-        //                         <button
-        //                             onClick={onSubmit}
-        //                             type="submit"
-        //                             className="text-white bg-primary rounded-xl px-3 py-2 text-sm font-medium flex items-center"
-        //                         >
-        //                             Next
-        //                             <Icon className='ml-2.5 '  icon="streamline:interface-arrows-right-arrow-right-keyboard" />
-        //                         </button>
-        //                     </div>
-        //                 </div>
-        //             </div>
-        //         </div>
-        //     </div>
-        //     <div className="lg:block md:hidden w-8/12 mx-auto mt-5 bg-[#FBFCFD] flex justify-center sm:hidden">
-        //             <img className='mx-auto' src={selectRoleImg} alt="logo" />
-        //      </div>
-        // </div>
-        <div className='md:flex w-full '>
-            <div className="flex items-center md:h-[100vh] md:w-[40%] w-full md:pt-10 pt-5 md:flex justify-center">
-                <div className="lg:w-[70%] px-5">
-                    <img src={logo} alt="logo" className=" w-52" />
-                    <div className="md:mt-40 mt-20">
-                        <h1 className="font-bold text-2xl">Select Your Role</h1>
-                        <p className="text-[#6b6b6b] mt-2">
-                            Choose your role to access the platform: Super Admin, Admin, or Support Agent.
-                        </p>
-                        <div>
-                            {error && <h1 className='text-rose-600 font-bold mt-3'>{error}</h1>}
-                        </div>
-                        <Radio.Group  className="my-11 w-full" value={value}>
-                            <div onClick={() => handleRole('supperAdmin')} className={`border cursor-pointer rounded-xl flex justify-between p-7 mb-6  ${value === 'supperAdmin' ? 'bg-[#e6f1fe] border-primary' : ''}`}>
-                                <div className='flex items-center'>
-                                    <Icon className='text-primary text-3xl font-bold mr-4' icon="mingcute:user-security-line" />
-                                    <h1 class="text-secondary font-medium text-lg">Supper Admin</h1>
-
-
-                                </div>
-                                <div className='flex items-center'>
-                                    <Radio value={'supperAdmin'}></Radio>
-                                </div>
-
-                            </div>
-                            <div onClick={() => handleRole('admin')} className={`border cursor-pointer rounded-xl flex justify-between p-7 my-6 ${value === 'admin' ? 'bg-[#e6f1fe] border-primary' : ''}`}>
-                                <div className='flex items-center'>
-                                    <Icon className='text-primary text-3xl font-bold mr-4' icon="mingcute:user-3-line"/>
-                                    <h1 class="text-secondary font-medium text-lg">Admin</h1>
-
-                                </div>
-
-                                <div className='flex items-center'>
-                                    <Radio value={'admin'}></Radio>
-                                </div>
-
-                            </div>
-                            <div onClick={() => handleRole('supportAgent')} className={`border cursor-pointer rounded-xl flex justify-between p-7 mt-6 ${value === 'supportAgent' ? 'bg-[#e6f1fe] border-primary' : ''}`}>
-                                <div className='flex items-center'>
-                                    <Icon className='text-primary text-3xl font-bold mr-4' icon="streamline:interface-help-customer-support-human-1-customer-headphones-help-headset-person-profile-suuport" />
-                                    <h1 class="text-secondary font-medium text-lg">Support Agent</h1>
-
-                                </div>
-
-                                <div className='flex items-center'>
-                                    <Radio value={'supportAgent'}></Radio>
-                                </div>
-
-                            </div>
-
-                        </Radio.Group>
-                        <div className=" flex justify-between">
-                            <div className='flex items-center'>
-                                <div className='bg-primary w-[30px] h-[13px] rounded-xl mr-2.5'></div>
-                                <div className='bg-gray-400 w-[13px] h-[13px] rounded-xl'></div>
-
-                            </div>
-                            <div className=''>
-                                <button
-                                    onClick={onSubmit}
-                                    type="submit"
-                                    className="text-white bg-primary rounded-xl px-3 py-2 text-sm font-medium flex items-center"
-                                >
-                                    Next
-                                    <Icon className='ml-2.5 '  icon="streamline:interface-arrows-right-arrow-right-keyboard" />
-                                </button>
-                            </div>
-                        </div>
+            <div className="py-[35px] ">
+              <div className=" grid md:grid-cols-3 grid-cols-1 items-center gap-5">
+                {UserRole?.map((role) => (
+                  <div
+                    key={role.roll}
+                    onClick={() => setActive(role.roll)}
+                    className={` gap-[12px] cursor-pointer hover:border-[3px] hover:border-primary rounded-[16px] flex items-center justify-start md:justify-center md:flex-col py-2 md:py-6 px-[10px] ${
+                      role.roll === active
+                        ? " border-[3px] shadow-shadowOne border-primary"
+                        : "border border-primary/25"
+                    }`}
+                  >
+                    <div className=" w-[53px] h-[53px] bg-[#F9F5FF] rounded-full flex items-center justify-center">
+                      {role?.icon}
                     </div>
-                </div>
+                    <h4 className=" text-black font-[500] text-[14px]">
+                      {role.title}
+                    </h4>
+                  </div>
+                ))}
+              </div>
             </div>
-            <div className="hidden md:h-[100vh] mt-5 md:mt-0 md:w-[60%] md:flex items-center justify-center bg-[#FBFCFD]">
-                    <img className='mx-auto' src={selectRoleImg} alt="logo" />
-             </div>
+
+            <form onSubmit={handleSubmit(onSubmit)} className="w-full">
+              <div className="flex flex-col items-start ">
+                <label
+                  htmlFor="otp"
+                  className="mb-1 font-[500] text-[14px] text-[#1B2559]"
+                >
+                  Email <span className=" text-primary">*</span>
+                </label>
+                <input
+                  className="py-3 px-2 text-[#3D4854] placeholder:text-[#A3AED0]  rounded-[16px] w-full text-[16px] outline-none border-[#90969D] border-[1px] focus:border-primary"
+                  type="email"
+                  placeholder={"Enter Your Email"}
+                  id="otp"
+                  {...register("email", {
+                    required: {
+                      value: true,
+                      message: "Please enter a valid e-mail address",
+                    },
+                  })}
+                />
+                <label className="label">
+                  {errors.email?.type === "required" && (
+                    <span className=" text-sm mt-1 text-red-500">
+                      {errors.email.message}
+                    </span>
+                  )}
+                </label>
+              </div>
+              <div className="flex flex-col items-start mt-5 mb-2">
+                <label
+                  htmlFor="otp"
+                  className="mb-1 font-[500] text-[14px] text-[#1B2559]"
+                >
+                  Password <span className=" text-primary">*</span>
+                </label>
+                <div className="w-full relative">
+                  <input
+                    className="py-3 px-2 text-[#3D4854] placeholder:text-[#A3AED0]  rounded-[16px] w-full text-[16px] outline-none border-[#90969D] border-[1px] focus:border-primary"
+                    type={show ? "text" : "password"}
+                    placeholder={"Enter Your Password"}
+                    id="otp"
+                    {...register("password", {
+                      required: {
+                        value: true,
+                        message: "Please enter a password",
+                      },
+                    })}
+                  />
+                  <div className=" absolute top-[27%] right-[10px]">
+                  <button type="button" onClick={() => setShow((pre) => !pre)}>
+                    {show ? (
+                      <Icon
+                        icon="ic:outline-visibility"
+                        className="text-[25px] text-black"
+                      />
+                    ) : (
+                      <Icon
+                        icon="mdi:visibility-off-outline"
+                        className="text-[25px] text-black"
+                      />
+                    )}
+                  </button>
+                </div>
+                </div>
+
+                <label className="label">
+                  {errors.password?.type === "required" && (
+                    <span className=" text-sm mt-1 text-red-500">
+                      {errors.password.message}
+                    </span>
+                  )}
+                </label>
+              </div>
+
+              <div className=" flex items-center justify-between py-4">
+                <div>
+                  <Checkbox className=" text-primary text-[14px] font-[400]">
+                    Keep me logged in
+                  </Checkbox>
+                </div>
+                <Link to="/" className=" text-primary font-[500] text-[14px]">
+                  Forget password?
+                </Link>
+              </div>
+
+              <CustomButton
+                className={"w-full h-[50px] font-[700] text-[14px]"}
+              >
+                sign up
+              </CustomButton>
+            </form>
+          </div>
         </div>
-    );
+      </div>
+      <div className="hidden relative md:h-[100vh] w-full md:w-[50%] md:flex items-center">
+        <img
+          className="mx-auto h-full w-full object-content"
+          src={"/images/login_image.png"}
+          alt="logo"
+        />
+        <div className=" absolute top-[50%] left-[50%] flex items-center flex-col justify-center translate-x-[-50%] translate-y-[-50%]">
+          <img src="/images/logo.png" alt="" className="w-[267px] h-[51px]" />
+          <p className=" font-[500] text-[18px] text-[#fff] text-center pt-[15px] w-[500px]">
+            Caring Connections, Empowering Lives: Nurturing Well-being Through
+            Every Click.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default SelectRolePage;
