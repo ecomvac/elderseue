@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SupportAgentDasbhoardLayout = () => {
+const SupportAgentDashboardLayout = () => {
     return (
         <div>
             this is suport agent dashboard layout
@@ -8,4 +8,4 @@ const SupportAgentDasbhoardLayout = () => {
     );
 };
 
-export default SupportAgentDasbhoardLayout;
+export default SupportAgentDashboardLayout;
