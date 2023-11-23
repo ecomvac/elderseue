@@ -1,6 +1,7 @@
 import React from 'react';
 import SectionWrapper from '../../../../../Shared/SectionWrapper';
 import { Pie, measureTextWidth } from '@ant-design/plots';
+import { Icon } from '@iconify/react';
 
 const MembersOverview = () => {
     function renderStatistic(containerWidth, text, fontSize, fontWeight) {
@@ -20,11 +21,11 @@ const MembersOverview = () => {
     const data = [
         {
             type: 'Male',
-            value:6,
+            value: 6,
         },
         {
             type: 'Female',
-            value:4,
+            value: 4,
         },
 
     ]
@@ -74,8 +75,34 @@ const MembersOverview = () => {
     return (
         <>
             <SectionWrapper>
-                <div className='bg-primary rounded-[20px]'>
-                    <Pie {...config} />
+                <div className='bg-primary rounded-[20px] p-6'>
+                    <div>
+                        <h2 className='text-white text-2xl font-bold'>Members Overview</h2>
+                    </div>
+                    <div className='mt-12'>
+                        <div className='flex'>
+                            <div className='w-[79px] flex flex-col gap-5'>
+                                <span className='flex flex-col'>
+                                    <span className='flex items-center gap-1 text-base text-secondLightPrimary font-medium'>
+                                        <span><Icon icon="ion:male" /></span>
+                                        <span>Male</span>
+                                    </span>
+                                    <span className='text-[34px] font-bold text-white'>06</span>
+                                </span>
+                                <span className='flex flex-col'>
+                                    <span className='flex items-center gap-1 text-base text-secondLightPrimary font-medium'>
+                                        <span><Icon className='text-2xl' icon="material-symbols:female" /></span>
+                                        <span>Female</span>
+                                    </span>
+                                    <span className='text-[34px] font-bold text-white'>04</span>
+                                </span>
+                            </div>
+                            <div>
+                                <Pie {...config} />
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
 
             </SectionWrapper>

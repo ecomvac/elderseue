@@ -4,6 +4,7 @@ import CustomTable from '../../../../../Shared/Table/CustomTable';
 import { Icon } from '@iconify/react';
 import SectionWrapper from '../../../../../Shared/SectionWrapper';
 import CustomButton from '../../../../../Shared/button/CustomButton';
+import TableActions from './TableActions';
 const FamilyMember = () => {
     const tableData = customerTable
     const columns = [
@@ -28,8 +29,12 @@ const FamilyMember = () => {
             render: (row) => <span className=' text-base font-normal text-text-secondary'>{row.blood}</span>
         },
         {
-            title: '',
-            render: (row) => <span className=' text-base font-normal text-text-secondary'>...</span>
+            title: <Icon icon="basil:other-2-outline" className=" text-[35px]"/>,
+            key:'id',
+            render: (row) => (
+                <TableActions data={row} />
+            )
+            // render: (row) => <span className=' text-base font-normal text-text-secondary'><Icon icon="bi:three-dots-vertical" /></span>
         }
     ];
     return (

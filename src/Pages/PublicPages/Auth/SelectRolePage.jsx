@@ -130,9 +130,9 @@ const SelectRolePage = () => {
                   Email <span className=" text-primary">*</span>
                 </label>
                 <input
-                  className="py-3 px-2 text-[#3D4854] placeholder:text-[#A3AED0]  rounded-[16px] w-full text-[16px] outline-none border-[#90969D] border-[1px] focus:border-primary"
+                  className="py-[18px] px-[16px] h-[50px] text-[#3D4854] placeholder:text-[#A3AED0]  rounded-[16px] w-full text-[16px] outline-none  border-[1px] focus:border-primary"
                   type="email"
-                  placeholder={"Enter Your Email"}
+                  placeholder={"mail@simmmple.com"}
                   id="otp"
                   {...register("email", {
                     required: {
@@ -158,7 +158,7 @@ const SelectRolePage = () => {
                 </label>
                 <div className="w-full relative">
                   <input
-                    className="py-3 px-2 text-[#3D4854] placeholder:text-[#A3AED0]  rounded-[16px] w-full text-[16px] outline-none border-[#90969D] border-[1px] focus:border-primary"
+                    className="py-[18px] px-[16px] h-[50px] text-[#3D4854] placeholder:text-[#A3AED0]  rounded-[16px] w-full text-[16px] outline-none  border-[1px] focus:border-primary"
                     type={show ? "text" : "password"}
                     placeholder={"Enter Your Password"}
                     id="otp"
@@ -207,9 +207,9 @@ const SelectRolePage = () => {
               </div>
 
               <CustomButton
-                className={"w-full h-[50px] font-[700] text-[14px]"}
+                className={"w-full h-[50px] font-[700] text-[14px] rounded-[18px]"}
               >
-                sign up
+                Sign In
               </CustomButton>
             </form>
           </div>
