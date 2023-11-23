@@ -225,3 +225,8 @@ body{
 #reportPage-shadow{
   box-shadow: 9px 13px 13px -13px black;
 }
+
+
+:where(.css-dev-only-do-not-override-nllxry).ant-switch.ant-switch-checked{
+  background: #9039FF;
+}

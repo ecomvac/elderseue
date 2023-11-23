@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Customers from './Customers/Customers';
 import { Icon } from '@iconify/react';
+import Notifications from './Notifications/Notifications';
 
 const SingleElderly = () => {
     const [activeTab, setActiveTab] = useState('overView')
@@ -42,6 +43,9 @@ const SingleElderly = () => {
 
             {
                 activeTab === 'customers' && <Customers />
+            }
+            {
+                activeTab === 'notifications' && <Notifications />
             }
 
         </>
