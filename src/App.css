@@ -87,8 +87,9 @@ body{
 
 /* ---------style for ant design table pagination----------- */
 .ant-pagination .ant-pagination-item{
-  border: none;
-  color:#5D6670
+  border-right: 2px solid red !important;
+  color:#5D6670;
+  margin: 0px 0px !important;
 }
 .ant-pagination .ant-pagination-item-active a{
   color:black;
@@ -174,11 +175,13 @@ body{
 
 .ant-modal {
   border-radius: 30px !important;
+  padding: 0px !important;
   /* Only border-radius here */
 }
 
 .ant-modal-content {
   border-radius: 30px !important;
+  padding: 0px !important;
   /* border: 10px solid black; */
 }
 
