@@ -1,8 +1,8 @@
 import React from 'react';
 
-const SectionWrapper = ({children,color=''}) => {
+const SectionWrapper = ({children}) => {
     return (
-        <div className={`rounded-[20px] bg-white ${color}`}>
+        <div className={`rounded-[20px] bg-white`}>
             {children}
         </div>
     );
