@@ -4,6 +4,9 @@ import CustomButton from '../../Shared/button/CustomButton'
 import { Icon } from '@iconify/react';
 import SearchInput from '../../Shared/Search/SearchInput';
 import Sort from '../../Shared/sort/Sort';
+import AdminSupportAgentTable from '../../Components/Admin/AdminSupportAgent/AdminSupportAgentTable';
+import { SupportAgents } from '../../assets/admin/data';
+import CreateAdminSupportAgent from '../../Components/Admin/AdminSupportAgent/CreateAdminSupportAgent';
 
 const AdminSupportAgents = () => {
     const [search, setSearch] = React.useState("");
@@ -23,12 +26,12 @@ const AdminSupportAgents = () => {
         <div className=" bg-white rounded-2xl">
           <div className=" px-[22px] py-6 flex items-start flex-col lg:flex-row justify-between gap-2">
             <div className=" flex items-center justify-between w-full">
-              <h2 className=" text-2xl font-bold text-text-primary">Admin</h2>
+              <h2 className=" text-2xl font-bold text-text-primary">Support Agents</h2>
 
               {/* ========show button mobile view===== */}
               <CustomButton onClick={()=>handelOpenModal()} className={" lg:hidden flex"}>
                 <Icon icon="ic:baseline-add" className=" text-xl mr-1" />{" "}
-                Add New Admin
+                Create
               </CustomButton>
             </div>
             <div className=" flex items-center justify-end gap-5 w-full">
@@ -46,12 +49,14 @@ const AdminSupportAgents = () => {
             </div>
           </div>
 
-          {/* ---------admin Data table-------- */}
+          {/* =============Admin Support Agent data table============== */}
           <div className=" grid grid-cols-1"> 
-            {/* <SuperAdminUserTable tableData={superAdmin} /> */}
+            <AdminSupportAgentTable tableData={SupportAgents}/>
           </div>
         </div>
       </div>
+      {/* ---------Create new Support Agent-------- */}
+      <CreateAdminSupportAgent modalOPen={modalOPen} setModalOpen={setModalOpen}/>
     </>
   )
 }
