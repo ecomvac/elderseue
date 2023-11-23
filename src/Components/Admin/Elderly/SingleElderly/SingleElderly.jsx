@@ -1,10 +1,11 @@
 import React from 'react';
+import Customers from './Customers/Customers';
 
 const SingleElderly = () => {
     return (
-        <div>
-            hello 
-        </div>
+        <>
+           <Customers/>
+        </>
     );
 };
 

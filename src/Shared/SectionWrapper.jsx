@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SectionWraper = ({children,color=''}) => {
+const SectionWrapper = ({children,color=''}) => {
     return (
         <div className={`rounded-[20px] bg-white ${color}`}>
             {children}
@@ -8,4 +8,4 @@ const SectionWraper = ({children,color=''}) => {
     );
 };
 
-export default SectionWraper;
+export default SectionWrapper;
