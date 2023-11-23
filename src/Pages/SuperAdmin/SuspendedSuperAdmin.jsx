@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import TopHeading from "../../Shared/TopHeading/TopHeading";
 import Sort from "../../Shared/sort/Sort";
 import SearchInput from "../../Shared/Search/SearchInput";
 import SuspendedAdminTable from "../../Components/SuperAdmin/SuspendedAdmins/SuspendedAdminTable";
 import { bandUserData } from "../../assets/admin/data";
+import BreadCrumb from "../../Shared/TopHeading/BreadCrumb";
 
 const SuspendedSuperAdmin = () => {
     const [search, setSearch] = React.useState("");
@@ -27,7 +27,7 @@ const SuspendedSuperAdmin = () => {
 
   return (
     <>
-      <TopHeading />
+      <BreadCrumb title={"Dashboard"} links={[{title:"Home",url:"/super-admin/dashboard"},{title:"Dashboard",url:"/super-admin/dashboard"}]}/>
       <div className=" lg:mt-[-30px] mb-[30px]">
         <div className=" bg-white rounded-2xl py-6 px-[22px] relative">
     

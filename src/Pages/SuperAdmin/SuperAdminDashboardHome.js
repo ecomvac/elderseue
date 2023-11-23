@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import TopHeading from "../../Shared/TopHeading/TopHeading";
 import SearchInput from "../../Shared/Search/SearchInput";
 import CustomButton from "../../Shared/button/CustomButton";
 import { Icon } from "@iconify/react";
@@ -7,6 +6,7 @@ import SuperAdminUserTable from "../../Components/SuperAdmin/superAdmin/SuperAdm
 import { superAdmin } from "../../assets/admin/data";
 import CreateAdminModal from "../../Components/SuperAdmin/superAdmin/CreateAdminModal";
 import Sort from "../../Shared/sort/Sort";
+import BreadCrumb from "../../Shared/TopHeading/BreadCrumb";
 
 
 const SuperAdminDashboardHome = () => {
@@ -22,7 +22,7 @@ const SuperAdminDashboardHome = () => {
 
   return (
     <>
-      <TopHeading/>
+      <BreadCrumb title={"Dashboard"} links={[{title:"Home",url:"/super-admin/dashboard"},{title:"Dashboard",url:"/super-admin/dashboard"}]}/>
       <div className=" lg:mt-[-30px] mb-[30px]">
         <div className=" bg-white rounded-2xl">
           <div className=" px-[22px] py-6 flex items-start flex-col lg:flex-row justify-between gap-2">

@@ -2,7 +2,7 @@ import { Icon } from '@iconify/react'
 import { Badge, Popover } from 'antd'
 import React from 'react'
 
-const DashboardNav = () => {
+const DashboardNav = ({name,user}) => {
 
 
 
@@ -10,8 +10,8 @@ const DashboardNav = () => {
     const content = (
         <div className="">
             <div className=' flex  flex-col items-center justify-center'>
-                <h3 className=' text-base m-[-5px] p-0 font-medium text-text-primary'>Jeos Sola</h3>
-                <p className=' text-[11px]  p-0 font-normal text-light-black'>Super Admin</p>
+                <h3 className=' text-base m-[-5px] p-0 font-medium text-text-primary'>{name}</h3>
+                <p className=' text-[11px]  p-0 font-normal text-light-black'>{user}</p>
             </div>
             <button className=" text-sm flex  w-full items-center gap-2 rounded-[10px] font-medium text-light-black hover:bg-primary/10 hover:text-[#9039FF] py-2 px-5">
                 <Badge size="small" count={3} offset={[-7, 4]} className='mt-1'>
@@ -39,7 +39,7 @@ const DashboardNav = () => {
                 <input type="text" placeholder='Search' className=' placeholder-[#8F9BBA]  text-[14px] pl-9 outline-none font-[400] w-full bg-[#F9F9FB] py-3 px-5 rounded-full'/>
             </div>
 
-            <div className=' hidden lg:flex items-center w-[350px] justify-end lg2:gap-[16px] gap-3'>
+            <div className=' hidden lg:flex items-center w-[400px] justify-end lg2:gap-[16px] gap-3'>
                 <Badge size="small" count={3} offset={[-7, 4]} className='mt-1'>
                     <button className=''>
                         <Icon icon="basil:notification-solid" className=' text-light-black text-[25px]'/>
@@ -49,10 +49,12 @@ const DashboardNav = () => {
                     <Icon icon="mingcute:world-2-fill" className=' text-light-black text-[25px]'/>
                 </button>
                 <button className=' hidden lg:flex items-center gap-2'>
-                    <img src="/images/user1.png" alt="" className=' w-[35px] h-[35px] rounded-full'/>
                     <div>
-                        <h3 className=' text-base m-[-5px] p-0 font-medium text-text-primary'>Jeos Sola</h3>
-                        <p className=' text-[11px]  p-0 font-normal text-light-black'>Super Admin</p>
+                    <img src="/images/user1.png" alt="" className=' w-[35px] h-[35px] rounded-full'/>
+                    </div>
+                    <div>
+                        <h3 className=' text-base mb-[-5px] p-0 font-medium text-text-primary'>{name}</h3>
+                        <p className=' text-[11px] text-start  p-0 font-normal text-light-black'>{user}</p>
                     </div>
                 </button>
             </div>
