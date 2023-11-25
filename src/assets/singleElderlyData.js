@@ -1,3 +1,4 @@
+
 export const customerTable=[
     {
         id:1,
@@ -111,10 +112,11 @@ export const customerTable=[
 export const devicesData=[
     {
         id:1,
-        img:'',
-        name:'',
-        title:'',
-        status:'',
+        img:'/images/devices/camera.svg',
+        name:'Indoor Camera',
+        title:'Camera',
+        status:'active',
+        room:'dining',
         document:{
             title:'',
             documents:{
@@ -124,5 +126,140 @@ export const devicesData=[
                 four:''
             }
         }
-    }
+    },
+    {
+        id:2,
+        img:'/images/devices/bosch.svg',
+        name:'Bosch Smart Home Sm',
+        title:'Sensor',
+        room:'bed',
+        status:'active',
+        document:{
+            title:'',
+            documents:{
+                one:'',
+                two:'',
+                three:'',
+                four:''
+            }
+        }
+    },
+    {
+        id:3,
+        img:'/images/devices/remote1.svg',
+        name:'SmartLife X1 Pro',
+        title:'Lock',
+        status:'active',
+        room:'living',
+        document:{
+            title:'',
+            documents:{
+                one:'',
+                two:'',
+                three:'',
+                four:''
+            }
+        }
+    },
+    {
+        id:4,
+        img:'/images/devices/rs.svg',
+        name:'RS-1843AOPC mmWave Radar',
+        title:'Sensor',
+        status:'active',
+        room:'kitchen',
+        document:{
+            title:'',
+            documents:{
+                one:'',
+                two:'',
+                three:'',
+                four:''
+            }
+        }
+    },
+    {
+        id:5,
+        img:'/images/devices/echo.svg',
+        name:'Amazon Echo',
+        title:'Speaker',
+        status:'inactive',
+        room:'bath',
+        document:{
+            title:'',
+            documents:{
+                one:'',
+                two:'',
+                three:'',
+                four:''
+            }
+        }
+    },
+    {
+        id:6,
+        img:'/images/devices/cam.svg',
+        name:'Security Cam',
+        title:'Camera',
+        status:'active',
+        room:'garage',
+        document:{
+            title:'',
+            documents:{
+                one:'',
+                two:'',
+                three:'',
+                four:''
+            }
+        }
+    },
+    {
+        id:7,
+        img:'/images/devices/showe.svg',
+        name:'Smart Shower',
+        title:'Shower',
+        status:'active',
+        room:'children',
+        document:{
+            title:'',
+            documents:{
+                one:'',
+                two:'',
+                three:'',
+                four:''
+            }
+        }
+    },
+    {
+        id:8,
+        img:'/images/devices/doorbell.svg',
+        name:'Arlo Video Doorbell',
+        title:'Doorbell',
+        status:'active',
+        room:'living',
+        document:{
+            title:'',
+            documents:{
+                one:'',
+                two:'',
+                three:'',
+                four:''
+            }
+        }
+    },
+    {
+        id:9,
+        img:'/images/devices/watch.svg',
+        name:'Apple Watch Series 3',
+        title:'Sensor',
+        status:'inactive',
+        document:{
+            title:'',
+            documents:{
+                one:'',
+                two:'',
+                three:'',
+                four:''
+            }
+        }
+    },
 ]
