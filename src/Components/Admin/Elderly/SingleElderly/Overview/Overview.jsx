@@ -2,6 +2,7 @@ import React from 'react'
 import OverviewProfile from './OverviewProfile'
 import Activities from './Activities'
 import OverViewTop from './OverViewTop'
+import ElderlyTrends from './ElderlyTrends'
 
 const Overview = () => {
   return (
@@ -18,6 +19,9 @@ const Overview = () => {
             <div className=' lg:w-[65%] w-full'>
                 <div className='bg-white py-6 px-[22px] rounded-[20px]'>
                     <OverViewTop/>
+                </div>
+                <div className='bg-white py-6 px-[22px] rounded-[20px] mt-[30px]'>
+                    <ElderlyTrends/>
                 </div>
             </div>
         </div>
