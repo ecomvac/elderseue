@@ -4,13 +4,14 @@ import SingleElderly from '../../Components/Admin/Elderly/SingleElderly/SingleEl
 
 
 const AdminElderlySinglePage = () => {
- 
+
 
   return (
     <>
       <BreadCrumb title={"Elderly"} links={[{ title: "Home", url: "/super-admin/dashboard" }, { title: "Elderly", url: "/super-admin/dashboard" }, { title: "Kari Daughetry #453453", url: "sdfsfdsfsf" }]} />
-      
-      <SingleElderly />
+      <div className='grid grid-cols-1 lg:mt-[-30px]'>
+        <SingleElderly />
+      </div>
     </>
   )
 }

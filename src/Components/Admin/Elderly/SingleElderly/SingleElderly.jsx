@@ -1,52 +1,76 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Customers from './Customers/Customers';
 import { Icon } from '@iconify/react';
 import Notifications from './Notifications/Notifications';
-
+import { Tabs } from 'antd';
+import Devices from './Devices/Devices';
 const SingleElderly = () => {
-    const [activeTab, setActiveTab] = useState('overView')
-    const activeClass = 'bg-primary text-white px-5 py-[14px]'
-    const normalClass = 'flex items-center gap-2.5 hover:bg-primary duration-300 rounded-[50px] hover:text-white'
-    const inactive = 'text-text-secondary px-5 py-[14px]'
-    return (
-        <>
-            <div className='bg-white rounded-full mb-12 p-2 flex items-center gap-[15px] font-medium'>
-                <button onClick={() => setActiveTab('overView')} className={`${activeTab === 'overView' ? activeClass : inactive} ${normalClass}`}>
-                    <span className='text-2xl'><Icon icon="lucide:bar-chart" /></span>
-                    <span className='text-lg'>OverView</span>
-                </button>
-                <button onClick={() => setActiveTab('activity')} className={`${activeTab === 'activity' ? activeClass : inactive} ${normalClass}`}>
-                    <span className='text-2xl'><Icon icon="basil:explore-outline" /></span>
-                    <span className='text-lg'>Activity</span>
-                </button>
-                <button onClick={() => setActiveTab('devices')} className={`${activeTab === 'devices' ? activeClass : inactive} ${normalClass}`}>
-                    <span className='text-2xl'><Icon icon="tabler:device-tv" /></span>
-                    <span className='text-lg'>Devices</span>
-                </button>
-                <button onClick={() => setActiveTab('subscriptions')} className={`${activeTab === 'subscriptions' ? activeClass : inactive} ${normalClass}`}>
-                    <span className='text-2xl'><Icon icon="quill:creditcard" /></span>
-                    <span className='text-lg'>Subscriptions</span>
-                </button>
-                <button onClick={() => setActiveTab('notifications')} className={`${activeTab === 'notifications' ? activeClass : inactive} ${normalClass}`}>
-                    <span className='text-2xl'><Icon icon="ion:notifications-outline" /></span>
-                    <span className='text-lg'>Notifications</span>
-                </button>
-                <button onClick={() => setActiveTab('customers')} className={`${activeTab === 'customers' ? activeClass : inactive} ${normalClass}`}>
-                    <span className='text-2xl'><Icon icon="majesticons:users-line" /></span>
-                    <span className='text-lg'>Customers</span>
-                </button>
-                <button onClick={() => setActiveTab('history')} className={`${activeTab === 'history' ? activeClass : inactive} ${normalClass}`}>
-                    <span className='text-2xl'><Icon className='' icon="fluent:history-20-filled" /></span>
-                    <span className='text-lg'>History</span>
-                </button>
-            </div>
 
-            {
-                activeTab === 'customers' && <Customers />
-            }
-            {
-                activeTab === 'notifications' && <Notifications />
-            }
+    const tabData = [
+        {
+            id: 1,
+            icon: <Icon icon="lucide:bar-chart" />,
+            title: 'Overview',
+            children: <Customers />
+        },
+        {
+            id: 2,
+            icon: <Icon icon="basil:explore-outline" />,
+            title: 'Activity',
+            children: <Notifications />
+        },
+        {
+            id: 3,
+            icon: <Icon icon="tabler:device-tv" />,
+            title: 'Devices',
+            children: <Devices />
+        },
+        {
+            id: 4,
+            icon: <Icon icon="quill:creditcard" />,
+            title: 'Subscriptions',
+            children: <Notifications />
+        },
+        {
+            id: 5,
+            icon: <Icon icon="ion:notifications-outline" />,
+            title: 'Notifications',
+            children: <Notifications />
+        },
+        {
+            id: 6,
+            icon: <Icon icon="majesticons:users-line" />,
+            title: 'Customers',
+            children: <Customers />
+        },
+        {
+            id: 7,
+            icon: <Icon className='' icon="fluent:history-20-filled" />,
+            title: 'History',
+            children: <Notifications />
+        },
+    ]
+
+    return (
+
+        <>
+            <div id='elderly'>
+                <Tabs
+                    defaultActiveKey="2"
+                    items={tabData.map((tab) => {
+                        return {
+                            label: (
+                                <span className={`flex items-center gap-2.5`}>
+                                    {tab.icon}
+                                    {tab.title}
+                                </span>
+                            ),
+                            key: `${tab.id}`,
+                            children: tab.children,
+                        };
+                    })}
+                />
+            </div>
 
         </>
     );

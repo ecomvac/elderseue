@@ -75,12 +75,12 @@ const MembersOverview = () => {
     return (
         <>
             <SectionWrapper>
-                <div className='bg-primary rounded-[20px] p-6'>
+                <div id='member' className='bg-primary rounded-[20px] p-6'>
                     <div>
                         <h2 className='text-white text-2xl font-bold'>Members Overview</h2>
                     </div>
                     <div className='mt-12'>
-                        <div className='flex'>
+                        <div className='flex items-center justify-between'>
                             <div className='w-[79px] flex flex-col gap-5'>
                                 <span className='flex flex-col'>
                                     <span className='flex items-center gap-1 text-base text-secondLightPrimary font-medium'>
@@ -97,11 +97,38 @@ const MembersOverview = () => {
                                     <span className='text-[34px] font-bold text-white'>04</span>
                                 </span>
                             </div>
-                            <div>
-                                <Pie {...config} />
+                            <div className='mt-[-158px]'>
+                                <Pie className='w-[400px]' {...config} />
+                                <div className='flex justify-center mt-[-147px]'>
+                                    <div className='flex items-center w-[200px] justify-between text-white text-base font-bold'>
+                                        <span>60%</span>
+                                        <span>40%</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-
+                    </div>
+                    <div className='mt-[106px]'> 
+                        <div className='mb-2.5 px-[35px] flex items-center justify-between'>
+                            <span className='flex flex-col'>
+                                <span className='text-[28px] font-bold text-white'>01</span>
+                                <span className='font-medium text-[13px] text-secondLightPrimary'>Child</span>
+                            </span>
+                            <span className='flex flex-col'>
+                                <span className='text-[28px] font-bold text-white'>02</span>
+                                <span className='font-medium text-[13px] text-secondLightPrimary'>Adolescent</span>
+                            </span>
+                            <span className='flex flex-col'>
+                                <span className='text-[28px] font-bold text-white'>05</span>
+                                <span className='font-medium text-[13px] text-secondLightPrimary'>Adult</span>
+                            </span>
+                            <span className='flex flex-col'>
+                                <span className='text-[28px] font-bold text-white'>02</span>
+                                <span className='font-medium text-[13px] text-secondLightPrimary'>Elderly</span>
+                            </span>
+                            
+                        </div>
+                        <div></div>
                     </div>
                 </div>
 

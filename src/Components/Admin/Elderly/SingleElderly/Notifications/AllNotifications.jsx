@@ -24,13 +24,14 @@ const AllNotifications = () => {
                                 <Icon className='text-[#FF974D]' icon="basil:info-triangle-outline" />
                             </div>
                             <div>
-                                <div className='lg2:flex items-center md:flex'>
+                                <div className='flex items-center flex-wrap'>
                                     <span className='text-text-primary text-lg font-medium'>New Access granted</span>
-                                    <div className='flex items-center'>
+                                    <span className='flex items-center'>
                                         <Icon className="text-[5px] text-text-secondary mx-1" icon="ion:ellipse" />
                                         <span className='text-[13px] text-[#A3AED0] font-medium'>Just Now</span>
-                                    </div>
+                                    </span>
                                 </div>
+                                
                                 <p className="text-sm text-text-secondary sm:my-1 lg2:my-0 md:my-0">A person wants access to enter in the house</p>
                                 <div className='my-3'>
                                     <button className='mr-3 bg-primary text-white text-[13px] rounded-lg font-medium py-2 px-3'>Accept</button>
@@ -47,12 +48,12 @@ const AllNotifications = () => {
                                 <Icon className='text-[#FF2727]' icon="jam:alert" />
                             </div>
                             <div>
-                                <div className='lg2:flex  md:flex items-center'>
+                                <div className='flex items-center flex-wrap'>
                                     <span className='text-text-primary text-lg font-medium'>SOS Emergency Alert!</span>
-                                    <div className='flex items-center'>
+                                    <span className='flex items-center'>
                                         <Icon className="text-[5px] text-text-secondary mx-1" icon="ion:ellipse" />
                                         <span className='text-[13px] text-[#A3AED0] font-medium'>07:20 pm</span>
-                                    </div>
+                                    </span>
                                 </div>
                                 <p className="text-sm text-text-secondary sm:my-1 lg2:my-0 md:my-0">A person wants access to enter in the house</p>
                             </div>
@@ -66,12 +67,12 @@ const AllNotifications = () => {
                                 <Icon className='text-primary' icon="mdi:bed-time" />
                             </div>
                             <div>
-                                <div className='lg2:flex  md:flex items-center'>
+                                <div className='flex items-center flex-wrap'>
                                     <span className='text-text-primary text-lg font-medium'>Bedtime: Has not gone to bed yet</span>
-                                    <div className='flex items-center'>
+                                    <span className='flex items-center'>
                                         <Icon className="text-[5px] text-text-secondary mx-1" icon="ion:ellipse" />
                                         <span className='text-[13px] text-[#A3AED0] font-medium'>07:20 pm</span>
-                                    </div>
+                                    </span>
                                 </div>
                                 <p className="text-sm text-text-secondary sm:my-1 lg2:my-0 md:my-0">A person wants access to enter in the house</p>
                             </div>
@@ -85,12 +86,12 @@ const AllNotifications = () => {
                                 <Icon className='text-[#FF974D]' icon="basil:info-triangle-outline" />
                             </div>
                             <div>
-                                <div className='lg2:flex md:flex items-center'>
+                                <div className='flex items-center flex-wrap'>
                                     <span className='text-text-primary text-lg font-medium'>Elderly Fall Detected!</span>
-                                    <div className='flex items-center'>
+                                    <span className='flex items-center'>
                                         <Icon className="text-[5px] text-text-secondary mx-1" icon="ion:ellipse" />
                                         <span className='text-[13px] text-[#A3AED0] font-medium'>04:50 am</span>
-                                    </div>
+                                    </span>
                                 </div>
                                 <p className="text-sm text-text-secondary sm:my-1 lg2:my-0 md:my-0">A person wants access to enter in the house</p>
                             </div>
@@ -104,12 +105,12 @@ const AllNotifications = () => {
                                 <Icon className='text-[#FF2727]' icon="jam:alert" />
                             </div>
                             <div>
-                                <div className='lg2:flex  md:flex items-center'>
+                                <div className='flex items-center flex-wrap'>
                                     <span className='text-text-primary text-lg font-medium'>SOS Emergency Alert!</span>
-                                    <div className='flex items-center'>
+                                    <span className='flex items-center'>
                                         <Icon className="text-[5px] text-text-secondary mx-1" icon="ion:ellipse" />
                                         <span className='text-[13px] text-[#A3AED0] font-medium'>07:20 pm</span>
-                                    </div>
+                                    </span>
                                 </div>
                                 <p className="text-sm text-text-secondary sm:my-1 lg2:my-0 md:my-0">A person wants access to enter in the house</p>
                             </div>
@@ -123,12 +124,12 @@ const AllNotifications = () => {
                                 <Icon className='text-primary' icon="mdi:toilet" />
                             </div>
                             <div>
-                                <div className='lg2:flex md:flex items-center'>
+                                <div className='flex items-center flex-wrap'>
                                     <span className='text-text-primary text-lg font-medium'>Frequently Bathroom Visit</span>
-                                    <div className='flex items-center'>
+                                    <span className='flex items-center'>
                                         <Icon className="text-[5px] text-text-secondary mx-1" icon="ion:ellipse" />
                                         <span className='text-[13px] text-[#A3AED0] font-medium'>07:20 pm</span>
-                                    </div>
+                                    </span>
                                 </div>
                                 <p className="text-sm text-text-secondary sm:my-1 lg2:my-0 md:my-0">A person wants access to enter in the house</p>
                             </div>
@@ -142,12 +143,12 @@ const AllNotifications = () => {
                                 <Icon className='text-[#0070F0]' icon="mdi:bed-time" />
                             </div>
                             <div>
-                                <div className='lg2:flex  md:flex items-center'>
+                                <div className='flex items-center flex-wrap'>
                                     <span className='text-text-primary text-lg font-medium'>Bedtime: Has not gone to bed yet</span>
-                                    <div className='flex items-center'>
+                                    <span className='flex items-center'>
                                         <Icon className="text-[5px] text-text-secondary mx-1" icon="ion:ellipse" />
                                         <span className='text-[13px] text-[#A3AED0] font-medium'>07:20 pm</span>
-                                    </div>
+                                    </span>
                                 </div>
                                 <p className="text-sm text-text-secondary sm:my-1 lg2:my-0 md:my-0">A person wants access to enter in the house</p>
                             </div>

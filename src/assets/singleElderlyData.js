@@ -106,3 +106,23 @@ export const customerTable=[
    
 
 ]
+
+
+export const devicesData=[
+    {
+        id:1,
+        img:'',
+        name:'',
+        title:'',
+        status:'',
+        document:{
+            title:'',
+            documents:{
+                one:'',
+                two:'',
+                three:'',
+                four:''
+            }
+        }
+    }
+]
