@@ -42,21 +42,21 @@ const Activities = () => {
           Last 5 Activities
         </h2>
       </div>
-      <div>
+      <div className=" flex items-start flex-col gap-2">
         {data.map((activitie, index) => (
-          <div key={index} className=" flex items-center ">
-            <div className=" w-[36px] h-[36px] relative rounded-full flex items-center mb-10 justify-center bg-success">
+          <div key={index} className=" flex items-start gap-3">
+            <div className=" w-[36px] h-[36px] relative rounded-full flex items-center  justify-center bg-success">
               <Icon
                 icon="lets-icons:check-fill"
                 className=" text-[25px] text-white"
               />
               {index !== data.length - 1 && (
                 <div
-                  className={` absolute h-[30px] w-1 ${" bg-[#384766]"} bottom-[-100%]`}
+                  className={` absolute h-[100px] w-[1px] ${" bg-[#E8E9EE]"} bottom-[-100%]`}
                 />
               )}
             </div>
-            <div>
+            <div className=" min-h-[100px]">
                 <h3 className=" text-[13px] font-medium text-light-black">{activitie?.time}</h3>
                 <h2 className=" text-base font-medium text-text-primary">{activitie.title}</h2>
             </div>

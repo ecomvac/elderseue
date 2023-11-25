@@ -1,6 +1,7 @@
 import React from 'react'
 import OverviewProfile from './OverviewProfile'
 import Activities from './Activities'
+import OverViewTop from './OverViewTop'
 
 const Overview = () => {
   return (
@@ -14,8 +15,10 @@ const Overview = () => {
                     <Activities/>
                 </div>
             </div>
-            <div className=' lg:w-[65%] w-full bg-white h-[500px]'>
-
+            <div className=' lg:w-[65%] w-full'>
+                <div className='bg-white py-6 px-[22px] rounded-[20px]'>
+                    <OverViewTop/>
+                </div>
             </div>
         </div>
     </div>
