@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Customers from './Customers/Customers';
 import { Icon } from '@iconify/react';
 import Notifications from './Notifications/Notifications';
+import Overview from './Overview/Overview';
 
 const SingleElderly = () => {
     const [activeTab, setActiveTab] = useState('overView')
@@ -40,6 +41,10 @@ const SingleElderly = () => {
                     <span className='text-lg'>History</span>
                 </button>
             </div>
+
+            {
+                activeTab === 'overView' && <Overview />
+            }
 
             {
                 activeTab === 'customers' && <Customers />
