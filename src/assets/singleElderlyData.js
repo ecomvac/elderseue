@@ -11,6 +11,7 @@ export const customerTable=[
     {
         id:2,
         name:'Devid Tom ',
+        role:'admin',
         relation:'Son',
         contact:'301-501-4786',
         age:'28',
@@ -117,15 +118,7 @@ export const devicesData=[
         title:'Camera',
         status:'active',
         room:'dining',
-        document:{
-            title:'',
-            documents:{
-                one:'',
-                two:'',
-                three:'',
-                four:''
-            }
-        }
+        
     },
     {
         id:2,
@@ -151,15 +144,7 @@ export const devicesData=[
         title:'Lock',
         status:'active',
         room:'living',
-        document:{
-            title:'',
-            documents:{
-                one:'',
-                two:'',
-                three:'',
-                four:''
-            }
-        }
+      
     },
     {
         id:4,
@@ -168,15 +153,7 @@ export const devicesData=[
         title:'Sensor',
         status:'active',
         room:'kitchen',
-        document:{
-            title:'',
-            documents:{
-                one:'',
-                two:'',
-                three:'',
-                four:''
-            }
-        }
+       
     },
     {
         id:5,
@@ -185,15 +162,7 @@ export const devicesData=[
         title:'Speaker',
         status:'inactive',
         room:'bath',
-        document:{
-            title:'',
-            documents:{
-                one:'',
-                two:'',
-                three:'',
-                four:''
-            }
-        }
+       
     },
     {
         id:6,
@@ -202,15 +171,7 @@ export const devicesData=[
         title:'Camera',
         status:'active',
         room:'garage',
-        document:{
-            title:'',
-            documents:{
-                one:'',
-                two:'',
-                three:'',
-                four:''
-            }
-        }
+       
     },
     {
         id:7,
@@ -219,15 +180,7 @@ export const devicesData=[
         title:'Shower',
         status:'active',
         room:'children',
-        document:{
-            title:'',
-            documents:{
-                one:'',
-                two:'',
-                three:'',
-                four:''
-            }
-        }
+        
     },
     {
         id:8,
@@ -236,15 +189,7 @@ export const devicesData=[
         title:'Doorbell',
         status:'active',
         room:'living',
-        document:{
-            title:'',
-            documents:{
-                one:'',
-                two:'',
-                three:'',
-                four:''
-            }
-        }
+        
     },
     {
         id:9,
@@ -261,5 +206,72 @@ export const devicesData=[
                 four:''
             }
         }
+    },
+]
+
+export const roomData=[
+    {
+        id:1,
+        room:'Living Room',
+        tem:'24',
+        hu:'90%',
+        con:'484',
+        div:'05'
+    },
+    {
+        id:2,
+        room:'Dining Room',
+        tem:'24',
+        hu:'70%',
+        con:'484',
+        div:'05'
+    },
+    {
+        id:3,
+        room:'Bed Room',
+        tem:'24',
+        hu:'60%',
+        con:'484',
+        div:'05'
+    },
+    {
+        id:4,
+        room:'Kitchen Room',
+        tem:'24',
+        hu:'70%',
+        con:'484',
+        div:'05'
+    },
+    {
+        id:5,
+        room:'Bath Room',
+        tem:'24',
+        hu:'80%',
+        con:'484',
+        div:'05'
+    },
+    {
+        id:6,
+        room:'Children Room',
+        tem:'24',
+        hu:'60%',
+        con:'484',
+        div:'05'
+    },
+    {
+        id:7,
+        room:'Garage Room',
+        tem:'24',
+        hu:'70%',
+        con:'484',
+        div:'05'
+    },
+    {
+        id:8,
+        room:'Bed Room',
+        tem:'24',
+        hu:'90%',
+        con:'484',
+        div:'05'
     },
 ]

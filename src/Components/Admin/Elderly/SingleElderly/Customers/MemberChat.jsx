@@ -4,64 +4,64 @@ import React from 'react';
 const MemberChat = () => {
     const data = [
        {
-        id:1,
+        id:'01',
         age:10,
         name:'Khan',
         title:'Child'
        },
        {
-        id:2,
+        id:'02',
         age:50,
         name:'Sahed Khan',
         title:'Elderly'
        },
        {
-        id:3,
+        id:'03',
         age:20,
         name:'Ddjd',
         title:'Adult'
        },
        {
-        id:4,
-        age:10,
+        id:'04',
+        age:28,
         name:'Rahim',
-        title:'Child'
+        title:'Adult'
        },
        {
-        id:5,
+        id:'05',
         age:20,
         name:'Karim',
         title:'Adult'
        },
        {
-        id:6,
+        id:'06',
         age:85,
         name:'Rahima',
         title:'Elderly'
        },
        {
-        id:7,
-        age:30,
+        id:'07',
+        age:25,
         name:'Sahed Khan',
-        title:'Adolescent'
+        title:'Adult'
        },
        {
-        id:8,
+        id:'08',
         age:20,
         name:'Bikash',
         title:'Adult'
        },
        {
-        id:9,
+        id:'09',
         age:40,
         name:'Kdin',
         title:'Adolescent'
        },
        {
-        id:10,
-        age:10,
+        id:'10',
+        age:35,
         name:'Sahed Khan',
-        title:'Child'
+        title:'Adolescent'
        },
       
         
@@ -70,21 +70,23 @@ const MemberChat = () => {
         data,
         xField: 'id',
         yField: 'age',
-        columnWidthRatio: 0.8,
-        xAxis: {
-          label: {
-            autoHide: true,
-            autoRotate: false,
-          },
-        },
-        meta: {
-          type: {
-            alias: '类别',
-          },
-          sales: {
-            alias: '销售额',
-          },
-        },
+        // xAxis: {
+        //   label: {
+        //     autoHide: true,
+        //     autoRotate: false,
+        //   },
+        // },
+       
+        // meta: {
+        //   type: {
+        //     alias: '类别',
+        //   },
+        //   sales: {
+        //     alias: '销售额',
+        //   },
+        // },
+        minColumnWidth: 10,
+        maxColumnWidth: 10,
       };
     return (
         <div>

@@ -6,55 +6,56 @@ import AllDevices from './AllDevices';
 import {devicesData} from '../../../../../assets/singleElderlyData'
 
 const DeviceSection = () => {
-
+// const firstTab= All <span >{devicesData.length}</span>
+let All = <span>All <span className='text-[13px] px-1 rounded-full bg-gray-300'>{devicesData.length}</span></span>
     const tabData = [
         {
             id: 1,
             icon: <Icon icon="lucide:bar-chart" />,
-            title: 'All',
-            children: devicesData && <AllDevices data={devicesData}/>
+            title: All,
+            children:  <AllDevices data={devicesData}/>
         },
         {
             id: 2,
             icon: <Icon icon="basil:explore-outline" />,
             title: 'Living Room',
-            children: '<Notifications />'
+            children:  <AllDevices data={devicesData.filter((living)=>living.room==="living")} />
         },
         {
             id: 3,
             icon: <Icon icon="tabler:device-tv" />,
             title: 'Dining Room',
-            children: '<Devices />'
+            children:  <AllDevices data={devicesData.filter((living)=>living.room==="dining")} />
         },
         {
             id: 4,
             icon: <Icon icon="quill:creditcard" />,
             title: 'Bed Room',
-            children: '<Notifications />'
+            children: <AllDevices data={devicesData.filter((living)=>living.room==="bed")} />
         },
         {
             id: 5,
             icon: <Icon icon="ion:notifications-outline" />,
             title: 'Kitchen Room',
-            children: '<Notifications />'
+            children: <AllDevices data={devicesData.filter((living)=>living.room==="kitchen")} />
         },
         {
             id: 6,
             icon: <Icon icon="majesticons:users-line" />,
             title: 'Bathroom',
-            children: '<Customers />'
+            children: <AllDevices data={devicesData.filter((living)=>living.room==="bath")} />
         },
         {
             id: 7,
             icon: <Icon className='' icon="fluent:history-20-filled" />,
             title: 'Garage',
-            children: "Garage"
+            children: <AllDevices data={devicesData.filter((data)=>data.room==="garage")} />
         },
         {
             id: 8,
             icon: <Icon className='' icon="fluent:history-20-filled" />,
             title: 'Children',
-            children: "children"
+            children:<AllDevices data={devicesData.filter((data)=>data.room==="children")} />
         },
     ]
 
@@ -71,7 +72,7 @@ const DeviceSection = () => {
                         <div className=''>
                             <div id='device'>
                                 <Tabs
-                                    defaultActiveKey="2"
+                                    defaultActiveKey="1"
                                     items={tabData.map((tab) => {
                                         return {
                                             label: (
