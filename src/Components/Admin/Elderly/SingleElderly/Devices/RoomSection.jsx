@@ -16,8 +16,8 @@ const RoomSection = () => {
     };
     const content = (index) => (
         <div className=" w-[190px]">
-            <button className="text-sm flex w-full items-start rounded-[10px] font-medium text-light-black hover:bg-primary/10 hover:text-[#9039FF] py-3 px-5">Edit Device</button>
-            <button onClick={() => { setDeleteModal(true); handleOpenChange(index, false) }} className="text-sm w-full flex items-start rounded-[10px] font-medium text-light-black hover:bg-danger/10 hover:text-danger py-3 px-5">Delete Member</button>
+            <button className="text-sm flex w-full items-start rounded-[10px] font-medium text-light-black hover:bg-primary/10 hover:text-[#9039FF] py-3 px-5">Edit Room</button>
+            <button onClick={() => { setDeleteModal(true); handleOpenChange(index, false) }} className="text-sm w-full flex items-start rounded-[10px] font-medium text-light-black hover:bg-danger/10 hover:text-danger py-3 px-5">Delete Room</button>
         </div>
     );
     return (
