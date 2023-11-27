@@ -10,7 +10,7 @@ const PasswordInput = ({label,label2,register,placeholder}) => {
             {label}
             </label>
             <input
-           className="py-3 px-2 text-[#3D4854] placeholder:text-[#A3AED0]  rounded-[16px] w-full text-[16px] outline-none border-[#90969D] border-[1px] focus:border-primary"
+           className="py-[18px] h-[50px] px-4  text-text-primary placeholder:text-[#A3AED0]  rounded-[16px] w-full text-[16px] outline-none  border-[1px] focus:border-primary"
             type={show ? "text" :"password"}
             placeholder={placeholder}
             id="otp"

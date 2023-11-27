@@ -5,10 +5,10 @@
   padding: 0;
 } */
 
-body{
+body {
   width: 100%;
-    /* font-family: "Poppins", "sans-serif", "roboto"; */
-    font-family: 'DM Sans', sans-serif;
+  /* font-family: "Poppins", "sans-serif", "roboto"; */
+  font-family: 'DM Sans', sans-serif;
 }
 
 @font-face {
@@ -20,7 +20,7 @@ body{
   font-family: "normal";
 }
 
-.css-h0q0iv-MuiButtonBase-root-MuiTab-root{
+.css-h0q0iv-MuiButtonBase-root-MuiTab-root {
   padding: 12px 26px !important;
   font-size: 14px !important;
   text-transform: capitalize !important;
@@ -38,7 +38,7 @@ body{
   width: 100%;
 }
 
-#sidebar_hover:hover{
+#sidebar_hover:hover {
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.00) 104.88%) !important;
   color: #fff;
 }
@@ -62,9 +62,11 @@ body{
 .custom-select select {
   appearance: none;
   -webkit-appearance: none;
-  padding-left: 30px; /* Space for icon */
+  padding-left: 30px;
+  /* Space for icon */
   background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16"><path d="M8 0a4 4 0 0 0-4 4c0 3 4 8 4 8s4-5 4-8a4 4 0 0 0-4-4zm0 6a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/></svg>') no-repeat right center;
-  background-size: 20px 20px; /* Size of icon */
+  background-size: 20px 20px;
+  /* Size of icon */
 }
 
 
@@ -73,54 +75,59 @@ body{
 }
 
 
-.border__item{
-  border:8px solid transparent;
+.border__item {
+  border: 8px solid transparent;
 }
-#supportAgent-p-bar .ant-progress-text{
-  color:white;
-  font-weight:600;
+
+#supportAgent-p-bar .ant-progress-text {
+  color: white;
+  font-weight: 600;
   font-size: 16px;
 }
-.ant-table-cell{
-  color:#5D6670
+
+.ant-table-cell {
+  color: #5D6670
 }
 
 /* ---------style for ant design table pagination----------- */
-.ant-pagination .ant-pagination-item{
-  border: none;
-  color:#5D6670
+.ant-pagination .ant-pagination-item {
+  border-right: 2px solid red !important;
+  color: #5D6670;
+  margin: 0px 0px !important;
 }
-.ant-pagination .ant-pagination-item-active a{
-  color:black;
-  background:#E7E8EA;
+
+.ant-pagination .ant-pagination-item-active a {
+  color: black;
+  background: #E7E8EA;
   border-radius: 4px;
 
 }
 
 .ant-table-thead .ant-table-cell {
   background-color: green !important;
-  }
+}
 
-#reportPage-shadow{
+#reportPage-shadow {
   box-shadow: 9px 13px 13px -13px black;
 }
 
 
-.ant-table-thead >tr >th{
-  color:#68709C !important;
-  font-size:13px !important;
+.ant-table-thead>tr>th {
+  color: #68709C !important;
+  font-size: 13px !important;
   font-weight: 700 !important;
   background: red !important;
 }
 
-.support-agent-dashboard .ant-table-cell{
+.support-agent-dashboard .ant-table-cell {
   padding: 16px 27px !important;
 }
 
-.ant-pagination-options{
-  display:none !important;
+.ant-pagination-options {
+  display: none !important;
 }
-.admin__Table .ant-table-cell{
+
+.admin__Table .ant-table-cell {
   padding: 15px 22px !important;
 }
 
@@ -129,35 +136,29 @@ body{
   margin: 20px 32px !important;
 }
 
-/* -----for user table-------- */
-#user-table .css-11xur9t-MuiPaper-root-MuiTableContainer-root{
-  box-shadow: 0px 0px 0px 0px !important;
-}
-.MuiBox-root .css-19kzrtu{
-  padding:0px;
-}
 
 /* -----------support agent > dashboard > activity > elderly conditions date picker------------- */
 
-#elderlyDatePicker .ant-picker-input > input{
-  color:white !important;
+#elderlyDatePicker .ant-picker-input>input {
+  color: white !important;
 }
-#elderlyDatePicker .ant-picker-input > span{
-  color:white !important;
+
+#elderlyDatePicker .ant-picker-input>span {
+  color: white !important;
 }
 
 #elderlyDatePicker input::placeholder {
-  color: rgb(248, 248, 248); 
+  color: rgb(248, 248, 248);
 
 }
 
-#suspendAdmin__swiper .mySwiper2  .swiper{
+#suspendAdmin__swiper .mySwiper2 .swiper {
   width: 100% !important;
   height: 100% !important;
 }
 
 /* this is audio track*/
-#waveform > div{
+#waveform>div {
   margin-bottom: 64px !important;
 }
 
@@ -165,7 +166,7 @@ body{
 .ant-table-thead .ant-table-cell {
   background-color: #F7F7F9 !important;
   border-radius: 0px !important;
-  }
+}
 
 
 
@@ -174,54 +175,155 @@ body{
 
 .ant-modal {
   border-radius: 30px !important;
+  padding: 0px !important;
   /* Only border-radius here */
 }
 
 .ant-modal-content {
   border-radius: 30px !important;
+  padding: 0px !important;
   /* border: 10px solid black; */
 }
 
 
 /* its use for divice finding--------------- */
- @keyframes rotate {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
   }
 
-  .circle-container {
-    position: relative;
-    width: 218px;
-    height: 217px;
-    animation: rotate 1s linear infinite;
+  100% {
+    transform: rotate(360deg);
   }
+}
 
-  .animated-circle {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
+.circle-container {
+  position: relative;
+  width: 218px;
+  height: 217px;
+  animation: rotate 1s linear infinite;
+}
+
+.animated-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 
 /* end its use for divice finding--------------- */
-
 
 /* ----------start rounded checkbox ----------- */
 .rounded-checkbox .ant-checkbox-wrapper {
   border-radius: 50%;
 }
+
 .rounded-checkbox .ant-checkbox-inner {
   border-radius: 50%;
 }
+
 /* ----------end rounded checkbox ----------- */
 
 
 /*---------- Report page shadow-------- */
-#reportPage-shadow{
+#reportPage-shadow {
   box-shadow: 9px 13px 13px -13px black;
+}
+
+
+:where(.css-dev-only-do-not-override-nllxry).ant-switch.ant-switch-checked {
+  background: #9039FF;
+}
+
+
+/* -------------------single Elderly tabs---------------------- */
+#elderly :where(.css-dev-only-do-not-override-nllxry).ant-tabs .ant-tabs-tab+.ant-tabs-tab {
+  margin-right: 15px !important;
+  margin-top: 0px !important;
+  margin-left: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+#elderly :where(.css-dev-only-do-not-override-nllxry).ant-tabs .ant-tabs-tab {
+  padding: 15px 20px !important;
+  margin-right: 15px !important;
+  border-radius: 38px;
+  font-size:16px !important;
+  font-weight: 500 !important;
+  color:#2B3674;
+}
+
+#elderly :where(.css-dev-only-do-not-override-nllxry).ant-tabs-top>.ant-tabs-nav::before {
+  border-bottom: 0px !important;
+}
+
+
+#elderly :where(.css-dev-only-do-not-override-nllxry).ant-tabs .ant-tabs-tab.ant-tabs-tab-active {
+ 
+  background-color: #9039FF;
+}
+#elderly :where(.css-dev-only-do-not-override-nllxry).ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn{
+  color: white !important;
+}
+
+#elderly :where(.css-dev-only-do-not-override-nllxry).ant-tabs-top>.ant-tabs-nav,
+:where(.css-dev-only-do-not-override-nllxry).ant-tabs-bottom>.ant-tabs-nav {
+  margin-bottom: 0px !important;
+  background-color: white;
+  padding: 8px !important;
+  border-radius: 38px;
+}
+#elderly .ant-tabs-ink-bar {
+  display: none !important;
+}
+
+/* -------------------devices tabs---------------------- */
+#device :where(.css-dev-only-do-not-override-nllxry).ant-tabs .ant-tabs-tab+.ant-tabs-tab {
+  margin-right: 10px !important;
+  margin-top: 0px !important;
+  margin-left: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+#device :where(.css-dev-only-do-not-override-nllxry).ant-tabs .ant-tabs-tab {
+  padding: 15px 20px !important;
+  margin-right: 15px !important;
+  border-radius: 38px;
+  font-size:16px !important;
+  font-weight: 500 !important;
+  color:#2B3674;
+}
+
+#device :where(.css-dev-only-do-not-override-nllxry).ant-tabs-top>.ant-tabs-nav::before {
+  border-bottom: 0px !important;
+}
+
+
+#device :where(.css-dev-only-do-not-override-nllxry).ant-tabs .ant-tabs-tab.ant-tabs-tab-active {
+ 
+  background-color: #ff394a00;
+}
+
+#device :where(.css-dev-only-do-not-override-nllxry).ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn{
+  color: #9039FF !important;
+} 
+
+#device :where(.css-dev-only-do-not-override-nllxry).ant-tabs-top>.ant-tabs-nav,
+:where(.css-dev-only-do-not-override-nllxry).ant-tabs-bottom>.ant-tabs-nav {
+  margin-bottom: 0px !important;
+  background-color: rgba(255, 255, 255, 0);
+  padding: 8px !important;
+  border-radius: 0px;
+}
+#device .ant-tabs-ink-bar {
+  /* height: 5px !important; */
+  background: #9039FF !important;
+}
+
+
+/* -------------------------------members overview in customer------------- */
+#member .g2-html-annotation{
+  color: white !important;
+  top: 235px !important;
 }

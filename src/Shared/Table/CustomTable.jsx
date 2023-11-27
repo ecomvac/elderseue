@@ -10,7 +10,7 @@ const CustomTable = ({ tableData, columns, scroll }) => {
     console.log(`Page: ${page}, Page Size: ${pageSize}`);
     setStart((pre) => (page === 1 ? 1 : page * 10 - 9));
     setend((pre) =>
-      page * 10 > tableData.length ? tableData.length : page * 10
+      page * 10 > tableData?.length ? tableData?.length : page * 10
     );
   };
   const paginationOptions = {
@@ -27,7 +27,7 @@ const CustomTable = ({ tableData, columns, scroll }) => {
         scroll={scroll}
       />
       <div className="lg:block text-light-black font-medium text-[13px] lg:absolute bottom-[25px] left-6 hidden ">
-        Showing{start} to {end} of {tableData?.length} entries
+        Showing {start} to {end} of {tableData?.length} entries
       </div>
     </div>
   );

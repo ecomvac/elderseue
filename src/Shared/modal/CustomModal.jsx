@@ -13,6 +13,10 @@ const CustomModal = ({
   handleSubmit,
   buttonText,
 }) => {
+
+  const modalStyle = {
+    padding: 0, // Set padding to 0 for the Modal component
+  };
   return (
     <div>
       <Modal
@@ -26,9 +30,10 @@ const CustomModal = ({
         onCancel={() => setModalOpen(false)}
         width={width}
         className={` ${className}`}
+        style={modalStyle}
       >
-        <div className=" py-2">
-          <div className=" flex items-center justify-between">
+        <div className="">
+          <div className=" flex items-center justify-between px-9 pt-9 pb-4">
             <h2 className=" text-[24px] font-[700] text-text-primary">
               {title}
             </h2>
@@ -39,8 +44,11 @@ const CustomModal = ({
               <Icon icon="material-symbols:close" />
             </button>
           </div>
-          <form onSubmit={handleSubmit} className="w-full mt-[0px]">
-            <div className="mt-[10px]">{children}</div>
+          <div className="w-full relative top-0 left-0 mb-2  h-[2px] bg-[#E8E9EE] mr-[-520px]">
+
+          </div>
+          <form onSubmit={handleSubmit} className="w-full mt-[0px] px-9 pb-9">
+            <div className="">{children}</div>
             <div className="mt-[38px] flex items-center gap-5">
               <CustomButton className={" w-full"}>{buttonText}</CustomButton>
               <button

@@ -11,7 +11,7 @@ const DeleteModal = ({
   onDelete,
 }) => {
   return (
-    <div className=" rounded-[30px] overflow-hidden">
+    <div className="">
       <Modal
         centered
         cancelText
@@ -25,8 +25,9 @@ const DeleteModal = ({
         width={520}
         className={` bg-red-500 pt-3 rounded-[30px]`}
       >
-        <div className=" rounded-[30px]">
-          <div className=" flex items-center justify-end">
+        <div className="bg-red-500 pt-10 rounded-[30px] h-14  -z-20 relative left-0 top-[-10px]"></div>
+        <div className=" rounded-[30px] mt-[-40px]">
+          <div className=" flex items-center justify-end mr-5">
             <button
               onClick={() => setModalOpen(false)}
               className=" w-[40px] text-3xl h-[40px] rounded-lg flex items-center justify-center hover:bg-[#FDEEEE] hover:text-[#FF5959] text-[#969BB3]"
@@ -54,7 +55,7 @@ const DeleteModal = ({
           </div>
         </div>
 
-        <div className=" flex items-center justify-center gap-5 pt-[40px] pb-4">
+        <div className=" flex items-center justify-center gap-5 pt-[40px] pb-9">
           <button
             onClick={onDelete}
             className="font-bold  h-[40px] px-6 rounded-[10px] bg-red-500 border border-red-500 text-white "
