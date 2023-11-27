@@ -8,7 +8,7 @@ const AdminDashboardHome = () => {
         <>
              <BreadCrumb title={"Dashboard"} links={[{title:"Home",url:"/admin/dashboard"},{title:"Dashboard",url:"/admin/dashboard"}]}/>
              <div className=" lg:mt-[-30px] mb-[30px]">
-                <div className='flex items-center justify-between'>
+                <div className='flex items-center lg:flex-row flex-col justify-between'>
                     <div className='lg:w-[65%] w-full '>
                         <div className=' bg-white py-[30px] rounded-[20px] px-[22px]'>
                             <TopSupportAgents/>
