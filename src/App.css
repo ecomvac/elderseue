@@ -338,3 +338,7 @@ body {
   padding: 9px !important;
 
 } */
+.ant-popover .ant-popover-inner{
+  margin: 0 !important;
+  padding: 0 !important;
+}
