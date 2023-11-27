@@ -2,7 +2,7 @@ import OverViewChart from '../OverViewChart/OverViewChart';
 import { useContext, useState } from 'react';
 import OverviewTrends from '../OverviewTrends';
 // import { SidebarContext } from '../../../../../../../../Context/SidebarContext';
-const AllOverview = ({trendsData}) => {
+const AllOverview = ({ trendsData }) => {
     const [data, setData] = useState(trendsData[0])
     // const {setOverViewActive} = useContext(SidebarContext)
     const handleTrend = (e) => {
@@ -15,8 +15,8 @@ const AllOverview = ({trendsData}) => {
     }
     return (
         <div className='xl:flex'>
-            <OverviewTrends chartInfo={chartInfo} overviewData={trendsData}></OverviewTrends>
-            <div className='xl:w-2/3 w-full xl:mt-[-54px] md:mt-7 sm:mt-7'><OverViewChart data={data}></OverViewChart></div>
+            <div className='w-full xl:w-1/3'><OverviewTrends chartInfo={chartInfo} overviewData={trendsData}></OverviewTrends></div>
+            <div className='w-full xl:w-2/3 border-l  -mt-[150px]'><OverViewChart data={data}></OverViewChart></div>
         </div>
     );
 };

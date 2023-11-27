@@ -20,76 +20,102 @@ const OverViewChart = ({ data }) => {
         data: tableData,
         xField: 'date',
         yField: 'value',
-        smooth:true,
+        smooth: true,
         xAxis: {
             range: [0, 1],
         },
         areaStyle: () => {
             return {
-              fill: 'l(270) 0:#ffffff 0.5:#7ec2f3 1:#1890ff',
+                fill: 'l(270) 0:#ffffff 0.5:#7ec2f3 1:#1890ff',
             };
-          },
+        },
     };
-    
-  
+
+
     return (
         <div>
-            <div className='lg2:flex justify-between md:flex'>
+            {/* --------------title--------------------- */}
+            <div className='lg2:flex justify-between md:flex py-6 px-8 border-b'>
                 <div className='flex flex-wrap items-center mr-2'>
-                    <h1 className='text-2xl mr-2.5 font-medium text-secondary'>{data?.title}</h1>
-                    <div className={`rounded-xl px-1.5 py-1 flex items-center
-                        ${(data?.category) === 'Critical' && 'bg-[#FEF2F2]'}
-                        ${(data?.category) === 'Average' && 'bg-[#E6F9EE]'}
-                        ${(data?.category) === 'Warning' && 'bg-[#FEF7EA]'}
+                    <h1 className='text-[22px] mr-2.5 font-bold text-text-primary'>{data?.title}</h1>
+                    <div className={`rounded-xl px-1.5  flex items-center 
+                        ${(data?.category) === 'Critical' && 'bg-[#FF5959] '}
+                        ${(data?.category) === 'Average' && 'bg-[#01BE4F]'}
+                        ${(data?.category) === 'Warning' && 'bg-[#EF9D00]'}
                     `}>
-                        <span className='mr-1'>
+                        <span className='mr-1 text-white'>
                             {
-                                data?.category==='Average' ?<Icon className={`text-lg text-[#01BE4F]`} icon="ion:ellipse-sharp" />:<Icon className={`text-2xl
-                            ${(data?.category) === 'Critical' && 'text-[#FF5959]'}
-                            ${(data?.category) === 'Warning' && 'text-[#FF974D]'}
+                                data?.category === 'Average' ? <Icon className={`my-2`} icon="ion:ellipse-sharp" /> : <Icon className={`text-3xl
+                            
                         `} icon="octicon:triangle-down-24" />
                             }
                         </span>
-                        <span className='text-secondary font-medium'>{data?.category}</span>
+                        <span className='text-white font-medium'>{data?.category}</span>
                     </div>
                 </div>
-                
+
                 <div className='lg2:my-0 md:my-0 sm:my-5'><Space direction="horizontal">
                     <RangePicker format='MM-DD' />
                 </Space></div>
             </div>
-            <div>
+            {/* -------------------cart-------------------- */}
+            <div className='px-6'>
                 <Area {...config} />
             </div>
-            <div className='flex items-center justify-between px-7 py-2 border rounded-lg my-7'>
+            {/* ----------------average box----------------- */}
+            <div className='flex items-center justify-between px-7 py-2 border-b border-t  my-7'>
                 <div>
-                    <p className='text-secondary text-sm font-medium'>Average</p><h1 className='text-2xl font-bold text-black'>{data?.average}</h1>
+                    <h1 className='text-2xl font-bold text-text-primary'>{data?.average}</h1>
+                    <p className='text-text-secondary text-base font-medium'>Average {data.title}</p>
+
                 </div>
                 <div className='lg2:flex items-center md:flex'>
-                    <div className='flex items-center lg2:mr-7 md:mr-7'>
-                        <Progress className='mr-2.5' type="circle" percent={16} showInfo={false} size={40} strokeWidth={13} strokeColor={'#01BE4F'} />
-                        <div>
-                            <p className='font-medium text-secondary'>Average</p>
-                            <p className='text-lg font-bold text-black'>16%</p>
+                    {/* ----------average-------------- */}
+                    <div className='flex items-center gap-3'>
+                        <div className='w-3 h-6 justify-center bg-green-200 rounded-xl flex items-center'>
+                            <div className='w-1.5 h-4 rounded-2xl bg-green-600'></div>
+                        </div>
+                        <div className='flex items-center lg2:mr-7 md:mr-7'>
+                            <div>
+                                <p className='  text-text-secondary text-base font-medium'>Average</p>
+                                <p className='text-2xl font-bold text-text-primary'>17%</p>
+                            </div>
+                            <Progress className='mr-2.5' type="circle" percent={16} showInfo={false} size={40} strokeWidth={13} strokeColor={'#01BE4F'} />
+
                         </div>
                     </div>
-                    <div className='flex items-center lg2:mr-7 md:mr-7 lg2:my-0 md:my-0 sm:my-2'>
-                        <Progress className='mr-2.5' type="circle" percent={45} showInfo={false} size={40} strokeWidth={13} strokeColor={'#FF974D'} />
-                        <div>
-                            <p className='font-medium text-secondary'>Warning</p>
-                            <p className='text-lg font-bold text-black'>45%</p>
+                    {/* -----------warning----------- */}
+                    <div className='flex items-center gap-3 '>
+                        <div className='w-3 h-6 justify-center bg-[#FF974D]/30 rounded-xl flex items-center'>
+                            <div className='w-1.5 h-4 rounded-2xl bg-[#FF974D]'></div>
+                        </div>
+                        <div className='flex items-center lg2:mr-7 md:mr-7 lg2:my-0 md:my-0 sm:my-2'>
+                            <div>
+                                <p className=' text-text-secondary text-base font-medium'>Warning</p>
+                                <p className='text-2xl font-bold text-text-primary'>35%</p>
+                            </div>
+                            <Progress className='mr-2.5' type="circle" percent={45} showInfo={false} size={40} strokeWidth={13} strokeColor={'#FF974D'} />
+
                         </div>
                     </div>
-                    <div className='flex items-center'>
-                        <Progress className='mr-2.5' type="circle" percent={39} showInfo={false} size={40} strokeWidth={13} strokeColor={'#FF5959'} />
-                        <div>
-                            <p className='font-medium text-secondary'>Critical</p>
-                            <p className='text-lg font-bold text-black'>39%</p>
+                    {/* "------------critical-------------" */}
+                    <div className='flex items-center gap-3 '>
+                        <div className='w-3 h-6 justify-center bg-[#FF5959]/30 rounded-xl flex items-center'>
+                            <div className='w-1.5 h-4 rounded-2xl bg-[#FF5959]'></div>
+                        </div>
+                        <div className='flex items-center'>
+                            <div>
+                                <p className='  text-text-secondary text-base font-medium'>Critical</p>
+                                <p className='text-2xl font-bold text-text-primary'>17%</p>
+                            </div>
+                            <Progress className='mr-2.5' type="circle" percent={39} showInfo={false} size={40} strokeWidth={13} strokeColor={'#FF5959'} />
+
                         </div>
                     </div>
                 </div>
             </div>
-            <div className='border rounded-lg'><Table id="trends-table" columns={columns} dataSource={tableData} /></div>
+            {/* ----------------table------------------- */}
+            <div className='border mb-6  mx-6'><Table id="trends-table" columns={columns} dataSource={tableData} /></div>
         </div>
     );
 };

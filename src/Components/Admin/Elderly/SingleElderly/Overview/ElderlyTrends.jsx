@@ -47,27 +47,61 @@ const ElderlyTrends = () => {
                           <span>
                             <span className='flex items-center gap-2 text-text-secondary'>
                               <span className='text-base'><Icon icon="streamline:target-solid" /></span>
-                              <span className='text-[15px] font-medium '>{trend.target} Target</span>
+                              <span className='text-[15px] font-medium '>{trend.target}
+                                {
+                                  trend.type === 'x' && <span>x</span>
+                                }
+                                {
+                                  trend.type === 'hr' && <span>hr</span>
+                                }
+                                {
+                                  trend.type === 'percent' && <span>%</span>
+                                }
+                                <span className='ml-1'>Target</span></span>
                             </span>
-                            <span className='flex items-center gap-2 text-text-secondary'>
-                              <span className='text-base text-[#58CB6C]'><Icon icon="clarity:curve-chart-solid" /></span>
-                              <span className='text-[15px] font-medium '>{trend.present}</span>
+                            <span className='flex items-center gap-1 text-text-secondary'>
+                              <img src={'/images/avrg.svg'} alt="" />
+                              {/* <span className='text-base text-[#58CB6C]'><Icon icon="clarity:curve-chart-solid" /></span> */}
+                              <span className='text-[15px] font-medium '>{trend.present}
+                                {
+                                  trend.type === 'x' && <span>x</span>
+                                }
+                                {
+                                  trend.type === 'hr' && <span>hr</span>
+                                }
+                                {
+                                  trend.type === 'percent' && <span>%</span>
+                                }
+                              </span>
                             </span>
                           </span>
                           <span className='flex flex-col'>
                             <span className='flex items-center justify-center text-[#58CB6C] text-xl font-bold gap-1'>
-                              <span><Icon icon="ic:round-show-chart" /></span>
+                              <img src={'/images/avrg2.svg'} alt="" />
                               <span>
-                                23
+                                {Number(trend.present) > Number(trend.target) && '+'}
+                                {Number(trend.present) - Number(trend.target)}
+                                {
+                                  trend.type === 'x' && <span>x</span>
+                                }
+                                {
+                                  trend.type === 'hr' && <span>hr</span>
+                                }
+                                {
+                                  trend.type === 'percent' && <span>%</span>
+                                }
                               </span>
                             </span>
-                            <span className='text-[13px] font-normal text-text-primary/50'>Less Than Target</span>
+                            <span className='text-[13px] font-normal text-text-primary/50'>
+                            {Number(trend.present) > Number(trend.target) ? 'More ':'Less '}
+                               Than Target
+                              </span>
                           </span>
                         </div>
                       </div>
                     </>)
                   }
-                  <button className='border rounded-lg p-2.5 w-full flex items-center justify-center gap-1 text-[13px] font-normal text-text-primary/50'>Load More <span><Icon  className='text-lg' icon="ant-design:arrow-down-outlined" /></span></button>
+                  <button className='border rounded-lg p-2.5 w-full flex items-center justify-center gap-1 text-[13px] font-normal text-text-primary/50'>Load More <span><Icon className='text-lg' icon="ant-design:arrow-down-outlined" /></span></button>
                 </div>
               </div>
             </div>
@@ -104,21 +138,52 @@ const ElderlyTrends = () => {
                           <span>
                             <span className='flex items-center gap-2 text-text-secondary'>
                               <span className='text-base'><Icon icon="streamline:target-solid" /></span>
-                              <span className='text-[15px] font-medium '>{trend.target} Target</span>
+                              <span className='text-[15px] font-medium '>{trend.target}
+                                {
+                                  trend.type === 'x' && <span>x</span>
+                                }
+                                {
+                                  trend.type === 'hr' && <span>hr</span>
+                                }
+                                {
+                                  trend.type === 'percent' && <span>%</span>
+                                } <span className='ml-1'>
+                                  Target</span></span>
                             </span>
                             <span className='flex items-center gap-2 text-text-secondary'>
                               <span className='text-base text-Warning'><Icon icon="clarity:curve-chart-solid" /></span>
-                              <span className='text-[15px] font-medium '>{trend.present}</span>
+                              <span className='text-[15px] font-medium '>{trend.present}
+                                {
+                                  trend.type === 'x' && <span>x</span>
+                                }
+                                {
+                                  trend.type === 'hr' && <span>hr</span>
+                                }
+                                {
+                                  trend.type === 'percent' && <span>%</span>
+                                }
+                              </span>
                             </span>
                           </span>
                           <span className='flex flex-col'>
                             <span className='flex items-center justify-center text-Warning text-xl font-bold gap-1'>
                               <span><Icon icon="ic:round-show-chart" /></span>
                               <span>
-                                23
+                                {Number(trend.present) > Number(trend.target) && '+'}
+                                {Number(trend.present) - Number(trend.target)}
+                                {
+                                  trend.type === 'x' && <span>x</span>
+                                }
+                                {
+                                  trend.type === 'hr' && <span>hr</span>
+                                }
+                                {
+                                  trend.type === 'percent' && <span>%</span>
+                                }
                               </span>
                             </span>
-                            <span className='text-[13px] font-normal text-text-primary/50'>Less Than Target</span>
+                            <span className='text-[13px] font-normal text-text-primary/50'>{Number(trend.present) > Number(trend.target) ? 'More ':'Less '}
+                               Than Target</span>
                           </span>
                         </div>
                       </div>
@@ -160,21 +225,52 @@ const ElderlyTrends = () => {
                           <span>
                             <span className='flex items-center gap-2 text-text-secondary'>
                               <span className='text-base'><Icon icon="streamline:target-solid" /></span>
-                              <span className='text-[15px] font-medium '>{trend.target} Target</span>
+                              <span className='text-[15px] font-medium '>{trend.target}
+                                {
+                                  trend.type === 'x' && <span>x</span>
+                                }
+                                {
+                                  trend.type === 'hr' && <span>hr</span>
+                                }
+                                {
+                                  trend.type === 'percent' && <span>%</span>
+                                }
+                                <span className='ml-1'>Target</span></span>
                             </span>
                             <span className='flex items-center gap-2 text-text-secondary'>
                               <span className='text-base text-Critical'><Icon icon="clarity:curve-chart-solid" /></span>
-                              <span className='text-[15px] font-medium '>{trend.present}</span>
+                              <span className='text-[15px] font-medium '>{trend.present}
+                                {
+                                  trend.type === 'x' && <span>x</span>
+                                }
+                                {
+                                  trend.type === 'hr' && <span>hr</span>
+                                }
+                                {
+                                  trend.type === 'percent' && <span>%</span>
+                                }
+                              </span>
                             </span>
                           </span>
                           <span className='flex flex-col'>
                             <span className='flex items-center justify-center text-Critical text-xl font-bold gap-1'>
                               <span><Icon icon="ic:round-show-chart" /></span>
                               <span>
-                                23
+                                {Number(trend.present) > Number(trend.target) && '+'}
+                                {Number(trend.present) - Number(trend.target)}
+                                {
+                                  trend.type === 'x' && <span>x</span>
+                                }
+                                {
+                                  trend.type === 'hr' && <span>hr</span>
+                                }
+                                {
+                                  trend.type === 'percent' && <span>%</span>
+                                }
                               </span>
                             </span>
-                            <span className='text-[13px] font-normal text-text-primary/50'>Less Than Target</span>
+                            <span className='text-[13px] font-normal text-text-primary/50'>{Number(trend.present) > Number(trend.target) ? 'More ':'Less '}
+                               Than Target</span>
                           </span>
                         </div>
                       </div>
