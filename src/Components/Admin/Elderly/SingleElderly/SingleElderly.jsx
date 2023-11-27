@@ -4,6 +4,7 @@ import { Icon } from '@iconify/react';
 import Notifications from './Notifications/Notifications';
 import { Tabs } from 'antd';
 import Devices from './Devices/Devices';
+import Overview from './Overview/Overview';
 const SingleElderly = () => {
 
     const tabData = [
@@ -11,7 +12,7 @@ const SingleElderly = () => {
             id: 1,
             icon: <Icon icon="lucide:bar-chart" />,
             title: 'Overview',
-            children: <Customers />
+            children: <Overview />
         },
         {
             id: 2,
