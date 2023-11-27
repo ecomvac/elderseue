@@ -327,3 +327,9 @@ body {
   color: white !important;
   top: 235px !important;
 }
+
+
+.ant-popover .ant-popover-inner{
+  margin: 0 !important;
+  padding: 0 !important;
+}

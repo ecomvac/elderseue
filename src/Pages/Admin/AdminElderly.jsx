@@ -5,14 +5,13 @@ import { Icon } from '@iconify/react';
 import SearchInput from '../../Shared/Search/SearchInput';
 import ElderlyTable from '../../Components/Admin/Elderly/ElderlyTable/ElderlyTable';
 import { Elderlies } from '../../assets/admin/data';
-import Filter from '../../Shared/sort/Filter';
 import AdminElderlyCreate from '../../Components/Admin/Elderly/ElderlyTable/AdminElderlyCreate';
+import FilterByTag from '../../Shared/FilterByTag/FilterByTag';
 
 const AdminElderly = () => {
     const [search, setSearch] = React.useState("");
     const [modalOPen,setModalOpen] = useState(false)
-    const [selected, setSelected] = useState("");
-    const data = ["Filter By Tag", "Filter By name",]
+
   
   
     const handelOpenModal = ()=>{
@@ -41,7 +40,7 @@ const AdminElderly = () => {
             setSearch={setSearch}
             placeholder="Search Elderly Profiles"
           />
-          <Filter selected={selected} setSelected={setSelected} data={data}/>
+          <FilterByTag/>
           <CustomButton onClick={()=>handelOpenModal()} className={" hidden lg:flex min-w-[80px]"}>
             <Icon icon="ic:baseline-add" className=" text-xl mr-1" />{" "}
             Create
