@@ -5,6 +5,7 @@ import Notifications from './Notifications/Notifications';
 import { Tabs } from 'antd';
 import Devices from './Devices/Devices';
 import Overview from './Overview/Overview';
+import InnerOverView from './Overview/InnerOverView/InnerOverView';
 const SingleElderly = () => {
 
     const tabData = [
@@ -12,13 +13,13 @@ const SingleElderly = () => {
             id: 1,
             icon: <Icon icon="lucide:bar-chart" />,
             title: 'Overview',
-            children: <Overview />
+            children: <Overview/>
         },
         {
             id: 2,
             icon: <Icon icon="basil:explore-outline" />,
             title: 'Activity',
-            children: <Notifications />
+            children: <InnerOverView/>
         },
         {
             id: 3,
@@ -57,7 +58,7 @@ const SingleElderly = () => {
         <>
             <div id='elderly'>
                 <Tabs
-                    defaultActiveKey="2"
+                    defaultActiveKey="1"
                     items={tabData.map((tab) => {
                         return {
                             label: (

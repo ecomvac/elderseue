@@ -10,7 +10,7 @@ const FamilyMember = () => {
     const columns = [
         {
             title: 'NAME',
-            render: (row) => <span className=' text-base font-normal text-text-secondary'>{row.name}</span>
+            render: (row) => <span className=' text-base font-normal text-text-secondary flex items-center gap-2.5'><span>{row.name}</span>{row?.role && <span className='text-primary bg-secondLightPrimary text-[13px] py-[3px] px-1.5 rounded-lg'>Admin</span>}</span>
         },
         {
             title: 'RELATION',

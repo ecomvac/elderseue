@@ -2,6 +2,7 @@ import React from 'react';
 import SectionWrapper from '../../../../../Shared/SectionWrapper';
 import { Pie, measureTextWidth } from '@ant-design/plots';
 import { Icon } from '@iconify/react';
+import MemberChat from './MemberChat';
 
 const MembersOverview = () => {
     function renderStatistic(containerWidth, text, fontSize, fontWeight) {
@@ -129,6 +130,9 @@ const MembersOverview = () => {
                             
                         </div>
                         <div></div>
+                    </div>
+                    <div>
+                        <MemberChat/>
                     </div>
                 </div>
 
