@@ -636,55 +636,55 @@ export const trendsData = [
         category: "Average",
         target: "90",
         present: "86",
-        average: "52",
+        average: "52%",
         table: [
             {
                 date: "June 1, 2023",
-                value: "50"
+                value: "50%"
             },
             {
                 date: "June 2, 2023",
-                value: "60"
+                value: "60%"
             },
             {
                 date: "June 3, 2023",
-                value: "52"
+                value: "52%"
             },
             {
                 date: "June 4, 2023",
-                value: "55"
+                value: "55%"
             },
             {
                 date: "June 5, 2023",
-                value: "60"
+                value: "60%"
             },
             {
                 date: "June 6, 2023",
-                value: "53"
+                value: "53%"
             },
             {
                 date: "June 7, 2023",
-                value: "55"
+                value: "55%"
             },
             {
                 date: "June 8, 2023",
-                value: "57"
+                value: "57%"
             },
             {
                 date: "June 9, 2023",
-                value: "50"
+                value: "50%"
             },
             {
                 date: "June 10, 2023",
-                value: "54"
+                value: "54%"
             },
             {
                 date: "June 11, 2023",
-                value: "53"
+                value: "53%"
             },
             {
                 date: "June 12, 2023",
-                value: "55"
+                value: "55%"
             }
         ]
     },

@@ -5,6 +5,7 @@ import { Area } from '@ant-design/plots';
 const { RangePicker } = DatePicker;
 
 const OverViewChart = ({ data }) => {
+    
     const columns = [
         {
             title: 'Date',
@@ -24,9 +25,10 @@ const OverViewChart = ({ data }) => {
         xAxis: {
             range: [0, 1],
         },
+        color: 'indigo',
         areaStyle: () => {
             return {
-                fill: 'l(270) 0:#ffffff 0.5:#7ec2f3 1:#1890ff',
+                fill: 'l(270) 0:#ffffff 0.5:#8f39ff67 1:#9039FF',
             };
         },
     };
@@ -54,11 +56,13 @@ const OverViewChart = ({ data }) => {
                     </div>
                 </div>
 
-                <div className='lg2:my-0 md:my-0 sm:my-5'><Space direction="horizontal">
-                    <RangePicker format='MM-DD' />
-                </Space></div>
+                <div id='overView' className='lg2:my-0 md:my-0 sm:my-5 '>
+                    <Space direction="horizontal">
+                        <RangePicker format='MM-DD' />
+                    </Space>
+                </div>
             </div>
-            {/* -------------------cart-------------------- */}
+            {/* -------------------chart-------------------- */}
             <div className='px-6'>
                 <Area {...config} />
             </div>

@@ -318,7 +318,8 @@ body {
 }
 #device .ant-tabs-ink-bar {
   /* height: 5px !important; */
-  background: #9039FF !important;
+  background: #8f39ff1c !important;
+  /* background: #9039FF !important; */
 }
 
 
@@ -327,3 +328,13 @@ body {
   color: white !important;
   top: 235px !important;
 }
+
+
+/* ---------------------date picker---------------- */
+/* #overView :where(.css-dev-only-do-not-override-nllxry).ant-picker{
+  border:none !important;
+  background-color: #F4EBFF !important;
+  border-radius: 10px !important;
+  padding: 9px !important;
+
+} */

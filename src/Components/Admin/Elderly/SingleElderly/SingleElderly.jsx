@@ -21,7 +21,7 @@ const SingleElderly = () => {
             id: 2,
             icon: <Icon icon="basil:explore-outline" />,
             title: 'Activity',
-            children: <InnerOverView/>
+            children: "<InnerOverView/>"
         },
         {
             id: 3,

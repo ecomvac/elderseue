@@ -183,7 +183,7 @@ const handleTrend=(title)=>{
                             <span className='flex flex-col'>
                               <span className='flex items-center justify-center text-Warning text-xl font-bold gap-1'>
                                 <span>
-                                  {Number(trend.present) > Number(trend.target) ? <Icon icon="material-symbols:show-chart" /> : <Icon icon="uil:chart-down" />}
+                                  {Number(trend.present) > Number(trend.target) ? <Icon icon="material-symbols:trending-up" /> : <Icon icon="uil:chart-down" />}
                                 </span>
                                 <span>
                                   {Number(trend.present) > Number(trend.target) && '+'}
@@ -278,7 +278,7 @@ const handleTrend=(title)=>{
                             <span className='flex flex-col'>
                               <span className='flex items-center justify-center text-Critical text-xl font-bold gap-1'>
                                 <span><span>
-                                  {Number(trend.present) > Number(trend.target) ? <Icon icon="material-symbols:show-chart" /> : <Icon icon="uil:chart-down" />}
+                                  {Number(trend.present) > Number(trend.target) ? <Icon icon="material-symbols:trending-up" /> : <Icon icon="uil:chart-down" />}
                                 </span></span>
                                 <span>
                                   {Number(trend.present) > Number(trend.target) && '+'}
