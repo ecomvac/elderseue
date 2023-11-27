@@ -22,9 +22,8 @@ const Trends = () => {
         }
     ]
     return (
-        <div className='bg-white p-6 rounded-lg drop-shadow-md'>
-            <div className='mb-7'>
-                <h1 className='text-2xl text-black font-medium'>Trends</h1>
+        <div className=''>
+            <div className=''>
             </div>
             <div>
                 <div className='gap-2'>
