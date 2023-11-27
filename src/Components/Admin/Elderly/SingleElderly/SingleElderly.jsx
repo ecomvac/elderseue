@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Customers from './Customers/Customers';
 import { Icon } from '@iconify/react';
 import Notifications from './Notifications/Notifications';
@@ -6,14 +6,16 @@ import { Tabs } from 'antd';
 import Devices from './Devices/Devices';
 import Overview from './Overview/Overview';
 import InnerOverView from './Overview/InnerOverView/InnerOverView';
+import { SidebarContext } from '../../../../Context/CustomContext';
 const SingleElderly = () => {
+    const { innerOverView } = useContext(SidebarContext)
 
     const tabData = [
         {
             id: 1,
             icon: <Icon icon="lucide:bar-chart" />,
             title: 'Overview',
-            children: <Overview/>
+            children: innerOverView? <Overview/>:<InnerOverView/>
         },
         {
             id: 2,

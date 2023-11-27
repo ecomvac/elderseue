@@ -66,7 +66,7 @@ const OverViewChart = ({ data }) => {
             <div className='flex items-center justify-between px-7 py-2 border-b border-t  my-7'>
                 <div>
                     <h1 className='text-2xl font-bold text-text-primary'>{data?.average}</h1>
-                    <p className='text-text-secondary text-base font-medium'>Average {data.title}</p>
+                    <p className='text-text-secondary text-base font-medium'>Average {data?.title}</p>
 
                 </div>
                 <div className='lg2:flex items-center md:flex'>

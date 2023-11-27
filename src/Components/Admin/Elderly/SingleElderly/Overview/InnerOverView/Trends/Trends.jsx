@@ -1,10 +1,18 @@
-import React, { useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import AllOverview from './AllOverview/AllOverview';
 import { trendsData } from '../../../../../../../assets/singleElderlyData'
-import SearchInput from '../../../../../../../Shared/Search/SearchInput';
 import { Icon } from '@iconify/react';
+import { SidebarContext } from '../../../../../../../Context/CustomContext';
 const Trends = () => {
     const [activeTab, setActiveTab] = useState('All')
+    const [data, setData] = useState(trendsData[0])
+    const { activeTrend } = useContext(SidebarContext)
+
+    useEffect(() => {
+        const data = trendsData.find(item => item.title === activeTrend)
+        setData(data)
+    }, [activeTrend])
+    console.log(data);
     const tabs = [
         {
             id: 1,
@@ -36,10 +44,10 @@ const Trends = () => {
                 </div>
             </div>
             <div>
-                {activeTab === 'All' && <AllOverview trendsData={trendsData} />}
-                {activeTab === 'Average' && <AllOverview trendsData={trendsData.filter((average) => average.category === "Average")}></AllOverview>}
-                {activeTab === 'Warning' && <AllOverview trendsData={trendsData.filter((average) => average.category === "Warning")}></AllOverview>}
-                {activeTab === 'Critical' && <AllOverview trendsData={trendsData.filter((average) => average.category === "Critical")}></AllOverview>}
+                {activeTab === 'All' && <AllOverview chartData={data}  trendsData={trendsData} />}
+                {activeTab === 'Average' && <AllOverview chartData={data} trendsData={trendsData.filter((average) => average.category === "Average")}></AllOverview>}
+                {activeTab === 'Warning' && <AllOverview chartData={data} trendsData={trendsData.filter((average) => average.category === "Warning")}></AllOverview>}
+                {activeTab === 'Critical' && <AllOverview chartData={data} trendsData={trendsData.filter((average) => average.category === "Critical")}></AllOverview>}
             </div>
         </div>
     );
