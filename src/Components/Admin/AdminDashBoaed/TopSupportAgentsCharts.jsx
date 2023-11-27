@@ -60,7 +60,7 @@ const TopSupportAgentsCharts = ({data}) => {
 
   return (
     <div className='mt-[35px]'>
-    <div className='w-full md:h-[532px] h-[300px] text-secondary'>
+    <div className='w-full md:h-[332px] h-[300px] text-secondary'>
        <Area {...config} />
    </div>
 </div>
