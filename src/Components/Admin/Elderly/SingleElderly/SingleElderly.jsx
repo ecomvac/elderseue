@@ -1,23 +1,27 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Customers from './Customers/Customers';
 import { Icon } from '@iconify/react';
 import Notifications from './Notifications/Notifications';
 import { Tabs } from 'antd';
 import Devices from './Devices/Devices';
+import Overview from './Overview/Overview';
+import InnerOverView from './Overview/InnerOverView/InnerOverView';
+import { SidebarContext } from '../../../../Context/CustomContext';
 const SingleElderly = () => {
+    const { innerOverView } = useContext(SidebarContext)
 
     const tabData = [
         {
             id: 1,
             icon: <Icon icon="lucide:bar-chart" />,
             title: 'Overview',
-            children: <Customers />
+            children: innerOverView? <Overview/>:<InnerOverView/>
         },
         {
             id: 2,
             icon: <Icon icon="basil:explore-outline" />,
             title: 'Activity',
-            children: <Notifications />
+            children: "<InnerOverView/>"
         },
         {
             id: 3,
@@ -56,7 +60,7 @@ const SingleElderly = () => {
         <>
             <div id='elderly'>
                 <Tabs
-                    defaultActiveKey="2"
+                    defaultActiveKey="1"
                     items={tabData.map((tab) => {
                         return {
                             label: (
