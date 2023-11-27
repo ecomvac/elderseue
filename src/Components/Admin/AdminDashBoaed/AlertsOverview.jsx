@@ -30,7 +30,7 @@ const AlertsOverview = () => {
         </h2>
         <SortDat selected={selected} setSelected={setSelected} data={data} />
       </div>
-      <div className=" flex items-start lg2:flex-row flex-col justify-between mt-8">
+      <div className=" flex items-start lg2:flex-row gap-5 flex-col justify-between mt-8">
         <div className="lg2:w-[30%] w-full ml-5">
           <div>
             <h3 className=" text-[13px] font-medium text-text-secondary">
