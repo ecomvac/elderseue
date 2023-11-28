@@ -4,10 +4,12 @@ import SearchInput from "../../Shared/Search/SearchInput";
 import SuspendedAdminTable from "../../Components/SuperAdmin/SuspendedAdmins/SuspendedAdminTable";
 import { bandUserData } from "../../assets/admin/data";
 import BreadCrumb from "../../Shared/TopHeading/BreadCrumb";
+import CreateSuspendModal from "../../Components/SuperAdmin/SuspendedAdmins/CreateSuspendModal";
 
 const SuspendedSuperAdmin = () => {
     const [search, setSearch] = React.useState("");
     const [selected, setSelected] = useState("");
+    const [modalOPen,setModalOpen] = useState(false)
     const data = ["Sort", "name", "type"]
 
     const setAdminData = [
@@ -46,7 +48,7 @@ const SuspendedSuperAdmin = () => {
                                 <h2 className=" text-dark-black font-bold text-lg">{data.title}</h2>
                             </div>
                             <div>
-                                <button className=" py-3 px-4 text-[13px] hover:bg-text-primary/30 duration-200 font-bold rounded-[10px] text-primary bg-primary/10">Set New Admin</button>
+                                <button onClick={()=>setModalOpen(true)} className=" py-3 px-4 text-[13px] hover:bg-text-primary/30 duration-200 font-bold rounded-[10px] text-primary bg-primary/10">Set New Admin</button>
                             </div>
                         </div>
                     ))}
@@ -80,6 +82,8 @@ const SuspendedSuperAdmin = () => {
           </div>
         </div>
       </div>
+        {/* ---------admin set modal-------- */}
+      <CreateSuspendModal modalOPen={modalOPen} setModalOpen={setModalOpen}/>
     </>
   );
 };
