@@ -2,7 +2,7 @@ import React from "react";
 
 const CustomInput = ({ label, type, register, error, placeholder }) => {
   return (
-    <div className="flex flex-col items-start w-full mt-5">
+    <div className="flex flex-col items-start w-full mt-3">
       <label
         htmlFor="otp"
         className="mb-1 font-medium text-[13px] text-[#1B2559]"

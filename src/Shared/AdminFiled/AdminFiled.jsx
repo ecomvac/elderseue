@@ -29,10 +29,10 @@ const AdminFiled = ({data}) => {
             <p  className=" text-[19px] font-[400] AkayaTelivigala-Regular">{data?.firstName?.slice(0,1)}{data?.lastName?.slice(0,1)}</p>
       </div>
       <div>
-        <h3 className="text-[16px] text-text-primary font-[500]">
+        <h3 className="text-[16px] text-text-primary mt-[-2px] p-0 font-[500]">
           {data?.firstName + " " + data?.lastName}
         </h3>
-        <p className=" text-[13px] font-[400] text-[#A3AED0]">{data.email}</p>
+        <p className=" text-[13px] mt-[-4px] font-[400] text-[#A3AED0]">{data.email}</p>
       </div>
     </div>
   );

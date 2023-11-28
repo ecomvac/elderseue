@@ -19,7 +19,10 @@ const ElderlyTableAction = ({data}) => {
           // await apiCallFunction(data);
           setDeleteModal(false)
           // Display the success toast
-          toast.custom((t) => <CustomToast t={t} text="Elderly profile has been successfully deleted" />);
+          setTimeout(()=>{
+            toast.custom((t) => <CustomToast t={t} text="Elderly profile has been successfully deleted" />);
+      
+          },900)
         } catch (error) {
           // Handle API call or other errors
           console.error('An error occurred:', error);

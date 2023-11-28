@@ -23,7 +23,10 @@ const AdminElderlyCreate = ({setModalOpen,modalOPen}) => {
       reset();
       setModalOpen(false)
       // Display the success toast
-      toast.custom((t) => <CustomToast t={t} text="New Elderly has been created Successfully!" />);
+      setTimeout(()=>{
+        toast.custom((t) => <CustomToast t={t} text="New Elderly has been created Successfully!" />);
+      
+      },900)
     } catch (error) {
       // Handle API call or other errors
       console.error('An error occurred:', error);

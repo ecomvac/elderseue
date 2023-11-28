@@ -70,12 +70,12 @@ const SelectRolePage = () => {
         navigate("/super-admin/dashboard");
       }
       reset();
-      toast.custom((t) => (
-        <CustomToast
-          t={t}
-          text={"Admin successfully logged into the admin dashboard."}
-        />
-      ));
+      // toast.custom((t) => (
+      //   <CustomToast
+      //     t={t}
+      //     text={"Admin successfully logged into the admin dashboard."}
+      //   />
+      // ));
     } else {
       toast.custom((t) => (
         <CustomErrorToast

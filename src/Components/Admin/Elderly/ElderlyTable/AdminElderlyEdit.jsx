@@ -26,7 +26,10 @@ const AdminElderlyEdit = ({item,setModalOpen,modalOPen}) => {
           // await apiCallFunction(data);
           // Display the success toast
           setModalOpen(false)
-          toast.custom((t) => <CustomToast t={t} text="Changes has been successfully made" />);
+          setTimeout(()=>{
+            toast.custom((t) => <CustomToast t={t} text="Changes has been successfully made" />);
+      
+          },900)
         } catch (error) {
           // Handle API call or other errors
           console.error('An error occurred:', error);

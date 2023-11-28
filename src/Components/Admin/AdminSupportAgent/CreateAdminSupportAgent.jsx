@@ -24,9 +24,12 @@ const CreateAdminSupportAgent = ({ modalOPen, setModalOpen }) => {
           setModalOpen(false);
     
           // Display the success toast
-          toast.custom((t) => (
-            <CustomToast t={t} text="New admin has been created Successfully!" />
-          ));
+          setTimeout(()=>{
+            toast.custom((t) => (
+              <CustomToast t={t} text="New Support Agent has been created Successfully!" />
+            ));
+          },900)
+
         } catch (error) {
           // Handle API call or other errors
           console.error("An error occurred:", error);

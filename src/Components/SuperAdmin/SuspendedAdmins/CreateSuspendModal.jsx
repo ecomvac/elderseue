@@ -1,26 +1,17 @@
-import React from 'react'
-import { useForm } from 'react-hook-form';
-import toast from 'react-hot-toast';
-import CustomToast from '../../../Shared/Tosat/CustomToast';
-import CustomModal from '../../../Shared/modal/CustomModal';
-import CustomInput from '../../../Shared/input/CustomInput';
+import React from "react";
+import CustomModal from "../../../Shared/modal/CustomModal";
+import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
+import CustomToast from "../../../Shared/Tosat/CustomToast";
+import CustomInput from "../../../Shared/input/CustomInput";
 
-const SupportAgentsEdit = ({item,setModalOpen,modalOPen}) => {
-    
+const CreateSuspendModal = ({ modalOPen, setModalOpen }) => {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm({
-    defaultValues:{
-      firstName:item.firstName,
-      lastName:item.lastName,
-      email:item.email,
-      businessAdress:item.businessAdress,
-      contactPerson:item.contactPerson,
-      contactNumber:item.contactNumber,
-    }
-  });
+    reset,
+  } = useForm();
 
   const onSubmit = (data) => {
     try {
@@ -28,30 +19,34 @@ const SupportAgentsEdit = ({item,setModalOpen,modalOPen}) => {
       // Replace this with your actual API call
       // await apiCallFunction(data);
 
-      setModalOpen(false)
+      reset();
+      setModalOpen(false);
+
       // Display the success toast
       setTimeout(()=>{
-        toast.custom((t) => <CustomToast t={t} text="Changes has been successfully made" />);
-
+        toast.custom((t) => (
+            <CustomToast t={t} text="New admin has been created Successfully!" />
+          ));
       },900)
+
     } catch (error) {
       // Handle API call or other errors
-      console.error('An error occurred:', error);
-      toast.error('An error occurred while creating a new admin.');
+      console.error("An error occurred:", error);
+      toast.error("An error occurred while creating a new admin.");
     }
   };
 
   return (
     <CustomModal
-        modalOPen={modalOPen}
-        setModalOpen={setModalOpen}
-        handleSubmit={handleSubmit(onSubmit)}
-        width={590}
-        title="Edit Support Agent Details"
-        buttonText={"Save Changes"}
+      modalOPen={modalOPen}
+      setModalOpen={setModalOpen}
+      handleSubmit={handleSubmit(onSubmit)}
+      width={590}
+      title="Set New Admin"
+      buttonText={"Set Admin"}
     >
         <div className='flex items-center gap-4'>
-            <CustomInput 
+            <CustomInput
               label={"First Name"}
               type={"text"}
               register={
@@ -85,7 +80,7 @@ const SupportAgentsEdit = ({item,setModalOpen,modalOPen}) => {
             </div>
 
             <CustomInput 
-              label={"E-mail"}
+              label={"Business E-mail"}
               type={"email"}
               register={
                   register("email",{
@@ -96,17 +91,7 @@ const SupportAgentsEdit = ({item,setModalOpen,modalOPen}) => {
                   })
               }
               error={errors.email}
-              placeholder={"Enter E-mail"}
-
-            />
-
-          <CustomInput 
-              label={"Business Address"}
-              type={"text"}
-              register={
-                  register("businessAdress")
-              }
-              placeholder={"Business Address"}
+              placeholder={"Enter Business E-mail"}
 
             />
 
@@ -114,8 +99,15 @@ const SupportAgentsEdit = ({item,setModalOpen,modalOPen}) => {
               label={"Contact Person"}
               type={"text"}
               register={
-                  register("contactPerson")
+                  register("contactPerson",
+                  {
+                    required: {
+                        value: true,
+                        message: "Please enter Contact Person",
+                        },
+                    })
               }
+              error={errors.contactPerson}
               placeholder={"Enter Contact Person"}
 
             />
@@ -124,13 +116,20 @@ const SupportAgentsEdit = ({item,setModalOpen,modalOPen}) => {
               label={"Contact Number"}
               type={"text"}
               register={
-                  register("contactNumber")
+                  register("contactNumber",
+                  {
+                    required: {
+                        value: true,
+                        message: "Please enter Contact Number",
+                        },
+                    })
               }
+              error={errors.contactNumber}
               placeholder={"Enter Contact Number"}
 
             />
     </CustomModal>
-  )
-}
+  );
+};
 
-export default SupportAgentsEdit
+export default CreateSuspendModal;

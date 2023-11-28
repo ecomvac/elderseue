@@ -20,7 +20,9 @@ const SuperAdminResetPasswordModal = ({modalOPen,setModalOpen}) => {
           reset();
           setModalOpen(false)
           // Display the success toast
-          toast.custom((t) => <CustomToast t={t} text="Temporary password has been successfully changed" />);
+          setTimeout(()=>{
+            toast.custom((t) => <CustomToast t={t} text="Temporary password has been successfully changed" />);
+          },900)
         } catch (error) {
           // Handle API call or other errors
           console.error('An error occurred:', error);
