@@ -4,6 +4,8 @@ import React, { useState } from 'react'
 import SupportAgentsEdit from './SupportAgentsEdit'
 import SupportAgentsResetPasswordModal from './SupportAgentsResetPasswordModal'
 import DeleteModal from '../../../Shared/delete/DeleteModal'
+import toast from 'react-hot-toast'
+import CustomToast from '../../../Shared/Tosat/CustomToast'
 
 const AdminSupportAgentTableAction = ({data}) => {
     const [edit,setEdit] = useState(false)
@@ -27,6 +29,13 @@ const AdminSupportAgentTableAction = ({data}) => {
         </div>
       );
 
+  const handalDelete = ()=>{
+    setDeleteModal(false)
+    setTimeout(()=>{
+      toast.custom((t) => <CustomToast t={t} text="Support Agent account has been successfully deleted" />);
+
+    },900)
+  }
 
   return (
     <>
@@ -43,7 +52,7 @@ const AdminSupportAgentTableAction = ({data}) => {
     {/* ============= admin password change Modal============ */}
       <SupportAgentsResetPasswordModal  modalOPen={resetModal} setModalOpen={setResetMOdal}/>
     {/* ============= admin delete Modal============ */}
-      <DeleteModal modalOPen={deleteModal} setModalOpen={setDeleteModal} title={"Are you sure to delete this support agent account? This"} title2={" process can be undo."}/>
+      <DeleteModal onDelete={()=>handalDelete()} modalOPen={deleteModal} setModalOpen={setDeleteModal} title={"Are you sure to delete this support agent account? This"} title2={" process can be undo."}/>
     </>
   )
 }

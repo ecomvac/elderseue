@@ -30,7 +30,10 @@ const SupportAgentsEdit = ({item,setModalOpen,modalOPen}) => {
 
       setModalOpen(false)
       // Display the success toast
-      toast.custom((t) => <CustomToast t={t} text="Changes has been successfully made" />);
+      setTimeout(()=>{
+        toast.custom((t) => <CustomToast t={t} text="Changes has been successfully made" />);
+
+      },900)
     } catch (error) {
       // Handle API call or other errors
       console.error('An error occurred:', error);

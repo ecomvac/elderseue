@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import SuperAdminEditModal from "./SuperAdminEditModal";
 import SuperAdminResetPasswordModal from "./SuperAdminResetPasswordModal";
 import DeleteModal from "../../../Shared/delete/DeleteModal";
+import toast from "react-hot-toast";
+import CustomToast from "../../../Shared/Tosat/CustomToast";
 
 const SuperAdminUserTableAction = ({data}) => {
     const [edit,setEdit] = useState(false)
@@ -28,6 +30,14 @@ const SuperAdminUserTableAction = ({data}) => {
       );
 
 
+      const handelDelete = ()=>{
+        setDeleteModal(false)
+        setTimeout(()=>{
+          toast.custom((t) => <CustomToast t={t} text="Support Agent account has been successfully deleted" />);
+        },900)
+      }
+
+
   return (
     <>
      <div>
@@ -43,7 +53,7 @@ const SuperAdminUserTableAction = ({data}) => {
     {/* ============= admin password change Modal============ */}
       <SuperAdminResetPasswordModal  modalOPen={resetModal} setModalOpen={setResetMOdal}/>
     {/* ============= admin delete Modal============ */}
-      <DeleteModal modalOPen={deleteModal} setModalOpen={setDeleteModal} title={"Are you sure to delete this admin account? This process"} title2={"can be undo."}/>
+      <DeleteModal onDelete={()=>handelDelete()} modalOPen={deleteModal} setModalOpen={setDeleteModal} title={"Are you sure to delete this admin account? This process"} title2={"can be undo."}/>
     </>
   );
 };

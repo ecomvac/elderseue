@@ -22,10 +22,13 @@ const CreateAdminModal = ({ modalOPen, setModalOpen }) => {
       reset();
       setModalOpen(false);
 
+      setTimeout(() => {
+        toast.custom((t) => (
+          <CustomToast t={t} text="New admin has been created Successfully!" />
+        ));
+       }, 900)
       // Display the success toast
-      toast.custom((t) => (
-        <CustomToast t={t} text="New admin has been created Successfully!" />
-      ));
+
     } catch (error) {
       // Handle API call or other errors
       console.error("An error occurred:", error);
