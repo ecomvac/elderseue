@@ -7,6 +7,8 @@ import Devices from './Devices/Devices';
 import Overview from './Overview/Overview';
 import InnerOverView from './Overview/InnerOverView/InnerOverView';
 import { SidebarContext } from '../../../../Context/CustomContext';
+import Subscriptions from './Subscriptions/Subscriptions';
+import Activity from './Activity/Activity';
 const SingleElderly = () => {
     const { innerOverView } = useContext(SidebarContext)
 
@@ -21,7 +23,7 @@ const SingleElderly = () => {
             id: 2,
             icon: <Icon icon="basil:explore-outline" />,
             title: 'Activity',
-            children: "<InnerOverView/>"
+            children: <Activity/>
         },
         {
             id: 3,
@@ -33,7 +35,7 @@ const SingleElderly = () => {
             id: 4,
             icon: <Icon icon="quill:creditcard" />,
             title: 'Subscriptions',
-            children: <Notifications />
+            children: <Subscriptions />
         },
         {
             id: 5,
