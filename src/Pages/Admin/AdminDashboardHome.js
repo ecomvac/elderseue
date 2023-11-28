@@ -4,6 +4,7 @@ import TopSupportAgents from '../../Components/Admin/AdminDashBoaed/TopSupportAg
 import AlertsOverview from '../../Components/Admin/AdminDashBoaed/AlertsOverview';
 import ElderliesOverview from '../../Components/Admin/AdminDashBoaed/ElderliesOverview/ElderliesOverview';
 import AdminDashBoardSupportAgents from '../../Components/Admin/AdminDashBoaed/AdminDashBoardSupportAgents/AdminDashBoardSupportAgents';
+import AdminDashBoardElderlies from '../../Components/Admin/AdminDashBoaed/AdminDashBoardElderlies/AdminDashBoardElderlies';
 
 const AdminDashboardHome = () => {
     return (
@@ -26,12 +27,12 @@ const AdminDashboardHome = () => {
                     </div>
                 </div>
 
-                <div className=' flex items-start justify-between gap-[30px]'>
+                <div className=' flex items-start flex-col lg2:flex-row justify-between gap-[30px]'>
                     <div className=' bg-white w-full py-[30px] rounded-[20px] mt-[30px]'>
                         <AdminDashBoardSupportAgents/>  
                     </div>
                     <div className=' bg-white w-full py-[30px] rounded-[20px]  mt-[30px]'>
-                            
+                        <AdminDashBoardElderlies/> 
                     </div>
                 </div>
              </div>
