@@ -282,6 +282,7 @@ export const trendsData = [
         subTitle: "List of what time wake up",
         target: "08:00",
         present: "07:56",
+        diff:'4m',
         category: "Average",
         average: "06:35",
         table: [
@@ -340,6 +341,7 @@ export const trendsData = [
         subTitle: "List of what time to sleep",
         target: "11:50",
         present: "11:40",
+        diff:'6min',
         category: "Average",
         average: "20:40",
         table: [
@@ -400,6 +402,7 @@ export const trendsData = [
         category: "Average",
         target: "20",
         present: "19",
+        diff:'1',
         average: "25 visits",
         table: [
             {
@@ -459,6 +462,7 @@ export const trendsData = [
         category: "Warning",
         target: "10",
         present: "14",
+        diff:'4',
         average: "9h 20m",
         table: [
             {
@@ -518,6 +522,7 @@ export const trendsData = [
         category: "Warning",
         target: "7",
         present: "2",
+        diff:'5',
         average: "9h 20m",
         table: [
             {
@@ -636,6 +641,7 @@ export const trendsData = [
         category: "Average",
         target: "90",
         present: "86",
+        diff:'4',
         average: "52%",
         table: [
             {
@@ -695,6 +701,7 @@ export const trendsData = [
         category: "Critical",
         target: "3",
         present: "1",
+        diff:'2',
         average: 8,
         table: [
             {
@@ -754,6 +761,7 @@ export const trendsData = [
         category: "Critical",
         target: "4",
         present: "14",
+        diff:'10',
         average: 6,
         table: [
             {
@@ -813,6 +821,7 @@ export const trendsData = [
         category: "Critical",
         target: "8",
         present: "0",
+        diff:'8',
         average: "6",
         table: [
             {

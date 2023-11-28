@@ -5,7 +5,7 @@ import { Area } from '@ant-design/plots';
 const { RangePicker } = DatePicker;
 
 const OverViewChart = ({ data }) => {
-    
+
     const columns = [
         {
             title: 'Date',
@@ -31,9 +31,47 @@ const OverViewChart = ({ data }) => {
                 fill: 'l(270) 0:#ffffff 0.5:#8f39ff67 1:#9039FF',
             };
         },
+        tooltip: {
+            customContent: (title, items) => {
+                return (
+                    <div>
+                        {items?.map((item, index) => {
+
+                            const { value,title } = item;
+                            return (
+                                <span
+                                    key={index}
+                                    className="flex flex-col  bg-text-primary rounded-[10px] mx-0"
+                                    data-index={index}
+                                >
+                                    <span className='text-white pl-2 pr-6 bg-white/10 w-full text-[13px] font-medium py-2'>{title}</span>
+                                    <span className="text-white pl-2   font-bold text-xl py-2">{value}</span>
+                                </span>
+                            );
+                        })}
+
+                    </div>
+                );
+            },
+        }
     };
 
-
+    const customPagination = {
+        nextText: 'Next',
+        prevText: 'Prev',
+        // locale: {
+        //   prevText: (
+        //     <span>
+        //       Prev <strong>Word</strong>
+        //     </span>
+        //   ),
+        //   nextText: (
+        //     <span>
+        //       Next <strong>Word</strong>
+        //     </span>
+        //   ),
+        // },
+      };
     return (
         <div>
             {/* --------------title--------------------- */}
@@ -119,7 +157,7 @@ const OverViewChart = ({ data }) => {
                 </div>
             </div>
             {/* ----------------table------------------- */}
-            <div className='border mb-6  mx-6'><Table id="trends-table" columns={columns} dataSource={tableData} /></div>
+            <div className='border mb-6  mx-6'><Table id="trends-table" columns={columns} dataSource={tableData} pagination={customPagination} /></div>
         </div>
     );
 };

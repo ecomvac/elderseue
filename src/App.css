@@ -85,32 +85,17 @@ body {
   font-size: 16px;
 }
 
-.ant-table-cell {
-  color: #5D6670
-}
 
-/* ---------style for ant design table pagination----------- */
-.ant-pagination .ant-pagination-item {
-  border-right: 2px solid red !important;
-  color: #5D6670;
-  margin: 0px 0px !important;
-}
 
-.ant-pagination .ant-pagination-item-active a {
-  color: black;
-  background: #E7E8EA;
-  border-radius: 4px;
-
-}
+/* ---------style for ant design table----------- */
 
 .ant-table-thead .ant-table-cell {
   background-color: green !important;
 }
 
-#reportPage-shadow {
-  box-shadow: 9px 13px 13px -13px black;
+.ant-table-cell {
+  color: #5D6670
 }
-
 
 .ant-table-thead>tr>th {
   color: #68709C !important;
@@ -123,19 +108,14 @@ body {
   padding: 16px 27px !important;
 }
 
-.ant-pagination-options {
-  display: none !important;
-}
-
 .admin__Table .ant-table-cell {
   padding: 15px 22px !important;
 }
 
-
-.ant-table-wrapper .ant-table-pagination.ant-pagination {
-  margin: 20px 32px !important;
+.ant-table-thead .ant-table-cell {
+  background-color: #F7F7F9 !important;
+  border-radius: 0px !important;
 }
-
 
 /* -----------support agent > dashboard > activity > elderly conditions date picker------------- */
 
@@ -163,10 +143,6 @@ body {
 }
 
 
-.ant-table-thead .ant-table-cell {
-  background-color: #F7F7F9 !important;
-  border-radius: 0px !important;
-}
 
 
 
@@ -212,7 +188,7 @@ body {
   height: 100%;
 }
 
-/* end its use for divice finding--------------- */
+
 
 /* ----------start rounded checkbox ----------- */
 .rounded-checkbox .ant-checkbox-wrapper {
@@ -223,15 +199,9 @@ body {
   border-radius: 50%;
 }
 
-/* ----------end rounded checkbox ----------- */
 
 
-/*---------- Report page shadow-------- */
-#reportPage-shadow {
-  box-shadow: 9px 13px 13px -13px black;
-}
-
-
+/* -----------------style for switch------------- */
 :where(.css-dev-only-do-not-override-nllxry).ant-switch.ant-switch-checked {
   background: #9039FF;
 }
@@ -249,9 +219,9 @@ body {
   padding: 15px 20px !important;
   margin-right: 15px !important;
   border-radius: 38px;
-  font-size:16px !important;
+  font-size: 16px !important;
   font-weight: 500 !important;
-  color:#2B3674;
+  color: #2B3674;
 }
 
 #elderly :where(.css-dev-only-do-not-override-nllxry).ant-tabs-top>.ant-tabs-nav::before {
@@ -260,10 +230,11 @@ body {
 
 
 #elderly :where(.css-dev-only-do-not-override-nllxry).ant-tabs .ant-tabs-tab.ant-tabs-tab-active {
- 
+
   background-color: #9039FF;
 }
-#elderly :where(.css-dev-only-do-not-override-nllxry).ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn{
+
+#elderly :where(.css-dev-only-do-not-override-nllxry).ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
   color: white !important;
 }
 
@@ -274,6 +245,7 @@ body {
   padding: 8px !important;
   border-radius: 38px;
 }
+
 #elderly .ant-tabs-ink-bar {
   display: none !important;
 }
@@ -290,9 +262,9 @@ body {
   padding: 15px 20px !important;
   margin-right: 15px !important;
   border-radius: 38px;
-  font-size:16px !important;
+  font-size: 16px !important;
   font-weight: 500 !important;
-  color:#2B3674;
+  color: #2B3674;
 }
 
 #device :where(.css-dev-only-do-not-override-nllxry).ant-tabs-top>.ant-tabs-nav::before {
@@ -301,13 +273,13 @@ body {
 
 
 #device :where(.css-dev-only-do-not-override-nllxry).ant-tabs .ant-tabs-tab.ant-tabs-tab-active {
- 
+
   background-color: #ff394a00;
 }
 
-#device :where(.css-dev-only-do-not-override-nllxry).ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn{
+#device :where(.css-dev-only-do-not-override-nllxry).ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
   color: #9039FF !important;
-} 
+}
 
 #device :where(.css-dev-only-do-not-override-nllxry).ant-tabs-top>.ant-tabs-nav,
 :where(.css-dev-only-do-not-override-nllxry).ant-tabs-bottom>.ant-tabs-nav {
@@ -316,6 +288,7 @@ body {
   padding: 8px !important;
   border-radius: 0px;
 }
+
 #device .ant-tabs-ink-bar {
   /* height: 5px !important; */
   background: #8f39ff1c !important;
@@ -324,13 +297,99 @@ body {
 
 
 /* -------------------------------members overview in customer------------- */
-#member .g2-html-annotation{
+#member .g2-html-annotation {
   color: white !important;
   top: 235px !important;
 }
 
 
-.ant-popover .ant-popover-inner{
+/* ---------------------style for popover------------------- */
+.ant-popover .ant-popover-inner {
   margin: 0 !important;
   padding: 0 !important;
+}
+
+
+/* --------------------ant table pagination---------------- */
+:where(.css-dev-only-do-not-override-nllxry).ant-table-wrapper .ant-table-pagination.ant-pagination {
+  padding-right: 22px !important;
+}
+
+.ant-pagination-prev {
+  border: 1px solid rgb(185, 182, 182);
+  border-radius: 8px !important;
+  padding:0px 6px !important;
+
+}
+
+.ant-pagination-prev ::after {
+  content: 'Previous';
+  margin-left:2px !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+}
+
+.ant-pagination-item-link ::after{
+  content: '' !important;
+}
+.ant-pagination-next {
+  border: 1px solid rgb(185, 182, 182);
+  border-radius: 8px !important;
+  margin-left: 8px !important;
+  padding:0px 6px !important;
+}
+
+.ant-pagination-next ::before {
+  content: 'Next';
+  margin-right: 6px !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+}
+
+.ant-pagination-item {
+  border: 1px solid rgb(185, 182, 182) !important;
+  /* border-top: 1px solid rgb(185, 182, 182) !important;
+  border-bottom: 1px solid rgb(185, 182, 182) !important;
+  border-right: 0px !important;
+  border-left: 0px !important; */
+  border-radius: 0px !important;
+  margin: 0px !important;
+}
+
+/* .ant-spin-container ul li:nth-child(2) {
+  border: 1px solid rgb(185, 182, 182) !important;
+  border-bottom-right-radius: 0px !important;
+  border-top-right-radius: 0px !important;
+  border-top-left-radius: 8px !important;
+  border-bottom-left-radius: 8px !important;
+  margin-left: 0px !important;
+} */
+/* .ant-pagination-item-1 {
+  border: 1px solid rgb(185, 182, 182) !important;
+  border-bottom-right-radius: 0px !important;
+  border-top-right-radius: 0px !important;
+  border-top-left-radius: 8px !important;
+  border-bottom-left-radius: 8px !important;
+  margin: 0px !important;
+} */
+
+/* .ant-spin-container ul li:nth-last-child(2) {
+  border-right: 1px solid rgb(185, 182, 182) !important;
+  border-bottom-right-radius: 8px !important;
+  border-top-right-radius: 8px !important;
+  border-top-left-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+  margin: 0px !important;
+} */
+
+.ant-pagination-item-active {
+  background-color: #9039FF !important;
+  border: 1px solid #9039FF !important;
+}
+
+.ant-pagination-item-active a {
+  color: white !important;
+  font-size: 13px !important;
+  font-weight: bold !important;
+
 }

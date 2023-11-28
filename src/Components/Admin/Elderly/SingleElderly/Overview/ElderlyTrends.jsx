@@ -70,7 +70,6 @@ const handleTrend=(title)=>{
                               </span>
                               <span className='flex items-center gap-1 text-text-secondary'>
                                 <img src={'/images/avrg.svg'} alt="" />
-                                {/* <span className='text-base text-[#58CB6C]'><Icon icon="clarity:curve-chart-solid" /></span> */}
                                 <span className='text-[15px] font-medium '>{trend.present}
                                   {
                                     trend.type === 'x' && <span>x</span>
@@ -88,8 +87,8 @@ const handleTrend=(title)=>{
                               <span className='flex items-center justify-center text-[#58CB6C] text-xl font-bold gap-1'>
                                 <img src={'/images/avrg2.svg'} alt="" />
                                 <span>
-                                  {Number(trend.present) > Number(trend.target) && '+'}
-                                  {Number(trend.present) - Number(trend.target)}
+                                  {Number(trend.present) > Number(trend.target) ? '+':'-'}
+                                  {trend.diff}
                                   {
                                     trend.type === 'x' && <span>x</span>
                                   }
@@ -186,8 +185,8 @@ const handleTrend=(title)=>{
                                   {Number(trend.present) > Number(trend.target) ? <Icon icon="material-symbols:trending-up" /> : <Icon icon="uil:chart-down" />}
                                 </span>
                                 <span>
-                                  {Number(trend.present) > Number(trend.target) && '+'}
-                                  {Number(trend.present) - Number(trend.target)}
+                                  {Number(trend.present) > Number(trend.target) ? '+':'-'}
+                                  {trend.diff}
                                   {
                                     trend.type === 'x' && <span>x</span>
                                   }
@@ -281,8 +280,8 @@ const handleTrend=(title)=>{
                                   {Number(trend.present) > Number(trend.target) ? <Icon icon="material-symbols:trending-up" /> : <Icon icon="uil:chart-down" />}
                                 </span></span>
                                 <span>
-                                  {Number(trend.present) > Number(trend.target) && '+'}
-                                  {Number(trend.present) - Number(trend.target)}
+                                  {Number(trend.present) > Number(trend.target) ? '+':'-'}
+                                  {(trend.diff)}
                                   {
                                     trend.type === 'x' && <span>x</span>
                                   }
