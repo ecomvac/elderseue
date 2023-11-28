@@ -1,20 +1,28 @@
 import { Icon } from '@iconify/react';
-import React from 'react';
+import React, { useState } from 'react';
 import SectionWrapper from '../../../../../Shared/SectionWrapper';
 import CustomButton from '../../../../../Shared/button/CustomButton';
+import CustomModal from '../../../../../Shared/modal/CustomModal';
+import CreateNotification from './CreateNotification';
 
 const AllNotifications = () => {
+
+    // -----------modal for create notifications-------------
+    const [openModal, setOpenModal] = useState(false)
+
     return (
         <SectionWrapper>
             <div className=''>
                 <div className="px-[22px] py-6 gap-2 flex justify-between ">
                     <h1 className="text-text-primary text-2xl font-bold " >Notifications</h1>
-                    <CustomButton className={'bg-secondLightPrimary'}>
-                        <span className='flex items-center text-primary'>
-                            <span>Create Notification</span>
-                            <span><Icon className='ml-2 font-bold' icon="basil:send-outline" /></span>
-                        </span>
-                    </CustomButton>
+                    <div className='group'>
+                        <CustomButton onClick={() => setOpenModal(true)} className={'bg-secondLightPrimary '}>
+                            <span className='flex items-center group-hover:text-white duration-300 text-primary'>
+                                <span>Create Notification</span>
+                                <span><Icon className='ml-2 font-bold' icon="basil:send-outline" /></span>
+                            </span>
+                        </CustomButton>
+                    </div>
                 </div>
 
                 <div>
@@ -31,7 +39,7 @@ const AllNotifications = () => {
                                         <span className='text-[13px] text-[#A3AED0] font-medium'>Just Now</span>
                                     </span>
                                 </div>
-                                
+
                                 <p className="text-sm text-text-secondary sm:my-1 lg2:my-0 md:my-0">A person wants access to enter in the house</p>
                                 <div className='my-3'>
                                     <button className='mr-3 bg-primary text-white text-[13px] rounded-lg font-medium py-2 px-3'>Accept</button>
@@ -159,6 +167,16 @@ const AllNotifications = () => {
 
                 </div>
             </div>
+            <CustomModal
+                modalOPen={openModal}
+                setModalOpen={setOpenModal}
+                width='500px'
+                className=''
+                title={"Write Custom Notifications"}
+                buttonText={'Send'}
+            >
+                <CreateNotification />
+            </CustomModal>
         </SectionWrapper>
 
     );

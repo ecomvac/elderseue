@@ -10,7 +10,7 @@ const CustomModal = ({
   className,
   title,
   children,
-  handleSubmit,
+  handleSubmit=()=>{},
   buttonText,
 }) => {
 
@@ -54,7 +54,7 @@ const CustomModal = ({
               <button
                 type="button"
                 onClick={() => setModalOpen(false)}
-                className="font-[500] text-[14px] h-[40px] w-full hover:border-primary px-5 rounded-[10px] bg-transparent text-[#666D90] border border-secondary"
+                className="font-[500] text-[14px] h-[40px] w-full hover:border-primary px-5 rounded-[10px] bg-transparent text-[#666D90] border border-gray-300"
               >
                 Cancel
               </button>
