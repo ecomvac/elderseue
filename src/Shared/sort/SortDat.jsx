@@ -1,20 +1,18 @@
 import React, { useState } from "react";
 import { Icon } from "@iconify/react";
 
-const SortDat = ({selected,setSelected,data,width,bg}) => {
+const SortDat = ({selected,setSelected,data,width,className}) => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="relative">
+    <div className="relative h-[37px]">
       <div
         onClick={() => setOpen(!open)}
-        style={{width:width,background:bg}}
-        className={` bg-primary/10 w-[150px] text-primary font-medium cursor-pointer px-2 py-2 flex items-center rounded-[10px] justify-between ${
-          !selected && " text-primary"
-        } ${ bg? " bg-text-primary/10" : ""}`}
+        style={{width:width}}
+        className={` w-[120px] text-[13px] font-medium cursor-pointer px-2 py-2 flex items-center rounded-[10px] justify-between ${className}`}
       >
         <div className="flex items-center gap-[1px]">
-         <Icon icon="basil:calendar-outline" className='text-[20px]' />
+         <Icon icon="basil:calendar-outline" className='text-[18px]' />
             {selected
                 ? selected?.length > 25
                     ? selected?.substring(0, 25) + "..."
@@ -24,7 +22,7 @@ const SortDat = ({selected,setSelected,data,width,bg}) => {
         <Icon icon="basil:caret-down-solid" className={`${open && "rotate-180"} text-[20px]`}/>
       </div>
             {
-              open && <ul style={{width:width}} className=" absolute z-40 w-[150px] overflow-hidden top-[45px] bg-white shadow-md left-0 border-[1px] border-[#90969D] rounded-[10px]">
+              open && <ul style={{width:width}} className=" absolute z-40 w-[120px] overflow-hidden top-[40px] bg-white shadow-md left-0 border-[1px] border-[#90969D] rounded-[10px]">
                     {
                         data.map((item,i)=>(
                             <li 

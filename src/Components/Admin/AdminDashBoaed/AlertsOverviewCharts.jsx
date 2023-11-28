@@ -141,7 +141,7 @@ const AlertsOverviewCharts = () => {
       };
 
   return (
-    <div className='h-[300px]'>
+    <div className='h-[280px]'>
         <Column {...config} />
     </div>
   )

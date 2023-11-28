@@ -1001,3 +1001,91 @@ export const adminAlertsData = [
         value:80,
     },
   ]
+
+
+  export const elderyOverview = [
+    {
+        type: 'Male',
+        day: 'Sun',
+        value: 20,
+        date: '14 Oct',
+    },
+    {
+        type: 'Male',
+        year: 'Mon',
+        value: 30,
+        date: '15 Oct',
+    },
+    {
+        type: 'Male',
+        year: 'Tue',
+        value: 40,
+        date: '16 Oct',
+    },
+    {
+        type: 'Male',
+        year: 'Wed',
+        value: 20,
+        date: '17 Oct',
+    },
+    {
+        type: 'Male',
+        year: 'Thu',
+        value: 30,
+        date: '18 Oct',
+    },
+    {
+        type: 'Male',
+        year: 'Fri',
+        value: 40,
+        date: '19 Oct',
+    },
+    {
+        type: 'Male',
+        year: 'Sat',
+        value: 50,
+        date: '20 Oct',
+    },
+    {
+        type: 'Female',
+        day: 'Sun',
+        value: 60,
+        date: '21 Oct',
+    },
+    {
+        type: 'Female',
+        year: 'Mon',
+        value: 40,
+        date: '22 Oct',
+    },
+    {
+        type: 'Female',
+        year: 'Tue',
+        value: 20,
+        date: '23 Oct',
+    },
+    {
+        type: 'Female',
+        year: 'Wed',
+        value: 60,
+        date: '24 Oct',
+    },
+    {
+        type: 'Female',
+        year: 'Thu',
+        value: 40,
+        date: '25 Oct',
+    },
+    {
+        type: 'Female',
+        year: 'Fri',
+        value: 20,
+        date: '26 Oct',
+    },
+    {
+        type: 'Female',
+        year: 'Sat',
+        value: 10,
+        date: '27 Oct',
+    },
+];

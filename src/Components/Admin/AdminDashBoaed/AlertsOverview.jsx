@@ -26,7 +26,7 @@ const AlertsOverview = () => {
     <div>
       <div className=" flex md:items-center md:flex-row flex-col gap-2 justify-between">
         <h2 className=" text-2xl font-bold text-text-primary">
-          Top Support Agents
+          Alerts Overview
         </h2>
         <SortDat selected={selected} setSelected={setSelected} data={data} />
       </div>

@@ -19,7 +19,7 @@ const AdminDashboardHome = () => {
                         </div>
                     </div>
                     <div className='lg2:w-[35%] w-full '>
-                        <div className=' bg-primary py-[30px] rounded-[20px] px-[22px]'>
+                        <div className=' bg-primary py-[30px] h-[850px] rounded-[20px] px-[22px]'>
                             <ElderliesOverview/>
                         </div>
                     </div>
