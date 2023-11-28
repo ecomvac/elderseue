@@ -4,7 +4,6 @@ import { Icon } from "@iconify/react";
 import CustomButton from "../../../Shared/button/CustomButton";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
-import CustomToast from "../../../Shared/Tosat/CustomToast";
 import CustomErrorToast from "../../../Shared/Tosat/CustomErrorToast";
 import { Checkbox } from "antd";
 

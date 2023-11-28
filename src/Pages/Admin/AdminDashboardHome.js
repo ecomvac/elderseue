@@ -3,6 +3,7 @@ import BreadCrumb from '../../Shared/TopHeading/BreadCrumb';
 import TopSupportAgents from '../../Components/Admin/AdminDashBoaed/TopSupportAgents';
 import AlertsOverview from '../../Components/Admin/AdminDashBoaed/AlertsOverview';
 import ElderliesOverview from '../../Components/Admin/AdminDashBoaed/ElderliesOverview/ElderliesOverview';
+import AdminDashBoardSupportAgents from '../../Components/Admin/AdminDashBoaed/AdminDashBoardSupportAgents/AdminDashBoardSupportAgents';
 
 const AdminDashboardHome = () => {
     return (
@@ -22,6 +23,15 @@ const AdminDashboardHome = () => {
                         <div className=' bg-primary py-[30px] h-[850px] rounded-[20px] px-[22px]'>
                             <ElderliesOverview/>
                         </div>
+                    </div>
+                </div>
+
+                <div className=' flex items-start justify-between gap-[30px]'>
+                    <div className=' bg-white w-full py-[30px] rounded-[20px] mt-[30px]'>
+                        <AdminDashBoardSupportAgents/>  
+                    </div>
+                    <div className=' bg-white w-full py-[30px] rounded-[20px]  mt-[30px]'>
+                            
                     </div>
                 </div>
              </div>
