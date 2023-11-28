@@ -1,36 +1,48 @@
 import React from 'react';
 import { Table, Progress, DatePicker, Space } from 'antd';
 import { Icon } from '@iconify/react';
-import { Area } from '@ant-design/plots';
+import { Area, G2 } from '@ant-design/plots';
+import { configuration } from '../../../../../../../../Shared/areaChartThemeConfiguration';
 const { RangePicker } = DatePicker;
 
 const OverViewChart = ({ data }) => {
 
-    const columns = [
-        {
-            title: 'Date',
-            dataIndex: 'date'
-        },
-        {
-            title: 'Value',
-            dataIndex: 'value'
-        }
-    ]
-    const tableData = data?.table;
+    const { registerTheme } = G2;
+    registerTheme('custom-theme', configuration)
     const config = {
-        data: tableData,
+        data: data.table, 
         xField: 'date',
         yField: 'value',
         smooth: true,
+        legend: false,
+        color:'indigo',
         xAxis: {
-            range: [0, 1],
+          grid: {
+            line: {
+              style: {
+                stroke: 'l(90) 1:#D9D9D9 0:#EBEBEB',
+                lineWidth: 1,
+                lineDash: [4, 5],
+                strokeOpacity: 1,
+                cursor: 'pointer',
+              },
+            },
+          },
         },
-        color: 'indigo',
-        areaStyle: () => {
-            return {
-                fill: 'l(270) 0:#ffffff 0.5:#8f39ff67 1:#9039FF',
-            };
+        yAxis: {
+          grid: {
+            line: {
+              style: {
+                stroke: '#9039FF',
+                lineWidth: 0,
+                cursor: 'pointer',
+              },
+            },
+          },
         },
+        areaStyle: () => ({
+          fill: 'l(270) 1:#9039FF 0.2:#fff',
+        }),
         tooltip: {
             customContent: (title, items) => {
                 return (
@@ -53,25 +65,60 @@ const OverViewChart = ({ data }) => {
                     </div>
                 );
             },
-        }
-    };
-
-    const customPagination = {
-        nextText: 'Next',
-        prevText: 'Prev',
-        // locale: {
-        //   prevText: (
-        //     <span>
-        //       Prev <strong>Word</strong>
-        //     </span>
-        //   ),
-        //   nextText: (
-        //     <span>
-        //       Next <strong>Word</strong>
-        //     </span>
-        //   ),
-        // },
+        },
+        theme:'custom-theme'
       };
+
+    const columns = [
+        {
+            title: 'Date',
+            dataIndex: 'date'
+        },
+        {
+            title: 'Value',
+            dataIndex: 'value'
+        }
+    ]
+    // const tableData = data?.table;
+    // const config = {
+    //     data: tableData,
+    //     xField: 'date',
+    //     yField: 'value',
+    //     smooth: true,
+    //     xAxis: {
+    //         range: [0, 1],
+    //     },
+    //     color: 'indigo',
+    //     areaStyle: () => {
+    //         return {
+    //             fill: 'l(270) 0:#ffffff 0.5:#8f39ff67 1:#9039FF',
+    //         };
+    //     },
+    //     tooltip: {
+    //         customContent: (title, items) => {
+    //             return (
+    //                 <div>
+    //                     {items?.map((item, index) => {
+
+    //                         const { value,title } = item;
+    //                         return (
+    //                             <span
+    //                                 key={index}
+    //                                 className="flex flex-col  bg-text-primary rounded-[10px] mx-0"
+    //                                 data-index={index}
+    //                             >
+    //                                 <span className='text-white pl-2 pr-6 bg-white/10 w-full text-[13px] font-medium py-2'>{title}</span>
+    //                                 <span className="text-white pl-2   font-bold text-xl py-2">{value}</span>
+    //                             </span>
+    //                         );
+    //                     })}
+
+    //                 </div>
+    //             );
+    //         },
+    //     }
+    // };
+
     return (
         <div>
             {/* --------------title--------------------- */}
@@ -157,7 +204,7 @@ const OverViewChart = ({ data }) => {
                 </div>
             </div>
             {/* ----------------table------------------- */}
-            <div className='border mb-6  mx-6'><Table id="trends-table" columns={columns} dataSource={tableData} pagination={customPagination} /></div>
+            <div className='border mb-6  mx-6'><Table id="trends-table" columns={columns} dataSource={data.table}/></div>
         </div>
     );
 };
