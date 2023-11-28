@@ -10,7 +10,7 @@ const OverViewChart = ({ data }) => {
     const { registerTheme } = G2;
     registerTheme('custom-theme', configuration)
     const config = {
-        data: data.table, 
+        data: data?.table, 
         xField: 'date',
         yField: 'value',
         smooth: true,
@@ -204,7 +204,7 @@ const OverViewChart = ({ data }) => {
                 </div>
             </div>
             {/* ----------------table------------------- */}
-            <div className='border mb-6  mx-6'><Table id="trends-table" columns={columns} dataSource={data.table}/></div>
+            <div className='border mb-6  mx-6'><Table id="trends-table" columns={columns} dataSource={data?.table}/></div>
         </div>
     );
 };

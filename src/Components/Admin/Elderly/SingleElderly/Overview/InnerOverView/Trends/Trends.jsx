@@ -6,13 +6,18 @@ import { SidebarContext } from '../../../../../../../Context/CustomContext';
 const Trends = () => {
     const [activeTab, setActiveTab] = useState('All')
     const [data, setData] = useState(trendsData[0])
+    console.log("from trends", data)
     const { activeTrend } = useContext(SidebarContext)
 
     useEffect(() => {
-        const data = trendsData.find(item => item.title === activeTrend)
-        setData(data)
+        const newData = trendsData.find(item => item.title === activeTrend)
+        if (newData) {
+            setData(newData)
+        }
     }, [activeTrend])
-    console.log(data);
+
+
+
     const tabs = [
         {
             id: 1,
@@ -32,7 +37,7 @@ const Trends = () => {
         }
     ]
     return (
-        <div className=''>
+        <div className='bg-white'>
             <div className='my-6 w-full xl:w-1/3 px-4'>
                 <div className=' mb-6'>
                     <input type="text" placeholder='Search Trends' className='text-[13px] font-medium outline-none w-full  py-[9px] px-3 pr-10 flex items-center justify-between border-[1px] focus:border-primary rounded-[10px]' />
@@ -44,7 +49,7 @@ const Trends = () => {
                 </div>
             </div>
             <div>
-                {activeTab === 'All' && <AllOverview chartData={data}  trendsData={trendsData} />}
+                {activeTab === 'All' && <AllOverview chartData={data} trendsData={trendsData} />}
                 {activeTab === 'Average' && <AllOverview chartData={data} trendsData={trendsData.filter((average) => average.category === "Average")}></AllOverview>}
                 {activeTab === 'Warning' && <AllOverview chartData={data} trendsData={trendsData.filter((average) => average.category === "Warning")}></AllOverview>}
                 {activeTab === 'Critical' && <AllOverview chartData={data} trendsData={trendsData.filter((average) => average.category === "Critical")}></AllOverview>}
