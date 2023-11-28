@@ -170,7 +170,7 @@ const AllNotifications = () => {
             <CustomModal
                 modalOPen={openModal}
                 setModalOpen={setOpenModal}
-                width='500px'
+                width='590px'
                 className=''
                 title={"Write Custom Notifications"}
                 buttonText={'Send'}

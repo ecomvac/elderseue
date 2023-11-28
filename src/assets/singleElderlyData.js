@@ -282,7 +282,7 @@ export const trendsData = [
         subTitle: "List of what time wake up",
         target: "08:00",
         present: "07:56",
-        diff:'4m',
+        diff: '4m',
         category: "Average",
         average: "06:35",
         table: [
@@ -341,7 +341,7 @@ export const trendsData = [
         subTitle: "List of what time to sleep",
         target: "11:50",
         present: "11:40",
-        diff:'6min',
+        diff: '6min',
         category: "Average",
         average: "20:40",
         table: [
@@ -397,12 +397,12 @@ export const trendsData = [
     },
     {
         title: "Rooms Visited",
-        type:'x',
+        type: 'x',
         subTitle: "Number of room visits",
         category: "Average",
         target: "20",
         present: "19",
-        diff:'1',
+        diff: '1',
         average: "25 visits",
         table: [
             {
@@ -457,12 +457,12 @@ export const trendsData = [
     },
     {
         title: "Time at Home",
-        type:'hr',
+        type: 'hr',
         subTitle: "Time spent at home",
         category: "Warning",
         target: "10",
         present: "14",
-        diff:'4',
+        diff: '4',
         average: "9h 20m",
         table: [
             {
@@ -517,12 +517,12 @@ export const trendsData = [
     },
     {
         title: "Time outdoors",
-        type:'hr',
+        type: 'hr',
         subTitle: "Time spent outside today",
         category: "Warning",
         target: "7",
         present: "2",
-        diff:'5',
+        diff: '5',
         average: "9h 20m",
         table: [
             {
@@ -577,7 +577,7 @@ export const trendsData = [
     },
     {
         title: "Device Usage Time",
-        type:'hr',
+        type: 'hr',
         subTitle: "Time spent using devices",
         category: "Warning",
         target: "2",
@@ -637,11 +637,11 @@ export const trendsData = [
     {
         title: "Sleeping Score",
         subTitle: "Score of sleeping ",
-        type:'percent',
+        type: 'percent',
         category: "Average",
         target: "90",
         present: "86",
-        diff:'4',
+        diff: '4',
         average: "52%",
         table: [
             {
@@ -697,11 +697,11 @@ export const trendsData = [
     {
         title: "Showers",
         subTitle: "Number of showers",
-        type:'x',
+        type: 'x',
         category: "Critical",
         target: "3",
         present: "1",
-        diff:'2',
+        diff: '2',
         average: 8,
         table: [
             {
@@ -756,12 +756,12 @@ export const trendsData = [
     },
     {
         title: "Coffees",
-        type:'x',
+        type: 'x',
         subTitle: "Number of coffees",
         category: "Critical",
         target: "4",
         present: "14",
-        diff:'10',
+        diff: '10',
         average: 6,
         table: [
             {
@@ -816,12 +816,12 @@ export const trendsData = [
     },
     {
         title: "Bathroom Visited",
-        type:'x',
+        type: 'x',
         subTitle: "The number of times has gone",
         category: "Critical",
         target: "8",
         present: "0",
-        diff:'8',
+        diff: '8',
         average: "6",
         table: [
             {
@@ -873,5 +873,318 @@ export const trendsData = [
                 value: "6"
             }
         ]
+    }
+]
+
+export const subscriptionData = [
+    {
+        title: "24/7 Monitoring and Emergency Response",
+        value: true,
+        category: "essential"
+
+    },
+    {
+        title: "Medication Reminders",
+        value: true,
+        category: "essential"
+    },
+    {
+        title: "Activity Tracking",
+        value: true,
+        category: "essential"
+    },
+    {
+        title: "Monthly video call with a caregiver or family member",
+        value: true,
+        category: "essential"
+    },
+    {
+        title: "Unlimited video calls with caregivers or family members",
+        value: true,
+        category: "essential"
+    },
+    {
+        title: "24/7 Monitoring and Emergency Response",
+        value: true,
+        category: "essential"
+    },
+    {
+        title: "Medication Reminders",
+        value: true,
+        category: "essential"
+    },
+    {
+        title: "Activity Tracking",
+        value: true,
+        category: "essential"
+    },
+    {
+        title: "Monthly video call with a caregiver or family member",
+        value: true,
+        category: "essential"
+    },
+    {
+        title: "Unlimited video calls with caregivers or family members",
+        value: false,
+        category: "essential"
+    },
+    {
+        title: "24/7 Monitoring and Emergency Response",
+        value: false,
+        category: "essential"
+    },
+    {
+        title: "Medication Reminders",
+        value: false,
+        category: "essential",
+        "dolar": "+$05:00"
+    },
+    {
+        title: "24/7 Monitoring and Emergency Response",
+        value: false,
+        category: "essential"
+
+    },
+    {
+        title: "Medication Reminders",
+        value: false,
+        category: "standard"
+    },
+    {
+        title: "Activity Tracking",
+        value: false,
+        category: "standard"
+    },
+    {
+        title: "Monthly video call with a caregiver or family member",
+        value: false,
+        category: "standard"
+    },
+    {
+        title: "Unlimited video calls with caregivers or family members",
+        value: false,
+        category: "standard"
+    },
+    {
+        title: "24/7 Monitoring and Emergency Response",
+        value: false,
+        category: "standard"
+    },
+    {
+        title: "Medication Reminders",
+        value: false,
+        category: "standard"
+    },
+    {
+        title: "Activity Tracking",
+        value: false,
+        category: "standard"
+    },
+    {
+        title: "Monthly video call with a caregiver or family member",
+        value: false,
+        category: "standard"
+    },
+    {
+        title: "Unlimited video calls with caregivers or family members",
+        value: false,
+        category: "standard"
+    },
+    {
+        title: "24/7 Monitoring and Emergency Response",
+        value: false,
+        category: "standard"
+    },
+    {
+        title: "Medication Reminders",
+        value: false,
+        category: "standard",
+        "dolar": "+$05:00"
+    },
+    {
+        title: "Monthly video call with a caregiver or family member",
+        value: false,
+        category: "standard"
+    },
+    {
+        title: "Unlimited video calls with caregivers or family members",
+        value: false,
+        category: "standard"
+    },
+    {
+        title: "24/7 Monitoring and Emergency Response",
+        value: false,
+        category: "standard"
+    },
+    {
+        title: "Medication Reminders",
+        value: false,
+        category: "standard"
+    },
+    {
+        title: "Activity Tracking",
+        value: false,
+        category: "standard"
+    },
+    {
+        title: "Monthly video call with a caregiver or family member",
+        value: false,
+        category: "standard"
+    },
+    {
+        title: "Unlimited video calls with caregivers or family members",
+        value: false,
+        category: "standard"
+    },
+    {
+        title: "24/7 Monitoring and Emergency Response",
+        value: false,
+        category: "standard"
+    },
+    {
+        title: "Medication Reminders",
+        value: false,
+        category: "standard",
+        "dolar": "+$05:00"
+    },
+    {
+        title: "24/7 Monitoring and Emergency Response",
+        value: false,
+        category: "premium"
+
+    },
+    {
+        title: "Medication Reminders",
+        value: false,
+        category: "premium"
+    },
+    {
+        title: "Activity Tracking",
+        value: false,
+        category: "premium"
+    },
+    {
+        title: "Monthly video call with a caregiver or family member",
+        value: false,
+        category: "premium"
+    },
+    {
+        title: "Unlimited video calls with caregivers or family members",
+        value: false,
+        category: "premium"
+    },
+    {
+        title: "24/7 Monitoring and Emergency Response",
+        value: false,
+        category: "premium"
+    },
+    {
+        title: "Medication Reminders",
+        value: false,
+        category: "premium"
+    },
+    {
+        title: "Activity Tracking",
+        value: false,
+        category: "premium"
+    },
+    {
+        title: "Monthly video call with a caregiver or family member",
+        value: false,
+        category: "premium"
+    },
+    {
+        title: "Unlimited video calls with caregivers or family members",
+        value: false,
+        category: "premium"
+    },
+    {
+        title: "24/7 Monitoring and Emergency Response",
+        value: false,
+        category: "premium"
+    },
+    {
+        title: "Medication Reminders",
+        value: false,
+        category: "premium",
+        "dolar": "+$05:00"
+    },
+    {
+        title: "24/7 Monitoring and Emergency Response",
+        value: false,
+        category: "premium"
+
+    },
+    {
+        title: "Medication Reminders",
+        value: false,
+        category: "premium"
+    },
+    {
+        title: "Activity Tracking",
+        value: false,
+        category: "premium"
+    },
+    {
+        title: "Monthly video call with a caregiver or family member",
+        value: false,
+        category: "premium"
+    },
+    {
+        title: "Unlimited video calls with caregivers or family members",
+        value: false,
+        category: "premium"
+    },
+    {
+        title: "24/7 Monitoring and Emergency Response",
+        value: false,
+        category: "premium"
+    },
+    {
+        title: "Unlimited video calls with caregivers or family members",
+        value: false,
+        category: "enterprise"
+    },
+    {
+        title: "24/7 Monitoring and Emergency Response",
+        value: false,
+        category: "enterprise"
+    },
+    {
+        title: "Medication Reminders",
+        value: false,
+        category: "enterprise",
+        "dolar": "+$05:00"
+    },
+    {
+        title: "24/7 Monitoring and Emergency Response",
+        value: false,
+        category: "enterprise"
+
+    },
+    {
+        title: "Medication Reminders",
+        value: false,
+        category: "enterprise"
+    },
+    {
+        title: "Activity Tracking",
+        value: false,
+        category: "enterprise"
+    },
+    {
+        title: "Monthly video call with a caregiver or family member",
+        value: false,
+        category: "enterprise"
+    },
+    {
+        title: "Unlimited video calls with caregivers or family members",
+        value: false,
+        category: "enterprise"
+    },
+    {
+        title: "24/7 Monitoring and Emergency Response",
+        value: false,
+        category: "enterprise"
     }
 ]

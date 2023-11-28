@@ -12,7 +12,7 @@ const CreateNotification = () => {
                     <span className='flex items-center p-3 '>
                         <button onClick={()=>setActiveType('classic')}>
                             {
-                                activeType==='classic'?<Icon className='text-primary text-[21px] mr-1.5' icon="lets-icons:done-ring-round-fill" />:<Icon className='text-[#B8BBCC] text-3xl' icon="octicon:dot-fill-24" />
+                                activeType==='classic'?<Icon className='text-primary text-[21px] mr-1.5' icon="lets-icons:done-ring-round-fill" />:<Icon className='text-[#B8BBCC] -ml-1 text-3xl' icon="octicon:dot-fill-24" />
                             }
                         </button>
                         <span className='text-text-primary text-base font-medium'>Classic</span>
@@ -20,7 +20,7 @@ const CreateNotification = () => {
                     <span className='flex items-center p-3 '>
                         <button onClick={()=>setActiveType('sms')}>
                             {
-                                activeType==='sms'?<Icon className='text-primary text-[21px] mr-1.5' icon="lets-icons:done-ring-round-fill" />:<Icon className='text-[#B8BBCC] text-3xl' icon="octicon:dot-fill-24" />
+                                activeType==='sms'?<Icon className='text-primary text-[21px] mr-1.5' icon="lets-icons:done-ring-round-fill" />:<Icon className='text-[#B8BBCC] -ml-1 text-3xl' icon="octicon:dot-fill-24" />
                             }
                         </button>
                         <span className='text-text-primary text-base font-medium'>SMS</span>
