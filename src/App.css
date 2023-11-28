@@ -330,6 +330,14 @@ body {
 }
 
 
+/* ---------------------date picker---------------- */
+/* #overView :where(.css-dev-only-do-not-override-nllxry).ant-picker{
+  border:none !important;
+  background-color: #F4EBFF !important;
+  border-radius: 10px !important;
+  padding: 9px !important;
+
+} */
 .ant-popover .ant-popover-inner{
   margin: 0 !important;
   padding: 0 !important;

@@ -36,9 +36,12 @@ const TopSupportAgentsCharts = ({data}) => {
             },
           },
         },
-        areaStyle: () => ({
-          fill: 'l(270) 1:#9039FF 0.2:#fff',
-        }),
+        color: 'indigo',
+        areaStyle: () => {
+            return {
+                fill: 'l(270) 0:#ffffff 0.5:#8f39ff67 1:#9039FF',
+            };
+        },
         tooltip: {
           customContent: (title, items) => { 
             const dataPoint = data.find(point => point.day === parseInt(title));

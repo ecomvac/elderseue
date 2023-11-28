@@ -28,7 +28,7 @@ const DashboardNav = ({name,user}) => {
 
 
   return (
-    <div className='w-full lg:pt-[45px] pt-5 flex items-center justify-end'>
+    <div className='w-full lg:pt-[45px] pt-5 flex items-center justify-end z-50'>
         <div className=' bg-white lg2:w-[600px] lg:w-[450px] w-full p-[10px] pr-5 flex items-center justify-between gap-5 rounded-full'>
             <div className=' w-[10%] lg:hidden'>
                 <button className=' flex items-center justify-start ml-3'><Icon icon="pepicons-pop:menu" className=' text-[25px]'/></button>

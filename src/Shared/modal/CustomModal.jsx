@@ -33,7 +33,7 @@ const CustomModal = ({
         style={modalStyle}
       >
         <div className="">
-          <div className=" flex items-center justify-between px-9 pt-9 pb-4">
+          <div className=" flex items-center justify-between px-9 pt-6 pb-5">
             <h2 className=" text-[24px] font-[700] text-text-primary">
               {title}
             </h2>
@@ -44,7 +44,7 @@ const CustomModal = ({
               <Icon icon="material-symbols:close" />
             </button>
           </div>
-          <div className="w-full relative top-0 left-0 mb-2  h-[2px] bg-[#E8E9EE] mr-[-520px]">
+          <div className="w-full relative top-0 left-0 mb-3  h-[2px] bg-[#E8E9EE] mr-[-520px]">
 
           </div>
           <form onSubmit={handleSubmit} className="w-full mt-[0px] px-9 pb-9">

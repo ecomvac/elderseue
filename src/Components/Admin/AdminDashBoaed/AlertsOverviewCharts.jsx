@@ -120,6 +120,9 @@ const AlertsOverviewCharts = () => {
         isStack: true,
         minColumnWidth: 30,
         maxColumnWidth: 30,
+        columnStyle: {
+          radius: [5, 5, 0, 0], // Set the radius for rounded corners
+        },
         yAxis: {
             label: {
               formatter: (v) => `${(v)}`,
@@ -128,6 +131,7 @@ const AlertsOverviewCharts = () => {
                 line: {
                   style: {
                     stroke: '#707EAE',
+                    color:"#fff",
                     lineWidth: 0.08,
                     cursor: 'pointer',
                   },
@@ -135,6 +139,7 @@ const AlertsOverviewCharts = () => {
               },
             },
       };
+
   return (
     <div className='h-[300px]'>
         <Column {...config} />
