@@ -12,6 +12,7 @@ const TopSupportAgentsCharts = ({data}) => {
         yField: 'caseSolved',
         smooth: true,
         legend: false,
+        color:'indigo',
         xAxis: {
           grid: {
             line: {
