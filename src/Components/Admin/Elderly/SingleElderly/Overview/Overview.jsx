@@ -2,6 +2,7 @@ import React from 'react'
 import ElderlyTrends from './ElderlyTrends'
 import Status from './Status'
 import Activities from './Activities'
+import Tags from './Tags'
 
 const Overview = () => {
 
@@ -43,6 +44,9 @@ const Overview = () => {
                 <Status />
                 <div className=' mt-[30px]'>
                     <Activities/>
+                </div>
+                <div className=' mt-[30px]'>
+                    <Tags/>
                 </div>
             </div>
             <div className='w-full lg2:w-2/3'>
