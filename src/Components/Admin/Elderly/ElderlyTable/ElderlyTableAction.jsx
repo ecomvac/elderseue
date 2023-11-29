@@ -1,13 +1,15 @@
 import { Icon } from '@iconify/react'
 import { Tooltip } from 'antd'
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import AdminElderlyEdit from './AdminElderlyEdit'
 import DeleteModal from '../../../../Shared/delete/DeleteModal'
 import toast from 'react-hot-toast'
 import CustomToast from '../../../../Shared/Tosat/CustomToast'
 import { useNavigate } from 'react-router-dom'
+import { SidebarContext } from '../../../../Context/CustomContext'
 
 const ElderlyTableAction = ({data}) => {
+  const {setElderlyId}=useContext(SidebarContext)
     const [edit,setEdit] = useState(false)
     const [deleteModal,setDeleteModal] = useState(false)
     const navigate = useNavigate()
@@ -44,7 +46,7 @@ const ElderlyTableAction = ({data}) => {
         </Tooltip>
 
         <Tooltip placement="topLeft" title="View">
-        <button onClick={()=>navigate(`/admin/dashboard/elderly/${data.id}`)}>
+        <button onClick={()=>{navigate(`/admin/dashboard/elderly/${data?.id}`);setElderlyId(data?.id)}}>
              <Icon icon="carbon:view-filled" className='text-[20px] text-light-black hover:text-[#0070F0]' />
         </button>
         </Tooltip>

@@ -1,17 +1,24 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import SectionWrapper from '../../../../../Shared/SectionWrapper';
 import { Icon } from '@iconify/react';
+import { SidebarContext } from '../../../../../Context/CustomContext';
 
 const Status = () => {
+    const { elderlyId } = useContext(SidebarContext)
     return (
         <>
             <SectionWrapper>
                 <div className='px-[22px] py-6'>
-                    <div style={{ backgroundImage: 'url("/images/satusImg.png")', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }} className='mb-5 p-5 rounded-[17px] bg-[#F43E3E]'>
+                    <div style={{ backgroundImage: 'url("/images/satusImg.png")', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }} className={`mb-5 p-5 rounded-[17px] ${elderlyId === (2 || 4 || 6) ? 'bg-primary' : 'bg-[#F43E3E]'}`}>
                         <div className='flex items-center gap-[14px]'>
-                            <span className='p-4 rounded-full bg-white'><Icon className='text-[22px] text-[#F43E3E] ' icon="lucide:siren" /></span>
+                            <span className='p-4 rounded-full bg-white'>
+                                {elderlyId === (2 || 4 || 6) ? <Icon className='text-[22px] text-primary' icon="octicon:shield-check-16" />: <Icon className='text-[22px] text-[#F43E3E] ' icon="lucide:siren" />}
+
+                            </span>
                             <span className='flex flex-col'>
-                                <span className='font-bold text-2xl text-white'>Critical</span>
+                                <span className='font-bold text-2xl text-white'>
+                                    {elderlyId === (2 || 4 || 6) ? <span>All Good</span> : <span>Critical</span>}
+                                </span>
                                 <span className='text-sm text-white opacity-80'>Something Went Wrong With Elderly</span>
                             </span>
                         </div>

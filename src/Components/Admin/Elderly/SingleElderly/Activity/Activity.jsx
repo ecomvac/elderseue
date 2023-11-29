@@ -2,20 +2,23 @@ import React from 'react';
 import Trends from '../Overview/InnerOverView/Trends/Trends';
 import SectionWrapper from '../../../../../Shared/SectionWrapper';
 import Video from './Video/Video';
+import Chart from './Chart';
 
 const Activity = () => {
     return (
         <div>
-            <div className='xl:flex items-center mt-5'>
+            <div className='flex flex-col xl:flex-row gap-[30px] mt-5'>
                 {/* ------------video-------------- */}
                 <div className='w-full xl:w-2/3'>
                     <div className='w-full'>
-                        <Video />
+                        {/* <Video /> */}
                     </div>
                 </div>
-                {/* ------------chart-------------- */}
-                <div>
-                    chart here
+                {/* ------------elderly conditions chart-------------- */}
+                <div className='w-full xl:w-1/3'>
+                    <div className='w-full'>
+                        <Chart />
+                    </div>
                 </div>
             </div>
             {/* ------------trends-------------- */}

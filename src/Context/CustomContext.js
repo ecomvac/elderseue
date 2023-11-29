@@ -6,6 +6,9 @@ const SidebarContextProvider = ({ children }) => {
   const [innerOverView, setinnerOverView] = useState(true)
   const [activeTrend, setActiveTrend] = useState('')
 
+  // ----------------set single elderly condition------------
+  const [elderlyId,setElderlyId]=useState('')
+
   const [show, setShow] = useState(false)
   const [overView, setOverView] = useState(true)
   const [overViewActive, setOverViewActive] = useState("")
@@ -19,7 +22,9 @@ const SidebarContextProvider = ({ children }) => {
     setinnerOverView,
     innerOverView,
     activeTrend,
-    setActiveTrend
+    setActiveTrend,
+    elderlyId,
+    setElderlyId
   }
 
   return (

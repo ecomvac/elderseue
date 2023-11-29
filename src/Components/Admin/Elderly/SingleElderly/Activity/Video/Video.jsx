@@ -22,7 +22,7 @@ const Video = () => {
   };
 
   return (
-    <div className="w-full h-full bg-white px-[22px] py-6  rounded-[10px]">
+    <div className="w-full h-full bg-white px-[22px] py-6  rounded-[20px]">
       <div className="flex items-center justify-between">
         <h1 className="text-2xl font-bold text-text-primary ">
           Live Camera Feed
