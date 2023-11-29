@@ -3,6 +3,7 @@ import ElderlyTrends from './ElderlyTrends'
 import Status from './Status'
 import Activities from './Activities'
 import Tags from './Tags'
+import Task from './Task'
 
 const Overview = () => {
 
@@ -51,6 +52,14 @@ const Overview = () => {
             </div>
             <div className='w-full lg2:w-2/3'>
                 <ElderlyTrends />
+                <div className=' flex items-start gap-[30px] mt-[30px]'>
+                    <div className=' w-full'>
+                        <Task/>
+                    </div>
+                    <div className=' w-full'>
+
+                    </div>
+                </div>
             </div>
 
         </div>
