@@ -6,7 +6,6 @@ import AllDevices from './AllDevices';
 import {devicesData} from '../../../../../assets/singleElderlyData'
 
 const DeviceSection = () => {
-// const firstTab= All <span >{devicesData.length}</span>
 let All = <span>All <span className='text-[13px] px-1 rounded-full bg-gray-300'>{devicesData.length}</span></span>
     const tabData = [
         {
