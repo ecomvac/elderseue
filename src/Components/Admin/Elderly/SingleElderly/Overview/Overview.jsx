@@ -1,6 +1,7 @@
 import React from 'react'
 import ElderlyTrends from './ElderlyTrends'
 import Status from './Status'
+import Activities from './Activities'
 
 const Overview = () => {
 
@@ -40,6 +41,9 @@ const Overview = () => {
             <div className='w-full lg2:w-1/3'>
                 {/* -----------status part--------------- */}
                 <Status />
+                <div className=' mt-[30px]'>
+                    <Activities/>
+                </div>
             </div>
             <div className='w-full lg2:w-2/3'>
                 <ElderlyTrends />
