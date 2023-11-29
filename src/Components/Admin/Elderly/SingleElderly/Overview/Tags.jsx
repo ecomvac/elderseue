@@ -6,6 +6,7 @@ import CustomErrorToast from "../../../../../Shared/Tosat/CustomErrorToast";
 
 const Tags = () => {
   const [tags, setTags] = useState("");
+  const [category,setCategory] = useState("elderly")
   const [data, setData] = useState([
     {
       id: 1,
@@ -20,27 +21,31 @@ const Tags = () => {
     {
       id: 3,
       title: "UWB/BLE tracking systems",
-      category: "elderly",
+      category: "system",
     },
     {
       id: 4,
       title: "Real-time location systems",
-      category: "elderly",
+      category: "system",
     },
     {
       id: 5,
       title: "RFID reader",
-      category: "elderly",
+      category: "system",
     },
   ]);
 
-  const addTages = () => {
+
+  console.log(category)
+
+  const addTags = (e) => {
+    e.preventDefault()
     if (!tags) {
       toast.custom((t) => (
         <CustomErrorToast t={t} text={"Please add a tags"} title={"Error"} />
       ));
     } else {
-      setData((pre) => [...pre, { id: Math.random(), tag: tags }]);
+      setData((pre) => [...pre, { id: Math.random(), title: tags,category:category }]);
       setTags("");
     }
   };
@@ -59,42 +64,84 @@ const Tags = () => {
             <select
               name=""
               id=""
+              onChange={(e)=>setCategory(e.target.value)}
               className="py-[8px] px-3 outline-none border-none text-primary bg-primary/10 rounded-[10px]"
             >
-              <option value="">Add as Elderly Tag</option>
-              <option value="">Add ad System Tags</option>
+              <option value="elderly">Add as Elderly Tag</option>
+              <option value="system">Add ad System Tags</option>
             </select>
           </div>
         </div>
 
         <div className=" py-6">
-          <form action="">
+          <form action="" onSubmit={addTags}>
             <input
               className="py-[18px] text-sm px-4 text-text-primary placeholder:text-[#A3AED0] h-[40px]  rounded-[16px] w-full outline-none   border-[1px] focus:border-primary"
               type={"text"}
               placeholder={"Type And Press ‘Enter’ To Add "}
               id="otp"
+              value={tags}
+              onChange={(e)=>setTags(e.target.value)}
             />
           </form>
         </div>
-
-        <div className="flex flex-wrap items-center gap-2 mt-5">
-          {data.map((item, i) => {
-            return (
-              <div
-                key={i}
-                className="flex items-center gap-3 bg-[#E6F1FE] rounded-full h-[37px] px-3"
-              >
-                <span className="text-[13px] font-bold text-primary">
-                  {item.title}
-                </span>
-                <button onClick={() => removeTags(item.id)}>
-                  <Icon icon="mi:close" className="text-[17px]" />
-                </button>
-              </div>
-            );
-          })}
+      {/* ======Elderly category tags======= */}
+        <div>
+          <div className=" flex items-center gap-2">
+            <div className=" bg-[#E19438]/20 w-[30px] h-[30px] rounded-full flex items-center justify-center">
+              <div className=" bg-[#E19438] w-[15px] h-[15px] rounded-full border-[3px] border-white"></div>
+            </div>
+            <h2 className=" text-[13px] font-bold text-[#E19438]">
+              Elderly Tags
+            </h2>
+          </div>
+          <div className="flex flex-wrap items-center gap-2 mt-2">
+            {data.filter(it=>it.category==="elderly").map((item, i) => {
+              return (
+                <div
+                  key={i}
+                  className="flex items-center gap-3 bg-[#E19438] rounded-full h-[37px] px-3"
+                >
+                  <span className="text-[13px] font-bold text-white">
+                    {item.title}
+                  </span>
+                  <button onClick={() => removeTags(item.id)}>
+                    <Icon icon="mi:close" className="text-[17px] text-white" />
+                  </button>
+                </div>
+              );
+            })}
+          </div>
         </div>
+        {/* ======system category tags======= */}
+        <div className=" mt-5">
+          <div className=" flex items-center gap-2">
+            <div className=" bg-[#5F78AD]/20 w-[30px] h-[30px] rounded-full flex items-center justify-center">
+              <div className=" bg-[#5F78AD] w-[15px] h-[15px] rounded-full border-[3px] border-white"></div>
+            </div>
+            <h2 className=" text-[13px] font-bold text-[#5F78AD]">
+            System Tags
+            </h2>
+          </div>
+          <div className="flex flex-wrap items-center gap-2 mt-2">
+            {data.filter(it=>it.category==="system").map((item, i) => {
+              return (
+                <div
+                  key={i}
+                  className="flex items-center gap-3 bg-[#5F78AD] rounded-full h-[37px] px-3"
+                >
+                  <span className="text-[13px] font-bold text-white">
+                    {item.title}
+                  </span>
+                  <button onClick={() => removeTags(item.id)}>
+                    <Icon icon="mi:close" className="text-[17px] text-white" />
+                  </button>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
       </div>
     </SectionWrapper>
   );
