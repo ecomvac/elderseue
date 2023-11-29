@@ -128,12 +128,12 @@ export const devicesData = [
         room: 'bed',
         status: 'active',
         document: {
-            title: '',
+            title: 'Sensor Readings',
             documents: {
-                one: '',
-                two: '',
-                three: '',
-                four: ''
+                tem:72,
+                humidity:55,
+                co2:450,
+                noise:35
             }
         }
     },
@@ -198,12 +198,12 @@ export const devicesData = [
         title: 'Sensor',
         status: 'inactive',
         document: {
-            title: '',
+            title: 'Sensor Readings',
             documents: {
-                one: '',
-                two: '',
-                three: '',
-                four: ''
+                tem:70,
+                humidity:60,
+                co2:430,
+                noise:45
             }
         }
     },

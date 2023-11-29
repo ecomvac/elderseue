@@ -9,6 +9,8 @@ const AllDevices = ({ data }) => {
     const [popoverStates, setPopoverStates] = useState(Array(data.length).fill(false));
     const [deviceId, setDeviceId] = useState(null)
 
+    const [showDocument, setShowDocument] = useState(null)
+
     const removeDevice = () => {
         const updatedDeviceData = deviceData.filter(device => device.id !== deviceId);
         setDeviceData(updatedDeviceData);
@@ -29,37 +31,62 @@ const AllDevices = ({ data }) => {
         <div className=' grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-h-[870px] overflow-y-auto'>
             {
                 deviceData?.map((device, index) => <>
-                    <div key={index} className='rounded-[18px] bg-white p-4'>
-                        <div className='flex justify-between'>
-                            <span className='flex flex-col gap-2.5'>
-                                <img src={device?.img} alt="Device" className='w-10' />
-                                <p className='font-medium text-lg text-text-primary'>{device?.name}</p>
-                            </span>
-                            <Popover className='flex items-start w-6 h-6' open={popoverStates[index]} onOpenChange={(newOpen) => handleOpenChange(index, newOpen)} content={() => content(index, device?.id)} placement="leftTop" trigger="click">
-                                <button className='hover:bg-primary/10 p-1 rounded-full'>
-                                    <img src={'/images/explore.svg'} className='w-5 h-5' alt="" />
-                                </button>
-                            </Popover>
+                    <div key={index} className='relative'>
+                        {
+                            showDocument===device.id && <>
+                                {
+                                    (device?.document) &&
+                                    <div className='bg-primary rounded-[18px] p-4 flex items-end justify-between absolute w-full'>
+                                        <span className='flex flex-col'>
+                                            <span className='text-white/95 font-bold text-base mb-2'>{device?.document?.title}</span>
+                                            <span className='flex flex-col gap-2'>
+                                                <span className='text-sm font-medium text-white/80'>Temperature: <span className='text-white/95 font-bold'>{device?.document?.documents?.tem}</span><sup>o</sup>F</span>
+                                                <span className='text-sm font-medium text-white/80'>Humidity: <span className='text-white/95 font-bold'>{device?.document?.documents?.humidity}%</span></span>
+                                                <span className='text-sm font-medium text-white/80'>CO2 Level: <span className='text-white/95 font-bold'>{device?.document?.documents?.co2}</span><sub>ppm</sub></span>
+                                                <span className='text-sm font-medium text-white/80'>Noise Level: <span className='text-white/95 font-bold'>{device?.document?.documents?.noise}</span><sub>dB</sub></span>
+                                            </span>
+                                        </span>
 
-                        </div>
-                        <div className='mt-5 flex items-center justify-between'>
-                            <span className='flex items-center gap-1'>
-                                <span className={
-                                    `
+                                        <span className={`cursor-pointer text-primary bg-white p-2 text-lg rounded-full`}>
+                                            <Icon onClick={() => setShowDocument(null)} icon="ci:file-document" />
+                                        </span>
+                                    </div>
+                                }
+                            </>
+                        }
+                        <div className='rounded-[18px] bg-white p-4'>
+                            <div className='flex justify-between'>
+                                <span className='flex flex-col gap-2.5'>
+                                    <img src={device?.img} alt="Device" className='w-10' />
+                                    <p className='font-medium text-lg text-text-primary'>{device?.name}</p>
+                                </span>
+                                <Popover className='flex items-start w-6 h-6' open={popoverStates[index]} onOpenChange={(newOpen) => handleOpenChange(index, newOpen)} content={() => content(index, device?.id)} placement="leftTop" trigger="click">
+                                    <button className='hover:bg-primary/10 p-1 rounded-full'>
+                                        <img src={'/images/explore.svg'} className='w-5 h-5' alt="" />
+                                    </button>
+                                </Popover>
+
+                            </div>
+                            <div className='mt-5 flex items-center justify-between'>
+                                <span className='flex items-center gap-1'>
+                                    <span className={
+                                        `
                                     ${device?.status === 'inactive' ? 'text-gray-500 p-[2px] bg-gray-200 rounded-full text-[14px]' : 'text-green-500 p-[2px] bg-green-200 rounded-full text-[14px]'}
                                     `
-                                }><Icon icon="octicon:dot-fill-24" /></span>
-                                <span className='text-base font-medium text-[#969BB3]'>{device?.title}</span>
-                            </span>
-                            <span className={`${device?.status === 'inactive' ? 'text-white bg-gray-400 p-2 text-lg rounded-full' : 'text-white bg-primary p-2 text-lg rounded-full'}`}>
-                                {device?.document ? <Icon icon="ci:file-document" /> : <Icon icon="mingcute:power-fill" />}
-                            </span>
+                                    }><Icon icon="octicon:dot-fill-24" /></span>
+                                    <span className='text-base font-medium text-[#969BB3]'>{device?.title}</span>
+                                </span>
+                                <span className={`cursor-pointer${device?.status === 'inactive' ? ' bg-gray-400 p-2 text-lg rounded-full' : ' bg-primary p-2 text-lg rounded-full'}`}>
+                                    {device?.document ? <Icon className='text-white' onClick={() => setShowDocument(device.id)} icon="ci:file-document" /> : <Icon className='text-white' icon="mingcute:power-fill" />}
+                                </span>
 
+                            </div>
                         </div>
+
                     </div>
                 </>)
             }
-            <DeleteModal onDelete={()=>removeDevice()} modalOPen={deleteModal} setModalOpen={setDeleteModal} title={"Are you sure to delete this device?"} title2={" Process can be undo."} />
+            <DeleteModal onDelete={() => removeDevice()} modalOPen={deleteModal} setModalOpen={setDeleteModal} title={"Are you sure to delete this device?"} title2={" Process can be undo."} />
         </div>
     );
 };

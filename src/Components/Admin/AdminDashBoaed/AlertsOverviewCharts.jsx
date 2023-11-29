@@ -69,7 +69,7 @@ const AlertsOverviewCharts = () => {
             value: 20,
           },
           {
-              type: 'Warning',
+            type: 'Warning',
             year: 'Sat',
             value: 10,
           },
@@ -79,32 +79,32 @@ const AlertsOverviewCharts = () => {
             value: 20,
           },
           {
-              type: 'Problem',
+            type: 'Problem',
             year: 'Mon',
             value: 30,
           },
           {
-              type: 'Problem',
+            type: 'Problem',
             year: 'Tue',
             value: 40,
           },
           {
-              type: 'Problem',
+            type: 'Problem',
             year: 'Wed',
             value: 20,
           },
           {
-              type: 'Problem',
+            type: 'Problem',
             year: 'Thu',
             value: 30,
           },
           {
-              type: 'Problem',
+            type: 'Problem',
             year: 'Fri',
             value: 40,
           },
           {
-              type: 'Problem',
+            type: 'Problem',
             year: 'Sat',
             value: 40,
           },
@@ -139,7 +139,6 @@ const AlertsOverviewCharts = () => {
               },
             },
       };
-
   return (
     <div className='h-[280px]'>
         <Column {...config} />
