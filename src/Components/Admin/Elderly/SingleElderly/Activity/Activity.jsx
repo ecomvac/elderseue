@@ -15,7 +15,7 @@ const Activity = () => {
                 {/* ------------video-------------- */}
                 <div className='w-full xl:w-2/3'>
                     <div className='w-full'>
-                        {/* <Video /> */}
+                        <Video />
                     </div>
                 </div>
                 {/* ------------elderly conditions chart-------------- */}

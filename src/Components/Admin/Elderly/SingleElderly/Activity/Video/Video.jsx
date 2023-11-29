@@ -37,7 +37,7 @@ const Video = () => {
       </div>
       {/* <RecordedHistoryModal modalInfo={modalInfo}></RecordedHistoryModal> */}
       <div className="xl:flex md:flex items-top mt-5 gap-2 ">
-        <div className="xl:block md:block sm:hidden max-h-[400px] overflow-hidden rounded-[10px] overflow-y-scroll customScrollbar">
+        <div className="hidden md:block max-h-[400px] overflow-hidden rounded-[10px] overflow-y-scroll customScrollbar">
           {videoData.map(
             (item, index) =>
               index !== activeScreen && (
