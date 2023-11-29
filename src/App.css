@@ -310,6 +310,11 @@ body {
 }
 
 
+/* ------------------tooltip----------- */
+.g2-tooltip{
+  background-color: rgba(255, 255, 255, 0) !important;
+}
+
 /* --------------------ant table pagination---------------- */
 :where(.css-dev-only-do-not-override-nllxry).ant-table-wrapper .ant-table-pagination.ant-pagination {
   padding-right: 22px !important;
@@ -348,11 +353,11 @@ body {
 
 .ant-pagination-item {
   border: 1px solid rgb(185, 182, 182) !important;
-  /* border-top: 1px solid rgb(185, 182, 182) !important;
+  border-top: 1px solid rgb(185, 182, 182) !important;
   border-bottom: 1px solid rgb(185, 182, 182) !important;
   border-right: 0px !important;
-  border-left: 0px !important; */
-  border-radius: 0px !important;
+  border-left: 0px !important;
+  /* border-radius: 0px !important; */
   margin: 0px !important;
 }
 
@@ -364,23 +369,23 @@ body {
   border-bottom-left-radius: 8px !important;
   margin-left: 0px !important;
 } */
-/* .ant-pagination-item-1 {
+.ant-pagination-item-1 {
   border: 1px solid rgb(185, 182, 182) !important;
   border-bottom-right-radius: 0px !important;
   border-top-right-radius: 0px !important;
   border-top-left-radius: 8px !important;
   border-bottom-left-radius: 8px !important;
   margin: 0px !important;
-} */
+}
 
-/* .ant-spin-container ul li:nth-last-child(2) {
+.ant-spin-container ul li:nth-last-child(2) {
   border-right: 1px solid rgb(185, 182, 182) !important;
   border-bottom-right-radius: 8px !important;
   border-top-right-radius: 8px !important;
   border-top-left-radius: 0px !important;
   border-bottom-left-radius: 0px !important;
   margin: 0px !important;
-} */
+}
 
 .ant-pagination-item-active {
   background-color: #9039FF !important;

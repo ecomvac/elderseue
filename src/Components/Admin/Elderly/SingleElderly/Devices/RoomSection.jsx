@@ -6,18 +6,24 @@ import DeleteModal from '../../../../../Shared/delete/DeleteModal';
 import { Popover } from 'antd';
 
 const RoomSection = () => {
+    const [data, setData] = useState(roomData)
     const [deleteModal, setDeleteModal] = useState(false);
-    const [popoverStates, setPopoverStates] = useState(Array(roomData.length).fill(false));
+    const [popoverStates, setPopoverStates] = useState(Array(data.length).fill(false));
+    const [roomId, setRoomId] = useState(null)
 
+    const removeRoom = () => {
+        const updatedDeviceData = data.filter(room => room.id !== roomId);
+        setData(updatedDeviceData);
+    }
     const handleOpenChange = (index, newOpen) => {
         const newPopoverStates = [...popoverStates];
         newPopoverStates[index] = newOpen;
         setPopoverStates(newPopoverStates);
     };
-    const content = (index) => (
+    const content = (index,id) => (
         <div className=" w-[190px]">
             <button className="text-sm flex w-full items-start rounded-[10px] font-medium text-light-black hover:bg-primary/10 hover:text-[#9039FF] py-3 px-5">Edit Room</button>
-            <button onClick={() => { setDeleteModal(true); handleOpenChange(index, false) }} className="text-sm w-full flex items-start rounded-[10px] font-medium text-light-black hover:bg-danger/10 hover:text-danger py-3 px-5">Delete Room</button>
+            <button onClick={() => { setDeleteModal(true); handleOpenChange(index, false);setRoomId(id) }} className="text-sm w-full flex items-start rounded-[10px] font-medium text-light-black hover:bg-danger/10 hover:text-danger py-3 px-5">Delete Room</button>
         </div>
     );
     return (
@@ -29,7 +35,7 @@ const RoomSection = () => {
                         <button className='flex items-center font-medium text-primary bg-secondLightPrimary px-4 py-[7px] rounded-[10px]'><span className='text-[19px]'><Icon icon="ic:sharp-add" /></span> <span className='text-[13px]'>Add Room</span></button>
                     </div>
                     <div className='p-[18px] rounded-[30px] bg-[#F6F8FF] grid grid-cols-1 gap-4 max-h-[730px] overflow-y-auto'>
-                        {roomData.map((singleRoom, index) => <>
+                        {data.map((singleRoom, index) => <>
                             <div key={index} className='rounded-[18px] bg-white p-4'>
                                 <div className='flex justify-between'>
                                     <span className='flex items-center gap-4'>
@@ -56,7 +62,7 @@ const RoomSection = () => {
                                         </span>
                                         <span className='text-[19px] font-medium text-text-primary'>{singleRoom.room}</span>
                                     </span>
-                                    <Popover className='flex items-start w-6 h-6' open={popoverStates[index]} onOpenChange={(newOpen) => handleOpenChange(index, newOpen)} content={() => content(index)} placement="leftTop" trigger="click">
+                                    <Popover className='flex items-start w-6 h-6' open={popoverStates[index]} onOpenChange={(newOpen) => handleOpenChange(index, newOpen)} content={() => content(index,singleRoom?.id)} placement="leftTop" trigger="click">
                                         <button className='hover:bg-primary/10 p-1 rounded-full'>
                                             <img src={'/images/explore.svg'} className='w-5 h-5' alt="" />
                                         </button>
@@ -85,7 +91,7 @@ const RoomSection = () => {
 
                     </div>
                 </div>
-                <DeleteModal modalOPen={deleteModal} setModalOpen={setDeleteModal} title={"Are you sure to delete this device?"} title2={" Process can be undo."} />
+                <DeleteModal onDelete={()=>removeRoom()} modalOPen={deleteModal} setModalOpen={setDeleteModal} title={"Are you sure to delete this device?"} title2={" Process can be undo."} />
             </SectionWrapper>
         </>
     );

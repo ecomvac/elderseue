@@ -3,10 +3,14 @@ import Trends from '../Overview/InnerOverView/Trends/Trends';
 import SectionWrapper from '../../../../../Shared/SectionWrapper';
 import Video from './Video/Video';
 import Chart from './Chart';
+import ElderlyFallDetected from './ElderlyFallDetected';
 
 const Activity = () => {
     return (
         <div>
+            <div>
+                <ElderlyFallDetected/>
+            </div>
             <div className='flex flex-col xl:flex-row gap-[30px] mt-5'>
                 {/* ------------video-------------- */}
                 <div className='w-full xl:w-2/3'>
