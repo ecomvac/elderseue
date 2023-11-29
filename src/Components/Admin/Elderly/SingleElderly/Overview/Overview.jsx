@@ -4,6 +4,7 @@ import Status from './Status'
 import Activities from './Activities'
 import Tags from './Tags'
 import Task from './Task'
+import Notes from './Notes'
 
 const Overview = () => {
 
@@ -57,7 +58,7 @@ const Overview = () => {
                         <Task/>
                     </div>
                     <div className=' w-full'>
-
+                        <Notes/>
                     </div>
                 </div>
             </div>
