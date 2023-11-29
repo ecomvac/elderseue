@@ -52,7 +52,6 @@ const SelectRolePage = () => {
   ];
 
   const onSubmit = (data) => {
-    console.log(data);
 
     if (
       data.email === "admin@gmail.com" ||

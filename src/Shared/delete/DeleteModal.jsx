@@ -57,7 +57,7 @@ const DeleteModal = ({
 
         <div className=" flex items-center justify-center gap-5 pt-[40px] pb-9">
           <button
-            onClick={onDelete}
+            onClick={()=>{onDelete();setModalOpen(false)}}
             className="font-bold  h-[40px] px-6 rounded-[10px] bg-red-500 border border-red-500 text-white "
           >
             Delete

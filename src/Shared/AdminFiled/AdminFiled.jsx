@@ -21,8 +21,6 @@ const AdminFiled = ({data}) => {
     return color;
   }
 
-  console.log("Color:", stringToColor(data?.firstName));
-
   return (
     <div className='flex items-center gap-2.5 w-full'>
       <div style={{background:stringToColor(data?.firstName),backgroundOpacity: "0.05" }}  className={`w-[40px] h-[40px] rounded-[11px] flex items-center justify-center bg-opacity-30`}>

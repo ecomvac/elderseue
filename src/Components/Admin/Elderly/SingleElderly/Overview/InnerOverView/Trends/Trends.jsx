@@ -6,7 +6,6 @@ import { SidebarContext } from '../../../../../../../Context/CustomContext';
 const Trends = () => {
     const [activeTab, setActiveTab] = useState('All')
     const [data, setData] = useState(trendsData[0])
-    console.log("from trends", data)
     const { activeTrend } = useContext(SidebarContext)
 
     useEffect(() => {
