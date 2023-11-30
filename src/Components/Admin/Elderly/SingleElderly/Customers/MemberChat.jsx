@@ -94,6 +94,17 @@ const MemberChat = () => {
           },
       },
   },
+  interactions: [{ type: 'element-active' }],
+  state: {
+      active: {
+          animate: { duration: 100, easing: 'easeLinear' },
+          style: {
+              lineWidth:3,
+              stroke: '#ffffff',
+
+          },
+      },
+  },
     minColumnWidth: 22,
     maxColumnWidth: 22,
     columnStyle: {
@@ -132,7 +143,7 @@ const MemberChat = () => {
     },
   };
   return (
-    <div className='h-[350px]'>
+    <div className='h-[459px]'>
       <Column {...config} />
     </div>
   );

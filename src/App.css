@@ -5,6 +5,29 @@
   padding: 0;
 } */
 
+
+@layer{
+  .scrollbar::-webkit-scrollbar {
+    width: 20px;
+    height: 20px;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    background: #f7f4ed;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: #e0cbcb;
+    border-radius: 100vh;
+    border: 3px solid #f6f7ed;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #c0a0b9;
+  }
+}
+
 body {
   width: 100%;
   /* font-family: "Poppins", "sans-serif", "roboto"; */
@@ -208,47 +231,7 @@ body {
 
 
 /* -------------------single Elderly tabs---------------------- */
-#elderly :where(.css-dev-only-do-not-override-nllxry).ant-tabs .ant-tabs-tab+.ant-tabs-tab {
-  margin-right: 15px !important;
-  margin-top: 0px !important;
-  margin-left: 0px !important;
-  margin-bottom: 0px !important;
-}
 
-#elderly :where(.css-dev-only-do-not-override-nllxry).ant-tabs .ant-tabs-tab {
-  padding: 15px 20px !important;
-  margin-right: 15px !important;
-  border-radius: 38px;
-  font-size: 16px !important;
-  font-weight: 500 !important;
-  color: #2B3674;
-}
-
-#elderly :where(.css-dev-only-do-not-override-nllxry).ant-tabs-top>.ant-tabs-nav::before {
-  border-bottom: 0px !important;
-}
-
-
-#elderly :where(.css-dev-only-do-not-override-nllxry).ant-tabs .ant-tabs-tab.ant-tabs-tab-active {
-
-  background-color: #9039FF;
-}
-
-#elderly :where(.css-dev-only-do-not-override-nllxry).ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
-  color: white !important;
-}
-
-#elderly :where(.css-dev-only-do-not-override-nllxry).ant-tabs-top>.ant-tabs-nav,
-:where(.css-dev-only-do-not-override-nllxry).ant-tabs-bottom>.ant-tabs-nav {
-  margin-bottom: 0px !important;
-  background-color: white;
-  padding: 8px !important;
-  border-radius: 38px;
-}
-
-#elderly .ant-tabs-ink-bar {
-  display: none !important;
-}
 
 /* -------------------devices tabs---------------------- */
 #device :where(.css-dev-only-do-not-override-nllxry).ant-tabs .ant-tabs-tab+.ant-tabs-tab {
@@ -290,9 +273,7 @@ body {
 }
 
 #device .ant-tabs-ink-bar {
-  /* height: 5px !important; */
-  background: #8f39ff1c !important;
-  /* background: #9039FF !important; */
+  background: #9039FF !important;
 }
 
 
@@ -313,9 +294,11 @@ body {
 /* ------------------tooltip----------- */
 .g2-tooltip{
   background-color: rgba(255, 255, 255, 0) !important;
+  box-shadow: 0px 0px 0px rgba(255, 255, 255, 0) !important;
 }
 
 /* --------------------ant table pagination---------------- */
+
 :where(.css-dev-only-do-not-override-nllxry).ant-table-wrapper .ant-table-pagination.ant-pagination {
   padding-right: 22px !important;
 }
@@ -353,22 +336,10 @@ body {
 
 .ant-pagination-item {
   border: 1px solid rgb(185, 182, 182) !important;
-  border-top: 1px solid rgb(185, 182, 182) !important;
-  border-bottom: 1px solid rgb(185, 182, 182) !important;
-  border-right: 0px !important;
-  border-left: 0px !important;
-  /* border-radius: 0px !important; */
+  border-radius: 0px !important;
   margin: 0px !important;
 }
 
-/* .ant-spin-container ul li:nth-child(2) {
-  border: 1px solid rgb(185, 182, 182) !important;
-  border-bottom-right-radius: 0px !important;
-  border-top-right-radius: 0px !important;
-  border-top-left-radius: 8px !important;
-  border-bottom-left-radius: 8px !important;
-  margin-left: 0px !important;
-} */
 .ant-pagination-item-1 {
   border: 1px solid rgb(185, 182, 182) !important;
   border-bottom-right-radius: 0px !important;
@@ -379,7 +350,6 @@ body {
 }
 
 .ant-spin-container ul li:nth-last-child(2) {
-  border-right: 1px solid rgb(185, 182, 182) !important;
   border-bottom-right-radius: 8px !important;
   border-top-right-radius: 8px !important;
   border-top-left-radius: 0px !important;
@@ -398,3 +368,17 @@ body {
   font-weight: bold !important;
 
 }
+
+/* ----- -----------------style for scrollbar----------------*/
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(190, 190, 190); 
+  border-radius: 10px;
+}
+/* .list_container {
+    overflow:auto;
+    height: 30px;
+    width: 10px;
+  } */

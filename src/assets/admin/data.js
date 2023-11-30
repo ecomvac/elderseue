@@ -1,7 +1,7 @@
 export const superAdmin = [
     {
         id:1,
-        firstName:"Geraldine",
+        firstName:"Aeraldine",
         lastName:"Kemmer",
         email:"Lucio.Rosenbaum12@gmail.com",
         contactNumber:"438-943-7669",
@@ -78,7 +78,7 @@ export const superAdmin = [
     },
     {
         id:8,
-        firstName:"Geraldine",
+        firstName:"Aeraldine",
         lastName:"Kemmer",
         email:"Lucio.Rosenbaum12@gmail.com",
         contactNumber:"438-943-7669",
@@ -89,7 +89,7 @@ export const superAdmin = [
     },
     {
         id:9,
-        firstName:"Geraldine",
+        firstName:"Aeraldine",
         lastName:"Kemmer",
         email:"Lucio.Rosenbaum12@gmail.com",
         contactNumber:"438-943-7669",
@@ -100,7 +100,7 @@ export const superAdmin = [
     },
     {
         id:10,
-        firstName:"Geraldine",
+        firstName:"Aeraldine",
         lastName:"Kemmer",
         email:"Ephraim.Wunsch8@example.com",
         contactNumber:"438-943-7669",
@@ -111,7 +111,7 @@ export const superAdmin = [
     },
     {
         id:11,
-        firstName:"Geraldine",
+        firstName:"Aeraldine",
         lastName:"Kemmer",
         email:"Lucio.Rosenbaum12@gmail.com",
         contactNumber:"438-943-7669",
@@ -176,8 +176,8 @@ export const superAdmin = [
         status:"Active",
     },
     {
-        id:1,
-        firstName:"Geraldine",
+        id:17,
+        firstName:"Aeraldine",
         lastName:"Kemmer",
         email:"Lucio.Rosenbaum12@gmail.com",
         contactNumber:"438-943-7669",
@@ -187,7 +187,7 @@ export const superAdmin = [
         status:"Active",
     },
     {
-        id:2,
+        id:18,
         firstName:"Bikash",
         lastName:"Roy",
         email:"Lucio.Rosenbaum12@gmail.com",
@@ -198,7 +198,7 @@ export const superAdmin = [
         status:"Inactive",
     },
     {
-        id:3,
+        id:19,
         firstName:"Aubrey",
         lastName:"Kuvalis",
         email:"Ephraim.Wunsch8@example.com",
@@ -209,7 +209,7 @@ export const superAdmin = [
         status:"Active",
     },
     {
-        id:4,
+        id:20,
         firstName:"Richard",
         lastName:"Breitenberg",
         email:"Catharine52@example.org",
@@ -220,7 +220,7 @@ export const superAdmin = [
         status:"Inactive",
     },
     {
-        id:5,
+        id:21,
         firstName:"Iris",
         lastName:"Ondricka",
         email:"Salma_Hintz89@example.com",
@@ -231,7 +231,7 @@ export const superAdmin = [
         status:"Inactive",
     },
     {
-        id:6,
+        id:22,
         firstName:"Sheryl",
         lastName:"Watsica",
         email:"Alexandra.Ortiz0@example.org",
@@ -242,7 +242,7 @@ export const superAdmin = [
         status:"Active",
     },
     {
-        id:7,
+        id:23,
         firstName:"Myrtle",
         lastName:"Monahan",
         email:"Rubye49@example.com",
@@ -253,8 +253,8 @@ export const superAdmin = [
         status:"Active",
     },
     {
-        id:8,
-        firstName:"Geraldine",
+        id:24,
+        firstName:"Aeraldine",
         lastName:"Kemmer",
         email:"Lucio.Rosenbaum12@gmail.com",
         contactNumber:"438-943-7669",
@@ -264,8 +264,8 @@ export const superAdmin = [
         status:"Active",
     },
     {
-        id:9,
-        firstName:"Geraldine",
+        id:25,
+        firstName:"Aeraldine",
         lastName:"Kemmer",
         email:"Lucio.Rosenbaum12@gmail.com",
         contactNumber:"438-943-7669",
@@ -275,8 +275,8 @@ export const superAdmin = [
         status:"Active",
     },
     {
-        id:10,
-        firstName:"Geraldine",
+        id:26,
+        firstName:"Aeraldine",
         lastName:"Kemmer",
         email:"Ephraim.Wunsch8@example.com",
         contactNumber:"438-943-7669",
@@ -286,8 +286,8 @@ export const superAdmin = [
         status:"Active",
     },
     {
-        id:11,
-        firstName:"Geraldine",
+        id:27,
+        firstName:"Aeraldine",
         lastName:"Kemmer",
         email:"Lucio.Rosenbaum12@gmail.com",
         contactNumber:"438-943-7669",
@@ -297,7 +297,7 @@ export const superAdmin = [
         status:"Active",
     },
     {
-        id:12,
+        id:28,
         firstName:"Bikash",
         lastName:"Roy",
         email:"Lucio.Rosenbaum12@gmail.com",
@@ -308,7 +308,7 @@ export const superAdmin = [
         status:"Inactive",
     },
     {
-        id:13,
+        id:29,
         firstName:"Aubrey",
         lastName:"Kuvalis",
         email:"Ephraim.Wunsch8@example.com",
@@ -319,7 +319,7 @@ export const superAdmin = [
         status:"Active",
     },
     {
-        id:14,
+        id:30,
         firstName:"Richard",
         lastName:"Breitenberg",
         email:"Catharine52@example.org",
@@ -330,7 +330,7 @@ export const superAdmin = [
         status:"Inactive",
     },
     {
-        id:15,
+        id:31,
         firstName:"Iris",
         lastName:"Ondricka",
         email:"Salma_Hintz89@example.com",
@@ -341,7 +341,7 @@ export const superAdmin = [
         status:"Inactive",
     },
     {
-        id:16,
+        id:32,
         firstName:"Sheryl",
         lastName:"Watsica",
         email:"Alexandra.Ortiz0@example.org",
@@ -358,7 +358,7 @@ export const superAdmin = [
 export const SupportAgents = [
     {
         id:1,
-        firstName:"Geraldine",
+        firstName:"Aeraldine",
         lastName:"Kemmer",
         email:"Lucio.Rosenbaum12@gmail.com",
         contactNumber:"438-943-7669",
@@ -456,7 +456,7 @@ export const SupportAgents = [
     },
     {
         id:8,
-        firstName:"Geraldine",
+        firstName:"Aeraldine",
         lastName:"Kemmer",
         email:"Lucio.Rosenbaum12@gmail.com",
         contactNumber:"438-943-7669",
@@ -470,7 +470,7 @@ export const SupportAgents = [
     },
     {
         id:9,
-        firstName:"Geraldine",
+        firstName:"Aeraldine",
         lastName:"Kemmer",
         email:"Lucio.Rosenbaum12@gmail.com",
         contactNumber:"438-943-7669",
@@ -484,7 +484,21 @@ export const SupportAgents = [
     },
     {
         id:10,
-        firstName:"Geraldine",
+        firstName:"Aeraldine",
+        lastName:"Kemmer",
+        email:"Ephraim.Wunsch8@example.com",
+        contactNumber:"438-943-7669",
+        contactPerson:"Javier Hudson IV",
+        businessName:"Tromp, Langosh and Tremblay",
+        businessAdress:"27 Rue de la Paix, Paris, France",
+        status:"Active",
+        CLOSEDCASES:356,
+        RATING:5.0,
+        COMMENTS:235,
+    },
+    {
+        id:11,
+        firstName:"Aeraldine",
         lastName:"Kemmer",
         email:"Ephraim.Wunsch8@example.com",
         contactNumber:"438-943-7669",
@@ -536,7 +550,7 @@ export const bandUserData = [
     
         {
             id:1,
-            firstName:"Geraldine",
+            firstName:"Aeraldine",
             lastName:"Kemmer",
             email:"Lucio.Rosenbaum12@gmail.com",
             contactNumber:"821-409-4239",
@@ -606,7 +620,7 @@ export const bandUserData = [
         },
         {
             id:8,
-            firstName:"Geraldine",
+            firstName:"Aeraldine",
             lastName:"Kemmer",
             email:"Lucio.Rosenbaum12@gmail.com",
             contactNumber:"566-594-3670",
@@ -626,7 +640,47 @@ export const bandUserData = [
         },
         {
             id:10,
-            firstName:"Geraldine",
+            firstName:"Aeraldine",
+            lastName:"Kemmer",
+            email:"Lucio.Rosenbaum12@gmail.com",
+            contactNumber:"566-594-3670",
+            suspendBy:"Jaime Purdy",
+            businessName:"Schinner, Brakus and Ziemann",
+            suspendData:"Mon Feb 06, 2023",
+        },
+        {
+            id:11,
+            firstName:"Myrtle",
+            lastName:"Monahan",
+            email:"Rubye49@example.com",
+            contactNumber:"834-563-6148",
+            suspendBy:"Ms. Dwight Leffler",
+            businessName:"Abbott Inc",
+            suspendData:"Mon Feb 06, 2023",
+        },
+        {
+            id:12,
+            firstName:"Aeraldine",
+            lastName:"Kemmer",
+            email:"Lucio.Rosenbaum12@gmail.com",
+            contactNumber:"566-594-3670",
+            suspendBy:"Jaime Purdy",
+            businessName:"Schinner, Brakus and Ziemann",
+            suspendData:"Mon Feb 06, 2023",
+        },
+        {
+            id:13,
+            firstName:"Myrtle",
+            lastName:"Monahan",
+            email:"Rubye49@example.com",
+            contactNumber:"834-563-6148",
+            suspendBy:"Ms. Dwight Leffler",
+            businessName:"Abbott Inc",
+            suspendData:"Mon Feb 06, 2023",
+        },
+        {
+            id:14,
+            firstName:"Aeraldine",
             lastName:"Kemmer",
             email:"Lucio.Rosenbaum12@gmail.com",
             contactNumber:"566-594-3670",
@@ -644,7 +698,7 @@ export const bandUserData = [
 export const Elderlies = [
     {
         id:1,
-        firstName:"Geraldine",
+        firstName:"Aeraldine",
         lastName:"Kemmer",
         email:"Lucio.Rosenbaum12@gmail.com",
         contactNumber:"438-943-7669",
@@ -747,7 +801,7 @@ export const Elderlies = [
     },
     {
         id:8,
-        firstName:"Geraldine",
+        firstName:"Aeraldine",
         lastName:"Kemmer",
         email:"Lucio.Rosenbaum12@gmail.com",
         contactNumber:"438-943-7669",
@@ -762,7 +816,7 @@ export const Elderlies = [
     },
     {
         id:9,
-        firstName:"Geraldine",
+        firstName:"Aeraldine",
         lastName:"Kemmer",
         email:"Lucio.Rosenbaum12@gmail.com",
         contactNumber:"438-943-7669",
@@ -777,7 +831,22 @@ export const Elderlies = [
     },
     {
         id:10,
-        firstName:"Geraldine",
+        firstName:"Aeraldine",
+        lastName:"Kemmer",
+        email:"Ephraim.Wunsch8@example.com",
+        contactNumber:"438-943-7669",
+        contactPerson:"Javier Hudson IV",
+        businessName:"Tromp, Langosh and Tremblay",
+        businessAdress:"27 Rue de la Paix, Paris, France",
+        status:"Active",
+        CRITICAL:"02",
+        WARNING:"04",
+        PROBLEM:"10",
+        MANAGEDBY:"Cornelius Little", 
+    },
+    {
+        id:11,
+        firstName:"Aeraldine",
         lastName:"Kemmer",
         email:"Ephraim.Wunsch8@example.com",
         contactNumber:"438-943-7669",

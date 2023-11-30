@@ -59,16 +59,18 @@ const Chart = () => {
                 </div>
             </div>
             <div>
-                <div className='mt-1 flex items-center justify-between py-2 px-5'>
-                    <h1 className='font-medium'>Elderly Visits</h1>
-                    <div className='py-2 px-3  text-xs border  border-white rounded-[10px]'>
-                        <select className=' bg-primary text-white cursor-pointer outline-none' onChange={handleTime} value={selectedTime}>
-                            <option value="Weekly">Weekly</option>
-                            <option value="Monthly">Monthly</option>
+                <div className='flex items-center justify-between'>
+                    <h1 className='font-bold text-white/95 text-xl'>Elderly Visits</h1>
+                    <div className='py-2 px-3  text-xs bg-white/20 rounded-[10px]'>
+                        <select className=' bg-white/5 text-white cursor-pointer outline-none' onChange={handleTime} value={selectedTime}>
+                            <option className='text-primary' value="Weekly">Weekly</option>
+                            <option className='text-primary' value="Monthly">Monthly</option>
                         </select>
                     </div>
                 </div>
-                <ElderlyConditionsChart data={data} />
+                <div className='mt-[70px]'>
+                    <ElderlyConditionsChart data={data} />
+                </div>
             </div>
         </div>
     );

@@ -8,7 +8,7 @@ const CreateNotification = () => {
     return (
         <div className='my-9'>
             <div className='mb-[14px] flex items-center justify-center'>
-                <span className='flex items-center gap-5'>
+                <span className='flex items-center w-[194px]'>
                     <span className='flex items-center p-3 '>
                         <button onClick={()=>setActiveType('classic')}>
                             {
