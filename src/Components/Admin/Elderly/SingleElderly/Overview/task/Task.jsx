@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import SectionWrapper from "../../../../../../Shared/SectionWrapper";
 import { Icon } from "@iconify/react";
-import CustomButton from "../../../../../../Shared/button/CustomButton";
 import toast from "react-hot-toast";
 import CustomErrorToast from "../../../../../../Shared/Tosat/CustomErrorToast";
 import AddTask from "./AddTask";

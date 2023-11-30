@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import CustomModal from "../../../../../../Shared/modal/CustomModal";
 import toast from "react-hot-toast";
-import CustomToast from "../../../../../../Shared/Tosat/CustomToast";
 import { useForm } from "react-hook-form";
 import CustomInput from "../../../../../../Shared/input/CustomInput";
 import { Icon } from "@iconify/react";
