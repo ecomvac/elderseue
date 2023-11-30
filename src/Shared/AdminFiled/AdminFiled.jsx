@@ -1,6 +1,6 @@
 import React from "react";
 
-const AdminFiled = ({data}) => {
+const AdminFiled = ({ data }) => {
   function stringToColor(string) {
     let hash = 0;
     let i;
@@ -23,8 +23,11 @@ const AdminFiled = ({data}) => {
 
   return (
     <div className='flex items-center gap-2.5 w-full'>
-      <div style={{background:stringToColor(data?.firstName),backgroundOpacity: "0.05" }}  className={`w-[40px] h-[40px] rounded-[11px] flex items-center justify-center bg-opacity-30`}>
-            <p  className=" text-[19px] font-[400] AkayaTelivigala-Regular">{data?.firstName?.slice(0,1)}{data?.lastName?.slice(0,1)}</p>
+      <div style={{ background: stringToColor(data?.firstName) }} className={`w-[40px] h-[40px] rounded-[11px] flex items-center justify-center bg-opacity-30`}>
+        <div className="w-[40px] h-[40px] bg-white/90 rounded-[11px] flex items-center justify-center ">
+          <p style={{ color: stringToColor(data?.firstName) }} className=" text-[19px] font-[400] AkayaTelivigala-Regular">{data?.firstName?.slice(0, 1)}{data?.lastName?.slice(0, 1)}</p>
+        </div>
+
       </div>
       <div>
         <h3 className="text-[16px] text-text-primary mt-[-2px] p-0 font-[500]">

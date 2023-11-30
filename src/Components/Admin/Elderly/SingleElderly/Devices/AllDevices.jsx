@@ -28,7 +28,7 @@ const AllDevices = ({ data }) => {
         </div>
     );
     return (
-        <div className=' grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-h-[870px] overflow-y-auto'>
+        <div className=' grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-h-[870px] overflow-y-auto mt-6'>
             {
                 deviceData?.map((device, index) => <>
                     <div key={index} className='relative'>
@@ -36,7 +36,7 @@ const AllDevices = ({ data }) => {
                             showDocument===device.id && <>
                                 {
                                     (device?.document) &&
-                                    <div className='bg-primary rounded-[18px] p-4 flex items-end justify-between absolute w-full'>
+                                    <div  onMouseLeave={() => setShowDocument(null)}  className='bg-primary rounded-[18px] p-4 flex items-end justify-between absolute w-full'>
                                         <span className='flex flex-col'>
                                             <span className='text-white/95 font-bold text-base mb-2'>{device?.document?.title}</span>
                                             <span className='flex flex-col gap-2'>
@@ -48,7 +48,7 @@ const AllDevices = ({ data }) => {
                                         </span>
 
                                         <span className={`cursor-pointer text-primary bg-white p-2 text-lg rounded-full`}>
-                                            <Icon onClick={() => setShowDocument(null)} icon="ci:file-document" />
+                                            <Icon icon="ci:file-document" />
                                         </span>
                                     </div>
                                 }
@@ -77,7 +77,7 @@ const AllDevices = ({ data }) => {
                                     <span className='text-base font-medium text-[#969BB3]'>{device?.title}</span>
                                 </span>
                                 <span className={`cursor-pointer${device?.status === 'inactive' ? ' bg-gray-400 p-2 text-lg rounded-full' : ' bg-primary p-2 text-lg rounded-full'}`}>
-                                    {device?.document ? <Icon className='text-white' onClick={() => setShowDocument(device.id)} icon="ci:file-document" /> : <Icon className='text-white' icon="mingcute:power-fill" />}
+                                    {device?.document ? <Icon className='text-white'onMouseEnter={() => setShowDocument(device.id)} icon="ci:file-document" /> : <Icon className='text-white' icon="mingcute:power-fill" />}
                                 </span>
 
                             </div>

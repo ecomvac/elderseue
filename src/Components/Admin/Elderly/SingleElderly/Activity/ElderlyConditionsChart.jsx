@@ -7,11 +7,39 @@ const ElderlyConditionsChart = ({ data }) => {
         xField: 'day',
         yField: 'value',
         color: "#ffffff",
+        // interactions: [
+        //     {
+        //       type: "active-region",
+        //       enable: false,
+        //     },
+        //   ],
+        interactions: [{ type: 'element-active' }],
+        state: {
+            active: {
+                animate: { duration: 100, easing: 'easeLinear' },
+                style: {
+                    lineWidth:3,
+                    stroke: '#ffffff',
+
+                },
+            },
+        },
+        // interactions: [
+        //     {
+        //         type: 'column-active',
+        //         cfg: {
+        //             style: {
+        //                 fill: 'red', // Set the column color to white on hover
+        //             },
+        //         },
+        //     },
+        // ],
+        
         minColumnWidth: 45,
         maxColumnWidth: 45,
         columnStyle: {
-          fill: '#dec4ff',
-          radius: [10,10, 10, 10], // Set the radius for rounded corners
+            fill: '#dec4ff',
+            radius: [10, 10, 10, 10], // Set the radius for rounded corners
         },
         yAxis: {
             label: {
@@ -37,18 +65,32 @@ const ElderlyConditionsChart = ({ data }) => {
             },
         },
         tooltip: {
-            customContent: (day, data) => {
-                const itemValue = data.map(v => v.value)
-                return `<div className="custom-tooltip rounded-[14px] px-[5px] py-[3px]">
-                            <h4 className="font-bold text-xl">${itemValue}</h4>
-                            <div className="text-[#5D6670]">${day}</div>
-                        </div>`;
+            customContent: (title, items) => {
+                return (
+                    <div>
+                        {items?.map((item, index) => {
+
+                            const { value, title } = item;
+                            return (
+                                <span
+                                    key={index}
+                                    className="flex flex-col  bg-text-primary rounded-[10px] mx-0"
+                                    data-index={index}
+                                >
+                                    <span className='text-white pl-2 pr-6 bg-white/10 w-full text-[13px] font-medium py-2'>{title}</span>
+                                    <span className="text-white pl-2 pr-5  font-bold text-xl py-2">{value} Visits</span>
+                                </span>
+                            );
+                        })}
+
+                    </div>
+                );
             },
-        }
+        },
 
     };
     return (
-        <div className='mt-2 h-[220px]'><Column {...config} /></div>
+        <div className=' h-[220px]'><Column {...config} /></div>
     );
 };
 
