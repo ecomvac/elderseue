@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SectionWrapper from '../../../../../Shared/SectionWrapper';
 import { Icon } from '@iconify/react';
 import { Tabs } from 'antd';
 import AllDevices from './AllDevices';
 import {devicesData} from '../../../../../assets/singleElderlyData'
+import AddDevice from './AddDevice';
 
 const DeviceSection = () => {
 let All = <span>All <span className='text-[13px] px-1 rounded-full bg-gray-300'>{devicesData.length}</span></span>
+// ----------modal for add device----------------
+const [modalOpen,setModalOpen]=useState(false)
+
     const tabData = [
         {
             id: 1,
@@ -64,7 +68,7 @@ let All = <span>All <span className='text-[13px] px-1 rounded-full bg-gray-300'>
                 <div className='px-[22px] py-6'>
                     <div className='mb-5 flex items-center justify-between'>
                         <span className='text-dark-black text-[23px] font-bold'>Devices</span>
-                        <button className='flex items-center font-medium text-primary bg-secondLightPrimary px-4 py-[7px] rounded-[10px]'><span className='text-[19px]'><Icon icon="ic:sharp-add" /></span> <span className='text-[13px]'>Add Device</span></button>
+                        <button onClick={()=>setModalOpen(true)} className='flex items-center font-medium text-primary bg-secondLightPrimary px-4 py-[7px] rounded-[10px]'><span className='text-[19px]'><Icon icon="ic:sharp-add" /></span> <span className='text-[13px]'>Add Device</span></button>
                     </div>
                     <div className='p-[18px] rounded-[30px] bg-[#F6F8FF]'>
                         {/* ---------tabs------------ */}
@@ -90,7 +94,8 @@ let All = <span>All <span className='text-[13px] px-1 rounded-full bg-gray-300'>
                 </div>
 
             </SectionWrapper>
-
+            {/* --------------------modal for add device--------------------- */}
+            <AddDevice setModalOpen={setModalOpen} modalOpen={modalOpen}/>
         </>
     );
 };

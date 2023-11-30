@@ -60,7 +60,6 @@ const SingleElderly = () => {
         {
             id: 1,
             title: 'Overview',
-            // children: 
         },
         {
             id: 2,
