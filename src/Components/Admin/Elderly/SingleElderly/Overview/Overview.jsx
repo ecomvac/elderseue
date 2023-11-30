@@ -3,7 +3,7 @@ import ElderlyTrends from './ElderlyTrends'
 import Status from './Status'
 import Activities from './Activities'
 import Tags from './Tags'
-import Task from './Task'
+import Task from './task/Task'
 import Notes from './Notes'
 
 const Overview = () => {

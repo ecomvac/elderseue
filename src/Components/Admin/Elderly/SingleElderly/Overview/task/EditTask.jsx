@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import CustomModal from "../../../../../Shared/modal/CustomModal";
+import CustomModal from "../../../../../../Shared/modal/CustomModal";
 import toast from "react-hot-toast";
-import CustomToast from "../../../../../Shared/Tosat/CustomToast";
+import CustomToast from "../../../../../../Shared/Tosat/CustomToast";
 import { useForm } from "react-hook-form";
-import CustomInput from "../../../../../Shared/input/CustomInput";
+import CustomInput from "../../../../../../Shared/input/CustomInput";
 import { Icon } from "@iconify/react";
 
-const AddTask = ({ modalOPen, setModalOpen }) => {
+const EditTask = ({task, modalOPen, setModalOpen }) => {
   const [priorityActive, setPriorityActive] = useState("Medium Priority");
   const [activeRecurrence, setActiveRecurrence] = useState("One Time");
   const [activeDay, setActiveDay] = useState("");
@@ -18,7 +18,14 @@ const AddTask = ({ modalOPen, setModalOpen }) => {
     handleSubmit,
     formState: { errors },
     reset,
-  } = useForm();
+  } = useForm({
+    defaultValues:{
+        title:task.title,
+        description:task.description,
+        eventOccurrences:task.eventOccurrences,
+        taskType:task.taskType,
+      }
+  });
 
   const onSubmit = (data) => {
     try {
@@ -30,14 +37,14 @@ const AddTask = ({ modalOPen, setModalOpen }) => {
       setModalOpen(false);
 
       // Display the success toast
-      setTimeout(() => {
-        toast.custom((t) => (
-          <CustomToast
-            t={t}
-            text="New Support Agent has been created Successfully!"
-          />
-        ));
-      }, 900);
+    //   setTimeout(() => {
+    //     toast.custom((t) => (
+    //       <CustomToast
+    //         t={t}
+    //         text="New Support Agent has been created Successfully!"
+    //       />
+    //     ));
+    //   }, 900);
     } catch (error) {
       // Handle API call or other errors
       console.error("An error occurred:", error);
@@ -268,4 +275,4 @@ const AddTask = ({ modalOPen, setModalOpen }) => {
   );
 };
 
-export default AddTask;
+export default EditTask;
