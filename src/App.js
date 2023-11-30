@@ -8,10 +8,10 @@ import { Toaster } from 'react-hot-toast';
 import AdminDashboardLayout from './Layout/AdminDashboardLayout';
 import AdminDashboardHome from './Pages/Admin/AdminDashboardHome';
 import SupportAgentDashboardLayout from './Layout/SupportAgentDashboardLayout';
-import SupportAgentDashboardHome from './Pages/SupportAgent/SupportAgentDashboardHome';
 import SuperAdminDashboardLayout from './Layout/SuperAdminDashboardLayout';
 import SuperAdminDashboardHome from './Pages/SuperAdmin/SuperAdminDashboardHome';
 import { adminRoutes } from './Routes/adminRoutes';
+import AlertsPage from './Pages/SupportAgent/AlertsPage';
 
 function App() {
 
@@ -48,7 +48,7 @@ function App() {
               // </AuthSuperAdmin>
             }
           >
-            <Route index element={<SupportAgentDashboardHome />} />
+            <Route index element={<AlertsPage />} />
             {adminRoutes.map(({ path, Component }, index) => (
               <Route key={index} path={path} element={<Component />} />
             ))}

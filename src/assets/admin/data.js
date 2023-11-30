@@ -1002,6 +1002,90 @@ export const adminAlertsData = [
     },
   ]
 
+  export const alertsData = [
+    {
+        title: "Security Sensor Triggered!",
+        name: "Kari Daughetry",
+        id: "453453",
+        CATEGORY: "Camera",
+        AFFECTEDDEVICES: "05",
+        DATE: "July 24, 2023",
+        alert: "Critical",
+        time: "04:54 PM",
+    },
+    {
+        title: "Emergency: Away too long!",
+        name: "Tom Harry",
+        id: "453478",
+        CATEGORY: "Sensor",
+        AFFECTEDDEVICES: "05",
+        DATE: "July 24, 2023",
+        alert: "Warning",
+        time: "04:54 PM",
+    },
+    {
+        title: "Deviation in Bathroom Visits Trends!",
+        name: "Tom Harry",
+        id: "453478",
+        CATEGORY: "Thermostat",
+        AFFECTEDDEVICES: "02",
+        DATE: "July 23, 2023",
+        alert: "Problem",
+        time: "04:54 PM",
+    },
+    {
+        title: "SOS Emergency Alert! ",
+        name: "Bikash Roy",
+        id: "453477",
+        CATEGORY: "Plug",
+        AFFECTEDDEVICES: "03",
+        DATE: "July 23, 2023",
+        alert: "Critical",
+        time: "04:54 PM",
+    },
+    {
+        title: "Emergency: No Visits to Elderly!",
+        name: "Kari Daughetry",
+        id: "453453",
+        CATEGORY: "Router",
+        AFFECTEDDEVICES: "05",
+        DATE: "July 26, 2023",
+        alert: "Warning",
+        time: "04:54 PM",
+    },
+    {
+        title: "Stove is still turned on ",
+        name: "Tom Harry",
+        id: "453478",
+        CATEGORY: "Router",
+        AFFECTEDDEVICES: "05",
+        DATE: "July 26, 2023",
+        alert: "Problem",
+        time: "04:54 PM",
+    },
+    {
+        title: "Unusual Cabinet Openings!",
+        name: "Tom Harry",
+        id: "453478",
+        CATEGORY: "Sensor",
+        AFFECTEDDEVICES: "02",
+        DATE: "July 25, 2023",
+        alert: "Warning",
+        time: "04:54 PM",
+    },
+    {
+        title: "Elderly are sleeping outside the Tageted time",
+        name: "Bikash Roy",
+        id: "453477",
+        CATEGORY: "Plug",
+        AFFECTEDDEVICES: "08",
+        DATE: "July 24, 2023",
+        alert: "Problem",
+        time: "04:54 PM",
+    },
+]
+
+
 
   export const elderyOverview = [
     {

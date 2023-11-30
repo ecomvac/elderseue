@@ -5,19 +5,30 @@
   padding: 0;
 } */
 
-body {
-  width: 100%;
-  /* font-family: "Poppins", "sans-serif", "roboto"; */
-  font-family: 'DM Sans', sans-serif;
-}
+
 
 @font-face {
   font-family: "normal";
   src: local('normal'), url("../public/font/AkayaTelivigala-Regular.ttf") format('opentype');
 }
 
+@font-face {
+  font-family: "Baloo2";
+  src: local('Baloo2'), url("../public/font/Baloo2-VariableFont_wght.ttf") format('opentype');
+}
+
+.Baloo2_font{
+  font-family: "Baloo2";
+}
+
 .AkayaTelivigala-Regular {
   font-family: "normal";
+}
+
+body {
+  width: 100%;
+  /* font-family: "Poppins", "sans-serif", "roboto"; */
+  font-family: "Baloo2";
 }
 
 .css-h0q0iv-MuiButtonBase-root-MuiTab-root {
@@ -397,4 +408,10 @@ body {
   font-size: 13px !important;
   font-weight: bold !important;
 
+}
+
+.ant-progress-text{
+  color:#ffffffb3 !important;
+  font-weight:600;
+  font-size: 16px;
 }

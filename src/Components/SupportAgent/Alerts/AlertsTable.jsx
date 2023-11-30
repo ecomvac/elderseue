@@ -1,0 +1,84 @@
+import { Icon } from '@iconify/react';
+import { Tooltip } from 'antd';
+import React from 'react'
+import { useNavigate } from 'react-router-dom';
+import CustomTable from '../../../Shared/Table/CustomTable';
+
+
+const Alerts = ({ row }) => {
+    return (
+        <div>
+            <div className='flex items-center gap-2'>
+
+                {
+                    row.alert === "Critical" && (
+                        <div className={`w-[40px] h-[40px] rounded-[10px] flex items-center justify-center bg-[#FF5959]/10`}>
+                            <Icon icon="ant-design:alert-outlined" className="text-[20px] text-[#FF5959]" />
+                        </div>
+                    )
+                }
+                {
+                    row.alert === "Warning" && (
+                        <div className={`w-[40px] h-[40px] rounded-[10px] flex items-center justify-center bg-[#FF974D]/10`}>
+                            <Icon icon="ri:alert-line" className="text-[20px] text-[#FF974D]" />
+                        </div>
+                    )
+                }
+                {
+                    row.alert === "Problem" && (
+                        <div className={`w-[40px] h-[40px] rounded-[10px] flex items-center justify-center bg-[#5973FF]/10`}>
+                            <Icon icon="ant-design:bug-outlined" className="text-[20px] text-[#5973FF]" />
+                        </div>
+                    )
+                }
+                <div>
+                    {/* <h3 className='text-[16px] font-[500] text-secondary hidden xl:flex'>{row.title}</h3> */}
+                    <h3 className='text-[16px] font-[500] text-dark-black'>{row.title.slice(0, 35)}</h3>
+                    <p className='text-[13px] font-[400] text-[#A3AED0]'>{row.name} <span className='font-[500]'>#{row.id}</span></p>
+                </div>
+
+            </div>
+        </div>
+    )
+}
+
+const AlertsTable = ({tableData}) => {
+    const navigate = useNavigate()
+    const columns = [
+        {
+            title: 'ALERT',
+            key: "id",
+            render: (row) => (
+                <Alerts row={row} />
+            )
+        },
+        {
+            title: 'ALERT TYPE',
+            render: (row) => <span className='text-[16px] font-[400] capitalize text-dark-black/80'>{row.alert}</span>,
+            sorter: (a, b) => a.type - b.type,
+        },
+        {
+            title: 'DATE',
+            render: (row) => <span className='text-[16px] font-[400] text-dark-black/80'>{row.DATE}</span>,
+            sorter: (a, b) => a.DATE - b.DATE,
+        },
+        {
+            title: 'ACTION',
+            key: "id",
+            render: (row) => (
+                <Tooltip title="View">
+                    <button onClick={() => {navigate(`/support-agent/dashboard/user/${row.id}`)}}>
+                        <Icon icon="ph:eye" className='text-[20px] text-secondary hover:text-[#0070F0]' />
+                    </button>
+                </Tooltip>
+            )
+        },
+    ];
+  return (
+    <div>
+        <CustomTable tableData={tableData} columns={columns} scroll={{x:"500px"}}/>
+    </div>
+  )
+}
+
+export default AlertsTable
