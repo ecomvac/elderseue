@@ -12,6 +12,7 @@ import SuperAdminDashboardLayout from './Layout/SuperAdminDashboardLayout';
 import SuperAdminDashboardHome from './Pages/SuperAdmin/SuperAdminDashboardHome';
 import { adminRoutes } from './Routes/adminRoutes';
 import AlertsPage from './Pages/SupportAgent/AlertsPage';
+import { SupportAgentRoutes } from './Routes/SupportAgentRoutes';
 
 function App() {
 
@@ -49,7 +50,7 @@ function App() {
             }
           >
             <Route index element={<AlertsPage />} />
-            {adminRoutes.map(({ path, Component }, index) => (
+            {SupportAgentRoutes.map(({ path, Component }, index) => (
               <Route key={index} path={path} element={<Component />} />
             ))}
           </Route>

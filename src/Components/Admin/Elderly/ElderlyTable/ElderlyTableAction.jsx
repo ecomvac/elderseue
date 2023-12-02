@@ -46,7 +46,7 @@ const ElderlyTableAction = ({data,role}) => {
         </Tooltip>
 
         <Tooltip placement="topLeft" title="View">
-        <button onClick={()=>{navigate(role? `/support-agent/dashboard/elderly/${data?.id}`: `/admin/dashboard/elderly/${data?.id}`);setElderlyId(data?.id)}}>
+        <button onClick={()=>{navigate(role==="support-agent" ? `/support-agent/dashboard/elderly/${data?.id}`: `/admin/dashboard/elderly/${data?.id}`);setElderlyId(data?.id)}}>
              <Icon icon="carbon:view-filled" className='text-[20px] text-light-black hover:text-[#0070F0]' />
         </button>
         </Tooltip>
