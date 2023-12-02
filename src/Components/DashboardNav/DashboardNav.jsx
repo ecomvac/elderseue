@@ -8,7 +8,7 @@ const DashboardNav = ({name,user}) => {
 
     // ====mobile view popup content====
     const content = (
-        <div className="">
+        <div className=" ">
             <div className=' flex  flex-col items-center justify-center'>
                 <h3 className=' text-base m-[-5px] p-0 font-medium text-text-primary'>{name}</h3>
                 <p className=' text-[11px]  p-0 font-normal text-light-black'>{user}</p>
@@ -28,7 +28,7 @@ const DashboardNav = ({name,user}) => {
 
 
   return (
-    <div className='w-full lg:pt-[45px] pt-5 flex items-center justify-end z-50'>
+    <div className='w-full h-[100px] bg-white  flex items-center justify-end z-50'>
         <div className=' bg-white lg2:w-[600px] lg:w-[450px] w-full p-[10px] pr-5 flex items-center justify-between gap-5 rounded-full'>
             <div className=' w-[10%] lg:hidden'>
                 <button className=' flex items-center justify-start ml-3'><Icon icon="pepicons-pop:menu" className=' text-[25px]'/></button>
