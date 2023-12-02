@@ -11,10 +11,12 @@ const AdminDashboardLayout = () => {
             <AdminSidebar />
     
         </div>
-        <div className='bg-[#F4F7FE] w-full min-h-[100vh] md:px-[30px] px-4'>
+        <div className='bg-[#F4F7FE] w-full min-h-[100vh] '>
             {/* Admin dashboard outlet create */}
-            <DashboardNav name={"Liam Ketla"} user="Admin"/>
-            <Outlet></Outlet>
+            <DashboardNav name={"Liam Ketla"} user="Admin"  role={"admin"}/>
+            <div className='md:px-[30px] px-4'>
+                <Outlet></Outlet>
+            </div>
         </div>
     </div>
     );

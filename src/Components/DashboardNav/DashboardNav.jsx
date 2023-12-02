@@ -1,24 +1,22 @@
 import { Icon } from '@iconify/react'
-import { Badge, Popover } from 'antd'
+import { Popover } from 'antd'
 import React from 'react'
+import NavNotification from '../../Shared/Notification/NavNotification';
 
-const DashboardNav = ({name,user}) => {
+const DashboardNav = ({name,user,role}) => {
 
 
 
     // ====mobile view popup content====
     const content = (
-        <div className=" ">
+        <div className="py-4 px-4 ">
             <div className=' flex  flex-col items-center justify-center'>
                 <h3 className=' text-base m-[-5px] p-0 font-medium text-text-primary'>{name}</h3>
                 <p className=' text-[11px]  p-0 font-normal text-light-black'>{user}</p>
             </div>
-            <button className=" text-sm flex  w-full items-center gap-2 rounded-[10px] font-medium text-light-black hover:bg-primary/10 hover:text-[#9039FF] py-2 px-5">
-                <Badge size="small" count={3} offset={[-7, 4]} className='mt-1'>
-                     <Icon icon="basil:notification-solid" className=' text-light-black text-[25px]'/>
-                </Badge>
-                Notification
-            </button>
+           
+                <NavNotification role={role}/>
+
             <button className=" text-sm flex  w-full items-center gap-2 rounded-[10px] font-medium text-light-black hover:bg-primary/10 hover:text-[#9039FF] py-2 px-5">
                 <Icon icon="mingcute:world-2-fill" className=' text-light-black text-[25px]'/>
                 Language
@@ -28,7 +26,7 @@ const DashboardNav = ({name,user}) => {
 
 
   return (
-    <div className='w-full h-[100px] bg-white  flex items-center justify-end z-50'>
+    <div className='w-fullNotification h-[100px] bg-white  flex items-center justify-end z-50'>
         <div className=' bg-white lg2:w-[600px] lg:w-[450px] w-full p-[10px] pr-5 flex items-center justify-between gap-5 rounded-full'>
             <div className=' w-[10%] lg:hidden'>
                 <button className=' flex items-center justify-start ml-3'><Icon icon="pepicons-pop:menu" className=' text-[25px]'/></button>
@@ -40,11 +38,7 @@ const DashboardNav = ({name,user}) => {
             </div>
 
             <div className=' hidden lg:flex items-center w-[400px] justify-end lg2:gap-[16px] gap-3'>
-                <Badge size="small" count={3} offset={[-7, 4]} className='mt-1'>
-                    <button className=''>
-                        <Icon icon="basil:notification-solid" className=' text-light-black text-[25px]'/>
-                    </button>
-                </Badge>
+                <NavNotification role={role}/>
                 <button>
                     <Icon icon="mingcute:world-2-fill" className=' text-light-black text-[25px]'/>
                 </button>

@@ -11,10 +11,12 @@ const SuperAdminDashboardLayout = () => {
             <SuperAdminSidebar/>
     
         </div>
-        <div className='bg-[#F4F7FE] w-full min-h-[100vh] md:px-[30px] px-4'>
+        <div className='bg-[#F4F7FE] w-full min-h-[100vh] '>
             {/* Admin dashboard outlet create */}
-            <DashboardNav name={"Jeos Sola"} user="Super Admin"/>
-            <Outlet></Outlet>
+            <DashboardNav name={"Jeos Sola"} user="Super Admin" role={"superAdmin"}/>
+            <div className='md:px-[30px] px-4'>
+                <Outlet></Outlet>
+            </div>
         </div>
     </div>
     );
