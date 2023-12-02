@@ -3,7 +3,7 @@ import AdminFiled from '../../../../Shared/AdminFiled/AdminFiled';
 import ElderlyTableAction from './ElderlyTableAction';
 import CustomTable from '../../../../Shared/Table/CustomTable';
 
-const ElderlyTable = ({tableData}) => {
+const ElderlyTable = ({tableData,role}) => {
     const columns = [
         {
             title: 'ELDERLY',
@@ -41,7 +41,7 @@ const ElderlyTable = ({tableData}) => {
             title: "ACTIONS",
             key: "id",
             render: (row) => (
-                <ElderlyTableAction data={row} />
+                <ElderlyTableAction data={row} role={role}/>
             )
         }
     ];

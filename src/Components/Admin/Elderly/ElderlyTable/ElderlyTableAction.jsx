@@ -8,7 +8,7 @@ import CustomToast from '../../../../Shared/Tosat/CustomToast'
 import { useNavigate } from 'react-router-dom'
 import { SidebarContext } from '../../../../Context/CustomContext'
 
-const ElderlyTableAction = ({data}) => {
+const ElderlyTableAction = ({data,role}) => {
   const {setElderlyId}=useContext(SidebarContext)
     const [edit,setEdit] = useState(false)
     const [deleteModal,setDeleteModal] = useState(false)
@@ -46,7 +46,7 @@ const ElderlyTableAction = ({data}) => {
         </Tooltip>
 
         <Tooltip placement="topLeft" title="View">
-        <button onClick={()=>{navigate(`/admin/dashboard/elderly/${data?.id}`);setElderlyId(data?.id)}}>
+        <button onClick={()=>{navigate(role? `/support-agent/dashboard/elderly/${data?.id}`: `/admin/dashboard/elderly/${data?.id}`);setElderlyId(data?.id)}}>
              <Icon icon="carbon:view-filled" className='text-[20px] text-light-black hover:text-[#0070F0]' />
         </button>
         </Tooltip>
