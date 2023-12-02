@@ -1,7 +1,7 @@
 import { Icon } from "@iconify/react";
-import { Progress, Space } from "antd";
 import React from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
+import SupportAgentSidebarProgress from "./SupportAgentSidebarProgress";
 
 const SupportAgentSidebar = () => {
   const navigate = useNavigate();
@@ -65,15 +65,7 @@ const SupportAgentSidebar = () => {
 
       <div>
         <div>
-          <Space wrap>
-            <Progress
-              strokeColor={"white"}
-              type="circle"
-              percent={30}
-              strokeWidth={10}
-              size={70}
-            />
-          </Space>
+            <SupportAgentSidebarProgress/>
         </div>
 
         <div className="flex justify-between items-center group p-4">

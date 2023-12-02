@@ -534,3 +534,9 @@ body {
     transform: rotate(360deg);
   }
 }
+
+.ant-progress-text{
+  color:#ffffffd9 !important;
+  font-weight:600;
+  font-size: 16px;
+}

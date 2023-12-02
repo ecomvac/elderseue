@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import SearchInput from "../../../Shared/Search/SearchInput";
 import AlertsTable from "./AlertsTable";
 import { alertsData } from "../../../assets/admin/data";
@@ -6,8 +6,21 @@ import AlartsSort from "../../../Shared/sort/AlartsSort";
 
 const AllAlerts = () => {
   const [search, setSearch] = React.useState("");
-  const [selected, setSelected] = useState("");
-  const data = ["All Alert", "Problems","Warning","Critical"];
+  const [selected, setSelected] = useState("All Alert");
+  const [alerts,setAlerts] = useState(alertsData)
+  const data = ["All Alert", "Problem","Warning","Critical"];
+
+  useEffect(()=>{
+
+    if(selected==="All Alert"){
+      setAlerts(alertsData)
+    }else{
+      const filterData = alertsData.filter(alert =>alert.alert===selected)
+      setAlerts(filterData)
+    }
+
+  },[selected])
+
   return (
     <div>
       <div className="px-[22px] flex md:items-center md:flex-row flex-col gap-3 justify-between">
@@ -30,7 +43,7 @@ const AllAlerts = () => {
       </div>
 
       <div className=" grid grid-cols-1 mt-6">
-        <AlertsTable tableData={alertsData}/>
+        <AlertsTable tableData={alerts}/>
       </div>
     </div>
   );
