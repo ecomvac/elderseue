@@ -967,107 +967,128 @@ export const adminAlertsData = [
     {
         day: 'Sat',
         name:"Critical",
-        value:30
+        value:30,
+        date:"11 July, Satday"
     },
     {
         day: 'Sun',
         name:"Critical",
         value:20,
+        date:"12 July, Sunday"
     },
     {
         day: 'Mon',
         name:"Critical",
         value:50,
+        date:"13 July, Monday"
     },
     {
         day: 'Tue',
         name:"Critical",
         value:40,
+        date:"14 July, Tueday"
     },
     {
         day: 'Wed',
         name:"Critical",
         value:10,
+        date:"15 July, Wedday"
     },
     {
         day: 'Thu',
         name:"Critical",
         value:80,
+        date:"16 July, Sunday"
     },
     {
         day: 'Fri',
         name:"Critical",
         value:90,
+        date:"17 July, Sunday"
     },
     {
         day: 'Sat',
         name:"Warning",
         value:60,
+        date:"18 July, Sunday"
     },
     {
         day: 'Sun',
         name:"Warning",
         value:40,
+        date:"19 July, Sunday"
     },
     {
         day: 'Mon',
         name:"Warning",
         value:20,
+        date:"20 July, Sunday"
     },
     {
         day: 'Tue',
         name:"Warning",
         value:30,
+        date:"12 July, Sunday"
     },
     {
         day: 'Wed',
         name:"Warning",
         value:70,
+        date:"12 July, Sunday"
     },
     {
         day: 'Thu',
         name:"Warning",
         value:90,
+        date:"12 July, Sunday"
     },
     {
         day: 'Fri',
         name:"Warning",
         value:30,
+        date:"12 July, Sunday"
     },
     {
         day: 'Sat',
         name:"Problem",
         value:10,
+        date:"12 July, Sunday"
     },
     {
         day: 'Sun',
         name:"Problem",
         value:30,
+        date:"12 July, Sunday"
     },
     {
         day: 'Mon',
         name:"Problem",
         value:50,
+        date:"12 July, Sunday"
     },
     {
         day: 'Tue',
         name:"Problem",
         value:30,
+        date:"12 July, Sunday"
     },
     {
         day: 'Wed',
         name:"Problem",
         value:70,
+        date:"12 July, Sunday"
     },
     {
         day: 'Thu',
         name:"Problem",
         value:50,
+        date:"12 July, Sunday"
     },
     {
         day: 'Fri',
         name:"Problem",
         value:80,
+        date:"12 July, Sunday"
     },
   ]
 

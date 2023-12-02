@@ -67,7 +67,7 @@ const AlertsTable = ({tableData}) => {
             key: "id",
             render: (row) => (
                 <Tooltip title="View">
-                    <button onClick={() => {navigate(`/support-agent/dashboard/user/${row.id}`)}}>
+                    <button onClick={() => {navigate(`/support-agent/dashboard/elderly/${row.id}`)}}>
                         <Icon icon="ph:eye" className='text-[20px] text-secondary hover:text-[#0070F0]' />
                     </button>
                 </Tooltip>

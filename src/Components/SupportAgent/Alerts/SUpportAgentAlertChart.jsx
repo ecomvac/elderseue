@@ -46,43 +46,41 @@ const SUpportAgentAlertChart = () => {
       },
     },
     tooltip: {
-      customContent: (title, items) => {
+      customContent: (title, items) => { 
         const dataPoint = adminAlertsData.find((point) => point.day === title);
         if (dataPoint) {
-          return `
-          <div style="padding:10px 0px;width:180px">
-            <div style="font-size: 16px; font-weight: 500; color: #0D1A29; margin-bottom: 10px;">
-              ${dataPoint.date}
-            </div>
-            <div style="display:flex; align-items:center; gap:2px; justify-content:space-between; margin-bottom: 7px;">
-                  <div style="display:flex; align-items:center; gap:2px;">
-                    <div style="width:3px;height:14px;background:#FF5959;"> </div>
-                    <div style="font-size: 16px; font-weight: 400; color: #5D6670;">
-                      Critical
+          return (
+            <div className=" overflow-hidden bg-text-primary rounded-[10px] w-[140px] ">
+                <div className=" bg-[#212D67] py-3 text-[13px] font-medium text-[#D1D8FA] px-3">
+                    {dataPoint.date}
+                </div>
+
+                <div className="flex flex-col gap-3 px-3 py-3">
+                    <div className="flex items-center justify-between">
+                        <div className=" flex items-center gap-2">
+                          <div className="w-[4px] h-[7px] rounded-full bg-[#5973FF]"></div>
+                          <h2 className="text-[13px] font-normal text-white">Problem</h2>
+                        </div>
+                        <h2 className="text-[11px] font-bold text-white">{items[2].data.value}</h2>
                     </div>
-                  </div>
-                  <div style="font-size: 16px; font-weight: 500; color: #0D1A29;">${items[0].data.value}</div>
-            </div>
-            <div style="display:flex; align-items:center; gap:2px; justify-content:space-between; margin-bottom: 7px;">
-                  <div style="display:flex; align-items:center; gap:2px;">
-                    <div style="width:3px;height:14px;background:#FF974D;"> </div>
-                    <div style="font-size: 16px; font-weight: 400; color: #5D6670;">
-                    Warning
+                    <div className="flex items-center justify-between">
+                        <div className=" flex items-center gap-2">
+                          <div className="w-[4px] h-[7px] rounded-full bg-[#FF974D]"></div>
+                          <h2 className="text-[13px] font-normal text-white">Warning</h2>
+                        </div>
+                        <h2 className="text-[11px] font-bold text-white">{items[1].data.value}</h2>
                     </div>
-                  </div>
-                  <div style="font-size: 16px; font-weight: 500; color: #0D1A29;">${items[1].data.value}</div>
-            </div>
-            <div style="display:flex; align-items:center; gap:2px; justify-content:space-between; margin-bottom: 7px;">
-                  <div style="display:flex; align-items:center; gap:2px;">
-                    <div style="width:3px;height:14px;background:#5973FF;"> </div>
-                    <div style="font-size: 16px; font-weight: 400; color: #5D6670;">
-                    Problem
+                    <div className="flex items-center justify-between">
+                        <div className=" flex items-center gap-2">
+                          <div className="w-[4px] h-[7px] rounded-full bg-[#FF5959]"></div>
+                          <h2 className="text-[13px] font-normal text-white">Critical</h2>
+                        </div>
+                        <h2 className="text-[11px] font-bold text-white">{items[0].data.value}</h2>
                     </div>
-                  </div>
-                  <div style="font-size: 16px; font-weight: 500; color: #0D1A29;">${items[2].data.value}</div>
+                </div>
             </div>
-          </div>
-          `;
+          )
+          ;
         } else {
           return "";
         }
