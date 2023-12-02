@@ -1,10 +1,12 @@
 import { Icon } from '@iconify/react'
 import { Popover } from 'antd'
-import React from 'react'
+import React, { useContext} from 'react'
 import NavNotification from '../../Shared/Notification/NavNotification';
+import { SidebarContext } from '../../Context/CustomContext';
 
 const DashboardNav = ({name,user,role}) => {
 
+    const { setSidebarShow } = useContext(SidebarContext)
 
 
     // ====mobile view popup content====
@@ -29,7 +31,7 @@ const DashboardNav = ({name,user,role}) => {
     <div className='w-fullNotification h-[100px] bg-white  flex items-center justify-end z-50'>
         <div className=' bg-white lg2:w-[600px] lg:w-[450px] w-full p-[10px] pr-5 flex items-center justify-between gap-5 rounded-full'>
             <div className=' w-[10%] lg:hidden'>
-                <button className=' flex items-center justify-start ml-3'><Icon icon="pepicons-pop:menu" className=' text-[25px]'/></button>
+                <button onClick={()=>setSidebarShow(true)} className=' flex items-center justify-start ml-3'><Icon icon="pepicons-pop:menu" className=' text-[25px]'/></button>
             </div>
             
             <div className=' relative lg:w-[90%] w-[80%]'>

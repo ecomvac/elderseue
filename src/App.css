@@ -540,3 +540,9 @@ body {
   font-weight:600;
   font-size: 16px;
 }
+
+
+.ant-drawer-wrapper-body .ant-drawer-body{
+  margin: 0 !important;
+  padding: 0 !important;
+}

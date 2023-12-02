@@ -1,14 +1,20 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import DashboardNav from '../Components/DashboardNav/DashboardNav';
 import { Outlet } from 'react-router-dom';
 import SupportAgentSidebar from '../Components/SupportAgent/SupportAgentSidebar/SupportAgentSidebar';
+import { SidebarContext } from '../Context/CustomContext';
+import CustomDrawer from '../Shared/Drawer/CustomDrawer';
 
 const SupportAgentDashboardLayout = () => {
+    const { sidebarShow,setSidebarShow } = useContext(SidebarContext)
     return (
         <div className="flex bg-[#F4F7FE]">
         <div className='w-[280px] lg:block hidden'>
             {/* ----------------admin Dashboard sidebar here----------------- */}
             <SupportAgentSidebar />
+            <CustomDrawer open={sidebarShow} setOpen={setSidebarShow}>
+                <SupportAgentSidebar />
+            </CustomDrawer>    
     
         </div>
         <div className='bg-[#F4F7FE] w-full min-h-[100vh] '>

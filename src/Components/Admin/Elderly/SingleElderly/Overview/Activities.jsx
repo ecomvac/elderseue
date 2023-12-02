@@ -72,7 +72,7 @@ const Activities = () => {
                   className=" text-[25px] text-white"
                 />
               </div>
-              <div className={` h-[145px] w-[2px] rounded-full relative bg-[#E8E9EE]`} >
+              <div className={` h-[168px] w-[2px] rounded-full relative bg-[#E8E9EE]`} >
               </div>
             </div>
           </div>
@@ -93,7 +93,8 @@ const Activities = () => {
                 </div>
                 <div className="flex items-center flex-col gap-4 ml-[-7px]">
                   {activitie?.items?.map((item, index) => (
-                    <div key={index} className=" mt-[-20px]">
+                    <div key={index} className=" mt-[-20px] relative">
+                      <div className="w-[20px] h-[2px] absolute top-[18px] bg-[#E8E9EE] left-[-23px]"></div>
                       <div className=" min-h-[70px]">
                         <h3 className=" text-[13px] font-medium text-light-black">
                           {item?.time}
@@ -108,7 +109,8 @@ const Activities = () => {
               </div>
             ))}
 
-            <div className=" mb-5">
+            <div className=" mb-5 relative">
+              <div className="w-[20px] h-[2px] absolute top-[9px] bg-[#E8E9EE] left-[-30px]"></div>
               <button className=" text-sm font-bold text-primary flex items-center gap-1">
                 <span className=" w-[19px] h-[19px] bg-primary rounded-full flex items-center justify-center text-white">
                   <Icon icon="ic:round-add" className=" text-white text-[16px]"/>
