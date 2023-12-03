@@ -2,7 +2,7 @@ import { Icon } from '@iconify/react';
 import { Steps } from 'antd';
 import React, { useEffect, useState } from 'react';
 
-const Step = ({added,setAdded,setConti}) => {
+const Step = ({added,setAdded,setcontinueWith}) => {
     const [syncingStatus, setSyncingStatus] = useState('wait')
     const [initializingStatus, setInitializingStatus] = useState('wait')
     
@@ -33,14 +33,14 @@ const Step = ({added,setAdded,setConti}) => {
         }, 5000);
         const doneTimeout = setTimeout(() => {
             setAdded(true);
-            setConti(false)
+            setcontinueWith(false)
         }, 7000);
         return () => {
             clearTimeout(syncingTimeout, initializingTimeout, doneTimeout);
         };
     }, []);
     return (
-        <div>
+        <div className='ml-9  md:ml-0'>
             <Steps items={items} labelPlacement="vertical"></Steps>
         </div>
     );

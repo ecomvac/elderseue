@@ -74,9 +74,9 @@ const MemberChat = () => {
     yAxis: {
       label: {
         style: {
-            fill: '#9039FF',
+          fill: '#9039FF',
         },
-    },
+      },
       grid: {
         line: {
           style: {
@@ -89,27 +89,38 @@ const MemberChat = () => {
     },
     xAxis: {
       label: {
-          style: {
-              fill: '#FFFFFF',
-          },
+        style: {
+          fill: '#FFFFFF',
+        },
       },
-  },
-  interactions: [{ type: 'element-active' }],
-  state: {
-      active: {
-          animate: { duration: 100, easing: 'easeLinear' },
-          style: {
-              lineWidth:3,
-              stroke: '#ffffff',
+      tickLine: {
+        style: {
+          stroke: '#9039FF', // Set the tick line color to white
+        },
+      },
+      line: {
+        style: {
+          stroke: '#9039FF', // Set the axis line color to white
+        },
+      },
+    },
 
-          },
+    interactions: [{ type: 'element-active' }],
+    state: {
+      active: {
+        animate: { duration: 100, easing: 'easeLinear' },
+        style: {
+          lineWidth: 3,
+          fill: '#FFFFFF', // Set the fill color to white when active (hovered)
+          stroke: '#ffffff',
+        },
       },
-  },
+    },
     minColumnWidth: 22,
     maxColumnWidth: 22,
     columnStyle: {
       fill: '#dec4ff',
-      radius: [10, 10, 10, 10], // Set the radius for rounded corners
+      radius: [10, 10, 10, 10],
     },
     tooltip: {
       customContent: (title, items) => {

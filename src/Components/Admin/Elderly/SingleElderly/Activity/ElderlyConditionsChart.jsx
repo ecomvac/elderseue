@@ -7,34 +7,17 @@ const ElderlyConditionsChart = ({ data }) => {
         xField: 'day',
         yField: 'value',
         color: "#ffffff",
-        // interactions: [
-        //     {
-        //       type: "active-region",
-        //       enable: false,
-        //     },
-        //   ],
         interactions: [{ type: 'element-active' }],
         state: {
             active: {
                 animate: { duration: 100, easing: 'easeLinear' },
                 style: {
-                    lineWidth:3,
+                    lineWidth: 3,
+                    fill: '#FFFFFF', // Set the fill color to white when active (hovered)
                     stroke: '#ffffff',
-
                 },
             },
         },
-        // interactions: [
-        //     {
-        //         type: 'column-active',
-        //         cfg: {
-        //             style: {
-        //                 fill: 'red', // Set the column color to white on hover
-        //             },
-        //         },
-        //     },
-        // ],
-        
         minColumnWidth: 45,
         maxColumnWidth: 45,
         columnStyle: {
@@ -61,6 +44,16 @@ const ElderlyConditionsChart = ({ data }) => {
             label: {
                 style: {
                     fill: '#FFFFFF',
+                },
+            },
+            tickLine: {
+                style: {
+                    stroke: '#9039FF', // Set the tick line color to white
+                },
+            },
+            line: {
+                style: {
+                    stroke: '#9039FF', // Set the axis line color to white
                 },
             },
         },

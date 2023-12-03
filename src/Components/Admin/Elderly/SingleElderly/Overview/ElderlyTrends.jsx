@@ -20,7 +20,7 @@ const handleTrend=(title)=>{
       <SectionWrapper>
         <div className='py-6 px-4'>
           <h2 className='px-[22px] text-text-primary font-bold text-2xl mb-5'>Elderly Trends</h2>
-          <div className=' grid grid-cols-2 xl:grid-cols-3 gap-8'>
+          <div className=' grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8'>
             {/* -----------------------average trends---------------------- */}
             <div className=''>
               <div className=' bg-[#58CB6C] w-full h-[4px] rounded-[18px]'></div>

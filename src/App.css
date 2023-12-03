@@ -320,6 +320,14 @@ body {
 
 }
 
+.ant-pagination-item-link{
+  color: rgba(43, 54, 116, 0.8) !important;
+}
+
+.ant-pagination-item-link:disabled{
+color: rgba(157, 158, 163, 0.8) !important;
+}
+
 .ant-pagination-prev ::after {
   content: 'Previous';
   margin-left: 2px !important;
@@ -349,6 +357,7 @@ body {
   border: 1px solid rgb(185, 182, 182) !important;
   border-radius: 0px !important;
   margin: 0px !important;
+ 
 }
 
 .ant-pagination-item-1 {
@@ -368,6 +377,10 @@ body {
   margin: 0px !important;
 }
 
+.ant-pagination-item a{
+  color: rgba(43, 54, 116, 0.6) !important;
+
+}
 .ant-pagination-item-active {
   background-color: #9039FF !important;
   border: 1px solid #9039FF !important;
