@@ -290,7 +290,11 @@ body {
 /* -------------------------------members overview in customer------------- */
 #member .g2-html-annotation {
   color: white !important;
-  top: 235px !important;
+  top: 125px !important;
+}
+/* --------------elderly member overview pie chart----------------- */
+#elderly-overview .g2-html-annotation {
+  color: white !important;
 }
 
 
@@ -302,6 +306,7 @@ body {
 
 
 /* ------------------tooltip----------- */
+
 .g2-tooltip {
   background-color: rgba(255, 255, 255, 0) !important;
   box-shadow: 0px 0px 0px rgba(255, 255, 255, 0) !important;
