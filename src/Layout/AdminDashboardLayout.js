@@ -9,7 +9,7 @@ const AdminDashboardLayout = () => {
     const { sidebarShow,setSidebarShow } = useContext(SidebarContext)
     return (
         <div className="flex bg-[#F4F7FE]">
-        <div className='w-[280px] lg:block hidden'>
+        <div className='xl:w-[280px] w-[240px] lg:block hidden'>
             {/* ----------------admin Dashboard sidebar here----------------- */}
             <AdminSidebar />
             <CustomDrawer open={sidebarShow} setOpen={setSidebarShow}>
@@ -20,7 +20,7 @@ const AdminDashboardLayout = () => {
         <div className='bg-[#F4F7FE] w-full min-h-[100vh] '>
             {/* Admin dashboard outlet create */}
             <DashboardNav name={"Liam Ketla"} user="Admin"  role={"admin"}/>
-            <div className='md:px-[30px] px-4'>
+            <div className='xl:px-[30px] px-4'>
                 <Outlet></Outlet>
             </div>
         </div>
