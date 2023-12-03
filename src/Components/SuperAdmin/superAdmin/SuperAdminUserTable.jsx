@@ -2,7 +2,6 @@ import React from 'react'
 import AdminFiled from '../../../Shared/AdminFiled/AdminFiled';
 import CustomTable from '../../../Shared/Table/CustomTable';
 import SuperAdminUserTableAction from './SuperAdminUserTableAction';
-import { Icon } from '@iconify/react';
 
 const SuperAdminUserTable = ({tableData}) => {
     const columns = [
