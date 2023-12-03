@@ -11,7 +11,7 @@ const AdminDashboardLayout = () => {
         <div className="flex bg-[#F4F7FE]">
         <div className='w-[280px] lg:block hidden'>
             {/* ----------------admin Dashboard sidebar here----------------- */}
-            
+            <AdminSidebar />
             <CustomDrawer open={sidebarShow} setOpen={setSidebarShow}>
                  <AdminSidebar />
             </CustomDrawer>    
