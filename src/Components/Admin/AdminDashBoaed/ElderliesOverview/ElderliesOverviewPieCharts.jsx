@@ -1,7 +1,7 @@
 import { Pie, measureTextWidth } from '@ant-design/plots';
 import React from 'react'
 
-const ElderliesOverviewPieCharts = ({data}) => {
+const ElderliesOverviewPieCharts = ({ data }) => {
 
     function renderStatistic(containerWidth, text, fontSize, fontWeight) {
         const { width: textWidth, height: textHeight } = measureTextWidth(text, fontSize);
@@ -20,14 +20,14 @@ const ElderliesOverviewPieCharts = ({data}) => {
     const calculatePercentage = (data, gender) => {
         // Filter data for the specified gender
         const filteredData = data.filter(item => item.type === gender);
-    
+
         // Calculate the total value for the specified gender
         const totalValue = filteredData.reduce((sum, item) => sum + item.value, 0);
         const total = data.reduce((sum, item) => sum + item.value, 0);
-    
+
         // Calculate the percentage for the specified gender
         const percentage = (totalValue / total) * 100;
-    
+
         return percentage;
     };
 
@@ -62,6 +62,7 @@ const ElderliesOverviewPieCharts = ({data}) => {
                     return renderStatistic(d, text, 45, 600);
                 },
             },
+
             content: {
                 offsetY: 70,
                 customHtml: (container, view, datum,) => {
@@ -73,17 +74,24 @@ const ElderliesOverviewPieCharts = ({data}) => {
         },
         interactions: [
         ],
+        tooltip: {
+            customContent: (title, items) => {
+                return (
+                    <></>
+                );
+            },
+        },
     };
 
-  return (
-    <div className='w-[309px] h-[229px] text-white'>
-        <Pie {...config} />
-        <div className='flex items-center justify-between mt-[-30px] px-5'>
-              <h2 className=' text-xl font-bold text-white'>{calculatePercentage(data,"Male").toFixed(0)}%</h2>
-              <h2 className=' text-xl font-bold text-white'>{calculatePercentage(data,"Female").toFixed(0)}%</h2>
+    return (
+        <div id='elderly-overview' className='w-[309px] h-[229px] text-white'>
+            <Pie {...config} />
+            <div className='flex items-center justify-between mt-[-30px] px-5'>
+                <h2 className=' text-xl font-bold text-white'>{calculatePercentage(data, "Male").toFixed(0)}%</h2>
+                <h2 className=' text-xl font-bold text-white'>{calculatePercentage(data, "Female").toFixed(0)}%</h2>
             </div>
-    </div>
-  )
+        </div>
+    )
 }
 
 export default ElderliesOverviewPieCharts
