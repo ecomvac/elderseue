@@ -5,8 +5,17 @@ const CustomTable = ({ tableData, columns, scroll }) => {
   const [start, setStart] = React.useState(1);
   const [end, setend] = React.useState(10);
 
+
+  const scrollTop = ()=>{
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
+
   // ====table pagination funcation====
   const handlePaginationChange = (page, pageSize) => {
+    scrollTop()
     console.log(`Page: ${page}, Page Size: ${pageSize}`);
     setStart((pre) => (page === 1 ? 1 : page * 10 - 9));
     setend((pre) =>

@@ -54,7 +54,7 @@ const CustomModal = ({
               <button
                 type="button"
                 onClick={() => setModalOpen(false)}
-                className="font-[500] text-[14px] h-[40px] w-full hover:border-primary px-5 rounded-[10px] bg-transparent text-[#666D90] border border-gray-300"
+                className="font-[500] text-[14px] h-[40px] w-full hover:border-primary hover:text-primary duration-300 px-5 rounded-[10px] bg-transparent text-[#666D90] border border-gray-300"
               >
                 Cancel
               </button>

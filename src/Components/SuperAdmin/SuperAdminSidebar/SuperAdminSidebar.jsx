@@ -13,7 +13,7 @@ const SuperAdminSidebar = () => {
 
   const menus = [
     {
-      label: "Admin",
+      label: "Dashboard",
       path: "/super-admin/dashboard",
       icon: <Icon className=" w-5 h-5" icon="basil:chart-pie-solid" />,
       child: [],

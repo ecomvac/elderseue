@@ -15,15 +15,15 @@ const AdminSupportAgentTable = ({tableData}) => {
         },
         {
             title: 'CONTACT NUMBER',
-            render: (row) => <span className=' text-base font-normal text-text-secondary'>{row.contactNumber}</span>,
+            render: (row) => <span className=' text-[14px] xl:text-base  font-normal text-text-secondary'>{row.contactNumber}</span>,
         },
         {
             title: 'CONTACT PERSON',
-            render: (row) =>  <span className=' text-base font-normal text-text-secondary'>{row.contactPerson}</span>
+            render: (row) =>  <span className=' text-[14px] xl:text-base  font-normal text-text-secondary'>{row.contactPerson}</span>
         },
         {
             title: 'BUSINESS ADDRESS',
-            render: (row) => <span className=' text-base font-normal text-text-secondary'>{row.businessAdress}</span>
+            render: (row) => <span className=' text-[14px] xl:text-base  font-normal text-text-secondary'>{row.businessAdress}</span>
 
         },
         {
@@ -49,7 +49,7 @@ const AdminSupportAgentTable = ({tableData}) => {
     ];
   return (
     <div>
-        <CustomTable tableData={tableData} columns={columns} scroll={{x:"1000px"}}/>
+        <CustomTable tableData={tableData} columns={columns} scroll={{x:"800px"}}/>
     </div>
   )
 }

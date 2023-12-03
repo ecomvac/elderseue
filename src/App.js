@@ -13,6 +13,7 @@ import SuperAdminDashboardHome from './Pages/SuperAdmin/SuperAdminDashboardHome'
 import { adminRoutes } from './Routes/adminRoutes';
 import AlertsPage from './Pages/SupportAgent/AlertsPage';
 import { SupportAgentRoutes } from './Routes/SupportAgentRoutes';
+import ScrollToTop from './Shared/ScrollToTop/ScrollToTop';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
   return (
     <>
       <div>
+        <ScrollToTop/>
         <CustomRoutes>
           {publicRoutes.map(({ path, Component }, index) => (
             <Route key={index} path={path} element={<Component />} />

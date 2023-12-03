@@ -51,6 +51,7 @@ body {
   width: 100%;
   /* font-family: "Poppins", "sans-serif", "roboto"; */
   font-family: "Baloo2";
+  scroll-behavior: smooth;
 }
 
 .css-h0q0iv-MuiButtonBase-root-MuiTab-root {

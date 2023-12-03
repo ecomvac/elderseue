@@ -3,7 +3,6 @@ import { Icon } from "@iconify/react";
 import { Popover } from "antd";
 
 const AlartsSort = ({ selected, setSelected, data, width, bg }) => {
-  const [open, setOpen] = useState(false);
 
   const [popupShow, setPopupShow] = useState(false);
 
@@ -39,7 +38,6 @@ const AlartsSort = ({ selected, setSelected, data, width, bg }) => {
         trigger="click"
       >
         <button
-          onClick={() => setOpen(!open)}
           style={{ width: width, background: bg }}
           className={` bg-primary/10 w-[110px] text-primary font-medium cursor-pointer px-2 py-2 flex items-center rounded-[10px] justify-between ${
             !selected && " text-primary"
@@ -55,7 +53,7 @@ const AlartsSort = ({ selected, setSelected, data, width, bg }) => {
           </span>
           <Icon
             icon="basil:caret-down-solid"
-            className={`${open && "rotate-180"} text-[20px]`}
+            className={`${popupShow && "rotate-180"} text-[20px]`}
           />
         </button>
       </Popover>

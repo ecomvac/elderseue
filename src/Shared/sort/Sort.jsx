@@ -1,15 +1,44 @@
 import React, { useState } from "react";
 import { Icon } from "@iconify/react";
+import { Popover } from "antd";
 
 const Sort = ({selected,setSelected,data,width,bg}) => {
-  const [open, setOpen] = useState(false);
+
+  const [popupShow, setPopupShow] = useState(false);
+
+  const handleOpenChange = (newOpen) => {
+    setPopupShow(newOpen);
+  };
+
+  const content = (
+    <div style={{width:width}} className=" w-[135px] p-2 max-h-[150px] overflow-y-scroll">
+      {data.map((item, index) => (
+        <button
+          key={index}
+          onClick={() => {
+            setPopupShow(false);
+            setSelected(item)
+          }}
+          className=" text-sm w-full items-start rounded-[10px] font-medium text-light-black hover:bg-primary/10 hover:text-[#9039FF] flex  py-3 px-5"
+        >
+          {item}
+        </button>
+      ))}
+    </div>
+  );
 
   return (
     <div className="relative">
-      <div
-        onClick={() => setOpen(!open)}
+      <Popover
+        open={popupShow}
+        onOpenChange={handleOpenChange}
+        content={content}
+        placement="bottomRight"
+        trigger="click"
+      >
+      <button
         style={{width:width,background:bg}}
-        className={` bg-primary/10 w-[110px] text-primary font-medium cursor-pointer px-2 py-2 flex items-center rounded-[10px] justify-between ${
+        className={` bg-primary/10 w-[110px] text-[13px] h-[40px] text-primary font-medium cursor-pointer px-2 py-2 flex items-center rounded-[10px] justify-between ${
           !selected && " text-primary"
         } ${ bg? " bg-text-primary/10" : ""}`}
       >
@@ -21,24 +50,9 @@ const Sort = ({selected,setSelected,data,width,bg}) => {
                     : selected
                 : data[0]}
         </div>
-        <Icon icon="basil:caret-down-solid" className={`${open && "rotate-180"} text-[20px]`}/>
-      </div>
-            {
-              open && <ul style={{width:width}} className=" absolute z-40 w-[110px] overflow-hidden top-[45px] bg-white shadow-md left-0 border-[1px] border-[#90969D] rounded-[10px]">
-                    {
-                        data.map((item,i)=>(
-                            <li 
-                            onClick={() => {
-                                if (item) {
-                                  setSelected(item);
-                                  setOpen(false);
-                                }
-                              }}
-                            className=" py-1 px-3 cursor-pointer hover:bg-gray-400 hover:text-white" key={i}>{item}</li>
-                        ))
-                    }
-                </ul>
-            }
+        <Icon icon="basil:caret-down-solid" className={`${popupShow && "rotate-180"} text-[20px]`}/>
+      </button>
+      </Popover>
     </div>
   );
 };
