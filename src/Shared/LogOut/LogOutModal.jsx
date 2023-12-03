@@ -56,13 +56,13 @@ const LogOutModal = ({
         <div className=" flex items-center justify-center gap-5 pt-[40px] pb-9">
           <button
             onClick={()=>{onDelete();setModalOpen(false)}}
-            className="font-bold  h-[40px] px-6 rounded-[10px] bg-primary  border-primary text-white "
+            className="font-bold  h-[40px] px-6 rounded-[10px] bg-primary  hover:bg-primary/80 duration-300 border-primary text-white "
           >
-            Delete
+            Log Out
           </button>
           <button
             onClick={() => setModalOpen(false)}
-            className="font-bold  h-[40px] px-6 rounded-[10px] bg-transparent text-secondary border border-secondary"
+            className="font-bold  h-[40px] px-6 hover:bg-red-500 hover:text-white duration-300 hover:border-red-500 rounded-[10px] bg-transparent text-secondary border border-secondary"
           >
             Cancel
           </button>

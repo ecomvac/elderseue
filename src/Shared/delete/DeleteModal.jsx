@@ -58,13 +58,13 @@ const DeleteModal = ({
         <div className=" flex items-center justify-center gap-5 pt-[40px] pb-9">
           <button
             onClick={()=>{onDelete();setModalOpen(false)}}
-            className="font-bold  h-[40px] px-6 rounded-[10px] bg-red-500 border border-red-500 text-white "
+            className="font-bold  h-[40px] px-6 rounded-[10px] bg-red-500 hover:bg-red-700 duration-300 border border-red-500 text-white "
           >
             Delete
           </button>
           <button
             onClick={() => setModalOpen(false)}
-            className="font-bold  h-[40px] px-6 rounded-[10px] bg-transparent text-secondary border border-secondary"
+            className="font-bold  h-[40px] px-6 hover:text-red-500 hover:border-red-500 duration-300 rounded-[10px] bg-transparent text-secondary border border-secondary"
           >
             Cancel
           </button>

@@ -13,19 +13,19 @@ const SuspendedAdminTable = ({tableData}) => {
         },
         {
             title: 'CONTACT NUMBER',
-            render: (row) => <span className='text-base font-normal text-text-secondary'>{row.contactNumber}</span>,
+            render: (row) => <span className='text-[14px] xl:text-basefont-normal text-text-secondary'>{row.contactNumber}</span>,
         },
         {
             title: 'SUSPENDED BY',
-            render: (row) => <span className='text-base font-normal text-text-secondary'>{row.suspendBy}</span>,
+            render: (row) => <span className='text-[14px] xl:text-base font-normal text-text-secondary'>{row.suspendBy}</span>,
         },
         {
             title: 'BUSINESS NAME',
-            render: (row) => <span className='text-base font-normal text-text-secondary'>{row.businessName}</span>,
+            render: (row) => <span className='text-[14px] xl:text-base font-normal text-text-secondary'>{row.businessName}</span>,
         },
         {
             title: 'SUSPENDED DATE',
-            render: (row) => <span className='text-base font-normal text-text-secondary'>{row.suspendData}</span>,
+            render: (row) => <span className='text-[14px] xl:text-base font-normal text-text-secondary'>{row.suspendData}</span>,
         },
         // {
         //     title: 'ACTION',
@@ -38,7 +38,7 @@ const SuspendedAdminTable = ({tableData}) => {
 
   return (
     <div>
-        <CustomTable tableData={tableData} columns={columns} scroll={{x:"1000px"}}/>
+        <CustomTable tableData={tableData} columns={columns} scroll={{x:"800px"}}/>
     </div>
   )
 }
