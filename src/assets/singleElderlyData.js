@@ -113,100 +113,50 @@ export const customerTable = [
 export const devicesData = [
     {
         id: 1,
-        img: '/images/devices/camera.svg',
-        name: 'Indoor Camera',
-        title: 'Camera',
-        status: 'active',
-        room: 'dining',
+        img: '/images/devices/homeCare.svg',
+        name: 'Home Care Assistant',
+        title: 'Assistant',
+        status: 'Fall not Detected',
+        room: ['dining','bed'],
 
     },
     {
         id: 2,
-        img: '/images/devices/bosch.svg',
-        name: 'Bosch Smart Home Sm',
+        img: '/images/devices/wave.svg',
+        name: 'Wave – Vital Signs Monitor',
         title: 'Sensor',
-        room: 'bed',
-        status: 'active',
-        document: {
-            title: 'Sensor Readings',
-            documents: {
-                tem:72,
-                humidity:55,
-                co2:450,
-                noise:35
-            }
-        }
+        room:[ 'bed','children'],
+        status: 'In Bed',
+        heart:58,
+        breath:16
     },
     {
         id: 3,
-        img: '/images/devices/remote1.svg',
-        name: 'SmartLife X1 Pro',
-        title: 'Lock',
-        status: 'active',
-        room: 'living',
+        img: '/images/devices/door.svg',
+        name: 'Door Sensor',
+        title: 'Sensor',
+        status: 'Closed',
+        room: ['living','garage'],
 
     },
     {
         id: 4,
-        img: '/images/devices/rs.svg',
-        name: 'RS-1843AOPC mmWave Radar',
+        img: '/images/devices/indoor.svg',
+        name: 'Indoor Siren',
         title: 'Sensor',
-        status: 'active',
+        status: 'Trigger',
         room: 'kitchen',
 
     },
     {
         id: 5,
-        img: '/images/devices/echo.svg',
-        name: 'Amazon Echo',
-        title: 'Speaker',
-        status: 'inactive',
+        img: '/images/devices/sos.svg',
+        name: 'SOS Button',
+        title: 'SOS Button',
+        status: 'Not Triggered',
         room: 'bath',
 
-    },
-    {
-        id: 6,
-        img: '/images/devices/cam.svg',
-        name: 'Security Cam',
-        title: 'Camera',
-        status: 'active',
-        room: 'garage',
-
-    },
-    {
-        id: 7,
-        img: '/images/devices/showe.svg',
-        name: 'Smart Shower',
-        title: 'Shower',
-        status: 'active',
-        room: 'children',
-
-    },
-    {
-        id: 8,
-        img: '/images/devices/doorbell.svg',
-        name: 'Arlo Video Doorbell',
-        title: 'Doorbell',
-        status: 'active',
-        room: 'living',
-
-    },
-    {
-        id: 9,
-        img: '/images/devices/watch.svg',
-        name: 'Apple Watch Series 3',
-        title: 'Sensor',
-        status: 'inactive',
-        document: {
-            title: 'Sensor Readings',
-            documents: {
-                tem:70,
-                humidity:60,
-                co2:430,
-                noise:45
-            }
-        }
-    },
+    }
 ]
 
 export const roomData = [
@@ -1339,5 +1289,49 @@ export const monthlyTrends= [
         title: "Bathroom Visited",
         average: "06 Visits",
         data: "07 Visits"
+    }
+]
+
+export const waveData=[
+    {
+        dailyOverView:{
+            sleepTime:'06:35',
+            sleepScore:72,
+            avgHeartRate:61,
+            avgBreathingRate:20,
+        },
+        sleepTimeLine:{
+            start:"22:45",
+            end:"04:58",
+            totalDeep:'04:30',
+            totalCore:"00:24",
+            totalRem:"00:45",
+            awake:"00:46",
+            outOfBed:"",
+            totalOutOfBed:1,
+        },
+        bioVita:[
+            {
+                time:'22:23',
+                value:'10'
+            },
+            {
+                time:'24:45',
+                value:'20'
+            },
+            {
+                time:'02:20',
+                value:'12'
+            },
+            {
+                time:'03:14',
+                value:'18'
+            },
+            {
+                time:'04:58',
+                value:'25'
+            },
+        ],
+
     }
 ]

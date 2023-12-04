@@ -9,6 +9,9 @@ const SidebarContextProvider = ({ children }) => {
   // ----------------set single elderly condition------------
   const [elderlyId,setElderlyId]=useState('')
 
+  // -------------inner device show---------------
+  const [deviceInner,setDeviceInner]=useState('');
+
   const [show, setShow] = useState(false)
   const [sidebarShow,setSidebarShow] = useState(false)
   const [overView, setOverView] = useState(true)
@@ -27,7 +30,9 @@ const SidebarContextProvider = ({ children }) => {
     elderlyId,
     setElderlyId,
     sidebarShow,
-    setSidebarShow
+    setSidebarShow,
+    setDeviceInner,
+    deviceInner
   }
 
   return (

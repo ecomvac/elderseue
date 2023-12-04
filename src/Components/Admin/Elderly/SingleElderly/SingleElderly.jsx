@@ -8,8 +8,10 @@ import { SidebarContext } from '../../../../Context/CustomContext';
 import Subscriptions from './Subscriptions/Subscriptions';
 import Activity from './Activity/Activity';
 import Report from './Report/Report';
+import InnerAssistant from './Devices/InnerAssistant/InnerAssistant';
+import InnerWave from './Devices/InnerWave/InnerWave';
 const SingleElderly = () => {
-    const { innerOverView } = useContext(SidebarContext)
+    const { innerOverView, deviceInner } = useContext(SidebarContext)
     const [activeTab, setActiveTab] = useState('Overview')
 
     // const tabData = [
@@ -122,7 +124,19 @@ const SingleElderly = () => {
                     activeTab === 'Activity' && <Activity />
                 }
                 {
-                    activeTab === 'Devices' && <Devices />
+                    activeTab === 'Devices' && <>
+                        {
+                            deviceInner === 'Home Care Assistant' && <InnerAssistant />
+                        }
+                        {
+                            deviceInner === 'Wave – Vital Signs Monitor' && <InnerWave />
+                        }
+                        {
+                            deviceInner===''&&<Devices />
+                        }
+                        
+                    </>
+
                 }
                 {
                     activeTab === 'Subscriptions' && <Subscriptions />

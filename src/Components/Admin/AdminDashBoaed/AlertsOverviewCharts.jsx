@@ -2,10 +2,11 @@ import { Column } from '@ant-design/plots';
 import React from 'react'
 
 const AlertsOverviewCharts = () => {
+
   const data = [
     {
       type: 'Critical',
-      day: 'Sun',
+      year: 'Sun',
       value: 20,
     },
     {
@@ -40,7 +41,7 @@ const AlertsOverviewCharts = () => {
     },
     {
       type: 'Warning',
-      day: 'Sun',
+      year: 'Sun',
       value: 60,
     },
     {
@@ -75,7 +76,7 @@ const AlertsOverviewCharts = () => {
     },
     {
       type: 'Problem',
-      day: 'Sun',
+      year: 'Sun',
       value: 20,
     },
     {

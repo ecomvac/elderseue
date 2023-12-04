@@ -110,7 +110,7 @@ const OverViewChart = ({ data }) => {
                 </div>
             </div>
             {/* -------------------chart-------------------- */}
-            <div className='px-6'>
+            <div className='px-6 h-[483px]'>
                 <Area {...config} />
             </div>
             {/* ----------------average box----------------- */}
