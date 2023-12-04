@@ -18,7 +18,7 @@ const ElderlyConditionsChart = ({ data }) => {
                 },
             },
         },
-        minColumnWidth: 45,
+        minColumnWidth: 20,
         maxColumnWidth: 45,
         columnStyle: {
             fill: '#dec4ff',
