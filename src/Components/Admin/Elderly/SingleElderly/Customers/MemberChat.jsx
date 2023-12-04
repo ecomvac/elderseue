@@ -116,7 +116,7 @@ const MemberChat = () => {
         },
       },
     },
-    minColumnWidth: 22,
+    minColumnWidth: 10,
     maxColumnWidth: 22,
     columnStyle: {
       fill: '#dec4ff',

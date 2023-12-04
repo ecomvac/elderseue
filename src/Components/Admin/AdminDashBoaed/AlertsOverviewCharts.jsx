@@ -118,7 +118,7 @@ const AlertsOverviewCharts = () => {
     legend: false,
     color: ['#F83333', '#F5A406', '#5C76FF'],
     isStack: true,
-    minColumnWidth: 20,
+    minColumnWidth: 10,
     maxColumnWidth: 20,
     yAxis: {
       label: {
