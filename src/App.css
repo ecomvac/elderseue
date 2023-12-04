@@ -565,3 +565,8 @@ color: rgba(157, 158, 163, 0.8) !important;
   margin: 0 !important;
   padding: 0 !important;
 }
+
+
+.ant-slider-handle {
+  background-color: #9039FF !important;
+}
