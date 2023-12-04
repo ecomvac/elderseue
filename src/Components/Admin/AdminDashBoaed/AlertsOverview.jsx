@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import SortDat from "../../../Shared/sort/SortDat";
 import AlertsOverviewCharts from "./AlertsOverviewCharts";
 import CustomBar from "./CustomBar";
+import { AlertsOverviewMonth, AlertsOverviewWeek } from "../../../assets/supportAgentData/AdminDashBoardChart";
 
 const AlertsOverview = () => {
-  const [selected, setSelected] = useState();
+  const [selected, setSelected] = useState("Last Week");
+  const [chartData,setChartData] = useState(AlertsOverviewWeek)
   const data = ["Last Week", "last Month"];
 
   const alertsData = [
@@ -21,6 +23,16 @@ const AlertsOverview = () => {
       value: "1,003",
     },
   ];
+
+
+  useEffect(()=>{
+    if(selected==="Last Week"){
+      setChartData(AlertsOverviewWeek)
+    }
+    if(selected==="last Month"){
+      setChartData(AlertsOverviewMonth)
+    }
+  },[selected])
 
   return (
     <div>
@@ -60,7 +72,7 @@ const AlertsOverview = () => {
           </div>
         </div>
         <div className="lg:w-[70%] w-full">
-          <AlertsOverviewCharts />
+          <AlertsOverviewCharts data={chartData}/>
         </div>
       </div>
     </div>

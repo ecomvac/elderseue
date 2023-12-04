@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import TopSupportAgentsCharts from './TopSupportAgentsCharts'
-import { TopSupportAgentsMonthly } from '../../../assets/supportAgentData/AdminDashBoardChart'
+import { TopSupportAgentsDaily, TopSupportAgentsMonthly, TopSupportAgentsYearly } from '../../../assets/supportAgentData/AdminDashBoardChart'
 
 const TopSupportAgents = () => {
     
-
+    const [chartData,setChartData] = useState(TopSupportAgentsYearly)
     const [active,setActive] = useState(3)
     const tabData = [
         {
@@ -21,6 +21,18 @@ const TopSupportAgents = () => {
         },
     ]
 
+    useEffect(()=>{
+        if(active===3){
+            setChartData(TopSupportAgentsYearly)
+        }
+        if(active===2){
+            setChartData(TopSupportAgentsMonthly)
+        }
+        if(active===1){
+            setChartData(TopSupportAgentsDaily)
+        }
+    },[active])
+
 
   return (
     <div>
@@ -34,7 +46,7 @@ const TopSupportAgents = () => {
             </div>
         </div>
         <div>
-            <TopSupportAgentsCharts data={TopSupportAgentsMonthly}/>
+            <TopSupportAgentsCharts data={chartData}/>
         </div>
     </div>
   )

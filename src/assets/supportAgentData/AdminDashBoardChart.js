@@ -296,3 +296,177 @@ export const TopSupportAgentsMonthly = [
         day:"24",
     },
 ]
+
+
+export const AlertsOverviewWeek = [
+    {
+      type: 'Critical',
+      day: 'Sun',
+      value: 20,
+    },
+    {
+      type: 'Critical',
+      year: 'Mon',
+      value: 30,
+    },
+    {
+      type: 'Critical',
+      year: 'Tue',
+      value: 40,
+    },
+    {
+      type: 'Critical',
+      year: 'Wed',
+      value: 20,
+    },
+    {
+      type: 'Critical',
+      year: 'Thu',
+      value: 30,
+    },
+    {
+      type: 'Critical',
+      year: 'Fri',
+      value: 40,
+    },
+    {
+      type: 'Critical',
+      year: 'Sat',
+      value: 50,
+    },
+    {
+      type: 'Warning',
+      day: 'Sun',
+      value: 60,
+    },
+    {
+      type: 'Warning',
+      year: 'Mon',
+      value: 40,
+    },
+    {
+      type: 'Warning',
+      year: 'Tue',
+      value: 20,
+    },
+    {
+      type: 'Warning',
+      year: 'Wed',
+      value: 60,
+    },
+    {
+      type: 'Warning',
+      year: 'Thu',
+      value: 40,
+    },
+    {
+      type: 'Warning',
+      year: 'Fri',
+      value: 20,
+    },
+    {
+      type: 'Warning',
+      year: 'Sat',
+      value: 10,
+    },
+    {
+      type: 'Problem',
+      day: 'Sun',
+      value: 20,
+    },
+    {
+      type: 'Problem',
+      year: 'Mon',
+      value: 30,
+    },
+    {
+      type: 'Problem',
+      year: 'Tue',
+      value: 40,
+    },
+    {
+      type: 'Problem',
+      year: 'Wed',
+      value: 20,
+    },
+    {
+      type: 'Problem',
+      year: 'Thu',
+      value: 30,
+    },
+    {
+      type: 'Problem',
+      year: 'Fri',
+      value: 40,
+    },
+    {
+      type: 'Problem',
+      year: 'Sat',
+      value: 40,
+    },
+  ];
+
+
+
+  export const AlertsOverviewMonth = [
+    {
+      type: 'Critical',
+      year: 'Week 1',
+      value: 20,
+    },
+    {
+      type: 'Critical',
+      year: 'Week 2',
+      value: 30,
+    },
+    {
+      type: 'Critical',
+      year: 'Week 3',
+      value: 40,
+    },
+    {
+      type: 'Critical',
+      year: 'Week 4',
+      value: 20,
+    },
+    {
+      type: 'Warning',
+      year: 'Week 1',
+      value: 60,
+    },
+    {
+      type: 'Warning',
+      year: 'Week 2',
+      value: 40,
+    },
+    {
+      type: 'Warning',
+      year: 'Week 3',
+      value: 20,
+    },
+    {
+      type: 'Warning',
+      year: 'Week 4',
+      value: 60,
+    },
+    {
+      type: 'Problem',
+      year: 'Week 1',
+      value: 20,
+    },
+    {
+      type: 'Problem',
+      year: 'Week 2',
+      value: 30,
+    },
+    {
+      type: 'Problem',
+      year: 'Week 3',
+      value: 40,
+    },
+    {
+      type: 'Problem',
+      year: 'Week 4',
+      value: 20,
+    },
+  ];
