@@ -2,7 +2,6 @@ import React from 'react'
 import AdminSupportAgentTableAction from './AdminSupportAgentTableAction';
 import AdminFiled from '../../../Shared/AdminFiled/AdminFiled';
 import CustomTable from '../../../Shared/Table/CustomTable';
-import { Icon } from '@iconify/react';
 
 const AdminSupportAgentTable = ({tableData}) => {
     const columns = [
@@ -23,7 +22,10 @@ const AdminSupportAgentTable = ({tableData}) => {
         },
         {
             title: 'BUSINESS ADDRESS',
-            render: (row) => <span className=' text-[14px] xl:text-base  font-normal text-text-secondary'>{row.businessAdress}</span>
+            render: (row) => <>
+            <span className=' text-[14px] xl:text-base xl:block hidden font-normal text-text-secondary'>{row.businessAdress}</span>
+            <span className=' text-[14px] xl:text-base block xl:hidden font-normal text-text-secondary'>{row.businessAdress.slice(0,15)+"..."}</span>
+            </>
 
         },
         {
@@ -40,7 +42,7 @@ const AdminSupportAgentTable = ({tableData}) => {
             sorter: (a, b) => a.status - b.status,
         },
         {
-            title: <Icon icon="basil:other-2-outline" className=" text-[35px]"/>,
+            title: "",
             key: "id",
             render: (row) => (
                 <AdminSupportAgentTableAction data={row} />
@@ -49,7 +51,7 @@ const AdminSupportAgentTable = ({tableData}) => {
     ];
   return (
     <div>
-        <CustomTable tableData={tableData} columns={columns} scroll={{x:"800px"}}/>
+        <CustomTable tableData={tableData} columns={columns} scroll={{x:"750px"}}/>
     </div>
   )
 }

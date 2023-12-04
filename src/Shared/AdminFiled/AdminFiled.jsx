@@ -29,11 +29,17 @@ const AdminFiled = ({ data }) => {
         </div>
 
       </div>
-      <div>
+      <div className=" hidden xl:flex items-start flex-col">
         <h3 className="text-[16px] text-text-primary mt-[-2px] p-0 font-[500]">
           {data?.firstName + " " + data?.lastName}
         </h3>
         <p className=" text-[13px] mt-[-4px] font-[400] text-[#A3AED0]">{data.email}</p>
+      </div>
+      <div className="flex flex-col xl:hidden">
+        <h3 className="text-[16px] text-text-primary mt-[-2px] p-0 font-[500]">
+          {data?.firstName + " " + data?.lastName.slice(0,2)+"..."}
+        </h3>
+        <p className=" text-[13px] mt-[-4px] font-[400] text-[#A3AED0]">{data.email.slice(0,18)+"..."}</p>
       </div>
     </div>
   );

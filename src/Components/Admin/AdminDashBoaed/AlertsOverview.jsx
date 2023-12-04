@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import SortDat from "../../../Shared/sort/SortDat";
 import AlertsOverviewCharts from "./AlertsOverviewCharts";
 import CustomBar from "./CustomBar";
+import { AlertsOverviewMonth, AlertsOverviewWeek } from "../../../assets/supportAgentData/AdminDashBoardChart";
 
 const AlertsOverview = () => {
-  const [selected, setSelected] = useState();
-  const data = ["Last Week", "last year"];
+  const [selected, setSelected] = useState("Last Week");
+  const [chartData,setChartData] = useState(AlertsOverviewWeek)
+  const data = ["Last Week", "last Month"];
 
   const alertsData = [
     {
@@ -22,16 +24,26 @@ const AlertsOverview = () => {
     },
   ];
 
+
+  useEffect(()=>{
+    if(selected==="Last Week"){
+      setChartData(AlertsOverviewWeek)
+    }
+    if(selected==="last Month"){
+      setChartData(AlertsOverviewMonth)
+    }
+  },[selected])
+
   return (
     <div>
       <div className=" flex md:items-center md:flex-row flex-col gap-2 justify-between">
         <h2 className=" text-2xl font-bold text-text-primary">
           Alerts Overview
         </h2>
-        <SortDat selected={selected} setSelected={setSelected} data={data} />
+        <SortDat className={" bg-primary/10 text-primary"} selected={selected} setSelected={setSelected} data={data} />
       </div>
-      <div className=" flex items-start lg2:flex-row gap-5 flex-col justify-between mt-8">
-        <div className="lg2:w-[30%] w-full ml-5">
+      <div className=" flex items-start lg:flex-row gap-5 flex-col justify-between mt-8">
+        <div className="lg:w-[30%] w-full ml-5">
           <div>
             <h3 className=" text-[13px] font-medium text-text-secondary">
               Total Alert
@@ -59,8 +71,8 @@ const AlertsOverview = () => {
             ))}
           </div>
         </div>
-        <div className="lg2:w-[70%] w-full">
-          <AlertsOverviewCharts />
+        <div className="lg:w-[70%] w-full">
+          <AlertsOverviewCharts data={chartData}/>
         </div>
       </div>
     </div>
