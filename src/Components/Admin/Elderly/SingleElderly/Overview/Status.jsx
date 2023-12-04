@@ -22,7 +22,7 @@ const Status = () => {
                                 <span className='text-sm text-white opacity-80'>Something Went Wrong With Elderly</span>
                             </span>
                         </div>
-                        <div className='mt-[72px] px-0 md:px-12 flex justify-between items-center'>
+                        <div className='mt-[72px] px-0 xl:px-12 grid grid-cols-3 xl:grid-cols-3 lg:grid-cols-2'>
                             <span className='flex items-center gap-1'>
                                 <span className='text-white opacity-80  text-[35px] h-[35px] '><Icon className='h-full' icon="lucide:siren" /></span>
                                 <span className='flex flex-col text-white'>

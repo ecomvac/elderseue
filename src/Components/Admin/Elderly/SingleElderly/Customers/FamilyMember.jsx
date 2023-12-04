@@ -54,7 +54,7 @@ const FamilyMember = () => {
                         </span>
                     </CustomButton>
                 </div>
-                <CustomTable tableData={tableData} columns={columns} scroll={{ x: "1000px" }} />
+                <CustomTable tableData={tableData} columns={columns} scroll={{ x: "750px" }} />
             </SectionWrapper>
 
         </>
