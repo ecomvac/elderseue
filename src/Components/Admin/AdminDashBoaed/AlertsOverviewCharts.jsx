@@ -157,6 +157,13 @@ const AlertsOverviewCharts = () => {
 
       return baseStyle;
     },
+    tooltip: {
+      customContent: (title, items) => {
+        return (
+          <></>
+        );
+      },
+    },
   };
 
   return (
