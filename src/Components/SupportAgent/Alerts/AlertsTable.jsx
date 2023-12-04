@@ -48,18 +48,23 @@ const AlertsTable = ({tableData}) => {
         {
             title: 'ALERT',
             key: "id",
-            render: (row) => (
+            render: (row) => (<div onClick={()=>handelClick(row)} className='w-full  cursor-pointer'>
                 <Alerts row={row} />
+            </div>
             )
         },
         {
             title: 'ALERT TYPE',
-            render: (row) => <span className='text-[16px] font-[400] capitalize text-dark-black/80'>{row.alert}</span>,
+            render: (row) =><button onClick={()=>handelClick(row)} className='w-full  cursor-pointer'> 
+                <span className='text-[16px] font-[400] capitalize text-dark-black/80'>{row.alert}</span>
+                </button>,
             sorter: (a, b) => a.type - b.type,
         },
         {
             title: 'DATE',
-            render: (row) => <span className='text-[16px] font-[400] text-dark-black/80'>{row.DATE}</span>,
+            render: (row) =><button onClick={()=>handelClick(row)} className='w-full  cursor-pointer'> 
+            <span className='text-[16px] font-[400] text-dark-black/80'>{row.DATE}</span>
+            </button>,
             sorter: (a, b) => a.DATE - b.DATE,
         },
         {
@@ -74,6 +79,11 @@ const AlertsTable = ({tableData}) => {
             )
         },
     ];
+
+    const handelClick = (record) => {
+        navigate(`/support-agent/dashboard/elderly/${record.id}`)
+    }
+
   return (
     <div>
         <CustomTable tableData={tableData} columns={columns} scroll={{x:"500px"}}/>
