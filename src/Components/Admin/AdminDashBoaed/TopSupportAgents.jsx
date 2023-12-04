@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
 import TopSupportAgentsCharts from './TopSupportAgentsCharts'
+import { TopSupportAgentsMonthly } from '../../../assets/supportAgentData/AdminDashBoardChart'
 
 const TopSupportAgents = () => {
+    
+
     const [active,setActive] = useState(3)
     const tabData = [
         {
@@ -19,81 +22,6 @@ const TopSupportAgents = () => {
     ]
 
 
-    const chartData = [
-        {
-            date:"05 July, 2023",
-            name:"Towsif Ahmed",
-            caseSolved:300,
-            day:"Jan",
-        },
-        {
-            date:"06 July, 2023",
-            name:"Tanjim Ahmed",
-            caseSolved:325,
-            day:"Feb",
-        },
-        {
-            date:"07 July, 2023",
-            name:"Tanjim Ahmed",
-            caseSolved:350,
-            day:"Mar",
-        },
-        {
-            date:"08 July, 2023",
-            name:"Tasfia Islam",
-            caseSolved:370,
-            day:"Apr",
-        },
-        {
-            date:"09 July, 2023",
-            name:"Towsif Ahmed",
-            caseSolved:350,
-            day:"May",
-        },
-        {
-            date:"10 July, 2023",
-            name:"Towsif Ahmed",
-            caseSolved:413,
-            day:"Jun",
-        },
-        {
-            date:"11 July, 2023",
-            name:"Tasfia Islam",
-            caseSolved:370,
-            day:"Jul",
-        },
-        {
-            date:"12 July, 2023",
-            name:"Tasfia Islam",
-            caseSolved:330,
-            day:"Aug",
-        },
-        {
-            date:"13 July, 2023",
-            name:"Towsif Ahmed",
-            caseSolved:280,
-            day:"Sep",
-        },
-        {
-            date:"14 July, 2023",
-            name:"Towsif Ahmed",
-            caseSolved:270,
-            day:"Oct",
-        },
-        {
-            date:"15 July, 2023",
-            name:"Towsif Ahmed",
-            caseSolved:300,
-            day:"Nov",
-        },
-        {
-            date:"16 July, 2023",
-            name:"Tasfia Islam",
-            caseSolved:320,
-            day:"Dec",
-        },
-    ]
-
   return (
     <div>
         <div className=' flex md:items-center md:flex-row flex-col gap-3 justify-between'>
@@ -106,7 +34,7 @@ const TopSupportAgents = () => {
             </div>
         </div>
         <div>
-            <TopSupportAgentsCharts data={chartData}/>
+            <TopSupportAgentsCharts data={TopSupportAgentsMonthly}/>
         </div>
     </div>
   )
