@@ -28,7 +28,7 @@ const Analysis = ({ waveData }) => {
             <div>
                 <SleepSummary />
             </div>
-            <div className='flex border-b'>
+            <div className='grid grid-cols-1 md:grid-cols-2 border-b'>
                 <div className='p-5 w-full border-r'><HeartRateSummary data={waveData.heartRateDetails} /></div>
                 <div className='p-5 w-full'><BreathRateSummary data={waveData.breathRateDetails} /></div>
             </div>

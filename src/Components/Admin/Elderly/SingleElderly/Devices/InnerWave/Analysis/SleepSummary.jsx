@@ -206,9 +206,9 @@ const SleepSummary = () => {
         },
     };
     return (
-        <div className='p-5 flex items-center gap-5 border-b'>
+        <div className='p-5 md:flex items-center gap-5 border-b'>
             {/* -----------average----------------- */}
-            <div className='w-1/3'>
+            <div className='w-full md:w-1/3'>
                 <div className='flex items-center gap-1'>
                     <Icon className='text-2xl  text-primary' icon="icon-park-solid:sleep" />
                     <p className='text-text-primary font-semibold'>Sleep Summery</p>
@@ -251,7 +251,7 @@ const SleepSummary = () => {
                 </div>
             </div>
             {/* -----------chart------------------- */}
-            <div className='w-2/3 h-[275px]'>
+            <div className='w-full md:w-2/3 h-[275px] mt-5 md:mt-0'>
                 <Column {...config} />
             </div>
         </div>

@@ -1,5 +1,4 @@
 import { Area } from '@ant-design/plots';
-import { Icon } from '@iconify/react';
 import React from 'react';
 
 const OutOfBed = ({ data }) => {
