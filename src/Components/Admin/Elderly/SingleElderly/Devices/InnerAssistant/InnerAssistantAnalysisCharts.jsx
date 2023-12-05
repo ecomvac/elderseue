@@ -14,9 +14,9 @@ const InnerAssistantAnalysisCharts = ({data}) => {
         minColumnWidth: 10,
         maxColumnWidth: 20,
         yAxis: {
-          label: {
-            formatter: (v) => `${v}%`,
-          },
+          // label: {
+          //   formatter: (v) => `${v}%`,
+          // },
           grid: {
             line: {
               style: {

@@ -31,7 +31,7 @@ const AllDevices = ({ data }) => {
         </div>
     );
     return (
-        <div className=' grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-h-[870px] overflow-y-auto mt-6'>
+        <div className=' grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 max-h-[870px] overflow-y-auto mt-6'>
             {
                 deviceData?.map((device, index) => <>
                     <div key={index} className='relative'>
@@ -49,7 +49,7 @@ const AllDevices = ({ data }) => {
                                 </Popover>
 
                             </div>
-                            <div className='mt-5 flex items-center justify-between'>
+                            <div className='mt-5 flex flex-wrap gap-3 items-center justify-between'>
                                 <span className='flex items-center gap-1'>
                                     <span className={`text-green-500 p-[2px] bg-green-200 rounded-full text-[14px]`}>
                                         <Icon icon="octicon:dot-fill-24" />
