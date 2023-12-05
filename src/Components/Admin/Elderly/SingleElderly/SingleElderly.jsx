@@ -93,7 +93,7 @@ const SingleElderly = () => {
         <>
             <div>
                 <div className='overflow-x-auto'>
-                    <div className='bg-[#F6F8FF] flex border-b-[3px] border-primary'>
+                    <div className='bg-[#F6F8FF] flex border-b-[2px] border-primary'>
                         {tabs?.map(tab => <>
                             <div className='flex items-end'>
                                 <div className={`duration-500 ${activeTab === tab?.title ? 'bg-primary' : 'bg-white'} w-[25px] h-[15px]`}>

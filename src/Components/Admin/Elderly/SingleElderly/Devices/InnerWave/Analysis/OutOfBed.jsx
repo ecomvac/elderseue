@@ -1,4 +1,5 @@
 import { Area } from '@ant-design/plots';
+import { Icon } from '@iconify/react';
 import React from 'react';
 
 const OutOfBed = ({ data }) => {
@@ -56,7 +57,15 @@ const OutOfBed = ({ data }) => {
         },
     };
     return (
-        <div>
+        <div className='p-5'>
+            <div className='flex items-center justify-between mb-6'>
+                <div className='flex items-center gap-1'>
+                    {/* <Icon className='text-3xl text-[#00BE9C]' icon="material-symbols:ecg-heart-sharp" /> */}
+                    <img src={"/images/wakeUpIcon.svg"} alt="" />
+                    <p className='text-lg font-semibold text-text-primary'>Out Of Bed</p>
+                </div>
+                <div className='text-[15px] font-semibold text-text-primary'><span>Avg. <span className='text-[#00BE9C]'>1x</span></span></div>
+            </div>
             <div className='h-[239px] mt-5'>
                 <Area {...config} />
             </div>

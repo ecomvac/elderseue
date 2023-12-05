@@ -1328,7 +1328,7 @@ export const waveData={
         },
         {
             time:'04:58',
-            value:25
+            value:15
         },
     ],
 
