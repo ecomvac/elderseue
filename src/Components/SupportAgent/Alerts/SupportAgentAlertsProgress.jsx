@@ -17,7 +17,7 @@ const SupportAgentAlertsProgress = ({data}) => {
             {
                 data.slice(0,7).map((row,i)=>{
                     return(
-                    <div key={i} onClick={()=>navigate(`/support-agent/dashboard/user/${row.id}`)} className='flex md:items-center cursor-pointer justify-between md:flex-row  flex-col w-full gap-7'>
+                    <div key={i} onClick={()=>navigate(`/support-agent/dashboard/elderly/${row.id}`)} className='flex md:items-center cursor-pointer justify-between md:flex-row  flex-col w-full gap-7'>
                         <div className='flex items-start gap-2'>
                         {
                             row.alert==="Critical" && (
