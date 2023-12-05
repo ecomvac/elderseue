@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import HeartRateSummary from './HeartRateSummary';
 import BreathRateSummary from './BreathRateSummary';
-
+import OutOfBed from './OutOfBed';
 const Analysis = ({waveData}) => {
     const [active,setActive] = useState(1)
     const tabData = [
@@ -24,9 +24,15 @@ const Analysis = ({waveData}) => {
                 ))}
             </div>
             </div>
+            <div>
+
+            </div>
             <div className='flex border-b'>
                 <div className='p-5 w-full border-r'><HeartRateSummary data={waveData.heartRateDetails}/></div>
                 <div className='p-5 w-full'><BreathRateSummary data={waveData.breathRateDetails}/></div>
+            </div>
+            <div>
+                <OutOfBed data={waveData.outOfBedDetails} />
             </div>
         </div>
     );

@@ -1391,6 +1391,36 @@ export const waveData={
             day:'Sat',
             value:[12,20]
         }
+    ],
+    outOfBedDetails:[
+        {
+            day:'Sun',
+            value:0
+        },
+        {
+            day:'Mon',
+            value:0.5
+        },
+        {
+            day:'Tue',
+            value:1
+        },
+        {
+            day:'Wed',
+            value:0
+        },
+        {
+            day:'Thu',
+            value:3
+        },
+        {
+            day:'Fri',
+            value:0
+        },
+        {
+            day:'Sat',
+            value:0
+        },
     ]
 
 }
