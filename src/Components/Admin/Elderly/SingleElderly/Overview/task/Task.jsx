@@ -46,6 +46,7 @@ const Task = () => {
       };
       updateData[index].message.push(newMessage);
       setTasks(updateData);
+      setMessage("")
     }
   };
 
@@ -54,7 +55,7 @@ const Task = () => {
       <SectionWrapper>
         <div className="p-5">
           <div className=" flex items-center justify-between">
-            <h2 className=" text-2xl font-bold text-dark-black">Tags</h2>
+            <h2 className=" text-2xl font-bold text-dark-black">Tasks</h2>
             <button onClick={()=>setOpen(true)} className="py-[8px] px-3 text-[13px] font-medium flex items-center justify-center gap-1 h-[37px] outline-none border-none text-primary bg-primary/10 rounded-[10px]">
               <Icon icon="ic:round-add" className=" text-[18px]" /> Add Task
             </button>

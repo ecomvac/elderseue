@@ -579,7 +579,7 @@ export const AlertsOverviewWeek = [
     },
     {
       type: 'NormalActivity',
-      day: 'Sun',
+      year: 'Sun',
       value: 20,
     },
     {
