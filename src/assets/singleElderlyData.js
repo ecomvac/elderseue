@@ -1421,6 +1421,61 @@ export const waveData={
             day:'Sat',
             value:0
         },
+    ],
+    monthlyHeart:[
+        {
+            day:'Week1',
+            value:[10,20]
+        },
+        {
+            day:'Week2',
+            value:[15,26]
+        },
+        {
+            day:'Week3',
+            value:[16,25]
+        },
+        {
+            day:'Week4',
+            value:[10,20]
+        },
+    ],
+    monthlyBreath:[
+        {
+            day:'Week1',
+            value:[10,20]
+        },
+        {
+            day:'Week2',
+            value:[15,26]
+        },
+        {
+            day:'Week3',
+            value:[16,25]
+        },
+        {
+            day:'Week4',
+            value:[10,20]
+        },
+    ],
+    monthlyOutOfBed:[
+        {
+            day:'Week1',
+            value:3
+        },
+        {
+            day:'Week2',
+            value:2
+        },
+        {
+            day:'Week3',
+            value:1
+        },
+        {
+            day:'Week4',
+            value:2
+        },
     ]
+    
 
 }

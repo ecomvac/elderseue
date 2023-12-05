@@ -47,7 +47,6 @@ const AddDevice = ({ modalOpen, setModalOpen }) => {
             }
         });
     }
-    console.log(selectedDevice)
 
     return (
         <div>
