@@ -2,7 +2,7 @@ import React from 'react'
 
 const InnerAssistantAnalysisAvg = () => {
   return (
-    <div className=' flex items-center justify-center gap-4'>
+    <div className=' grid xl:grid-cols-4 grid-cols-2 lg:w-[80%] mx-auto w-full  lg:grid-cols-2 gap-4'>
         <div className=' flex items-start gap-1'>
             <div className=' w-[10px] h-[10px] mt-[5px] rounded-full bg-[#9A4BFF]'>
 

@@ -4,13 +4,13 @@ import React from "react";
 
 const DailyOverviewCharts = () => {
   return (
-    <div className="grid grid-cols-2 gap-y-6">
+    <div className="grid xl:grid-cols-2 grid-cols-2 lg:grid-cols-1 gap-y-6">
       <div className="flex items-center gap-2">
         <div className="relative">
           <div className="flex justify-center text-primary ">
             <Icon
               className="absolute top-4 text-2xl"
-              icon="solar:moon-sleep-bold"
+              icon="grommet-icons:restroom-men"
             />
           </div>
           <Progress
@@ -24,20 +24,63 @@ const DailyOverviewCharts = () => {
         </div>
         <div className="flex flex-col">
           <span className="text-[#969BB3] text-base font-medium">
-            Sleep Time
+             Normal Activity
           </span>
           <span className="text-[#9A4BFF] text-[22px] font-semibold -mt-1">
-            {25}
+            9hr 15m
           </span>
         </div>
       </div>
       <div className="flex items-center gap-2">
         <div className="relative">
-          <div className="flex justify-center text-[#88DB00] ">
-            <Icon
-              className="absolute top-4 text-2xl"
-              icon="solar:ranking-bold"
-            />
+          <div className="flex justify-center  ">
+              <img src="/images/icon/noun-sitting-2.svg" alt="" className="absolute top-4 text-2xl"/>
+          </div>
+          <Progress
+            type="circle"
+            showInfo={false}
+            percent={60}
+            size={55}
+            strokeWidth={13}
+            strokeColor={"#00D192"}
+          />
+        </div>
+        <div className="flex flex-col">
+          <span className="text-[#969BB3] text-base font-medium">
+            Sedentary
+          </span>
+          <span className="text-[#00D192] text-[22px] font-semibold -mt-1">
+            13hr 45m
+          </span>
+        </div>
+      </div>
+      <div className="flex items-center gap-2">
+        <div className="relative">
+          <div className="flex justify-center text-[#FF8A35] ">
+              <img src="/images/icon/noun-night-run-1.svg" alt="" className="absolute top-4 text-2xl"/>
+          </div>
+          <Progress
+            type="circle"
+            showInfo={false}
+            percent={5}
+            size={55}
+            strokeWidth={13}
+            strokeColor={"#FF8A35"}
+          />
+        </div>
+        <div className="flex flex-col">
+          <span className="text-[#969BB3] text-base font-medium">
+            Wandering at Day
+          </span>
+          <span className="text-[#FF8A35] text-[22px] font-semibold -mt-1">
+            20m
+          </span>
+        </div>
+      </div>
+      <div className="flex items-center gap-2">
+        <div className="relative">
+          <div className="flex justify-center text-[#888888] ">
+              <img src="/images/icon/noun-night-run-3.svg" alt="" className="absolute top-4 text-2xl"/>
           </div>
           <Progress
             type="circle"
@@ -45,67 +88,15 @@ const DailyOverviewCharts = () => {
             percent={10}
             size={55}
             strokeWidth={13}
-            strokeColor={"#88DB00"}
+            strokeColor={"#888888"}
           />
         </div>
         <div className="flex flex-col">
           <span className="text-[#969BB3] text-base font-medium">
-            Sleep Score
+            Wandering at Night
           </span>
-          <span className="text-[#88DB00] text-[22px] font-semibold -mt-1">
-            {10}%
-          </span>
-        </div>
-      </div>
-      <div className="flex items-center gap-2">
-        <div className="relative">
-          <div className="flex justify-center text-[#FF5959] ">
-            <Icon
-              className="absolute top-4 text-2xl"
-              icon="material-symbols:ecg-heart"
-            />
-          </div>
-          <Progress
-            type="circle"
-            showInfo={false}
-            percent={20}
-            size={55}
-            strokeWidth={13}
-            strokeColor={"#FF5959"}
-          />
-        </div>
-        <div className="flex flex-col">
-          <span className="text-[#969BB3] text-base font-medium">
-            Avg. Heart Rate
-          </span>
-          <span className="text-[#FF5959] text-[22px] font-semibold -mt-1">
-            {20}
-          </span>
-        </div>
-      </div>
-      <div className="flex items-center gap-2">
-        <div className="relative">
-          <div className="flex justify-center text-[#FFBB3E] ">
-            <Icon
-              className="absolute top-4 text-2xl"
-              icon="healthicons:lungs"
-            />
-          </div>
-          <Progress
-            type="circle"
-            showInfo={false}
-            percent={30}
-            size={55}
-            strokeWidth={13}
-            strokeColor={"#FFBB3E"}
-          />
-        </div>
-        <div className="flex flex-col">
-          <span className="text-[#969BB3] text-base font-medium">
-            Avg. Breathing Rate
-          </span>
-          <span className="text-[#FFBB3E] text-[22px] font-semibold -mt-1">
-            {30}
+          <span className="text-[#888888] text-[22px] font-semibold -mt-1">
+            35m
           </span>
         </div>
       </div>
