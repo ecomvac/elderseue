@@ -2,7 +2,7 @@ import { Column } from '@ant-design/plots';
 import { Icon } from '@iconify/react';
 import React from 'react';
 
-const BreathRateSummary = ({data}) => {
+const BreathRateSummary = ({data,activeTab}) => {
     const config = {
         data,
         xField: 'day',
@@ -50,7 +50,7 @@ const BreathRateSummary = ({data}) => {
             <Icon className='text-3xl text-[#FFBB3E]' icon="healthicons:lungs" />
                 <p className='text-lg font-semibold text-text-primary'>Respiratory Rate Summery</p>
             </div>
-            <div className='text-[15px] font-semibold text-text-primary'><span>Avg. <span className='text-[#FFBB3E]'>14bpm</span></span></div>
+            <div className='text-[15px] font-semibold text-text-primary'><span>Avg. {activeTab==='Weekly'?<span className='text-[#FFBB3E]'>14bpm</span>:<span className='text-[#FFBB3E]'>15bpm</span>}</span></div>
         </div>
         <div className='h-[266px]'>
             <Column {...config} />

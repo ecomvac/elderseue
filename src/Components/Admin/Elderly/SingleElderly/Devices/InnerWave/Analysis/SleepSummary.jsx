@@ -1,9 +1,93 @@
 import { Column } from '@ant-design/plots';
 import { Icon } from '@iconify/react';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
-const SleepSummary = () => {
-    const data = [
+const SleepSummary = ({ activeTab }) => {
+    const monthlyData = [
+
+        {
+            type: 'deep',
+            day: 'Week1',
+            value: 9
+        },
+        {
+            type: 'deep',
+            day: 'Week2',
+            value: 9
+        },
+        {
+            type: 'deep',
+            day: 'Week3',
+            value: 8
+        },
+        {
+            type: 'deep',
+            day: 'Week4',
+            value: 9
+        },
+        {
+            type: 'core',
+            day: 'Week1',
+            value: 7
+        },
+        {
+            type: 'core',
+            day: 'Week2',
+            value: 6
+        },
+        {
+            type: 'core',
+            day: 'Week3',
+            value: 8
+        },
+        {
+            type: 'core',
+            day: 'Week4',
+            value: 4
+        },
+        {
+            type: 'rem',
+            day: 'Week1',
+            value: 3
+        },
+        {
+            type: 'rem',
+            day: 'Week2',
+            value: 2
+        },
+        {
+            type: 'rem',
+            day: 'Week3',
+            value: 1
+        },
+        {
+            type: 'rem',
+            day: 'Week4',
+            value: 3
+        },
+
+        {
+            type: 'awake',
+            day: 'Week1',
+            value: 2
+        },
+        {
+            type: 'awake',
+            day: 'Week2',
+            value: 3
+        },
+        {
+            type: 'awake',
+            day: 'Week3',
+            value: 2
+        },
+        {
+            type: 'awake',
+            day: 'Week4',
+            value: 4
+        },
+    ]
+    const weeklyData = [
 
         {
             type: 'deep',
@@ -150,6 +234,16 @@ const SleepSummary = () => {
 
 
     ]
+    const [data, setData] = useState(weeklyData)
+    useEffect(() => {
+        if (activeTab === 'Weekly') {
+            setData(weeklyData)
+        }
+        if (activeTab === 'Monthly') {
+            setData(monthlyData)
+        }
+    }, [activeTab])
+
     const config = {
         data,
         isStack: true,
@@ -162,31 +256,31 @@ const SleepSummary = () => {
         maxColumnWidth: 7,
         yAxis: {
             label: {
-              formatter: (v) => `${v}hr`,
+                formatter: (v) => `${v}hr`,
             },
             grid: {
-              line: {
-                style: {
-                  stroke: '#707EAE',
-                  color: '#fff',
-                  lineWidth: 0.08,
-                  cursor: 'pointer',
+                line: {
+                    style: {
+                        stroke: '#707EAE',
+                        color: '#fff',
+                        lineWidth: 0.08,
+                        cursor: 'pointer',
+                    },
                 },
-              },
             },
-          },
-          xAxis: {
+        },
+        xAxis: {
             tickLine: {
-              style: {
-                stroke: '#fcfcfd',
-              },
+                style: {
+                    stroke: '#fcfcfd',
+                },
             },
             line: {
-              style: {
-                stroke: '#fcfcfd',
-              },
+                style: {
+                    stroke: '#fcfcfd',
+                },
             },
-          },
+        },
         columnStyle: (data, dataColor) => {
             const baseStyle = { fill: dataColor, radius: [0, 0, 0, 0] };
             if (data?.type === 'deep') {
@@ -215,35 +309,36 @@ const SleepSummary = () => {
                 </div>
                 <div className='flex flex-col mt-[25px] mb-[35px]'>
                     <span className='text-[13px] font-medium text-text-secondary'>Avg. Sleep Time</span>
-                    <span className='text-text-primary font-bold text-[22px]'>9hr 57m</span>
+                    {activeTab === 'Weekly' ? <span className='text-text-primary font-bold text-[22px]'>9hr 57m</span> : <span className='text-text-primary font-bold text-[22px]'>8hr 57m</span>}
+
                 </div>
                 <div className='grid grid-cols-2 gap-y-5'>
                     <span className='flex gap-1'>
                         <span className='h-[9px] w-[9px] rounded-full bg-[#3964FF] mt-1'></span>
                         <span className='flex flex-col'>
                             <span className='text-[13px] font-medium text-text-secondary'>Avg. Deep</span>
-                            <span className='text-[#2B3674] font-bold text-lg]'>3hr 45m</span>
+                            {activeTab === 'Weekly' ? <span className='text-text-primary font-bold text-[22px]'>3hr 45m</span> : <span className='text-text-primary font-bold text-[22px]'>4hr 7m</span>}
                         </span>
                     </span>
                     <span className='flex gap-1'>
                         <span className='h-[9px] w-[9px] rounded-full bg-[#80E005] mt-1'></span>
                         <span className='flex flex-col'>
                             <span className='text-[13px] font-medium text-text-secondary'>Avg. Core</span>
-                            <span className='text-[#2B3674] font-bold text-lg]'>25m</span>
+                            {activeTab === 'Weekly' ? <span className='text-text-primary font-bold text-[22px]'>27m</span> : <span className='text-text-primary font-bold text-[22px]'>25m</span>}
                         </span>
                     </span>
                     <span className='flex gap-1'>
                         <span className='h-[9px] w-[9px] rounded-full bg-[#FF62C0] mt-1'></span>
                         <span className='flex flex-col'>
                             <span className='text-[13px] font-medium text-text-secondary'>Avg. REM</span>
-                            <span className='text-[#2B3674] font-bold text-lg]'>38m</span>
+                            {activeTab === 'Weekly' ? <span className='text-text-primary font-bold text-[22px]'>37m</span> : <span className='text-text-primary font-bold text-[22px]'>35m</span>}
                         </span>
                     </span>
                     <span className='flex gap-1'>
                         <span className='h-[9px] w-[9px] rounded-full bg-[#FF8D24] mt-1'></span>
                         <span className='flex flex-col'>
                             <span className='text-[13px] font-medium text-text-secondary'>Avg. Awake</span>
-                            <span className='text-[#2B3674] font-bold text-lg]'>35m</span>
+                            {activeTab === 'Weekly' ? <span className='text-text-primary font-bold text-[22px]'>47m</span> : <span className='text-text-primary font-bold text-[22px]'>34m</span>}
                         </span>
                     </span>
 

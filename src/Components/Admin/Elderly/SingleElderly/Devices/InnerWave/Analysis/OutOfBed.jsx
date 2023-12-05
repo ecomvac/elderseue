@@ -1,7 +1,7 @@
 import { Area } from '@ant-design/plots';
 import React from 'react';
 
-const OutOfBed = ({ data }) => {
+const OutOfBed = ({ data,activeTab }) => {
     const config = {
         data,
         xField: 'day',
@@ -63,7 +63,7 @@ const OutOfBed = ({ data }) => {
                     <img src={"/images/wakeUpIcon.svg"} alt="" />
                     <p className='text-lg font-semibold text-text-primary'>Out Of Bed</p>
                 </div>
-                <div className='text-[15px] font-semibold text-text-primary'><span>Avg. <span className='text-[#00BE9C]'>1x</span></span></div>
+                <div className='text-[15px] font-semibold text-text-primary'><span>Avg. {activeTab==='Weekly'?<span className='text-[#00BE9C]'>1x</span>:<span className='text-[#00BE9C]'>2x</span>}</span></div>
             </div>
             <div className='h-[239px] mt-5'>
                 <Area {...config} />

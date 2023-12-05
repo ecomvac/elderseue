@@ -36,8 +36,6 @@ const Tags = () => {
   ]);
 
 
-  console.log(category)
-
   const addTags = (e) => {
     e.preventDefault()
     if (!tags) {
