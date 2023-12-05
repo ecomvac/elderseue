@@ -32,7 +32,7 @@ const InnerAssistant = () => {
           </button>
         </div>
 
-        <div className="flex items-start justify-between">
+        <div className="flex items-start flex-col lg:flex-row justify-between">
             <div className="lg:w-[35%] w-full">
                 <InnerAssistantDailyOverview/>
             </div>

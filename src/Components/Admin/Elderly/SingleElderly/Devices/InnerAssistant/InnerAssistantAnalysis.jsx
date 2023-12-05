@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import InnerAssistantAnalysisCharts from "./InnerAssistantAnalysisCharts";
 import { InnerAssistantAnalysisChartsDataWeekly, InnerAssistantAnalysisChartsDataYearly } from "../../../../../../assets/supportAgentData/AdminDashBoardChart";
 import InnerAssistantAnalysisAvg from "./InnerAssistantAnalysisAvg";
+import { Icon } from "@iconify/react";
 
 const InnerAssistantAnalysis = () => {
   const [chartData,setChartData] = useState(InnerAssistantAnalysisChartsDataWeekly) 
@@ -49,8 +50,12 @@ const InnerAssistantAnalysis = () => {
         </div>
       </div>
       <div className="py-[18px] px-6 ">
-        <h2 className=" text-lg font-semibold text-text-primary">
-        Activity
+        <h2 className=" text-lg font-semibold text-text-primary flex items-center gap-1">
+          <Icon
+              className=" text-2xl text-primary"
+              icon="ri:walk-fill"
+            />
+          Activity
         </h2>
 
         <div className="py-5">
