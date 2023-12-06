@@ -150,7 +150,7 @@ const ElderlyTrends = () => {
                     </>)
                   }
                   {
-                    (averageTrends.length >4) && <>
+                    (averageTrends.length >4 &&  averageTrends.length > loadAverage) && <>
                       <button onClick={() => setLoadAverage(averageTrends.length)} className='border rounded-lg p-2.5 w-full flex items-center justify-center gap-1 text-[13px] font-normal text-text-primary/50'>Load More <span><Icon className='text-lg' icon="ant-design:arrow-down-outlined" /></span></button>
                     </>
                   }
@@ -289,7 +289,7 @@ const ElderlyTrends = () => {
                     </>)
                   }
                   {
-                    (warningTrends.length >4) && <>
+                    (warningTrends.length >4 && warningTrends.length > loadwarning) && <>
                       <button onClick={() => setLoadwarning(averageTrends.length)} className='border rounded-lg p-2.5 w-full flex items-center justify-center gap-1 text-[13px] font-normal text-text-primary/50'>Load More <span><Icon className='text-lg' icon="ant-design:arrow-down-outlined" /></span></button>
                     </>
                   }
@@ -425,7 +425,7 @@ const ElderlyTrends = () => {
                     </>)
                   }
                   {
-                    (criticalTrends.length >4) && <>
+                    (criticalTrends.length >4 && criticalTrends.length > loadCritical) && <>
                       <button onClick={() => setLoadCritical(averageTrends.length)} className='border rounded-lg p-2.5 w-full flex items-center justify-center gap-1 text-[13px] font-normal text-text-primary/50'>Load More <span><Icon className='text-lg' icon="ant-design:arrow-down-outlined" /></span></button>
                     </>
                   }
