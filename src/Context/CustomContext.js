@@ -4,7 +4,7 @@ export const SidebarContext = createContext()
 const SidebarContextProvider = ({ children }) => {
   // -------------handle elderly back button and elderly trends click------------
   const [innerOverView, setinnerOverView] = useState(true)
-  const [activeTrend, setActiveTrend] = useState('')
+  const [activeTrend, setActiveTrend] = useState({title:"Fall Detection"})
 
   // ----------------set single elderly condition------------
   const [elderlyId,setElderlyId]=useState('')

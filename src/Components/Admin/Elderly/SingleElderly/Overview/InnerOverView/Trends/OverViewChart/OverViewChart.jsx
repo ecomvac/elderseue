@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Table, Progress, DatePicker, Space } from 'antd';
 import { Icon } from '@iconify/react';
 import { Area, G2 } from '@ant-design/plots';
@@ -7,41 +7,79 @@ const { RangePicker } = DatePicker;
 
 const OverViewChart = ({ data }) => {
 
+    const [chartData, setChartData] = useState(data?.table)
+    useEffect(() => {
+        setChartData(data?.table);
+    }, [data?.table]);
+
+    const handleDate = (date) => {
+        // const startDate = start.format('MMM DD, YYYY');
+        //     const endDate = end.format('MMM DD, YYYY');
+        if (date) {
+            const [start, end] = date;
+            const startDate = new Date(start);
+            startDate.setHours(0, 0, 0, 0);
+            const endDate = new Date(end);
+            endDate.setHours(23, 59, 59, 999);
+
+            const filteredData = data.table.filter(entry => {
+                const entryDate = new Date(entry.alert);
+                return entryDate >= startDate && entryDate <= endDate;
+
+            });
+            setChartData(filteredData);
+        }else{
+            setChartData(data.table)
+        }
+
+    }
+
+    const [start, setStart] = React.useState(1)
+    const [end, setEnd] = React.useState(10)
+    const handlePaginationChange = (page, pageSize) => {
+        setStart((pre) => page === 1 ? 1 : page * 10 - 9)
+        setEnd((pre) => page * 10 > chartData.length ? chartData.length : page * 10)
+    };
+
+    const paginationConfig = {
+        onChange: handlePaginationChange,
+        pageSize: 10
+    };
     const { registerTheme } = G2;
     registerTheme('custom-theme', configuration)
     const config = {
-        data: data?.table, 
-        xField: 'date',
+        data: chartData,
+        xField: 'alert',
         yField: 'value',
         smooth: true,
         legend: false,
-        color:'#9039FF',
+        color: '#9039FF',
         xAxis: {
-          grid: {
-            line: {
-              style: {
-                stroke: 'l(90) 1:#D9D9D9 0:#EBEBEB',
-                lineWidth: 1,
-                lineDash: [4, 5],
-                strokeOpacity: 1,
-                cursor: 'pointer',
-              },
+            grid: {
+                line: {
+                    style: {
+                        stroke: 'l(90) 1:#D9D9D9 0:#EBEBEB',
+                        lineWidth: 1,
+                        lineDash: [4, 5],
+                        strokeOpacity: 1,
+                        cursor: 'pointer',
+                    },
+                },
             },
-          },
         },
         yAxis: {
-          grid: {
-            line: {
-              style: {
-                stroke: '#9039FF',
-                lineWidth: 0,
-                cursor: 'pointer',
-              },
+            grid: {
+                line: {
+                    style: {
+                        stroke: '#9039FF',
+                        lineWidth: 0,
+                        cursor: 'pointer',
+                    },
+                },
             },
-          },
         },
         areaStyle: () => ({
-          fill: 'l(270) 1:#9039FF 0.2:#fff',
+            fill: 'l(270) 1:#9039FF 0.2:#fff',
         }),
         tooltip: {
             customContent: (title, items) => {
@@ -49,7 +87,7 @@ const OverViewChart = ({ data }) => {
                     <div>
                         {items?.map((item, index) => {
 
-                            const { value,title } = item;
+                            const { value, title } = item;
                             return (
                                 <span
                                     key={index}
@@ -66,20 +104,41 @@ const OverViewChart = ({ data }) => {
                 );
             },
         },
-        theme:'custom-theme'
-      };
+        theme: 'custom-theme'
+    };
 
     const columns = [
         {
-            title: 'Date',
-            dataIndex: 'date'
+            title: 'ALERT',
+            dataIndex: 'alert'
         },
         {
-            title: 'Value',
-            dataIndex: 'value'
+            title: 'VALUE',
+            dataIndex: 'value',
+        },
+        {
+            title: 'ALERT TYPE',
+            dataIndex: 'type',
+            render: (row) => <span className={`flex w-24 items-center gap-2 rounded-[19px] px-[5px] py-[1px]
+            ${row === 'Average' && 'text-success bg-success/10'}
+            ${row === 'Critical' && 'text-Critical bg-Critical/10'}
+            ${row === 'Warning' && 'text-Warning bg-Warning/10'}
+
+            `}>
+                <span className='text-xl'>
+                    {
+                        row === "Average" ? <Icon icon="icon-park-outline:dot" /> : <Icon icon="iwwa:arrow-up" />
+                    }
+                </span>
+                <span className={`text-sm font-medium`}>{row}</span>
+            </span>
+        },
+        {
+            title: 'ACTION',
+            dataIndex: 'action'
         }
     ]
-  
+
 
     return (
         <div>
@@ -96,7 +155,7 @@ const OverViewChart = ({ data }) => {
                             {
                                 data?.category === 'Average' ? <Icon className={`my-2`} icon="ion:ellipse-sharp" /> : <Icon className={`text-3xl
                             
-                        `} icon="octicon:triangle-down-24" />
+                        `} icon="octicon:triangle-up-24" />
                             }
                         </span>
                         <span className='text-white font-medium'>{data?.category}</span>
@@ -105,22 +164,49 @@ const OverViewChart = ({ data }) => {
 
                 <div id='overView' className='lg2:my-0 md:my-0 sm:my-5 '>
                     <Space direction="horizontal">
-                        <RangePicker format='MM-DD' />
+                        <RangePicker format='MM-DD-YYYY' onChange={handleDate} />
                     </Space>
                 </div>
             </div>
             {/* -------------------chart-------------------- */}
-            <div className='px-6 h-[483px]'>
+            <div className='px-6 h-[483px] mt-6'>
                 <Area {...config} />
             </div>
             {/* ----------------average box----------------- */}
-            <div className='flex items-center justify-between px-7 py-2 border-b border-t  my-7'>
-                <div>
-                    <h1 className='text-2xl font-bold text-text-primary'>{data?.average}</h1>
-                    <p className='text-text-secondary text-base font-medium'>Average {data?.title}</p>
+            <div className='flex items-center pr-7 border-b border-t justify-between  my-7'>
+                <div className='flex items-center'>
+                    <div className='bg-primary px-5 py-2 mr-4 text-center'>
+                        <h2 className='text-white font-bold text-2xl'>{data.target}
 
+                            {
+                                data.type === 'x' && <span>x</span>
+                            }
+                            {
+                                data.type === 's' && <span>s</span>
+                            }
+                            {
+                                data.type === 'bpm' && <span>bpm</span>
+                            }
+                            {
+                                data.type === 'hr' && <span>hr</span>
+                            }
+                            {
+                                data.type === 'percent' && <span>%</span>
+                            }
+                            {
+                                data.type === 'm' && <span>m</span>
+                            }
+                        </h2>
+                        <p className='text-white/90 text-base font-bold -mt-1'>Target</p>
+                    </div>
+                    <div className='  py-2'>
+                        <h1 className='text-2xl font-bold text-text-primary'>{data?.average}</h1>
+                        <p className='text-text-secondary text-base font-medium'>Average {data?.title}</p>
+
+                    </div>
                 </div>
-                <div className='lg2:flex items-center md:flex'>
+
+                <div className='lg2:flex items-center md:flex  py-2'>
                     {/* ----------average-------------- */}
                     <div className='flex items-center gap-3'>
                         <div className='w-3 h-6 justify-center bg-green-200 rounded-xl flex items-center'>
@@ -166,7 +252,10 @@ const OverViewChart = ({ data }) => {
                 </div>
             </div>
             {/* ----------------table------------------- */}
-            <div className='border mb-6  mx-6'><Table id="trends-table" columns={columns} dataSource={data?.table}/></div>
+            <div className='border mb-6  mx-6 relative'>
+                <Table id="chart-table" columns={columns} dataSource={chartData} pagination={paginationConfig} />
+                <div className='lg:block text-[#90969D] font-medium text-[13px] lg:absolute bottom-[25px] left-6 hidden '>Showing {start} to {end} of {chartData?.length} entries</div>
+            </div>
         </div>
     );
 };

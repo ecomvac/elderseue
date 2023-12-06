@@ -15,8 +15,7 @@ const AddNotes = ({ modalOPen, setModalOpen,setNotes }) => {
       // Simulate an API call
       // Replace this with your actual API call
       // await apiCallFunction(data);
-        
-      console.log(data)
+  
 
       const newNote= {
         id: Math.random(),

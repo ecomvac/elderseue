@@ -117,7 +117,7 @@ export const devicesData = [
         name: 'Home Care Assistant',
         title: 'Assistant',
         status: 'Fall not Detected',
-        room: ['dining','bed'],
+        room: ['dining', 'bed'],
 
     },
     {
@@ -125,10 +125,10 @@ export const devicesData = [
         img: '/images/devices/wave.svg',
         name: 'Wave – Vital Signs Monitor',
         title: 'Sensor',
-        room:[ 'bed','children'],
+        room: ['bed', 'children'],
         status: 'In Bed',
-        heart:58,
-        breath:16
+        heart: 58,
+        breath: 16
     },
     {
         id: 3,
@@ -136,7 +136,7 @@ export const devicesData = [
         name: 'Door Sensor',
         title: 'Sensor',
         status: 'Closed',
-        room: ['living','garage'],
+        room: ['living', 'garage'],
 
     },
     {
@@ -226,7 +226,7 @@ export const roomData = [
     },
 ]
 
-export const trendsData = [
+export const oldTrendsData = [
     {
         title: "Waking up time",
         subTitle: "List of what time wake up",
@@ -1141,46 +1141,46 @@ export const subscriptionData = [
 
 export const videoData = [
     {
-        id:5,
-        room:"Living Room",
-        icon:"mdi-lightbulb-on-outline",
-        rtspUrl:"https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
-        running:true,
-        time:Date.now()
+        id: 5,
+        room: "Living Room",
+        icon: "mdi-lightbulb-on-outline",
+        rtspUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+        running: true,
+        time: Date.now()
     },
     {
-        id:1,
-        room:"Kitchen Room",
-        icon:"mdi-silverware-fork-knife",
-        rtspUrl:"https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
-        running:true,
-        time:Date.now()
+        id: 1,
+        room: "Kitchen Room",
+        icon: "mdi-silverware-fork-knife",
+        rtspUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+        running: true,
+        time: Date.now()
     },
     {
-        id:3,
-        room:"Bedroom",
-        icon:"mdi-bed-empty",
-        rtspUrl:"https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
-        running:false,
-        time:Date.now()
+        id: 3,
+        room: "Bedroom",
+        icon: "mdi-bed-empty",
+        rtspUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+        running: false,
+        time: Date.now()
     },
     {
-        id:4,
-        room:"Home Office",
-        icon:"mdi-desk-lamp",
-        rtspUrl:"https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
-        running:false,
-        time:Date.now()
+        id: 4,
+        room: "Home Office",
+        icon: "mdi-desk-lamp",
+        rtspUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+        running: false,
+        time: Date.now()
     },
     {
-        id:5,
-        room:"Bathroom",
-        icon:"mdi-shower",
-        rtspUrl:"https://img.ifunny.co/videos/55bb2b9637b70f249bf5cad5bb5bd399da1f13fc1da3fc2acfd16a5b5d7d0f73_1.mp4",
-        running:true,
-        time:Date.now()
+        id: 5,
+        room: "Bathroom",
+        icon: "mdi-shower",
+        rtspUrl: "https://img.ifunny.co/videos/55bb2b9637b70f249bf5cad5bb5bd399da1f13fc1da3fc2acfd16a5b5d7d0f73_1.mp4",
+        running: true,
+        time: Date.now()
     },
-   
+
 ]
 
 export const weeklyTrends = [
@@ -1237,7 +1237,7 @@ export const weeklyTrends = [
         data: "06 Visits"
     }
 ]
-export const monthlyTrends= [
+export const monthlyTrends = [
     {
         title: "Waking up time",
         average: "05:35",
@@ -1292,190 +1292,869 @@ export const monthlyTrends= [
     }
 ]
 
-export const waveData={
-    overView:{
-        sleepTime:{main:'6hr 35m',score:80},
-        sleepScore:{score:72},
-        avgHeartRate:{main:'61bpm',score:60},
-        avgBreathingRate:{main:'20bpm',score:90},
+export const waveData = {
+    overView: {
+        sleepTime: { main: '6hr 35m', score: 80 },
+        sleepScore: { score: 72 },
+        avgHeartRate: { main: '61bpm', score: 60 },
+        avgBreathingRate: { main: '20bpm', score: 90 },
     },
-    sleepTimeLine:{
-        start:"22:45",
-        end:"04:58",
-        totalDeep:'4hr 30m',
-        totalCore:"24m",
-        totalRem:"45m",
-        totalAwake:"46m",
-        outOfBed:"",
-        totalOutOfBed:'1x',
+    sleepTimeLine: {
+        start: "22:45",
+        end: "04:58",
+        totalDeep: '4hr 30m',
+        totalCore: "24m",
+        totalRem: "45m",
+        totalAwake: "46m",
+        outOfBed: "",
+        totalOutOfBed: '1x',
     },
-    bioVita:[
+    bioVita: [
         {
-            time:'22:23',
-            value:10
+            time: '22:23',
+            value: 10
         },
         {
-            time:'24:45',
-            value:20
+            time: '24:45',
+            value: 20
         },
         {
-            time:'02:20',
-            value:12
+            time: '02:20',
+            value: 12
         },
         {
-            time:'03:14',
-            value:18
+            time: '03:14',
+            value: 18
         },
         {
-            time:'04:58',
-            value:15
+            time: '04:58',
+            value: 15
         },
     ],
 
-    heartRateDetails:[
+    heartRateDetails: [
         {
-            day:'Sun',
-            value:[10,20]
+            day: 'Sun',
+            value: [10, 20]
         },
         {
-            day:'Mon',
-            value:[13,19]
+            day: 'Mon',
+            value: [13, 19]
         },
         {
-            day:'Tue',
-            value:[15,25]
+            day: 'Tue',
+            value: [15, 25]
         },
         {
-            day:'Wed',
-            value:[20,28]
+            day: 'Wed',
+            value: [20, 28]
         },
         {
-            day:'Thu',
-            value:[10,20]
+            day: 'Thu',
+            value: [10, 20]
         },
         {
-            day:'Fri',
-            value:[15,25]
+            day: 'Fri',
+            value: [15, 25]
         },
         {
-            day:'Sat',
-            value:[12,20]
+            day: 'Sat',
+            value: [12, 20]
         }
     ],
-    breathRateDetails:[
+    breathRateDetails: [
         {
-            day:'Sun',
-            value:[10,20]
+            day: 'Sun',
+            value: [10, 20]
         },
         {
-            day:'Mon',
-            value:[13,19]
+            day: 'Mon',
+            value: [13, 19]
         },
         {
-            day:'Tue',
-            value:[15,25]
+            day: 'Tue',
+            value: [15, 25]
         },
         {
-            day:'Wed',
-            value:[20,28]
+            day: 'Wed',
+            value: [20, 28]
         },
         {
-            day:'Thu',
-            value:[10,20]
+            day: 'Thu',
+            value: [10, 20]
         },
         {
-            day:'Fri',
-            value:[15,25]
+            day: 'Fri',
+            value: [15, 25]
         },
         {
-            day:'Sat',
-            value:[12,20]
+            day: 'Sat',
+            value: [12, 20]
         }
     ],
-    outOfBedDetails:[
+    outOfBedDetails: [
         {
-            day:'Sun',
-            value:0
+            day: 'Sun',
+            value: 0
         },
         {
-            day:'Mon',
-            value:0.5
+            day: 'Mon',
+            value: 0.5
         },
         {
-            day:'Tue',
-            value:1
+            day: 'Tue',
+            value: 1
         },
         {
-            day:'Wed',
-            value:0
+            day: 'Wed',
+            value: 0
         },
         {
-            day:'Thu',
-            value:3
+            day: 'Thu',
+            value: 3
         },
         {
-            day:'Fri',
-            value:0
+            day: 'Fri',
+            value: 0
         },
         {
-            day:'Sat',
-            value:0
-        },
-    ],
-    monthlyHeart:[
-        {
-            day:'Week1',
-            value:[10,20]
-        },
-        {
-            day:'Week2',
-            value:[15,26]
-        },
-        {
-            day:'Week3',
-            value:[16,25]
-        },
-        {
-            day:'Week4',
-            value:[10,20]
+            day: 'Sat',
+            value: 0
         },
     ],
-    monthlyBreath:[
+    monthlyHeart: [
         {
-            day:'Week1',
-            value:[10,20]
+            day: 'Week1',
+            value: [10, 20]
         },
         {
-            day:'Week2',
-            value:[15,26]
+            day: 'Week2',
+            value: [15, 26]
         },
         {
-            day:'Week3',
-            value:[16,25]
+            day: 'Week3',
+            value: [16, 25]
         },
         {
-            day:'Week4',
-            value:[10,20]
+            day: 'Week4',
+            value: [10, 20]
         },
     ],
-    monthlyOutOfBed:[
+    monthlyBreath: [
         {
-            day:'Week1',
-            value:3
+            day: 'Week1',
+            value: [10, 20]
         },
         {
-            day:'Week2',
-            value:2
+            day: 'Week2',
+            value: [15, 26]
         },
         {
-            day:'Week3',
-            value:1
+            day: 'Week3',
+            value: [16, 25]
         },
         {
-            day:'Week4',
-            value:2
+            day: 'Week4',
+            value: [10, 20]
+        },
+    ],
+    monthlyOutOfBed: [
+        {
+            day: 'Week1',
+            value: 3
+        },
+        {
+            day: 'Week2',
+            value: 2
+        },
+        {
+            day: 'Week3',
+            value: 1
+        },
+        {
+            day: 'Week4',
+            value: 2
         },
     ]
-    
+
 
 }
+
+
+export const trendsData = [
+    {
+        title: 'Fall Detection',
+        id:1,
+        subTitle: 'Active warning when fall occurs',
+        average: '03s',
+        target: '00',
+        present: '01',
+        diff: '1',
+        category: 'Warning',
+        type: 's',
+        table: [
+            {
+                alert: "June 02, 2023; 08:30",
+                type: "Warning",
+                value: 32,
+                action: "Notification"
+            },
+            {
+                alert: "June 03, 2023; 10:15",
+                type: "Critical",
+                value: 18,
+                action: "Notification + Call"
+            },
+            {
+                alert: "June 04, 2023; 12:45",
+                type: "Average",
+                value: 24,
+                action: "Notification"
+            },
+            {
+                alert: "June 05, 2023; 15:20",
+                type: "Warning",
+                value: 29,
+                action: "Notification"
+            },
+            {
+                alert: "June 06, 2023; 17:40",
+                type: "Critical",
+                value: "21",
+                action: "Notification + Call"
+            },
+            {
+                alert: "June 07, 2023; 19:00",
+                type: "Warning",
+                value: 28,
+                action: "Notification"
+            },
+            {
+                alert: "June 08, 2023; 21:10",
+                type: "Average",
+                value: 25,
+                action: "Notification"
+            },
+            {
+                alert: "June 09, 2023; 08:55",
+                type: "Warning",
+                value: 30,
+                action: "Notification"
+            },
+            {
+                alert: "June 10, 2023; 10:30",
+                type: "Critical",
+                value: 19,
+                action: "Notification + Call"
+            },
+            {
+                alert: "June 11, 2023; 13:15",
+                type: "Average",
+                value: 27,
+                action: "Notification"
+            },
+            {
+                alert: "June 12, 2023; 16:00",
+                type: "Warning",
+                value: 31,
+                action: "Notification"
+            }
+        ]
+    },
+    {
+        title: 'Device Offline',
+        id:2,
+        subTitle: 'Active warning when device is not connected to the cloud',
+        average: '03',
+        target: '00',
+        present: '01',
+        diff: '1',
+        type: 'm',
+        category: 'Warning',
+        table: [
+            {
+                alert: "June 02, 2023; 08:30",
+                type: "Warning",
+                value: 3,
+                action: "Notification"
+            },
+            {
+                alert: "June 03, 2023; 10:15",
+                type: "Critical",
+                value: 8,
+                action: "Notification + Call"
+            },
+            {
+                alert: "June 04, 2023; 12:45",
+                type: "Average",
+                value: 4,
+                action: "None"
+            },
+            {
+                alert: "June 05, 2023; 15:20",
+                type: "Warning",
+                value: 9,
+                action: "Notification"
+            },
+            {
+                alert: "June 06, 2023; 17:40",
+                type: "Critical",
+                value: 2,
+                action: "Notification + Call"
+            },
+            {
+                alert: "June 07, 2023; 19:00",
+                type: "Warning",
+                value: 8,
+                action: "Notification"
+            },
+            {
+                alert: "June 08, 2023; 21:10",
+                type: "Average",
+                value: 5,
+                action: "None"
+            },
+            {
+                alert: "June 09, 2023; 08:55",
+                type: "Warning",
+                value: 3,
+                action: "Notification"
+            },
+            {
+                alert: "June 10, 2023; 10:30",
+                type: "Critical",
+                value: 9,
+                action: "Notification + Call"
+            },
+            {
+                alert: "June 11, 2023; 13:15",
+                type: "Average",
+                value: 7,
+                action: "None"
+            },
+            {
+                alert: "June 12, 2023; 16:00",
+                type: "Warning",
+                value: 3,
+                action: "Notification"
+            }
+        ]
+    },
+    {
+        title: 'Surveillance Mode',
+        id:3,
+        subTitle: 'Motion detected when surveilence mode is active',
+        average: '03',
+        target: '00',
+        present: '01',
+        diff: '1',
+        type: 'm',
+        category: 'Critical',
+        table: [
+            {
+                alert: "June 02, 2023; 08:30",
+                type: "Warning",
+                value: 3,
+                action: "Notification"
+            },
+            {
+                alert: "June 03, 2023; 10:15",
+                type: "Critical",
+                value: 8,
+                action: "Notification + Call"
+            },
+            {
+                alert: "June 04, 2023; 12:45",
+                type: "Average",
+                value: 4,
+                action: "None"
+            },
+            {
+                alert: "June 05, 2023; 15:20",
+                type: "Warning",
+                value: 9,
+                action: "Notification"
+            },
+            {
+                alert: "June 06, 2023; 17:40",
+                type: "Critical",
+                value: 2,
+                action: "Notification + Call"
+            },
+            {
+                alert: "June 07, 2023; 19:00",
+                type: "Warning",
+                value: 8,
+                action: "Notification"
+            },
+            {
+                alert: "June 08, 2023; 21:10",
+                type: "Average",
+                value: 5,
+                action: "None"
+            },
+            {
+                alert: "June 09, 2023; 08:55",
+                type: "Warning",
+                value: 3,
+                action: "Notification"
+            },
+            {
+                alert: "June 10, 2023; 10:30",
+                type: "Critical",
+                value: 9,
+                action: "Notification + Call"
+            },
+            {
+                alert: "June 11, 2023; 13:15",
+                type: "Average",
+                value: 7,
+                action: "None"
+            },
+            {
+                alert: "June 12, 2023; 16:00",
+                type: "Warning",
+                value: 3,
+                action: "Notification"
+            }
+        ]
+    },
+    {
+        title: 'Oversleeping',
+        id:4,
+        subTitle: 'Time of Oversleeping',
+        average: '56m',
+        target: '6',
+        present: '4',
+        diff: '2',
+        type: 'hr',
+        category: 'Warning',
+        table: [
+            { alert: "June 02, 2023; 08:30", type: "Warning", value: 2.5, action: "Notification" },
+            { alert: "June 03, 2023; 10:15", type: "Critical", value: 4.5, action: "Notification + Call" },
+            { alert: "June 04, 2023; 12:45", type: "Average", value: 3.5, action: "None" },
+            { alert: "June 05, 2023; 15:20", type: "Warning", value: 2.2, action: "Notification" },
+            { alert: "June 06, 2023; 17:40", type: "Critical", value: 2.8, action: "Notification + Call" },
+            { alert: "June 07, 2023; 19:00", type: "Warning", value: 3.2, action: "Notification" },
+            { alert: "June 08, 2023; 21:10", type: "Average", value: 3.1, action: "None" },
+            { alert: "June 09, 2023; 08:55", type: "Warning", value: 1.2, action: "Notification" },
+            { alert: "June 10, 2023; 10:30", type: "Critical", value: 2.1, action: "Notification + Call" },
+            { alert: "June 11, 2023; 13:15", type: "Average", value: 3.1, action: "None" },
+            { alert: "June 12, 2023; 16:00", type: "Warning", value: 2.3, action: "Notification" }
+        ]
+    },
+    {
+        title: 'Frequent Night Activity',
+        id:5,
+        subTitle: 'If customer leaves their bed soo often',
+        average: '04x',
+        target: '03',
+        present: '4',
+        diff: '1',
+        category: 'Critical',
+        type: 'x',
+        table: [
+            {
+                alert: "June 02, 2023; 08:30",
+                type: "Warning",
+                value: 2,
+                action: "Notification"
+            },
+            {
+                alert: "June 03, 2023; 10:15",
+                type: "Critical",
+                value: 3,
+                action: "Notification + Call"
+            },
+            {
+                alert: "June 04, 2023; 12:45",
+                type: "Average",
+                value: 2,
+                action: "None"
+            },
+            {
+                alert: "June 05, 2023; 15:20",
+                type: "Warning",
+                value: 4,
+                action: "Notification"
+            },
+            {
+                alert: "June 06, 2023; 17:40",
+                type: "Critical",
+                value: 3,
+                action: "Notification + Call"
+            },
+            {
+                alert: "June 07, 2023; 19:00",
+                type: "Warning",
+                value: 2,
+                action: "Notification"
+            },
+            {
+                alert: "June 08, 2023; 21:10",
+                type: "Average",
+                value: 3,
+                action: "None"
+            },
+            {
+                alert: "June 09, 2023; 08:55",
+                type: "Warning",
+                value: 2,
+                action: "Notification"
+            },
+            {
+                alert: "June 10, 2023; 10:30",
+                type: "Critical",
+                value: 4,
+                action: "Notification + Call"
+            },
+            {
+                alert: "June 11, 2023; 13:15",
+                type: "Average",
+                value: 2,
+                action: "None"
+            },
+            {
+                alert: "June 12, 2023; 16:00",
+                type: "Warning",
+                value: 3,
+                action: "Notification"
+            }
+        ]
+    },
+    {
+        title: 'Wandering at Night',
+        id:6,
+        subTitle: 'Time away from room at night',
+        average: '1hr 20m',
+        target: '20',
+        present: '24',
+        diff: '4',
+        type: 'm',
+        category: 'Critical',
+        table: [
+            { alert: "June 02, 2023; 08:30", type: "Warning", value: 2.5, action: "Notification" },
+            { alert: "June 03, 2023; 10:15", type: "Critical", value: 4.5, action: "Notification + Call" },
+            { alert: "June 04, 2023; 12:45", type: "Average", value: 3.5, action: "None" },
+            { alert: "June 05, 2023; 15:20", type: "Warning", value: 2.2, action: "Notification" },
+            { alert: "June 06, 2023; 17:40", type: "Critical", value: 2.8, action: "Notification + Call" },
+            { alert: "June 07, 2023; 19:00", type: "Warning", value: 3.2, action: "Notification" },
+            { alert: "June 08, 2023; 21:10", type: "Average", value: 3.1, action: "None" },
+            { alert: "June 09, 2023; 08:55", type: "Warning", value: 1.2, action: "Notification" },
+            { alert: "June 10, 2023; 10:30", type: "Critical", value: 2.1, action: "Notification + Call" },
+            { alert: "June 11, 2023; 13:15", type: "Average", value: 3.1, action: "None" },
+            { alert: "June 12, 2023; 16:00", type: "Warning", value: 2.3, action: "Notification" }
+        ]
+    },
+    {
+        title: 'Sedentary',
+        id:7,
+        subTitle: 'Time spent sitting in the same place',
+        average: '1hr 14m',
+        target: '1',
+        present: '2',
+        diff: '1',
+        type: 'hr',
+        category: 'Warning',
+        table: [
+            { alert: "June 02, 2023; 08:30", type: "Warning", value: 2.5, action: "Notification" },
+            { alert: "June 03, 2023; 10:15", type: "Critical", value: 4.5, action: "Notification + Call" },
+            { alert: "June 04, 2023; 12:45", type: "Average", value: 3.5, action: "None" },
+            { alert: "June 05, 2023; 15:20", type: "Warning", value: 2.2, action: "Notification" },
+            { alert: "June 06, 2023; 17:40", type: "Critical", value: 2.8, action: "Notification + Call" },
+            { alert: "June 07, 2023; 19:00", type: "Warning", value: 3.2, action: "Notification" },
+            { alert: "June 08, 2023; 21:10", type: "Average", value: 3.1, action: "None" },
+            { alert: "June 09, 2023; 08:55", type: "Warning", value: 1.2, action: "Notification" },
+            { alert: "June 10, 2023; 10:30", type: "Critical", value: 2.1, action: "Notification + Call" },
+            { alert: "June 11, 2023; 13:15", type: "Average", value: 3.1, action: "None" },
+            { alert: "June 12, 2023; 16:00", type: "Warning", value: 2.3, action: "Notification" }
+        ]
+    },
+    {
+        title: 'Bedtime',
+        id:8,
+        subTitle: 'Variation in sleeping time',
+        average: '22:12',
+        target: '20:00',
+        present: '18:00',
+        diff: '2',
+        category: 'Average',
+        table: [
+            { alert: "June 02, 2023; 08:30", type: "Warning", value: 8.3, action: "Notification" },
+            { alert: "June 03, 2023; 10:15", type: "Critical", value: 9.3, action: "Notification + Call" },
+            { alert: "June 04, 2023; 12:45", type: "Average", value: 9.3, action: "None" },
+            { alert: "June 05, 2023; 15:20", type: "Warning", value: 8.3, action: "Notification" },
+            { alert: "June 06, 2023; 17:40", type: "Critical", value: 5.3, action: "Notification + Call" },
+            { alert: "June 07, 2023; 19:00", type: "Warning", value: 7.3, action: "Notification" },
+            { alert: "June 08, 2023; 21:10", type: "Average", value: 9.3, action: "None" },
+            { alert: "June 09, 2023; 08:55", type: "Warning", value: 6.3, action: "Notification" },
+            { alert: "June 10, 2023; 10:30", type: "Critical", value: 8.3, action: "Notification + Call" },
+            { alert: "June 11, 2023; 13:15", type: "Average", value: 7.3, action: "None" },
+            { alert: "June 12, 2023; 16:00", type: "Warning", value: 6.3, action: "Notification" }
+        ]
+    },
+    {
+        title: 'Wandering at Day',
+        id:9,
+        subTitle: 'Time away from room at day',
+        average: '1hr 14m',
+        target: '1',
+        present: '2',
+        diff: '1',
+        type: 'hr',
+        category: 'Average',
+        table: [
+            { alert: "June 02, 2023; 08:30", type: "Warning", value: 2.5, action: "Notification" },
+            { alert: "June 03, 2023; 10:15", type: "Critical", value: 4.5, action: "Notification + Call" },
+            { alert: "June 04, 2023; 12:45", type: "Average", value: 3.5, action: "None" },
+            { alert: "June 05, 2023; 15:20", type: "Warning", value: 2.2, action: "Notification" },
+            { alert: "June 06, 2023; 17:40", type: "Critical", value: 2.8, action: "Notification + Call" },
+            { alert: "June 07, 2023; 19:00", type: "Warning", value: 3.2, action: "Notification" },
+            { alert: "June 08, 2023; 21:10", type: "Average", value: 3.1, action: "None" },
+            { alert: "June 09, 2023; 08:55", type: "Warning", value: 1.2, action: "Notification" },
+            { alert: "June 10, 2023; 10:30", type: "Critical", value: 2.1, action: "Notification + Call" },
+            { alert: "June 11, 2023; 13:15", type: "Average", value: 3.1, action: "None" },
+            { alert: "June 12, 2023; 16:00", type: "Warning", value: 2.3, action: "Notification" }
+        ]
+    },
+    {
+        title: 'Extended Toileting',
+        id:10,
+        subTitle: 'If customer is in toilet longer than usual',
+        average: '39m',
+        target: '30',
+        present: '28',
+        diff: '2',
+        type: 'm',
+        category: 'Average',
+        table: [
+            { alert: "June 02, 2023; 08:30", type: "Warning", value: 30, action: "Notification" },
+            { alert: "June 03, 2023; 10:15", type: "Critical", value: 45, action: "Notification + Call" },
+            { alert: "June 04, 2023; 12:45", type: "Average", value: 15, action: "None" },
+            { alert: "June 05, 2023; 15:20", type: "Warning", value: 45, action: "Notification" },
+            { alert: "June 06, 2023; 17:40", type: "Critical", value: 30, action: "Notification + Call" },
+            { alert: "June 07, 2023; 19:00", type: "Warning", value: 15, action: "Notification" },
+            { alert: "June 08, 2023; 21:10", type: "Average", value: 30, action: "None" },
+            { alert: "June 09, 2023; 08:55", type: "Warning", value: 30, action: "Notification" },
+            { alert: "June 10, 2023; 10:30", type: "Critical", value: 15, action: "Notification + Call" },
+            { alert: "June 11, 2023; 13:15", type: "Average", value: 45, action: "None" },
+            { alert: "June 12, 2023; 16:00", type: "Warning", value: 15, action: "Notification" }
+        ]
+    },
+    {
+        title: 'Frequent Toileting',
+        id:11,
+        subTitle: 'If customer is in toilet more than usual',
+        average: '3x',
+        target: '2',
+        present: '3',
+        diff: '1',
+        category: 'Warning',
+        type: 'x',
+        table: [
+            { alert: "June 02, 2023; 08:30", type: "Warning", value: 3, action: "Notification" },
+            { alert: "June 03, 2023; 10:15", type: "Critical", value: 4, action: "Notification + Call" },
+            { alert: "June 04, 2023; 12:45", type: "Average", value: 1, action: "None" },
+            { alert: "June 05, 2023; 15:20", type: "Warning", value: 4, action: "Notification" },
+            { alert: "June 06, 2023; 17:40", type: "Critical", value: 3, action: "Notification + Call" },
+            { alert: "June 07, 2023; 19:00", type: "Warning", value: 1, action: "Notification" },
+            { alert: "June 08, 2023; 21:10", type: "Average", value: 3, action: "None" },
+            { alert: "June 09, 2023; 08:55", type: "Warning", value: 3, action: "Notification" },
+            { alert: "June 10, 2023; 10:30", type: "Critical", value: 1, action: "Notification + Call" },
+            { alert: "June 11, 2023; 13:15", type: "Average", value: 4, action: "None" },
+            { alert: "June 12, 2023; 16:00", type: "Warning", value: 1, action: "Notification" }
+        ]
+    },
+    {
+        title: 'Nutrition',
+        id:12,
+        subTitle: 'If kitchen is used less more or less than defined number',
+        average: '5x',
+        target: '6',
+        present: '5',
+        diff: '1',
+        category: 'Average',
+        type: 'x',
+        table: [
+            { alert: "June 02, 2023; 08:30", type: "Warning", value: 3, action: "Notification" },
+            { alert: "June 03, 2023; 10:15", type: "Critical", value: 4, action: "Notification + Call" },
+            { alert: "June 04, 2023; 12:45", type: "Average", value: 1, action: "None" },
+            { alert: "June 05, 2023; 15:20", type: "Warning", value: 4, action: "Notification" },
+            { alert: "June 06, 2023; 17:40", type: "Critical", value: 3, action: "Notification + Call" },
+            { alert: "June 07, 2023; 19:00", type: "Warning", value: 1, action: "Notification" },
+            { alert: "June 08, 2023; 21:10", type: "Average", value: 3, action: "None" },
+            { alert: "June 09, 2023; 08:55", type: "Warning", value: 3, action: "Notification" },
+            { alert: "June 10, 2023; 10:30", type: "Critical", value: 1, action: "Notification + Call" },
+            { alert: "June 11, 2023; 13:15", type: "Average", value: 4, action: "None" },
+            { alert: "June 12, 2023; 16:00", type: "Warning", value: 1, action: "Notification" }
+        ]
+    },
+    {
+        title: 'Heart Rate',
+        id:13,
+        subTitle: 'MHR of an elderly in sleeping time',
+        average: '62bpm',
+        target: '60',
+        present: '62',
+        diff: '2',
+        category: 'Warning',
+        type: 'bpm',
+        table: [
+            { alert: "June 02, 2023; 08:30", type: "Warning", value:82, action: "Notification" },
+            { alert: "June 03, 2023; 10:15", type: "Critical", value:80, action: "Notification + Call" },
+            { alert: "June 04, 2023; 12:45", type: "Average", value:81, action: "None" },
+            { alert: "June 05, 2023; 15:20", type: "Warning", value:80, action: "Notification" },
+            { alert: "June 06, 2023; 17:40", type: "Critical", value:82, action: "Notification + Call" },
+            { alert: "June 07, 2023; 19:00", type: "Warning", value:82, action: "Notification" },
+            { alert: "June 08, 2023; 21:10", type: "Average", value:81, action: "None" },
+            { alert: "June 09, 2023; 08:55", type: "Warning", value:80, action: "Notification" },
+            { alert: "June 10, 2023; 10:30", type: "Critical", value:82, action: "Notification + Call" },
+            { alert: "June 11, 2023; 13:15", type: "Average", value:81, action: "None" },
+            { alert: "June 12, 2023; 16:00", type: "Warning", value:80, action: "Notification" }
+        ]
+    },
+    {
+        title: 'Breath Rate',
+        id:14,
+        subTitle: 'Breathing rate zones for an elderly',
+        average: '20bpm',
+        target: '12',
+        present: '20',
+        diff: '2',
+        category: 'Critical',
+        type: 'bpm',
+        table: [
+            { alert: "June 02, 2023; 08:30", type: "Warning", value:32, action: "Notification" },
+            { alert: "June 03, 2023; 10:15", type: "Critical", value:33, action: "Notification + Call" },
+            { alert: "June 04, 2023; 12:45", type: "Average", value:31, action: "None" },
+            { alert: "June 05, 2023; 15:20", type: "Warning", value:30, action: "Notification" },
+            { alert: "June 06, 2023; 17:40", type: "Critical", value:32, action: "Notification + Call" },
+            { alert: "June 07, 2023; 19:00", type: "Warning", value:32, action: "Notification" },
+            { alert: "June 08, 2023; 21:10", type: "Average", value:31, action: "None" },
+            { alert: "June 09, 2023; 08:55", type: "Warning", value:30, action: "Notification" },
+            { alert: "June 10, 2023; 10:30", type: "Critical", value:32, action: "Notification + Call" },
+            { alert: "June 11, 2023; 13:15", type: "Average", value:31, action: "None" },
+            { alert: "June 12, 2023; 16:00", type: "Warning", value:30, action: "Notification" }
+        ]
+    },
+    {
+        title: 'Sleep Monitoring',
+        id:15,
+        subTitle: '--',
+        average: 'x',
+        target: 'x',
+        present: 'x',
+        diff: '0',
+        category: 'Average',
+        type: 'x',
+        table: [
+            { alert: "June 02, 2023; 08:30", type: "Warning", value: "xx", action: "Notification" },
+            { alert: "June 03, 2023; 10:15", type: "Critical", value: "xx", action: "Notification + Call" },
+            { alert: "June 04, 2023; 12:45", type: "Average", value: "xx", action: "None" },
+            { alert: "June 05, 2023; 15:20", type: "Warning", value: "xx", action: "Notification" },
+            { alert: "June 06, 2023; 17:40", type: "Critical", value: "xx", action: "Notification + Call" },
+            { alert: "June 07, 2023; 19:00", type: "Warning", value: "xx", action: "Notification" },
+            { alert: "June 08, 2023; 21:10", type: "Average", value: "xx", action: "None" },
+            { alert: "June 09, 2023; 08:55", type: "Warning", value: "xx", action: "Notification" },
+            { alert: "June 10, 2023; 10:30", type: "Critical", value: "xx", action: "Notification + Call" },
+            { alert: "June 11, 2023; 13:15", type: "Average", value: "xx", action: "None" },
+            { alert: "June 12, 2023; 16:00", type: "Warning", value: "xx", action: "Notification" }
+        ]
+    },
+    {
+        title: 'Abnormal Biorhythm',
+        id:16,
+        subTitle: 'Warn if the users bio vital exceed the pre-set threshold',
+        average: 'x',
+        target: 'x',
+        present: 'x',
+        diff: '0',
+        category: 'Critical',
+        type: 'x',
+        table: [
+            { alert: "June 02, 2023; 08:30", type: "Warning", value: "xx", action: "Notification" },
+            { alert: "June 03, 2023; 10:15", type: "Critical", value: "xx", action: "Notification + Call" },
+            { alert: "June 04, 2023; 12:45", type: "Average", value: "xx", action: "None" },
+            { alert: "June 05, 2023; 15:20", type: "Warning", value: "xx", action: "Notification" },
+            { alert: "June 06, 2023; 17:40", type: "Critical", value: "xx", action: "Notification + Call" },
+            { alert: "June 07, 2023; 19:00", type: "Warning", value: "xx", action: "Notification" },
+            { alert: "June 08, 2023; 21:10", type: "Average", value: "xx", action: "None" },
+            { alert: "June 09, 2023; 08:55", type: "Warning", value: "xx", action: "Notification" },
+            { alert: "June 10, 2023; 10:30", type: "Critical", value: "xx", action: "Notification + Call" },
+            { alert: "June 11, 2023; 13:15", type: "Average", value: "xx", action: "None" },
+            { alert: "June 12, 2023; 16:00", type: "Warning", value: "xx", action: "Notification" }
+        ]
+    },
+    {
+        title: 'Not in bed',
+        id:17,
+        subTitle: 'If elderly is not in bed for period of time',
+        average: '39m',
+        target: '30',
+        present: '28',
+        diff: '2',
+        type: 'm',
+        category: 'Warning',
+        table: [
+            { alert: "June 02, 2023; 08:30", type: "Warning", value:30, action: "Notification" },
+            { alert: "June 03, 2023; 10:15", type: "Critical", value:45, action: "Notification + Call" },
+            { alert: "June 04, 2023; 12:45", type: "Average", value:15, action: "None" },
+            { alert: "June 05, 2023; 15:20", type: "Warning", value:45, action: "Notification" },
+            { alert: "June 06, 2023; 17:40", type: "Critical", value:30, action: "Notification + Call" },
+            { alert: "June 07, 2023; 19:00", type: "Warning", value:15, action: "Notification" },
+            { alert: "June 08, 2023; 21:10", type: "Average", value:30, action: "None" },
+            { alert: "June 09, 2023; 08:55", type: "Warning", value:30, action: "Notification" },
+            { alert: "June 10, 2023; 10:30", type: "Critical", value:15, action: "Notification + Call" },
+            { alert: "June 11, 2023; 13:15", type: "Average", value:45, action: "None" },
+            { alert: "June 12, 2023; 16:00", type: "Warning", value:15, action: "Notification" }
+        ]
+    },
+    {
+        title: 'Abnormal Sleep',
+        id:18,
+        subTitle: 'If customer sleep is abnormal',
+        average: 'x',
+        target: 'x',
+        present: 'x',
+        diff: '0',
+        category: 'Average',
+        type: 'x',
+        table: [
+            { alert: "June 02, 2023; 08:30", type: "Warning", value: "xx", action: "Notification" },
+            { alert: "June 03, 2023; 10:15", type: "Critical", value: "xx", action: "Notification + Call" },
+            { alert: "June 04, 2023; 12:45", type: "Average", value: "xx", action: "None" },
+            { alert: "June 05, 2023; 15:20", type: "Warning", value: "xx", action: "Notification" },
+            { alert: "June 06, 2023; 17:40", type: "Critical", value: "xx", action: "Notification + Call" },
+            { alert: "June 07, 2023; 19:00", type: "Warning", value: "xx", action: "Notification" },
+            { alert: "June 08, 2023; 21:10", type: "Average", value: "xx", action: "None" },
+            { alert: "June 09, 2023; 08:55", type: "Warning", value: "xx", action: "Notification" },
+            { alert: "June 10, 2023; 10:30", type: "Critical", value: "xx", action: "Notification + Call" },
+            { alert: "June 11, 2023; 13:15", type: "Average", value: "xx", action: "None" },
+            { alert: "June 12, 2023; 16:00", type: "Warning", value: "xx", action: "Notification" }
+        ]
+    },
+    {
+        title: 'Sleep Score',
+        id:19,
+        subTitle: 'Overall Sleep Score based on multiple readings',
+        average: '66%',
+        target: '90',
+        present: '66',
+        diff: '24',
+        type: 'percent',
+        category: 'Average',
+        table: [
+            { alert: "June 02, 2023; 08:30", type: "Warning", value:58, action: "Notification" },
+            { alert: "June 03, 2023; 10:15", type: "Critical", value:55, action: "Notification + Call" },
+            { alert: "June 04, 2023; 12:45", type: "Average", value:52, action: "None" },
+            { alert: "June 05, 2023; 15:20", type: "Warning", value:58, action: "Notification" },
+            { alert: "June 06, 2023; 17:40", type: "Critical", value:55, action: "Notification + Call" },
+            { alert: "June 07, 2023; 19:00", type: "Warning", value:51, action: "Notification" },
+            { alert: "June 08, 2023; 21:10", type: "Average", value:53, action: "None" },
+            { alert: "June 09, 2023; 08:55", type: "Warning", value:55, action: "Notification" },
+            { alert: "June 10, 2023; 10:30", type: "Critical", value:58, action: "Notification + Call" },
+            { alert: "June 11, 2023; 13:15", type: "Average", value:56, action: "None" },
+            { alert: "June 12, 2023; 16:00", type: "Warning", value:58, action: "Notification" }
+        ]
+    },
+]

@@ -9,13 +9,11 @@ const Trends = () => {
     const { activeTrend } = useContext(SidebarContext)
 
     useEffect(() => {
-        const newData = trendsData.find(item => item.title === activeTrend)
+        const newData = trendsData.find(item => item.title === activeTrend.title)
         if (newData) {
             setData(newData)
         }
-    }, [activeTrend])
-
-
+    }, [activeTrend.title])
 
     const tabs = [
         {

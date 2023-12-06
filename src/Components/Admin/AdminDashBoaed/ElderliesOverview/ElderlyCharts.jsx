@@ -63,7 +63,6 @@ const ElderlyCharts = ({data}) => {
           return (
             <div>
               {items?.map((item, index) => {
-                console.log(item)
                 return (
                   <span
                     key={index}

@@ -9,17 +9,17 @@ const AddDevice = ({ modalOpen, setModalOpen }) => {
     const searchingData = [
         {
             id: 1,
-            img: '/images/devices/bosch.svg',
+            img: '/images/devices/door.svg',
             title: 'Bosch Smart Home'
         },
         {
             id: 3,
-            img: '/images/devices/cam.svg',
+            img: '/images/devices/wave.svg',
             title: 'Smart Lighting LED Lamp'
         },
         {
             id: 2,
-            img: '/images/devices/Camera.svg',
+            img: '/images/devices/homeCare.svg',
             title: 'Indoor Camera CB71'
         }
 
