@@ -86,8 +86,7 @@ const OverViewChart = ({ data }) => {
                 return (
                     <div>
                         {items?.map((item, index) => {
-
-                            const { value, title } = item;
+                            const { data,title } = item;
                             return (
                                 <span
                                     key={index}
@@ -95,7 +94,7 @@ const OverViewChart = ({ data }) => {
                                     data-index={index}
                                 >
                                     <span className='text-white pl-2 pr-6 bg-white/10 w-full text-[13px] font-medium py-2'>{title}</span>
-                                    <span className="text-white pl-2   font-bold text-xl py-2">{value}</span>
+                                    <span className="text-white pl-2   font-bold text-xl py-2">{data.tableValue}</span>
                                 </span>
                             );
                         })}
@@ -114,7 +113,7 @@ const OverViewChart = ({ data }) => {
         },
         {
             title: 'VALUE',
-            dataIndex: 'value',
+            dataIndex: 'tableValue',
         },
         {
             title: 'ALERT TYPE',

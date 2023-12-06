@@ -1497,69 +1497,81 @@ export const trendsData = [
                 alert: "June 02, 2023; 08:30",
                 type: "Warning",
                 value: 32,
-                action: "Notification"
+                action: "Notification",
+                tableValue: "32s"
             },
             {
                 alert: "June 03, 2023; 10:15",
                 type: "Critical",
                 value: 18,
-                action: "Notification + Call"
+                action: "Notification + Call",
+                tableValue: "18s"
             },
             {
                 alert: "June 04, 2023; 12:45",
                 type: "Average",
                 value: 24,
-                action: "Notification"
+                action: "Notification",
+                tableValue: "24s"
             },
             {
                 alert: "June 05, 2023; 15:20",
                 type: "Warning",
                 value: 29,
-                action: "Notification"
+                action: "Notification",
+                tableValue: "29s"
             },
             {
                 alert: "June 06, 2023; 17:40",
                 type: "Critical",
                 value: "21",
-                action: "Notification + Call"
+                action: "Notification + Call",
+                tableValue: "21s"
             },
             {
                 alert: "June 07, 2023; 19:00",
                 type: "Warning",
                 value: 28,
-                action: "Notification"
+                action: "Notification",
+                tableValue: "28s"
             },
             {
                 alert: "June 08, 2023; 21:10",
                 type: "Average",
                 value: 25,
-                action: "Notification"
+                action: "Notification",
+                tableValue: "25s"
             },
             {
                 alert: "June 09, 2023; 08:55",
                 type: "Warning",
                 value: 30,
-                action: "Notification"
+                action: "Notification",
+                tableValue: "30s"
             },
             {
                 alert: "June 10, 2023; 10:30",
                 type: "Critical",
                 value: 19,
-                action: "Notification + Call"
+                action: "Notification + Call",
+                tableValue: "19s"
             },
             {
                 alert: "June 11, 2023; 13:15",
                 type: "Average",
                 value: 27,
-                action: "Notification"
+                action: "Notification",
+                tableValue: "27s"
             },
             {
                 alert: "June 12, 2023; 16:00",
                 type: "Warning",
                 value: 31,
-                action: "Notification"
+                action: "Notification",
+                tableValue: "31s"
             }
-        ]
+        ],
+        
     },
     {
         title: 'Device Offline',
@@ -1576,67 +1588,78 @@ export const trendsData = [
                 alert: "June 02, 2023; 08:30",
                 type: "Warning",
                 value: 3,
-                action: "Notification"
+                action: "Notification",
+                tableValue: "3m"
             },
             {
                 alert: "June 03, 2023; 10:15",
                 type: "Critical",
                 value: 8,
-                action: "Notification + Call"
+                action: "Notification + Call",
+                tableValue: "8m"
             },
             {
                 alert: "June 04, 2023; 12:45",
                 type: "Average",
                 value: 4,
-                action: "None"
+                action: "None",
+                tableValue: "4m"
             },
             {
                 alert: "June 05, 2023; 15:20",
                 type: "Warning",
                 value: 9,
-                action: "Notification"
+                action: "Notification",
+                tableValue: "9m"
             },
             {
                 alert: "June 06, 2023; 17:40",
                 type: "Critical",
                 value: 2,
-                action: "Notification + Call"
+                action: "Notification + Call",
+                tableValue: "2m"
             },
             {
                 alert: "June 07, 2023; 19:00",
                 type: "Warning",
                 value: 8,
-                action: "Notification"
+                action: "Notification",
+                tableValue: "8m"
             },
             {
                 alert: "June 08, 2023; 21:10",
                 type: "Average",
                 value: 5,
-                action: "None"
+                action: "None",
+                tableValue: "5m"
             },
             {
                 alert: "June 09, 2023; 08:55",
                 type: "Warning",
                 value: 3,
-                action: "Notification"
+                action: "Notification",
+                tableValue: "3m"
             },
             {
                 alert: "June 10, 2023; 10:30",
                 type: "Critical",
                 value: 9,
-                action: "Notification + Call"
+                action: "Notification + Call",
+                tableValue: "9m"
             },
             {
                 alert: "June 11, 2023; 13:15",
                 type: "Average",
                 value: 7,
-                action: "None"
+                action: "None",
+                tableValue: "7m"
             },
             {
                 alert: "June 12, 2023; 16:00",
                 type: "Warning",
                 value: 3,
-                action: "Notification"
+                action: "Notification",
+                tableValue: "3m"
             }
         ]
     },
@@ -1655,67 +1678,78 @@ export const trendsData = [
                 alert: "June 02, 2023; 08:30",
                 type: "Warning",
                 value: 3,
-                action: "Notification"
+                action: "Notification",
+                tableValue: "3m"
             },
             {
                 alert: "June 03, 2023; 10:15",
                 type: "Critical",
                 value: 8,
-                action: "Notification + Call"
+                action: "Notification + Call",
+                tableValue: "8m"
             },
             {
                 alert: "June 04, 2023; 12:45",
                 type: "Average",
                 value: 4,
-                action: "None"
+                action: "None",
+                tableValue: "4m"
             },
             {
                 alert: "June 05, 2023; 15:20",
                 type: "Warning",
                 value: 9,
-                action: "Notification"
+                action: "Notification",
+                tableValue: "9m"
             },
             {
                 alert: "June 06, 2023; 17:40",
                 type: "Critical",
                 value: 2,
-                action: "Notification + Call"
+                action: "Notification + Call",
+                tableValue: "2m"
             },
             {
                 alert: "June 07, 2023; 19:00",
                 type: "Warning",
                 value: 8,
-                action: "Notification"
+                action: "Notification",
+                tableValue: "8m"
             },
             {
                 alert: "June 08, 2023; 21:10",
                 type: "Average",
                 value: 5,
-                action: "None"
+                action: "None",
+                tableValue: "5m"
             },
             {
                 alert: "June 09, 2023; 08:55",
                 type: "Warning",
                 value: 3,
-                action: "Notification"
+                action: "Notification",
+                tableValue: "3m"
             },
             {
                 alert: "June 10, 2023; 10:30",
                 type: "Critical",
                 value: 9,
-                action: "Notification + Call"
+                action: "Notification + Call",
+                tableValue: "9m"
             },
             {
                 alert: "June 11, 2023; 13:15",
                 type: "Average",
                 value: 7,
-                action: "None"
+                action: "None",
+                tableValue: "7m"
             },
             {
                 alert: "June 12, 2023; 16:00",
                 type: "Warning",
                 value: 3,
-                action: "Notification"
+                action: "Notification",
+                tableValue: "3m"
             }
         ]
     },
@@ -1730,17 +1764,17 @@ export const trendsData = [
         type: 'hr',
         category: 'Warning',
         table: [
-            { alert: "June 02, 2023; 08:30", type: "Warning", value: 2.5, action: "Notification" },
-            { alert: "June 03, 2023; 10:15", type: "Critical", value: 4.5, action: "Notification + Call" },
-            { alert: "June 04, 2023; 12:45", type: "Average", value: 3.5, action: "None" },
-            { alert: "June 05, 2023; 15:20", type: "Warning", value: 2.2, action: "Notification" },
-            { alert: "June 06, 2023; 17:40", type: "Critical", value: 2.8, action: "Notification + Call" },
-            { alert: "June 07, 2023; 19:00", type: "Warning", value: 3.2, action: "Notification" },
-            { alert: "June 08, 2023; 21:10", type: "Average", value: 3.1, action: "None" },
-            { alert: "June 09, 2023; 08:55", type: "Warning", value: 1.2, action: "Notification" },
-            { alert: "June 10, 2023; 10:30", type: "Critical", value: 2.1, action: "Notification + Call" },
-            { alert: "June 11, 2023; 13:15", type: "Average", value: 3.1, action: "None" },
-            { alert: "June 12, 2023; 16:00", type: "Warning", value: 2.3, action: "Notification" }
+            { alert: "June 02, 2023; 08:30", type: "Warning", value: 2.5, action: "Notification", tableValue: "2hr 30m" },
+            { alert: "June 03, 2023; 10:15", type: "Critical", value: 4.5, action: "Notification + Call", tableValue: "4hr 30m" },
+            { alert: "June 04, 2023; 12:45", type: "Average", value: 3.5, action: "None", tableValue: "3hr 30m" },
+            { alert: "June 05, 2023; 15:20", type: "Warning", value: 2.2, action: "Notification", tableValue: "2hr 12m" },
+            { alert: "June 06, 2023; 17:40", type: "Critical", value: 2.8, action: "Notification + Call", tableValue: "2hr 48m" },
+            { alert: "June 07, 2023; 19:00", type: "Warning", value: 3.2, action: "Notification", tableValue: "3hr 12m" },
+            { alert: "June 08, 2023; 21:10", type: "Average", value: 3.1, action: "None", tableValue: "3hr 6m" },
+            { alert: "June 09, 2023; 08:55", type: "Warning", value: 1.2, action: "Notification", tableValue: "1hr 12m" },
+            { alert: "June 10, 2023; 10:30", type: "Critical", value: 2.1, action: "Notification + Call", tableValue: "2hr 6m" },
+            { alert: "June 11, 2023; 13:15", type: "Average", value: 3.1, action: "None", tableValue: "3hr 6m" },
+            { alert: "June 12, 2023; 16:00", type: "Warning", value: 2.3, action: "Notification", tableValue: "2hr 18m" }
         ]
     },
     {
@@ -1754,72 +1788,17 @@ export const trendsData = [
         category: 'Critical',
         type: 'x',
         table: [
-            {
-                alert: "June 02, 2023; 08:30",
-                type: "Warning",
-                value: 2,
-                action: "Notification"
-            },
-            {
-                alert: "June 03, 2023; 10:15",
-                type: "Critical",
-                value: 3,
-                action: "Notification + Call"
-            },
-            {
-                alert: "June 04, 2023; 12:45",
-                type: "Average",
-                value: 2,
-                action: "None"
-            },
-            {
-                alert: "June 05, 2023; 15:20",
-                type: "Warning",
-                value: 4,
-                action: "Notification"
-            },
-            {
-                alert: "June 06, 2023; 17:40",
-                type: "Critical",
-                value: 3,
-                action: "Notification + Call"
-            },
-            {
-                alert: "June 07, 2023; 19:00",
-                type: "Warning",
-                value: 2,
-                action: "Notification"
-            },
-            {
-                alert: "June 08, 2023; 21:10",
-                type: "Average",
-                value: 3,
-                action: "None"
-            },
-            {
-                alert: "June 09, 2023; 08:55",
-                type: "Warning",
-                value: 2,
-                action: "Notification"
-            },
-            {
-                alert: "June 10, 2023; 10:30",
-                type: "Critical",
-                value: 4,
-                action: "Notification + Call"
-            },
-            {
-                alert: "June 11, 2023; 13:15",
-                type: "Average",
-                value: 2,
-                action: "None"
-            },
-            {
-                alert: "June 12, 2023; 16:00",
-                type: "Warning",
-                value: 3,
-                action: "Notification"
-            }
+            { alert: "June 02, 2023; 08:30", type: "Warning", value: 2, action: "Notification", tableValue: "2x" },
+            { alert: "June 03, 2023; 10:15", type: "Critical", value: 3, action: "Notification + Call", tableValue: "3x" },
+            { alert: "June 04, 2023; 12:45", type: "Average", value: 2, action: "None", tableValue: "2x" },
+            { alert: "June 05, 2023; 15:20", type: "Warning", value: 4, action: "Notification", tableValue: "4x" },
+            { alert: "June 06, 2023; 17:40", type: "Critical", value: 3, action: "Notification + Call", tableValue: "3x" },
+            { alert: "June 07, 2023; 19:00", type: "Warning", value: 2, action: "Notification", tableValue: "2x" },
+            { alert: "June 08, 2023; 21:10", type: "Average", value: 3, action: "None", tableValue: "3x" },
+            { alert: "June 09, 2023; 08:55", type: "Warning", value: 2, action: "Notification", tableValue: "2x" },
+            { alert: "June 10, 2023; 10:30", type: "Critical", value: 4, action: "Notification + Call", tableValue: "4x" },
+            { alert: "June 11, 2023; 13:15", type: "Average", value: 2, action: "None", tableValue: "2x" },
+            { alert: "June 12, 2023; 16:00", type: "Warning", value: 3, action: "Notification", tableValue: "3x" }
         ]
     },
     {
@@ -1832,18 +1811,18 @@ export const trendsData = [
         diff: '4',
         type: 'm',
         category: 'Critical',
-        table: [
-            { alert: "June 02, 2023; 08:30", type: "Warning", value: 2.5, action: "Notification" },
-            { alert: "June 03, 2023; 10:15", type: "Critical", value: 4.5, action: "Notification + Call" },
-            { alert: "June 04, 2023; 12:45", type: "Average", value: 3.5, action: "None" },
-            { alert: "June 05, 2023; 15:20", type: "Warning", value: 2.2, action: "Notification" },
-            { alert: "June 06, 2023; 17:40", type: "Critical", value: 2.8, action: "Notification + Call" },
-            { alert: "June 07, 2023; 19:00", type: "Warning", value: 3.2, action: "Notification" },
-            { alert: "June 08, 2023; 21:10", type: "Average", value: 3.1, action: "None" },
-            { alert: "June 09, 2023; 08:55", type: "Warning", value: 1.2, action: "Notification" },
-            { alert: "June 10, 2023; 10:30", type: "Critical", value: 2.1, action: "Notification + Call" },
-            { alert: "June 11, 2023; 13:15", type: "Average", value: 3.1, action: "None" },
-            { alert: "June 12, 2023; 16:00", type: "Warning", value: 2.3, action: "Notification" }
+        table:  [
+            { alert: "June 02, 2023; 08:30", type: "Warning", value: 2.5, action: "Notification", tableValue: "2hr 30m" },
+            { alert: "June 03, 2023; 10:15", type: "Critical", value: 4.5, action: "Notification + Call", tableValue: "4hr 30m" },
+            { alert: "June 04, 2023; 12:45", type: "Average", value: 3.5, action: "None", tableValue: "3hr 30m" },
+            { alert: "June 05, 2023; 15:20", type: "Warning", value: 2.2, action: "Notification", tableValue: "2hr 12m" },
+            { alert: "June 06, 2023; 17:40", type: "Critical", value: 2.8, action: "Notification + Call", tableValue: "2hr 48m" },
+            { alert: "June 07, 2023; 19:00", type: "Warning", value: 3.2, action: "Notification", tableValue: "3hr 12m" },
+            { alert: "June 08, 2023; 21:10", type: "Average", value: 3.1, action: "None", tableValue: "3hr 6m" },
+            { alert: "June 09, 2023; 08:55", type: "Warning", value: 1.2, action: "Notification", tableValue: "1hr 12m" },
+            { alert: "June 10, 2023; 10:30", type: "Critical", value: 2.1, action: "Notification + Call", tableValue: "2hr 6m" },
+            { alert: "June 11, 2023; 13:15", type: "Average", value: 3.1, action: "None", tableValue: "3hr 6m" },
+            { alert: "June 12, 2023; 16:00", type: "Warning", value: 2.3, action: "Notification", tableValue: "2hr 18m" }
         ]
     },
     {
@@ -1857,17 +1836,17 @@ export const trendsData = [
         type: 'hr',
         category: 'Warning',
         table: [
-            { alert: "June 02, 2023; 08:30", type: "Warning", value: 2.5, action: "Notification" },
-            { alert: "June 03, 2023; 10:15", type: "Critical", value: 4.5, action: "Notification + Call" },
-            { alert: "June 04, 2023; 12:45", type: "Average", value: 3.5, action: "None" },
-            { alert: "June 05, 2023; 15:20", type: "Warning", value: 2.2, action: "Notification" },
-            { alert: "June 06, 2023; 17:40", type: "Critical", value: 2.8, action: "Notification + Call" },
-            { alert: "June 07, 2023; 19:00", type: "Warning", value: 3.2, action: "Notification" },
-            { alert: "June 08, 2023; 21:10", type: "Average", value: 3.1, action: "None" },
-            { alert: "June 09, 2023; 08:55", type: "Warning", value: 1.2, action: "Notification" },
-            { alert: "June 10, 2023; 10:30", type: "Critical", value: 2.1, action: "Notification + Call" },
-            { alert: "June 11, 2023; 13:15", type: "Average", value: 3.1, action: "None" },
-            { alert: "June 12, 2023; 16:00", type: "Warning", value: 2.3, action: "Notification" }
+            { alert: "June 02, 2023; 08:30", type: "Warning", value: 2.5, action: "Notification", tableValue: "2hr 30m" },
+            { alert: "June 03, 2023; 10:15", type: "Critical", value: 4.5, action: "Notification + Call", tableValue: "4hr 30m" },
+            { alert: "June 04, 2023; 12:45", type: "Average", value: 3.5, action: "None", tableValue: "3hr 30m" },
+            { alert: "June 05, 2023; 15:20", type: "Warning", value: 2.2, action: "Notification", tableValue: "2hr 12m" },
+            { alert: "June 06, 2023; 17:40", type: "Critical", value: 2.8, action: "Notification + Call", tableValue: "2hr 48m" },
+            { alert: "June 07, 2023; 19:00", type: "Warning", value: 3.2, action: "Notification", tableValue: "3hr 12m" },
+            { alert: "June 08, 2023; 21:10", type: "Average", value: 3.1, action: "None", tableValue: "3hr 6m" },
+            { alert: "June 09, 2023; 08:55", type: "Warning", value: 1.2, action: "Notification", tableValue: "1hr 12m" },
+            { alert: "June 10, 2023; 10:30", type: "Critical", value: 2.1, action: "Notification + Call", tableValue: "2hr 6m" },
+            { alert: "June 11, 2023; 13:15", type: "Average", value: 3.1, action: "None", tableValue: "3hr 6m" },
+            { alert: "June 12, 2023; 16:00", type: "Warning", value: 2.3, action: "Notification", tableValue: "2hr 18m" }
         ]
     },
     {
@@ -1880,17 +1859,17 @@ export const trendsData = [
         diff: '2',
         category: 'Average',
         table: [
-            { alert: "June 02, 2023; 08:30", type: "Warning", value: 8.3, action: "Notification" },
-            { alert: "June 03, 2023; 10:15", type: "Critical", value: 9.3, action: "Notification + Call" },
-            { alert: "June 04, 2023; 12:45", type: "Average", value: 9.3, action: "None" },
-            { alert: "June 05, 2023; 15:20", type: "Warning", value: 8.3, action: "Notification" },
-            { alert: "June 06, 2023; 17:40", type: "Critical", value: 5.3, action: "Notification + Call" },
-            { alert: "June 07, 2023; 19:00", type: "Warning", value: 7.3, action: "Notification" },
-            { alert: "June 08, 2023; 21:10", type: "Average", value: 9.3, action: "None" },
-            { alert: "June 09, 2023; 08:55", type: "Warning", value: 6.3, action: "Notification" },
-            { alert: "June 10, 2023; 10:30", type: "Critical", value: 8.3, action: "Notification + Call" },
-            { alert: "June 11, 2023; 13:15", type: "Average", value: 7.3, action: "None" },
-            { alert: "June 12, 2023; 16:00", type: "Warning", value: 6.3, action: "Notification" }
+            { alert: "June 02, 2023; 08:30", type: "Warning", value: 8.3, action: "Notification", tableValue: "8hr 30m" },
+            { alert: "June 03, 2023; 10:15", type: "Critical", value: 9.3, action: "Notification + Call", tableValue: "9hr 30m" },
+            { alert: "June 04, 2023; 12:45", type: "Average", value: 9.3, action: "None", tableValue: "9hr 30m" },
+            { alert: "June 05, 2023; 15:20", type: "Warning", value: 8.3, action: "Notification", tableValue: "8hr 30m" },
+            { alert: "June 06, 2023; 17:40", type: "Critical", value: 5.3, action: "Notification + Call", tableValue: "5hr 30m" },
+            { alert: "June 07, 2023; 19:00", type: "Warning", value: 7.3, action: "Notification", tableValue: "7hr 30m" },
+            { alert: "June 08, 2023; 21:10", type: "Average", value: 9.3, action: "None", tableValue: "9hr 30m" },
+            { alert: "June 09, 2023; 08:55", type: "Warning", value: 6.3, action: "Notification", tableValue: "6hr 30m" },
+            { alert: "June 10, 2023; 10:30", type: "Critical", value: 8.3, action: "Notification + Call", tableValue: "8hr 30m" },
+            { alert: "June 11, 2023; 13:15", type: "Average", value: 7.3, action: "None", tableValue: "7hr 30m" },
+            { alert: "June 12, 2023; 16:00", type: "Warning", value: 6.3, action: "Notification", tableValue: "6hr 30m" }
         ]
     },
     {
@@ -1904,17 +1883,17 @@ export const trendsData = [
         type: 'hr',
         category: 'Average',
         table: [
-            { alert: "June 02, 2023; 08:30", type: "Warning", value: 2.5, action: "Notification" },
-            { alert: "June 03, 2023; 10:15", type: "Critical", value: 4.5, action: "Notification + Call" },
-            { alert: "June 04, 2023; 12:45", type: "Average", value: 3.5, action: "None" },
-            { alert: "June 05, 2023; 15:20", type: "Warning", value: 2.2, action: "Notification" },
-            { alert: "June 06, 2023; 17:40", type: "Critical", value: 2.8, action: "Notification + Call" },
-            { alert: "June 07, 2023; 19:00", type: "Warning", value: 3.2, action: "Notification" },
-            { alert: "June 08, 2023; 21:10", type: "Average", value: 3.1, action: "None" },
-            { alert: "June 09, 2023; 08:55", type: "Warning", value: 1.2, action: "Notification" },
-            { alert: "June 10, 2023; 10:30", type: "Critical", value: 2.1, action: "Notification + Call" },
-            { alert: "June 11, 2023; 13:15", type: "Average", value: 3.1, action: "None" },
-            { alert: "June 12, 2023; 16:00", type: "Warning", value: 2.3, action: "Notification" }
+            { alert: "June 02, 2023; 08:30", type: "Warning", value: 2.5, action: "Notification", tableValue: "2hr 30m" },
+            { alert: "June 03, 2023; 10:15", type: "Critical", value: 4.5, action: "Notification + Call", tableValue: "4hr 30m" },
+            { alert: "June 04, 2023; 12:45", type: "Average", value: 3.5, action: "None", tableValue: "3hr 30m" },
+            { alert: "June 05, 2023; 15:20", type: "Warning", value: 2.2, action: "Notification", tableValue: "2hr 12m" },
+            { alert: "June 06, 2023; 17:40", type: "Critical", value: 2.8, action: "Notification + Call", tableValue: "2hr 48m" },
+            { alert: "June 07, 2023; 19:00", type: "Warning", value: 3.2, action: "Notification", tableValue: "3hr 12m" },
+            { alert: "June 08, 2023; 21:10", type: "Average", value: 3.1, action: "None", tableValue: "3hr 6m" },
+            { alert: "June 09, 2023; 08:55", type: "Warning", value: 1.2, action: "Notification", tableValue: "1hr 12m" },
+            { alert: "June 10, 2023; 10:30", type: "Critical", value: 2.1, action: "Notification + Call", tableValue: "2hr 6m" },
+            { alert: "June 11, 2023; 13:15", type: "Average", value: 3.1, action: "None", tableValue: "3hr 6m" },
+            { alert: "June 12, 2023; 16:00", type: "Warning", value: 2.3, action: "Notification", tableValue: "2hr 18m" }
         ]
     },
     {
@@ -1928,17 +1907,17 @@ export const trendsData = [
         type: 'm',
         category: 'Average',
         table: [
-            { alert: "June 02, 2023; 08:30", type: "Warning", value: 30, action: "Notification" },
-            { alert: "June 03, 2023; 10:15", type: "Critical", value: 45, action: "Notification + Call" },
-            { alert: "June 04, 2023; 12:45", type: "Average", value: 15, action: "None" },
-            { alert: "June 05, 2023; 15:20", type: "Warning", value: 45, action: "Notification" },
-            { alert: "June 06, 2023; 17:40", type: "Critical", value: 30, action: "Notification + Call" },
-            { alert: "June 07, 2023; 19:00", type: "Warning", value: 15, action: "Notification" },
-            { alert: "June 08, 2023; 21:10", type: "Average", value: 30, action: "None" },
-            { alert: "June 09, 2023; 08:55", type: "Warning", value: 30, action: "Notification" },
-            { alert: "June 10, 2023; 10:30", type: "Critical", value: 15, action: "Notification + Call" },
-            { alert: "June 11, 2023; 13:15", type: "Average", value: 45, action: "None" },
-            { alert: "June 12, 2023; 16:00", type: "Warning", value: 15, action: "Notification" }
+            { alert: "June 02, 2023; 08:30", type: "Warning", value: 30, action: "Notification", tableValue: "30m" },
+            { alert: "June 03, 2023; 10:15", type: "Critical", value: 45, action: "Notification + Call", tableValue: "45m" },
+            { alert: "June 04, 2023; 12:45", type: "Average", value: 15, action: "None", tableValue: "15m" },
+            { alert: "June 05, 2023; 15:20", type: "Warning", value: 45, action: "Notification", tableValue: "45m" },
+            { alert: "June 06, 2023; 17:40", type: "Critical", value: 30, action: "Notification + Call", tableValue: "30m" },
+            { alert: "June 07, 2023; 19:00", type: "Warning", value: 15, action: "Notification", tableValue: "15m" },
+            { alert: "June 08, 2023; 21:10", type: "Average", value: 30, action: "None", tableValue: "30m" },
+            { alert: "June 09, 2023; 08:55", type: "Warning", value: 30, action: "Notification", tableValue: "30m" },
+            { alert: "June 10, 2023; 10:30", type: "Critical", value: 15, action: "Notification + Call", tableValue: "15m" },
+            { alert: "June 11, 2023; 13:15", type: "Average", value: 45, action: "None", tableValue: "45m" },
+            { alert: "June 12, 2023; 16:00", type: "Warning", value: 15, action: "Notification", tableValue: "15m" }
         ]
     },
     {
@@ -1951,18 +1930,18 @@ export const trendsData = [
         diff: '1',
         category: 'Warning',
         type: 'x',
-        table: [
-            { alert: "June 02, 2023; 08:30", type: "Warning", value: 3, action: "Notification" },
-            { alert: "June 03, 2023; 10:15", type: "Critical", value: 4, action: "Notification + Call" },
-            { alert: "June 04, 2023; 12:45", type: "Average", value: 1, action: "None" },
-            { alert: "June 05, 2023; 15:20", type: "Warning", value: 4, action: "Notification" },
-            { alert: "June 06, 2023; 17:40", type: "Critical", value: 3, action: "Notification + Call" },
-            { alert: "June 07, 2023; 19:00", type: "Warning", value: 1, action: "Notification" },
-            { alert: "June 08, 2023; 21:10", type: "Average", value: 3, action: "None" },
-            { alert: "June 09, 2023; 08:55", type: "Warning", value: 3, action: "Notification" },
-            { alert: "June 10, 2023; 10:30", type: "Critical", value: 1, action: "Notification + Call" },
-            { alert: "June 11, 2023; 13:15", type: "Average", value: 4, action: "None" },
-            { alert: "June 12, 2023; 16:00", type: "Warning", value: 1, action: "Notification" }
+        table:  [
+            { alert: "June 02, 2023; 08:30", type: "Warning", value: 3, action: "Notification", tableValue: "3x" },
+            { alert: "June 03, 2023; 10:15", type: "Critical", value: 4, action: "Notification + Call", tableValue: "4x" },
+            { alert: "June 04, 2023; 12:45", type: "Average", value: 1, action: "None", tableValue: "1x" },
+            { alert: "June 05, 2023; 15:20", type: "Warning", value: 4, action: "Notification", tableValue: "4x" },
+            { alert: "June 06, 2023; 17:40", type: "Critical", value: 3, action: "Notification + Call", tableValue: "3x" },
+            { alert: "June 07, 2023; 19:00", type: "Warning", value: 1, action: "Notification", tableValue: "1x" },
+            { alert: "June 08, 2023; 21:10", type: "Average", value: 3, action: "None", tableValue: "3x" },
+            { alert: "June 09, 2023; 08:55", type: "Warning", value: 3, action: "Notification", tableValue: "3x" },
+            { alert: "June 10, 2023; 10:30", type: "Critical", value: 1, action: "Notification + Call", tableValue: "1x" },
+            { alert: "June 11, 2023; 13:15", type: "Average", value: 4, action: "None", tableValue: "4x" },
+            { alert: "June 12, 2023; 16:00", type: "Warning", value: 1, action: "Notification", tableValue: "1x" }
         ]
     },
     {
@@ -1975,18 +1954,18 @@ export const trendsData = [
         diff: '1',
         category: 'Average',
         type: 'x',
-        table: [
-            { alert: "June 02, 2023; 08:30", type: "Warning", value: 3, action: "Notification" },
-            { alert: "June 03, 2023; 10:15", type: "Critical", value: 4, action: "Notification + Call" },
-            { alert: "June 04, 2023; 12:45", type: "Average", value: 1, action: "None" },
-            { alert: "June 05, 2023; 15:20", type: "Warning", value: 4, action: "Notification" },
-            { alert: "June 06, 2023; 17:40", type: "Critical", value: 3, action: "Notification + Call" },
-            { alert: "June 07, 2023; 19:00", type: "Warning", value: 1, action: "Notification" },
-            { alert: "June 08, 2023; 21:10", type: "Average", value: 3, action: "None" },
-            { alert: "June 09, 2023; 08:55", type: "Warning", value: 3, action: "Notification" },
-            { alert: "June 10, 2023; 10:30", type: "Critical", value: 1, action: "Notification + Call" },
-            { alert: "June 11, 2023; 13:15", type: "Average", value: 4, action: "None" },
-            { alert: "June 12, 2023; 16:00", type: "Warning", value: 1, action: "Notification" }
+        table:  [
+            { alert: "June 02, 2023; 08:30", type: "Warning", value: 3, action: "Notification", tableValue: "3x" },
+            { alert: "June 03, 2023; 10:15", type: "Critical", value: 4, action: "Notification + Call", tableValue: "4x" },
+            { alert: "June 04, 2023; 12:45", type: "Average", value: 1, action: "None", tableValue: "1x" },
+            { alert: "June 05, 2023; 15:20", type: "Warning", value: 4, action: "Notification", tableValue: "4x" },
+            { alert: "June 06, 2023; 17:40", type: "Critical", value: 3, action: "Notification + Call", tableValue: "3x" },
+            { alert: "June 07, 2023; 19:00", type: "Warning", value: 1, action: "Notification", tableValue: "1x" },
+            { alert: "June 08, 2023; 21:10", type: "Average", value: 3, action: "None", tableValue: "3x" },
+            { alert: "June 09, 2023; 08:55", type: "Warning", value: 3, action: "Notification", tableValue: "3x" },
+            { alert: "June 10, 2023; 10:30", type: "Critical", value: 1, action: "Notification + Call", tableValue: "1x" },
+            { alert: "June 11, 2023; 13:15", type: "Average", value: 4, action: "None", tableValue: "4x" },
+            { alert: "June 12, 2023; 16:00", type: "Warning", value: 1, action: "Notification", tableValue: "1x" }
         ]
     },
     {
@@ -2000,17 +1979,17 @@ export const trendsData = [
         category: 'Warning',
         type: 'bpm',
         table: [
-            { alert: "June 02, 2023; 08:30", type: "Warning", value:82, action: "Notification" },
-            { alert: "June 03, 2023; 10:15", type: "Critical", value:80, action: "Notification + Call" },
-            { alert: "June 04, 2023; 12:45", type: "Average", value:81, action: "None" },
-            { alert: "June 05, 2023; 15:20", type: "Warning", value:80, action: "Notification" },
-            { alert: "June 06, 2023; 17:40", type: "Critical", value:82, action: "Notification + Call" },
-            { alert: "June 07, 2023; 19:00", type: "Warning", value:82, action: "Notification" },
-            { alert: "June 08, 2023; 21:10", type: "Average", value:81, action: "None" },
-            { alert: "June 09, 2023; 08:55", type: "Warning", value:80, action: "Notification" },
-            { alert: "June 10, 2023; 10:30", type: "Critical", value:82, action: "Notification + Call" },
-            { alert: "June 11, 2023; 13:15", type: "Average", value:81, action: "None" },
-            { alert: "June 12, 2023; 16:00", type: "Warning", value:80, action: "Notification" }
+            { alert: "June 02, 2023; 08:30", type: "Warning", value: 82, action: "Notification", tableValue: "82bpm" },
+            { alert: "June 03, 2023; 10:15", type: "Critical", value: 80, action: "Notification + Call", tableValue: "80bpm" },
+            { alert: "June 04, 2023; 12:45", type: "Average", value: 81, action: "None", tableValue: "81bpm" },
+            { alert: "June 05, 2023; 15:20", type: "Warning", value: 80, action: "Notification", tableValue: "80bpm" },
+            { alert: "June 06, 2023; 17:40", type: "Critical", value: 82, action: "Notification + Call", tableValue: "82bpm" },
+            { alert: "June 07, 2023; 19:00", type: "Warning", value: 82, action: "Notification", tableValue: "82bpm" },
+            { alert: "June 08, 2023; 21:10", type: "Average", value: 81, action: "None", tableValue: "81bpm" },
+            { alert: "June 09, 2023; 08:55", type: "Warning", value: 80, action: "Notification", tableValue: "80bpm" },
+            { alert: "June 10, 2023; 10:30", type: "Critical", value: 82, action: "Notification + Call", tableValue: "82bpm" },
+            { alert: "June 11, 2023; 13:15", type: "Average", value: 81, action: "None", tableValue: "81bpm" },
+            { alert: "June 12, 2023; 16:00", type: "Warning", value: 80, action: "Notification", tableValue: "80bpm" }
         ]
     },
     {
@@ -2024,17 +2003,17 @@ export const trendsData = [
         category: 'Critical',
         type: 'bpm',
         table: [
-            { alert: "June 02, 2023; 08:30", type: "Warning", value:32, action: "Notification" },
-            { alert: "June 03, 2023; 10:15", type: "Critical", value:33, action: "Notification + Call" },
-            { alert: "June 04, 2023; 12:45", type: "Average", value:31, action: "None" },
-            { alert: "June 05, 2023; 15:20", type: "Warning", value:30, action: "Notification" },
-            { alert: "June 06, 2023; 17:40", type: "Critical", value:32, action: "Notification + Call" },
-            { alert: "June 07, 2023; 19:00", type: "Warning", value:32, action: "Notification" },
-            { alert: "June 08, 2023; 21:10", type: "Average", value:31, action: "None" },
-            { alert: "June 09, 2023; 08:55", type: "Warning", value:30, action: "Notification" },
-            { alert: "June 10, 2023; 10:30", type: "Critical", value:32, action: "Notification + Call" },
-            { alert: "June 11, 2023; 13:15", type: "Average", value:31, action: "None" },
-            { alert: "June 12, 2023; 16:00", type: "Warning", value:30, action: "Notification" }
+            { alert: "June 02, 2023; 08:30", type: "Warning", value: 32, action: "Notification", bpm: "32bpm", tableValue: "32bpm" },
+            { alert: "June 03, 2023; 10:15", type: "Critical", value: 33, action: "Notification + Call", bpm: "33bpm", tableValue: "33bpm" },
+            { alert: "June 04, 2023; 12:45", type: "Average", value: 31, action: "None", bpm: "31bpm", tableValue: "31bpm" },
+            { alert: "June 05, 2023; 15:20", type: "Warning", value: 30, action: "Notification", bpm: "30bpm", tableValue: "30bpm" },
+            { alert: "June 06, 2023; 17:40", type: "Critical", value: 32, action: "Notification + Call", bpm: "32bpm", tableValue: "32bpm" },
+            { alert: "June 07, 2023; 19:00", type: "Warning", value: 32, action: "Notification", bpm: "32bpm", tableValue: "32bpm" },
+            { alert: "June 08, 2023; 21:10", type: "Average", value: 31, action: "None", bpm: "31bpm", tableValue: "31bpm" },
+            { alert: "June 09, 2023; 08:55", type: "Warning", value: 30, action: "Notification", bpm: "30bpm", tableValue: "30bpm" },
+            { alert: "June 10, 2023; 10:30", type: "Critical", value: 32, action: "Notification + Call", bpm: "32bpm", tableValue: "32bpm" },
+            { alert: "June 11, 2023; 13:15", type: "Average", value: 31, action: "None", bpm: "31bpm", tableValue: "31bpm" },
+            { alert: "June 12, 2023; 16:00", type: "Warning", value: 30, action: "Notification", bpm: "30bpm", tableValue: "30bpm" }
         ]
     },
     {
@@ -2096,17 +2075,17 @@ export const trendsData = [
         type: 'm',
         category: 'Warning',
         table: [
-            { alert: "June 02, 2023; 08:30", type: "Warning", value:30, action: "Notification" },
-            { alert: "June 03, 2023; 10:15", type: "Critical", value:45, action: "Notification + Call" },
-            { alert: "June 04, 2023; 12:45", type: "Average", value:15, action: "None" },
-            { alert: "June 05, 2023; 15:20", type: "Warning", value:45, action: "Notification" },
-            { alert: "June 06, 2023; 17:40", type: "Critical", value:30, action: "Notification + Call" },
-            { alert: "June 07, 2023; 19:00", type: "Warning", value:15, action: "Notification" },
-            { alert: "June 08, 2023; 21:10", type: "Average", value:30, action: "None" },
-            { alert: "June 09, 2023; 08:55", type: "Warning", value:30, action: "Notification" },
-            { alert: "June 10, 2023; 10:30", type: "Critical", value:15, action: "Notification + Call" },
-            { alert: "June 11, 2023; 13:15", type: "Average", value:45, action: "None" },
-            { alert: "June 12, 2023; 16:00", type: "Warning", value:15, action: "Notification" }
+            { alert: "June 02, 2023; 08:30", type: "Warning", value: 30, action: "Notification", tableValue: "30m" },
+            { alert: "June 03, 2023; 10:15", type: "Critical", value: 45, action: "Notification + Call", tableValue: "45m" },
+            { alert: "June 04, 2023; 12:45", type: "Average", value: 15, action: "None", tableValue: "15m" },
+            { alert: "June 05, 2023; 15:20", type: "Warning", value: 45, action: "Notification", tableValue: "45m" },
+            { alert: "June 06, 2023; 17:40", type: "Critical", value: 30, action: "Notification + Call", tableValue: "30m" },
+            { alert: "June 07, 2023; 19:00", type: "Warning", value: 15, action: "Notification", tableValue: "15m" },
+            { alert: "June 08, 2023; 21:10", type: "Average", value: 30, action: "None", tableValue: "30m" },
+            { alert: "June 09, 2023; 08:55", type: "Warning", value: 30, action: "Notification", tableValue: "30m" },
+            { alert: "June 10, 2023; 10:30", type: "Critical", value: 15, action: "Notification + Call", tableValue: "15m" },
+            { alert: "June 11, 2023; 13:15", type: "Average", value: 45, action: "None", tableValue: "45m" },
+            { alert: "June 12, 2023; 16:00", type: "Warning", value: 15, action: "Notification", tableValue: "15m" }
         ]
     },
     {
@@ -2144,17 +2123,17 @@ export const trendsData = [
         type: 'percent',
         category: 'Average',
         table: [
-            { alert: "June 02, 2023; 08:30", type: "Warning", value:58, action: "Notification" },
-            { alert: "June 03, 2023; 10:15", type: "Critical", value:55, action: "Notification + Call" },
-            { alert: "June 04, 2023; 12:45", type: "Average", value:52, action: "None" },
-            { alert: "June 05, 2023; 15:20", type: "Warning", value:58, action: "Notification" },
-            { alert: "June 06, 2023; 17:40", type: "Critical", value:55, action: "Notification + Call" },
-            { alert: "June 07, 2023; 19:00", type: "Warning", value:51, action: "Notification" },
-            { alert: "June 08, 2023; 21:10", type: "Average", value:53, action: "None" },
-            { alert: "June 09, 2023; 08:55", type: "Warning", value:55, action: "Notification" },
-            { alert: "June 10, 2023; 10:30", type: "Critical", value:58, action: "Notification + Call" },
-            { alert: "June 11, 2023; 13:15", type: "Average", value:56, action: "None" },
-            { alert: "June 12, 2023; 16:00", type: "Warning", value:58, action: "Notification" }
+            { alert: "June 02, 2023; 08:30", type: "Warning", value: 58, action: "Notification", tableValue: "58%" },
+            { alert: "June 03, 2023; 10:15", type: "Critical", value: 55, action: "Notification + Call", tableValue: "55%" },
+            { alert: "June 04, 2023; 12:45", type: "Average", value: 52, action: "None", tableValue: "52%" },
+            { alert: "June 05, 2023; 15:20", type: "Warning", value: 58, action: "Notification", tableValue: "58%" },
+            { alert: "June 06, 2023; 17:40", type: "Critical", value: 55, action: "Notification + Call", tableValue: "55%" },
+            { alert: "June 07, 2023; 19:00", type: "Warning", value: 51, action: "Notification", tableValue: "51%" },
+            { alert: "June 08, 2023; 21:10", type: "Average", value: 53, action: "None", tableValue: "53%" },
+            { alert: "June 09, 2023; 08:55", type: "Warning", value: 55, action: "Notification", tableValue: "55%" },
+            { alert: "June 10, 2023; 10:30", type: "Critical", value: 58, action: "Notification + Call", tableValue: "58%" },
+            { alert: "June 11, 2023; 13:15", type: "Average", value: 56, action: "None", tableValue: "56%" },
+            { alert: "June 12, 2023; 16:00", type: "Warning", value: 58, action: "Notification", tableValue: "58%" }
         ]
     },
 ]

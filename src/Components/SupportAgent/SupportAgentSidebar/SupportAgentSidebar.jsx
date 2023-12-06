@@ -79,6 +79,10 @@ const SupportAgentSidebar = () => {
             <SupportAgentSidebarProgress />
           </div>
 
+          <div className="w-full h-[1px] bg-white/20 mb-[10px] mt-[20px]">
+
+          </div>
+
           <div className="flex justify-between items-center group p-4">
             <button
               onClick={() => setShow(true)}

@@ -11,7 +11,7 @@ const CustomDrawer = ({children,open,setOpen}) => {
       closable={false}
       onClose={onClose}
       open={open}
-      width={280}
+      width={240}
     >
        {children}
     </Drawer>

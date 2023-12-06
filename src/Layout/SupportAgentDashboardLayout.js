@@ -20,7 +20,7 @@ const SupportAgentDashboardLayout = () => {
         <div className='bg-[#F4F7FE] w-full min-h-[100vh] '>
             {/* Admin dashboard outlet create */}
             <DashboardNav name={"Liam Ketla"} user="Support Agent" role={"supportAgent"}/>
-            <div className='xl:px-[30px] px-4'>
+            <div className='xl:px-[30px] px-4 add_zoom'>
                 <Outlet></Outlet>
             </div>
         </div>
