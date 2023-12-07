@@ -12,7 +12,7 @@ const Notification = ({ filterNotificationData,role }) => {
 
     const handleNavigateNotificaitonDetails = (userId) => {
         if (role === 'supportAgent') {
-            navigate(`/support-agent/dashboard/user/${userId}`)
+            navigate(`/support-agent/dashboard/elderly/${userId}`)
         }
         if (role === 'admin') {
             navigate(`/admin/dashboard/elderly/${userId}`)

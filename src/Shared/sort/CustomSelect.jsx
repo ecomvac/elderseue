@@ -40,7 +40,7 @@ const CustomSelect = ({selected,setSelected,data,className,width}) => {
       >
       <button
         type="button"
-        className={` py-[18px] px-4  placeholder:text-[#A3AED0]  flex items-center justify-between w-full ${
+        className={` py-[18px] px-4  placeholder:text-[#A3AED0]  flex items-center justify-between ${
           !selected && " text-primary"
         } ${className}`}
       >

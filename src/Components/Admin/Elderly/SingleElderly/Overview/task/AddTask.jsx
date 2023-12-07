@@ -5,10 +5,13 @@ import CustomToast from "../../../../../../Shared/Tosat/CustomToast";
 import { useForm } from "react-hook-form";
 import CustomInput from "../../../../../../Shared/input/CustomInput";
 import { Icon } from "@iconify/react";
+import CustomSelect from "../../../../../../Shared/sort/CustomSelect";
 
 const AddTask = ({ modalOPen, setModalOpen }) => {
   const [priorityActive, setPriorityActive] = useState("Medium Priority");
   const [activeRecurrence, setActiveRecurrence] = useState("One Time");
+  const [selected, setSelected] = useState("");
+  const data = ["Medication", "Food"];
   const [activeDay, setActiveDay] = useState([]);
   const Recurrence = ["One Time", "Daily", "Weekly"];
   const dayData = ["Sat", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri"];
@@ -97,7 +100,7 @@ const AddTask = ({ modalOPen, setModalOpen }) => {
         ></textarea>
       </div>
 
-      <div className=" flex items-center gap-[18px] justify-between">
+      <div className=" flex items-center flex-col md:flex-row gap-[18px] justify-between">
         <div className="flex flex-col items-start w-full mt-3">
           <label
             htmlFor="otp"
@@ -105,15 +108,7 @@ const AddTask = ({ modalOPen, setModalOpen }) => {
           >
             Task Type
           </label>
-          <select
-            name=""
-            id=""
-            register={register("taskType")}
-            className=" px-4 text-text-primary placeholder:text-[#A3AED0] h-[50px] rounded-[16px] w-full text-base outline-none   border-[1px] focus:border-primary"
-          >
-            <option value="Medication">Medication</option>
-            <option value="Food">Food</option>
-          </select>
+          <CustomSelect width={"w-[250px]"} className={" rounded-[16px] w-[250px] text-base outline-none text-text-primary h-[50px] border-[1px] focus:border-primary "} selected={selected} setSelected={setSelected} data={data} />
         </div>
         <CustomInput
           label={"Event Occurrences"}
@@ -134,7 +129,7 @@ const AddTask = ({ modalOPen, setModalOpen }) => {
           htmlFor="otp"
           className="mb-1 font-medium text-[13px] text-[#1B2559]"
         >
-          Task Type
+          Task Priority
         </label>
 
         <div className=" flex itemc justify-between mt-2">
