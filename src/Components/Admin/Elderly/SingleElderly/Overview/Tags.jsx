@@ -3,10 +3,12 @@ import SectionWrapper from "../../../../../Shared/SectionWrapper";
 import { Icon } from "@iconify/react";
 import toast from "react-hot-toast";
 import CustomErrorToast from "../../../../../Shared/Tosat/CustomErrorToast";
+import CustomSelect from "../../../../../Shared/sort/CustomSelect";
 
 const Tags = () => {
   const [tags, setTags] = useState("");
-  const [category,setCategory] = useState("elderly")
+  const [selected, setSelected] = useState("Add as Elderly Tag");
+  const dataSelete = ["Add as Elderly Tag", "Add ad System Tags"];
   const [data, setData] = useState([
     {
       id: 1,
@@ -43,7 +45,7 @@ const Tags = () => {
         <CustomErrorToast t={t} text={"Please add a tags"} title={"Error"} />
       ));
     } else {
-      setData((pre) => [...pre, { id: Math.random(), title: tags,category:category }]);
+      setData((pre) => [...pre, { id: Math.random(), title: tags,category:selected==="Add as Elderly Tag" ? "elderly" : "system" }]);
       setTags("");
     }
   };
@@ -59,15 +61,7 @@ const Tags = () => {
         <div className=" flex items-center justify-between">
           <h2 className=" text-2xl font-bold text-dark-black">Tags</h2>
           <div>
-            <select
-              name=""
-              id=""
-              onChange={(e)=>setCategory(e.target.value)}
-              className="py-[8px] px-3 outline-none border-none text-primary bg-primary/10 rounded-[10px]"
-            >
-              <option value="elderly">Add as Elderly Tag</option>
-              <option value="system">Add ad System Tags</option>
-            </select>
+          <CustomSelect width={"w-[200px]"} className={"w-[200px] py-[8px] px-3 outline-none border-none text-primary bg-primary/10 rounded-[10px]"} selected={selected} setSelected={setSelected} data={dataSelete} />
           </div>
         </div>
 

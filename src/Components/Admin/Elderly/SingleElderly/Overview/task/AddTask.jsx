@@ -9,9 +9,10 @@ import { Icon } from "@iconify/react";
 const AddTask = ({ modalOPen, setModalOpen }) => {
   const [priorityActive, setPriorityActive] = useState("Medium Priority");
   const [activeRecurrence, setActiveRecurrence] = useState("One Time");
-  const [activeDay, setActiveDay] = useState("");
+  const [activeDay, setActiveDay] = useState([]);
   const Recurrence = ["One Time", "Daily", "Weekly"];
-  const day = ["Sat", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri"];
+  const dayData = ["Sat", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri"];
+  const [repet,setRepet] = useState(false)
 
   const {
     register,
@@ -44,6 +45,18 @@ const AddTask = ({ modalOPen, setModalOpen }) => {
       toast.error("An error occurred while creating a new admin.");
     }
   };
+
+  const handelDay = (day) => {
+    setActiveRecurrence("")
+    const isSelected = Boolean(activeDay.find((grpStud) => grpStud === day));
+    if (isSelected) {
+      setActiveDay(activeDay.filter((item) => item !== day));
+    } else {
+      setActiveDay((pre) => [...pre, day]);
+    }
+  };
+
+  console.log(activeDay)
 
   return (
     <CustomModal
@@ -214,7 +227,7 @@ const AddTask = ({ modalOPen, setModalOpen }) => {
           {Recurrence.map((item, index) => (
             <button
               key={index}
-              onClick={() => setActiveRecurrence(item)}
+              onClick={() => {setActiveRecurrence(item);setActiveDay([])}}
               type="button"
               className={`  text-[16px] py-2 px-3 rounded-full
                     font-medium flex items-center gap-2 hover:bg-primary hover:text-white group ${
@@ -236,27 +249,33 @@ const AddTask = ({ modalOPen, setModalOpen }) => {
         </div>
 
         <div className=" flex items-center gap-[10px] mt-5">
-          {day.map((item, index) => (
-            <button
-              key={index}
-              onClick={() => setActiveDay(item)}
-              type="button"
-              className={` w-[47px]  text-[16px] py-2 px-4 rounded-full
-                    font-medium flex items-center justify-center h-[35px] gap-2 hover:bg-primary hover:text-white group ${
-                      item === activeDay
-                        ? " bg-primary text-white"
-                        : " bg-primary/10 text-primary"
-                    }`}
-            >
-              <h2 className="mt-[-3px]">{item}</h2>
-            </button>
-          ))}
+          {dayData.map((item, index) => {
+            const isSelected = Boolean(
+              activeDay.find((grpStud) => grpStud === item)
+            );
+            return (
+              <button
+                key={index}
+                onClick={() => handelDay(item)}
+                type="button"
+                className={` w-[47px]  text-[16px] py-2 px-4 rounded-full
+                                          font-medium flex items-center justify-center h-[35px] gap-2 hover:bg-primary hover:text-white group ${
+                                            isSelected
+                                              ? " bg-primary text-white"
+                                              : " bg-primary/10 text-primary"
+                                          }`}
+              >
+                <h2 className="mt-[-3px]">{item}</h2>
+              </button>
+            );
+          })}
 
           <div className="w-[10px] h-[10px] rounded-full bg-primary/10"></div>
           <button
             type="button"
+            onClick={()=>setRepet((pre)=>!pre)}
             className={`  text-[16px] py-2 px-4 rounded-full
-                    font-medium flex items-center gap-2 hover:bg-primary hover:text-white gro bg-primary/10 text-primary`}
+                    font-medium flex items-center gap-2 hover:bg-primary hover:text-white gro  text-primary ${repet ? " bg-primary text-white" : "bg-primary/10"}`}
           >
             <h2 className=" flex items-center gap-2">
               <Icon icon="lucide:repeat-2" /> Repeat

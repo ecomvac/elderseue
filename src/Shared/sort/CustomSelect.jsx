@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Icon } from "@iconify/react";
 import { Popover } from "antd";
 
-const Sort = ({selected,setSelected,data,width,bg}) => {
+const CustomSelect = ({selected,setSelected,data,className,width}) => {
 
   const [popupShow, setPopupShow] = useState(false);
 
@@ -11,9 +11,10 @@ const Sort = ({selected,setSelected,data,width,bg}) => {
   };
 
   const content = (
-    <div style={{width:width}} className=" w-[135px] p-2 max-h-[150px] overflow-y-scroll">
+    <div className={`p-2 max-h-[150px] overflow-y-scroll ${width}`}>
       {data.map((item, index) => (
         <button
+          type="button"
           disabled={item==="Sort"}
           key={index}
           onClick={() => {
@@ -38,13 +39,12 @@ const Sort = ({selected,setSelected,data,width,bg}) => {
         trigger="click"
       >
       <button
-        style={{width:width,background:bg}}
-        className={` bg-primary/10 w-[110px] text-[13px] h-[40px] text-primary font-medium cursor-pointer px-2 py-2 flex items-center rounded-[10px] justify-between ${
+        type="button"
+        className={` py-[18px] px-4  placeholder:text-[#A3AED0]  flex items-center justify-between w-full ${
           !selected && " text-primary"
-        } ${ bg? " bg-text-primary/10" : ""}`}
+        } ${className}`}
       >
         <div className="flex items-center gap-[1px]">
-        <Icon icon="basil:sort-outline" className=' text-lg' />
             {selected
                 ? selected?.length > 25
                     ? selected?.substring(0, 25) + "..."
@@ -58,4 +58,4 @@ const Sort = ({selected,setSelected,data,width,bg}) => {
   );
 };
 
-export default Sort;
+export default CustomSelect;
