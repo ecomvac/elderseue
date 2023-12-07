@@ -4,22 +4,37 @@ import { Icon } from '@iconify/react';
 import { SidebarContext } from '../../../../../Context/CustomContext';
 
 const Status = () => {
-    const { elderlyId } = useContext(SidebarContext)
+    const { elderlyPossition } = useContext(SidebarContext)
     return (
         <>
             <SectionWrapper>
                 <div className='px-[22px] py-6'>
-                    <div style={{ backgroundImage: 'url("/images/satusImg.png")', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }} className={`mb-5 p-5 rounded-[17px] ${elderlyId === (2 || 4 || 6) ? 'bg-primary' : 'bg-[#F43E3E]'}`}>
+                    <div style={{ backgroundImage: 'url("/images/satusImg.png")', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }} className={`mb-5 p-5 rounded-[17px] 
+                    ${elderlyPossition === 'good' && 'bg-primary'}
+                    ${elderlyPossition === 'critical' && 'bg-[#F43E3E]'}
+                    ${elderlyPossition === 'problem' && 'bg-[#627BFF]'}
+                    ${elderlyPossition === 'warning' && 'bg-[#FF8C3A]'}
+                    
+                    `}>
                         <div className='flex items-center gap-[14px]'>
                             <span className='p-4 rounded-full bg-white'>
-                                {elderlyId === (2 || 4 || 6) ? <Icon className='text-[22px] text-primary' icon="octicon:shield-check-16" />: <Icon className='text-[22px] text-[#F43E3E] ' icon="lucide:siren" />}
-
+                                {elderlyPossition === 'good' && <Icon className='text-[22px] text-primary ' icon="iconamoon:check-bold" />}
+                                {elderlyPossition === 'critical' && <Icon className='text-[22px] text-[#F43E3E] ' icon="lucide:siren" />}
+                                {elderlyPossition === 'problem' && <Icon className='text-[22px] text-[#627BFF] ' icon="lucide:bug" />}
+                                {elderlyPossition === 'warning' && <Icon className='text-[22px] text-[#FF8C3A] ' icon="quill:warning" />}
                             </span>
                             <span className='flex flex-col'>
                                 <span className='font-bold text-2xl text-white'>
-                                    {elderlyId === (2 || 4 || 6) ? <span>All Good</span> : <span>Critical</span>}
+                                    {elderlyPossition === 'good' && <span>All Good</span>}
+                                    {elderlyPossition === 'critical' && <span>Critical</span>}
+                                    {elderlyPossition === 'problem' && <span>Problem</span>}
+                                    {elderlyPossition === 'warning' && <span>Warning</span>}
                                 </span>
-                                <span className='text-sm text-white opacity-80'>Something Went Wrong With Elderly</span>
+                                {elderlyPossition === 'good' && <span className='text-sm text-white opacity-80'>Everything Fine With Elderly</span>}
+                                {elderlyPossition === 'critical' && <span className='text-sm text-white opacity-80'>Something Went Wrong With Elderly</span>}
+                                {elderlyPossition === 'problem' && <span className='text-sm text-white opacity-80'>Some Problem Detected, Fix ASAP</span>}
+                                {elderlyPossition === 'warning' && <span className='text-sm text-white opacity-80'>Please Check, Is Everything Fine With Elderly</span>}
+
                             </span>
                         </div>
                         <div className='mt-[72px] px-0 xl:px-12 grid grid-cols-3 xl:grid-cols-3 lg:grid-cols-2'>

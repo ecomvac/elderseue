@@ -140,7 +140,7 @@ const OverViewChart = ({ data }) => {
 
 
     return (
-        <div>
+        <div className=''>
             {/* --------------title--------------------- */}
             <div className='lg2:flex justify-between md:flex py-6 px-8 border-b'>
                 <div className='flex flex-wrap items-center mr-2'>

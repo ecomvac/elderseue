@@ -18,7 +18,7 @@ const AdminDashBoardSupportAgents = () => {
           <SearchInput
             search={search}
             setSearch={setSearch}
-            placeholder="Search Support Agent"
+            placeholder="Search Support Agents"
           />
           <Sort width="140px" selected={selected} setSelected={setSelected} data={data} />
         </div>

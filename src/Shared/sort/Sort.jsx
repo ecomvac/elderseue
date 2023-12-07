@@ -52,7 +52,7 @@ const Sort = ({selected,setSelected,data,width,bg}) => {
         </div>
         <Icon icon="basil:caret-down-solid" className={`${popupShow && "rotate-180"} text-[20px]`}/>
       </button>
-      </Popover>
+      </Popover> 
     </div>
   );
 };

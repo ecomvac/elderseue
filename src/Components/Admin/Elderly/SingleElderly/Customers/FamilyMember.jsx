@@ -34,7 +34,7 @@ const FamilyMember = () => {
             render: (row) => <span className=' text-base font-normal text-text-secondary'>{row.blood}</span>
         },
         {
-            title: <Icon icon="basil:other-2-outline" className=" text-[35px]" />,
+            title: '',
             key: 'id',
             render: (row) => (
                 <TableActions setMemberId={setMemberId} removeMember={removeMember} data={row} />

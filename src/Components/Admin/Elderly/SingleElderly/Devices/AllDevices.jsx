@@ -9,7 +9,7 @@ const AllDevices = ({ data }) => {
     const [deleteModal, setDeleteModal] = useState(false);
     const [popoverStates, setPopoverStates] = useState(Array(data.length).fill(false));
     const [deviceId, setDeviceId] = useState(null)
-    const {setDeviceInner}=useContext(SidebarContext)
+    const { setDeviceInner } = useContext(SidebarContext)
 
     const removeDevice = () => {
         const updatedDeviceData = deviceData.filter(device => device.id !== deviceId);
@@ -24,7 +24,7 @@ const AllDevices = ({ data }) => {
     const content = (index, device) => (
         <div className=" w-[190px]">
             {
-                ((device.name ==='Wave – Vital Signs Monitor') || (device.name ==='Home Care Assistant')) && <button onClick={()=>setDeviceInner(device.name)}className="text-sm flex w-full items-start rounded-[10px] font-medium text-light-black hover:bg-primary/10 hover:text-[#9039FF] py-3 px-5">Show Details</button>
+                ((device.name === 'Wave – Vital Signs Monitor') || (device.name === 'Home Care Assistant')) && <button onClick={() => setDeviceInner(device.name)} className="text-sm flex w-full items-start rounded-[10px] font-medium text-light-black hover:bg-primary/10 hover:text-[#9039FF] py-3 px-5">Show Details</button>
             }
             <button className="text-sm flex w-full items-start rounded-[10px] font-medium text-light-black hover:bg-primary/10 hover:text-[#9039FF] py-3 px-5">Edit Device</button>
             <button onClick={() => { setDeleteModal(true); handleOpenChange(index, false); setDeviceId(device.id) }} className="text-sm w-full flex items-start rounded-[10px] font-medium text-light-black hover:bg-danger/10 hover:text-danger py-3 px-5">Delete Device</button>
@@ -57,20 +57,19 @@ const AllDevices = ({ data }) => {
                                     <span className='text-base font-medium text-[#969BB3]'>{device?.title}</span>
                                 </span>
 
+                                {/* ----------------breath--------- */}
                                 {
-                                    device.heart && <span>
-                                        <span className='flex items-center gap-1'>
-                                            {/* ---------heart----------- */}
-                                            <span className='flex items-center rounded-md font-medium bg-Critical/10 text-Critical px-[3px] py-[5px]'>
-                                                <span><Icon className='text-xl' icon="material-symbols-light:ecg-heart-sharp" /></span>
-                                                <span className='text-sm'>{device.heart}<span className='text-[10px]'>bpm</span></span>
-                                            </span>
-                                            {/* ----------------breath--------- */}
-                                            <span className='flex items-center rounded-md font-medium bg-Warning/10 text-Warning px-[3px] py-[5px]'>
-                                                <span><Icon className='text-xl' icon="healthicons:lungs" /></span>
-                                                <span className='text-sm'>{device.breath}<span className='text-[10px]'>bpm</span></span>
-                                            </span>
-                                        </span>
+                                    device.heart && <span className='flex items-center rounded-md font-medium bg-Warning/10 text-Warning px-[3px] py-[5px]'>
+                                        <span><Icon className='text-xl' icon="healthicons:lungs" /></span>
+                                        <span className='text-sm'>{device.breath}<span className='text-[10px]'>bpm</span></span>
+                                    </span>
+                                }
+                                {/* ---------heart----------- */}
+                                {
+                                    device.heart &&
+                                    <span className='flex items-center rounded-md font-medium bg-Critical/10 text-Critical px-[3px] py-[5px]'>
+                                        <span><Icon className='text-xl' icon="material-symbols-light:ecg-heart-sharp" /></span>
+                                        <span className='text-sm'>{device.heart}<span className='text-[10px]'>bpm</span></span>
                                     </span>
                                 }
 
