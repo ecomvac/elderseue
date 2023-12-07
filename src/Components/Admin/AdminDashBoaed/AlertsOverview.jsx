@@ -7,7 +7,7 @@ import { AlertsOverviewMonth, AlertsOverviewWeek } from "../../../assets/support
 const AlertsOverview = () => {
   const [selected, setSelected] = useState("Last Week");
   const [chartData,setChartData] = useState(AlertsOverviewWeek)
-  const data = ["Last Week", "last Month"];
+  const data = ["Last Week", "Last Month"];
 
   const alertsData = [
     {
@@ -29,7 +29,7 @@ const AlertsOverview = () => {
     if(selected==="Last Week"){
       setChartData(AlertsOverviewWeek)
     }
-    if(selected==="last Month"){
+    if(selected==="Last Month"){
       setChartData(AlertsOverviewMonth)
     }
   },[selected])

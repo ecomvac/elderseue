@@ -24,7 +24,7 @@ export const SuccessToast = (text) => {
       </div>
       <div className="">
         <button
-          onClick={() => toast.dismiss(t.id)}
+          onClick={() => toast.remove(t.id)}
         >
           <Icon icon="icon-park-outline:close" />
         </button>

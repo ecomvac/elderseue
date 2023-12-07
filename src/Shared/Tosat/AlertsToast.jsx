@@ -4,6 +4,7 @@ import image from "../../../src/assets/icon/tostIcon.svg"
 import image2 from "../../../src/assets/icon/alertsCross.svg"
 
 const AlertsToast = ({ t,text,title }) => {
+  console.log("this is id rtt",t)
   return (
     <div
       className={`${t.visible ? 'animate-enter' : 'animate-leave'
@@ -26,9 +27,9 @@ const AlertsToast = ({ t,text,title }) => {
       </div>
         <button
           className='py-2 px-3 mt-4'
-          onClick={() => toast.dismiss(t.id)}
+          onClick={() =>toast.remove(t.id)}
         >
-          <img src={image2} alt="" />
+          <img onClick={() => toast.dismiss(t.id)} src={image2} alt="" />
         </button>
     </div>
   )

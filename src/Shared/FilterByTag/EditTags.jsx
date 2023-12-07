@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import CustomToast from "../Tosat/CustomToast";
 import CustomModal from "../modal/CustomModal";
 import CustomInput from "../input/CustomInput";
+import CustomSelect from "../sort/CustomSelect";
 
 const EditTags = ({ item, setModalOpen, modalOPen }) => {
+  const [selected, setSelected] = useState("");
+  const data = ["Select An Existing Tag", "Osteoporosis","Diabetes Mellitus","High blood sugar"];
+
+
   const {
     register,
     handleSubmit,
@@ -61,12 +66,7 @@ const EditTags = ({ item, setModalOpen, modalOPen }) => {
         >
           Move Tag
         </label>
-        <select className=" px-4 text-text-primary placeholder:text-[#A3AED0] h-[50px]  rounded-[16px] w-full text-base outline-none   border-[1px] focus:border-primary"  name="cars" id="cars">
-            <option >Select An Existing Tag</option>
-          <option value="volvo">Osteoporosis</option>
-          <option value="saab">Diabetes Mellitus</option>
-          <option value="mercedes">High blood sugar</option>
-        </select>
+        <CustomSelect width={"w-[520px]"} className={" rounded-[16px] w-[520px] text-base outline-none text-text-primary h-[50px] border-[1px] focus:border-primary "} selected={selected} setSelected={setSelected} data={data} />
       </div>
     </CustomModal>
   );

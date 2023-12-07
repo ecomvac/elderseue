@@ -7,7 +7,7 @@ import { elderyOverview } from "../../../../assets/admin/data";
 
 const ElderliesOverview = () => {
   const [selected, setSelected] = useState();
-  const dataDay = ["Last Week", "last year"];
+  const dataDay = ["Last Week", "Last Year"];
 
   const data = [
     {

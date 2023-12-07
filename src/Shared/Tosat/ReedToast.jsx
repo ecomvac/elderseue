@@ -26,7 +26,7 @@ const ReedToast = ({ t,text,title }) => {
       </div>
         <button
           className='py-2 px-3'
-          onClick={() => toast.dismiss(t.id)}
+          onClick={() => toast.remove(t.id)}
         >
           <img src={img1} alt="" />
         </button>

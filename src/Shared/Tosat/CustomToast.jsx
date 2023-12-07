@@ -29,7 +29,7 @@ const CustomToast = ({ t,text }) => {
       </div>
         <button
           className='py-2 px-3'
-          onClick={() => toast.dismiss(t.id)}
+          onClick={() => toast.remove(t.id)}
         >
           <img src={image2} alt="" />
         </button>
