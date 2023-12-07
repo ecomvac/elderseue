@@ -15,7 +15,7 @@ const SuperAdminSidebar = () => {
     {
       label: "Dashboard",
       path: "/super-admin/dashboard",
-      icon: <Icon className=" w-5 h-5" icon="basil:chart-pie-solid" />,
+      icon: <Icon className=" w-5 h-5" icon="basil:chart-pie-outline" />,
       child: [],
     },
     {
@@ -27,7 +27,6 @@ const SuperAdminSidebar = () => {
       child: [],
     },
   ];
-
   const activeStyle = {
     color: "#fff",
     borderLeft: "2px solid #FFF",

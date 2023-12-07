@@ -10,7 +10,7 @@ const CustomModal = ({
   className,
   title,
   children,
-  handleSubmit=()=>{},
+  handleSubmit=(e)=>{e.preventDefault()},
   buttonText,
 }) => {
 
@@ -32,7 +32,7 @@ const CustomModal = ({
         className={` ${className}`}
         style={modalStyle}
       >
-        <div className="">
+        <div className="z-[50000000]">
           <div className=" flex items-center justify-between px-9 pt-6 pb-5">
             <h2 className=" text-[24px] font-[700] text-text-primary">
               {title}
@@ -50,7 +50,7 @@ const CustomModal = ({
           <form onSubmit={handleSubmit} className="w-full mt-[0px] px-9 pb-9">
             <div className="">{children}</div>
             <div className="mt-[38px] flex items-center gap-5">
-              <CustomButton className={" w-full"}>{buttonText}</CustomButton>
+              <CustomButton onClick={()=>setModalOpen(false)} className={" w-full"}>{buttonText}</CustomButton>
               <button
                 type="button"
                 onClick={() => setModalOpen(false)}

@@ -5,9 +5,13 @@ import { Icon } from '@iconify/react';
 import SectionWrapper from '../../../../../Shared/SectionWrapper';
 import CustomButton from '../../../../../Shared/button/CustomButton';
 import TableActions from './TableActions';
+import CustomModal from '../../../../../Shared/modal/CustomModal';
+import AddFamilyMember from './AddFamilyMember';
 const FamilyMember = () => {
     const [tableData, setTableData] = useState(customerTable);
-    const [memberId,setMemberId]=useState(null)
+    const [memberId, setMemberId] = useState(null)
+    // ------------modal for add member-----------------
+    const [modalOpen, setModalOpen] = useState(false)
     const removeMember = () => {
         const updatedTableData = tableData.filter(member => member.id !== memberId);
         setTableData(updatedTableData);
@@ -47,7 +51,7 @@ const FamilyMember = () => {
             <SectionWrapper>
                 <div className='flex items-center justify-between px-[22px] pt-[22px] pb-5'>
                     <span className='text-2xl font-bold text-text-primary'>Family Members</span>
-                    <CustomButton>
+                    <CustomButton onClick={()=>setModalOpen(true)}>
                         <span className='flex gap-1 items-center'>
                             <span><Icon icon="ic:twotone-add" /></span>
                             <span>Add Member</span>
@@ -56,7 +60,16 @@ const FamilyMember = () => {
                 </div>
                 <CustomTable tableData={tableData} columns={columns} scroll={{ x: "750px" }} />
             </SectionWrapper>
-
+            <CustomModal
+                modalOPen={modalOpen}
+                setModalOpen={setModalOpen}
+                width='590px'
+                className=''
+                title={"Add Member"}
+                buttonText={'Add Member'}
+            >
+                <AddFamilyMember />
+            </CustomModal>
         </>
     );
 };

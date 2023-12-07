@@ -31,7 +31,7 @@ const ElderlyTrends = () => {
                 <h2 className=' text-[19px] font-bold text-text-primary'>Average</h2>
                 <p className=' text-[13px] font-normal text-text-primary/60 min-h-[40px]'>Everything is stable with elderly trends.</p>
               </div>
-              <div className='mt-6 h-[100vh] overflow-y-auto'>
+              <div className='mt-6 max-h-[645px] overflow-y-auto'>
                 <div className='flex flex-col gap-[14px]'>
                   {
                     averageTrends.slice(0, loadAverage).map((trend, index) => <>
@@ -165,7 +165,7 @@ const ElderlyTrends = () => {
                 <h2 className=' text-[19px] font-bold text-text-primary'>Warning</h2>
                 <p className=' text-[13px] font-normal text-text-primary/60 min-h-[40px]'>Emerging concerns in elderly trends, monitor closely.</p>
               </div>
-              <div className='mt-6 h-[100vh] overflow-y-auto'>
+              <div className='mt-6 max-h-[645px] overflow-y-auto'>
                 <div className='flex flex-col gap-[14px]'>
                   {
                     warningTrends.slice(0,loadwarning).map((trend, index) => <>
@@ -302,7 +302,7 @@ const ElderlyTrends = () => {
                 <h2 className=' text-[19px] font-bold text-text-primary'>Critical</h2>
                 <p className=' text-[13px] font-normal text-text-primary/60 min-h-[40px]'>Urgent action required, elderly trends have reached a critical point.</p>
               </div>
-              <div className='mt-6 h-[100vh] overflow-y-auto'>
+              <div className='mt-6 max-h-[645px] overflow-y-auto'>
                 <div className='flex flex-col gap-[14px]'>
                   {
                     criticalTrends.slice(0,loadCritical).map((trend, index) => <>
