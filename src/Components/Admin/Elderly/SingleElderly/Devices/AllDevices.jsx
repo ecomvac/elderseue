@@ -35,7 +35,7 @@ const AllDevices = ({ data }) => {
             {
                 ((device.name === 'Wave – Vital Signs Monitor') || (device.name === 'Home Care Assistant')) && <button onClick={() => setDeviceInner(device.name)} className="text-sm flex w-full items-start rounded-[10px] font-medium text-light-black hover:bg-primary/10 hover:text-[#9039FF] py-3 px-5">Show Details</button>
             }
-            <button onClick={() =>{setOpenModal(true); setEditedDevice(device)}} className="text-sm flex w-full items-start rounded-[10px] font-medium text-light-black hover:bg-primary/10 hover:text-[#9039FF] py-3 px-5">Edit Device</button>
+            <button onClick={() =>{setOpenModal(true); setEditedDevice(device); setPopoverStates(Array(data.length).fill(false))}} className="text-sm flex w-full items-start rounded-[10px] font-medium text-light-black hover:bg-primary/10 hover:text-[#9039FF] py-3 px-5">Edit Device</button>
             <button onClick={() => { setDeleteModal(true); handleOpenChange(index, false); setDeviceId(device.id) }} className="text-sm w-full flex items-start rounded-[10px] font-medium text-light-black hover:bg-danger/10 hover:text-danger py-3 px-5">Delete Device</button>
         </div>
     );
@@ -51,7 +51,7 @@ const AllDevices = ({ data }) => {
                                     <img src={device?.img} alt="Device" className='w-10 h-10' />
                                     <p className='font-medium text-lg text-text-primary'>{device?.name}</p>
                                 </span>
-                                <div id='device'>
+                                <div>
                                     <Popover className='flex items-start w-6 h-6' open={popoverStates[index]} onOpenChange={(newOpen) => handleOpenChange(index, newOpen)} content={() => content(index, device)} placement="leftTop" trigger="click">
                                         <button className='hover:bg-primary/10 p-1 rounded-full'>
                                             <img src={'/images/explore.svg'} className='w-5 h-5' alt="" />

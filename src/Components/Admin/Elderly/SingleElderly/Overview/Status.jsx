@@ -1,12 +1,24 @@
-import React, { useContext, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import SectionWrapper from '../../../../../Shared/SectionWrapper';
 import { Icon } from '@iconify/react';
-import { SidebarContext } from '../../../../../Context/CustomContext';
 import { Popover } from 'antd';
-const Status = () => {
-    const { elderlyPossition } = useContext(SidebarContext)
+import {Elderlies}from '../../../../../assets/admin/data'
+import RecordedCallHistory from './RecordedCallHistory';
+const Status = ({userId}) => {
+    // --------recorded call history modal-------------
+    const [modalOPen,setModalOpen]=useState(false)
+
+    const [position,setPosition]=useState('')
+    const Id = Number(userId);
+    useEffect(() => {
+        const singleUser = Elderlies.find(user => user.id === Id);
+        if(singleUser){
+            setPosition(singleUser.possition)
+        }
+    }, [Id]);
+    
     const [selected, setSelected] = useState("");
-    const data = ['Call To', '999', '1111']
+    const data = ['Call To', '911', 'Family']
     const [popupShow, setPopupShow] = useState(false);
 
     const handleOpenChange = (newOpen) => {
@@ -35,30 +47,30 @@ const Status = () => {
             <SectionWrapper>
                 <div className='px-[22px] py-6'>
                     <div style={{ backgroundImage: 'url("/images/satusImg.png")', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }} className={`mb-5 p-5 rounded-[17px] 
-                    ${elderlyPossition === 'good' && 'bg-primary'}
-                    ${elderlyPossition === 'critical' && 'bg-[#F43E3E]'}
-                    ${elderlyPossition === 'problem' && 'bg-[#627BFF]'}
-                    ${elderlyPossition === 'warning' && 'bg-[#FF8C3A]'}
+                    ${position === 'good' && 'bg-primary'}
+                    ${position === 'critical' && 'bg-[#F43E3E]'}
+                    ${position === 'problem' && 'bg-[#627BFF]'}
+                    ${position === 'warning' && 'bg-[#FF8C3A]'}
                     
                     `}>
                         <div className='flex items-center gap-[14px]'>
                             <span className='p-4 rounded-full bg-white'>
-                                {elderlyPossition === 'good' && <Icon className='text-[22px] text-primary ' icon="iconamoon:check-bold" />}
-                                {elderlyPossition === 'critical' && <Icon className='text-[22px] text-[#F43E3E] ' icon="lucide:siren" />}
-                                {elderlyPossition === 'problem' && <Icon className='text-[22px] text-[#627BFF] ' icon="lucide:bug" />}
-                                {elderlyPossition === 'warning' && <Icon className='text-[22px] text-[#FF8C3A] ' icon="quill:warning" />}
+                                {position === 'good' && <Icon className='text-[22px] text-primary ' icon="iconamoon:check-bold" />}
+                                {position === 'critical' && <Icon className='text-[22px] text-[#F43E3E] ' icon="lucide:siren" />}
+                                {position === 'problem' && <Icon className='text-[22px] text-[#627BFF] ' icon="lucide:bug" />}
+                                {position === 'warning' && <Icon className='text-[22px] text-[#FF8C3A] ' icon="quill:warning" />}
                             </span>
                             <span className='flex flex-col'>
                                 <span className='font-bold text-2xl text-white'>
-                                    {elderlyPossition === 'good' && <span>All Good</span>}
-                                    {elderlyPossition === 'critical' && <span>Critical</span>}
-                                    {elderlyPossition === 'problem' && <span>Problem</span>}
-                                    {elderlyPossition === 'warning' && <span>Warning</span>}
+                                    {position === 'good' && <span>All Good</span>}
+                                    {position === 'critical' && <span>Critical</span>}
+                                    {position === 'problem' && <span>Problem</span>}
+                                    {position === 'warning' && <span>Warning</span>}
                                 </span>
-                                {elderlyPossition === 'good' && <span className='text-sm text-white opacity-80'>Everything Fine With Elderly</span>}
-                                {elderlyPossition === 'critical' && <span className='text-sm text-white opacity-80'>Something Went Wrong With Elderly</span>}
-                                {elderlyPossition === 'problem' && <span className='text-sm text-white opacity-80'>Some Problem Detected, Fix ASAP</span>}
-                                {elderlyPossition === 'warning' && <span className='text-sm text-white opacity-80'>Please Check, Is Everything Fine With Elderly</span>}
+                                {position === 'good' && <span className='text-sm text-white opacity-80'>Everything Fine With Elderly</span>}
+                                {position === 'critical' && <span className='text-sm text-white opacity-80'>Something Went Wrong With Elderly</span>}
+                                {position === 'problem' && <span className='text-sm text-white opacity-80'>Some Problem Detected, Fix ASAP</span>}
+                                {position === 'warning' && <span className='text-sm text-white opacity-80'>Please Check, Is Everything Fine With Elderly</span>}
 
                             </span>
                         </div>
@@ -118,11 +130,12 @@ const Status = () => {
                                     </button>
                                 </Popover>
                             </div>
-                            <div className='p-[7px] bg-primary/10 text-primary rounded-[10px] text-[19px]'><Icon icon="material-symbols:history" /></div>
+                            <button onClick={()=>setModalOpen(true)} className='p-[7px] bg-primary/10 text-primary rounded-[10px] text-[19px]'><Icon icon="material-symbols:history" /></button>
                         </div>
                     </div>
                 </div>
             </SectionWrapper>
+            <RecordedCallHistory setModalOpen={setModalOpen} modalOPen={modalOPen} />
         </>
     );
 };

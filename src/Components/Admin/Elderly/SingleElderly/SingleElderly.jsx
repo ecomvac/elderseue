@@ -10,7 +10,7 @@ import Activity from './Activity/Activity';
 import Report from './Report/Report';
 import InnerAssistant from './Devices/InnerAssistant/InnerAssistant';
 import InnerWave from './Devices/InnerWave/InnerWave';
-const SingleElderly = () => {
+const SingleElderly = ({userId}) => {
     const { innerOverView, deviceInner } = useContext(SidebarContext)
     const [activeTab, setActiveTab] = useState('Overview')
 
@@ -73,7 +73,7 @@ const SingleElderly = () => {
                     activeTab === 'Overview' && <>
 
                         {
-                            innerOverView ? <Overview /> : <InnerOverView />
+                            innerOverView ? <Overview userId={userId} /> : <InnerOverView />
                         }
                     </>
                 }
@@ -109,22 +109,6 @@ const SingleElderly = () => {
                 }
 
             </div>
-            {/* <div id='elderly'>
-                <Tabs
-                    defaultActiveKey="1"
-                    items={tabData.map((tab) => {
-                        return {
-                            label: (
-                                <span className={`flex items-center gap-2`}>
-                                    {tab.title}
-                                </span>
-                            ),
-                            key: `${tab.id}`,
-                            children: tab.children,
-                        };
-                    })}
-                />
-            </div> */}
 
         </>
     );

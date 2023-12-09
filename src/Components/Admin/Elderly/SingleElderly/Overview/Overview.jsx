@@ -5,16 +5,20 @@ import Activities from './Activities'
 import Tags from './Tags'
 import Task from './task/Task'
 import Notes from './notes/Notes'
+import ResolvingAlerms from './ResolvingAlerms/ResolvingAlerms'
 
-const Overview = () => {
+const Overview = ({userId}) => {
 
     return (
         <div className='mt-[30px] flex flex-col lg:flex-row gap-[30px] mb-12'>
             <div className='w-full lg:w-1/3'>
                 {/* -----------status part--------------- */}
-                <Status />
+                <Status userId={userId} />
                 <div className=' mt-[30px]'>
                     <Activities />
+                </div>
+                <div className=' mt-[30px]'>
+                    <ResolvingAlerms />
                 </div>
 
             </div>

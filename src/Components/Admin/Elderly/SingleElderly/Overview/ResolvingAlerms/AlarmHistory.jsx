@@ -1,14 +1,13 @@
 import { Icon } from '@iconify/react';
 import { Modal, Table } from 'antd';
 import React from 'react';
-import { recordedHistoryData } from '../../../../../../assets/singleElderlyData'
 
-const RecordedHistoryModal = ({ setModalOpen, modalOPen }) => {
+const AlarmHistory = ({ setModalOpen, modalOPen, data }) => {
     const [start, setStart] = React.useState(1)
     const [end, setEnd] = React.useState(6)
     const handlePaginationChange = (page, pageSize) => {
         setStart((pre) => page === 1 ? 1 : page * 6 - 5)
-        setEnd((pre) => page * 6 > recordedHistoryData.length ? recordedHistoryData.length : page * 6)
+        setEnd((pre) => page * 6 > data.length ? data.length : page * 6)
     };
 
     const paginationConfig = {
@@ -16,6 +15,21 @@ const RecordedHistoryModal = ({ setModalOpen, modalOPen }) => {
         pageSize: 6
     };
     const columns = [
+
+        {
+            title: 'ALARMS',
+            dataIndex: 'alarm',
+            render: (row) => {
+                if (row) {
+                  return <span className='flex flex-col'>
+                    <span className='text-base font-medium text-dark-black'>{row.title}</span>
+                    <span className='text-[13px] text-[#A3AED0]'>{row.description.slice(0,40)}...</span>
+                  </span>;
+                } else {
+                  return null; // or handle the case where row is undefined
+                }
+              },
+        },
 
         {
             title: 'DATE',
@@ -27,14 +41,8 @@ const RecordedHistoryModal = ({ setModalOpen, modalOPen }) => {
             },
         },
         {
-            title: 'RECORDED VIDEOS',
-            dataIndex: 'vdio',
-            render: (row) => <span className='flex items-baseline gap-2.5'>
-                <span className='bg-primary text-white rounded-full w-[30px] h-[30px] flex items-center justify-center'>
-                    <Icon className='w-[14px]' icon="lucide:video" />
-                </span>
-                <span>{row}</span>
-            </span>
+            title: 'Resolved By',
+            dataIndex: 'resolvedBy',
         }
 
     ]
@@ -54,7 +62,7 @@ const RecordedHistoryModal = ({ setModalOpen, modalOPen }) => {
                 <div className="z-[50000000]">
                     <div className=" flex items-center justify-between px-9 pt-6 pb-5 border-b">
                         <h2 className=" text-[24px] font-[700] text-text-primary">
-                            Video Recorded History
+                            Resolving Alarms History
                         </h2>
                         <button
                             onClick={() => setModalOpen(false)}
@@ -65,8 +73,8 @@ const RecordedHistoryModal = ({ setModalOpen, modalOPen }) => {
                     </div>
                     <div className="w-full relative  bg-[#ffffff] mt-5 rounded-b-[30px]">
                         <div id='modal-table' className=' relative bg-white  rounded-b-[30px] pb-3'>
-                            <Table id="chart-table" columns={columns} dataSource={recordedHistoryData} pagination={paginationConfig} />
-                            <div className='lg:block bg-white text-[#90969D] font-medium text-[13px] lg:absolute bottom-[28px] left-6 hidden '>Showing {start} to {end} of {recordedHistoryData?.length} entries</div>
+                            <Table id="chart-table" columns={columns} dataSource={data} pagination={paginationConfig} />
+                            <div className='lg:block bg-white text-[#90969D] font-medium text-[13px] lg:absolute bottom-[28px] left-6 hidden '>Showing {start} to {end} of {data?.length} entries</div>
                         </div>
                     </div>
 
@@ -76,4 +84,4 @@ const RecordedHistoryModal = ({ setModalOpen, modalOPen }) => {
     );
 };
 
-export default RecordedHistoryModal;
+export default AlarmHistory;

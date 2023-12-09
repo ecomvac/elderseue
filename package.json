@@ -24,7 +24,7 @@
     "react-topbar-progress-indicator": "^4.1.1",
     "screenfull": "^6.0.2",
     "swiper": "^10.3.1",
-    "wavesurfer.js": "^7.1.5",
+    "wavesurfer.js": "^7.5.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

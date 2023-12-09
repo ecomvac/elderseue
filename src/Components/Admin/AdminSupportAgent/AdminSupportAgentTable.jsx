@@ -2,29 +2,39 @@ import React from 'react'
 import AdminSupportAgentTableAction from './AdminSupportAgentTableAction';
 import AdminFiled from '../../../Shared/AdminFiled/AdminFiled';
 import CustomTable from '../../../Shared/Table/CustomTable';
+import { useNavigate } from 'react-router-dom';
 
-const AdminSupportAgentTable = ({tableData}) => {
+const AdminSupportAgentTable = ({ tableData }) => {
+    const navigate = useNavigate()
     const columns = [
         {
             title: 'SUPPORT AGENT',
             key: "id",
             render: (row) => (
-                <AdminFiled data={row} />
+                <button onClick={() => handelClick(row.id)}>
+                    <AdminFiled data={row} />
+                </button>
             )
         },
         {
             title: 'CONTACT NUMBER',
-            render: (row) => <span className=' text-[14px] xl:text-base  font-normal text-text-secondary'>{row.contactNumber}</span>,
+            render: (row) => <button onClick={() => handelClick(row.id)}>
+                <span className=' text-[14px] xl:text-base  font-normal text-text-secondary'>{row.contactNumber}</span>
+            </button>,
         },
         {
             title: 'CONTACT PERSON',
-            render: (row) =>  <span className=' text-[14px] xl:text-base  font-normal text-text-secondary'>{row.contactPerson}</span>
+            render: (row) => <button onClick={() => handelClick(row.id)}>
+                <span className=' text-[14px] xl:text-base  font-normal text-text-secondary'>{row.contactPerson}</span>
+            </button>
         },
         {
             title: 'BUSINESS ADDRESS',
             render: (row) => <>
-            <span className=' text-[14px] xl:text-base xl:block hidden font-normal text-text-secondary'>{row.businessAdress}</span>
-            <span className=' text-[14px] xl:text-base block xl:hidden font-normal text-text-secondary'>{row.businessAdress.slice(0,15)+"..."}</span>
+                <button onClick={() => handelClick(row.id)}>
+                    <span className=' text-[14px] xl:text-base xl:block hidden font-normal text-text-secondary'>{row.businessAdress}</span>
+                    <span className=' text-[14px] xl:text-base block xl:hidden font-normal text-text-secondary'>{row.businessAdress.slice(0, 15) + "..."}</span>
+                </button>
             </>
 
         },
@@ -49,11 +59,14 @@ const AdminSupportAgentTable = ({tableData}) => {
             )
         }
     ];
-  return (
-    <div>
-        <CustomTable tableData={tableData} columns={columns} scroll={{x:"750px"}}/>
-    </div>
-  )
+    const handelClick = (id) => {
+        navigate(`${id}`)
+    }
+    return (
+        <div>
+            <CustomTable tableData={tableData} columns={columns} scroll={{ x: "750px" }} />
+        </div>
+    )
 }
 
 export default AdminSupportAgentTable

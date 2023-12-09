@@ -33,7 +33,7 @@ const Video = () => {
           </button>
         </div>
         <div className="xl:flex md:flex items-top mt-5 gap-2 ">
-          {/* <div className="hidden md:block max-h-[400px] overflow-hidden rounded-[10px] overflow-y-scroll customScrollbar">
+          <div className="hidden md:block max-h-[400px] overflow-hidden rounded-[10px] overflow-y-scroll customScrollbar">
             {videoData.map(
               (item, index) =>
                 index !== activeScreen && (
@@ -49,8 +49,8 @@ const Video = () => {
                   </div>
                 )
             )}
-          </div> */}
-          {/* <VideoScreen
+          </div>
+          <VideoScreen
             videoUrl={videoData[activeScreen].rtspUrl}
             runningStatus={videoData[activeScreen].running}
             icon={videoData[activeScreen].icon}
@@ -58,8 +58,8 @@ const Video = () => {
             isActive={true}
             onClick={() => { }}
             onClickSmallScreen={() => { }}
-          /> */}
-          {/* <Swiper
+          />
+          <Swiper
             navigation={false}
             modules={[Pagination]}
             pagination={{ clickable: true }}
@@ -82,7 +82,7 @@ const Video = () => {
                   </SwiperSlide>
                 )
             )}
-          </Swiper> */}
+          </Swiper>
         </div>
       </div>
       <RecordedHistoryModal modalOPen={modalOPen} setModalOpen={setModalOpen} />
