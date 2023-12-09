@@ -14,20 +14,23 @@ const Overview = () => {
                 {/* -----------status part--------------- */}
                 <Status />
                 <div className=' mt-[30px]'>
-                    <Activities/>
+                    <Activities />
                 </div>
-                <div className=' mt-[30px]'>
-                    <Tags/>
-                </div>
+
             </div>
             <div className='w-full lg:w-2/3'>
                 <ElderlyTrends />
                 <div className=' flex items-start lg:flex-row flex-col gap-[30px] mt-[30px]'>
                     <div className=' w-full'>
-                        <Task/>
+                        <Task />
                     </div>
                     <div className=' w-full'>
-                        <Notes/>
+                        <div className=' w-full'>
+                            <Notes />
+                        </div>
+                        <div className='w-full mt-[30px]'>
+                            <Tags />
+                        </div>
                     </div>
                 </div>
             </div>

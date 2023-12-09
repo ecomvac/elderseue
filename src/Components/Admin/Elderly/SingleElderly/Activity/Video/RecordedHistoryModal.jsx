@@ -64,7 +64,7 @@ const RecordedHistoryModal = ({ setModalOpen, modalOPen }) => {
                         </button>
                     </div>
                     <div className="w-full relative  bg-[#ffffff] mt-5 rounded-b-[30px]">
-                        <div className=' relative bg-white  rounded-b-[30px] pb-3'>
+                        <div id='modal-table' className=' relative bg-white  rounded-b-[30px] pb-3'>
                             <Table id="chart-table" columns={columns} dataSource={recordedHistoryData} pagination={paginationConfig} />
                             <div className='lg:block bg-white text-[#90969D] font-medium text-[13px] lg:absolute bottom-[28px] left-6 hidden '>Showing {start} to {end} of {recordedHistoryData?.length} entries</div>
                         </div>
