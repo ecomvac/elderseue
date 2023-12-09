@@ -513,7 +513,6 @@ export const SupportAgents = [
 ] 
 
 
-
 export const suspendedErrorData = [
     {
         id:1,
@@ -690,8 +689,6 @@ export const bandUserData = [
         },
     
 ]
-
-
 
 
 

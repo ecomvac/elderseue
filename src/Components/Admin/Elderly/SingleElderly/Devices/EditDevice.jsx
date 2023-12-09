@@ -6,21 +6,50 @@ import { Icon } from '@iconify/react';
 const EditDevice = ({ editedDevice }) => {
     const rooms = ['My Living Room', 'My Dining Room', 'My Bed Room']
     const [roomName, setRoomName] = useState('');
+    const [deviceName, setDeviceName] = useState('')
+    const [uploadedImage, setUploadedImage] = useState(null);
     useEffect(() => {
-        setRoomName(editedDevice.name || '');
+        setDeviceName(editedDevice.name || '');
     }, [editedDevice]);
 
-    const handleRoomNameChange = (event) => {
-        setRoomName(event.target.value);
-    };
+    useEffect(() => {
+        if(editedDevice.img){
+            setUploadedImage(null)
+        }
+    }, [editedDevice]);
+    
+    const handleImageUpload = (e) => {
+        const image = e.target.files[0];
+        if (image) {
+            const reader = new FileReader();
+            reader.onload = (event) => {
+                setUploadedImage(event.target.result);
+            };
+            reader.readAsDataURL(image);
+        }
+    }
     return (
         <div className='mt-9'>
             <div className='flex justify-center'>
                 <div className='w-[92px] h-[92px] flex items-center justify-center border border-dashed rounded-full relative'>
-                    <div className='bg-white rounded-full absolute -bottom-3 right-1'>
-                        <button className='bg-primary/10 hover:bg-primary hover:text-white duration-300 rounded-full p-3 flex items-center justify-center text-primary'><Icon className='w-[19px] h-[19px]' icon="akar-icons:image" /></button>
+                    <div className='bg-white rounded-full absolute -bottom-3 right-1 '>
+                        <div className='bg-primary/10 hover:bg-primary hover:text-white duration-300 rounded-full p-3 flex items-center justify-center text-primary'>
+                            <label for="file-input" class="file-label">
+                                <Icon className='w-[19px] h-[19px] cursor-pointer' icon="akar-icons:image" />
+                            </label>
+                            <input
+                                type="file"
+                                id="file-input"
+                                className='hidden'
+                                onChange={handleImageUpload} />
+                        </div>
                     </div>
-                    <img className='w-[77px] h-[77px]' src={editedDevice.img} alt="device" />
+                    {uploadedImage ? (
+                        <img className='w-[60px] h-[60px]' src={uploadedImage} alt="device" />
+                    ) : (
+                        <img className='w-[77px] h-[77px]' src={editedDevice.img} alt="device" />
+                    )}
+
                 </div>
             </div>
             <div className='mt-[30px]'>
@@ -28,8 +57,7 @@ const EditDevice = ({ editedDevice }) => {
                     label={'Device Name'}
                     type={'text'}
                     register={'deviceName'}
-                    value={roomName}
-                    onChange={handleRoomNameChange}
+                    defaultValue={deviceName}
                 />
                 <div className='mt-4'>
                     <p className='text-text-primary text-[13px] font-medium mb-1.5'>Room Type</p>

@@ -1,5 +1,5 @@
 
-const EditInput = ({ label, type, register, value,onChange }) => {
+const EditInput = ({ label, type, register, defaultValue }) => {
     return (
         <div className="flex flex-col items-start w-full mt-3">
             <label
@@ -9,8 +9,7 @@ const EditInput = ({ label, type, register, value,onChange }) => {
                 {label}
             </label>
             <input
-                 value={value}
-                 onChange={onChange}
+            defaultValue={defaultValue}
                 className="py-[18px] px-4 text-text-primary placeholder:text-[#A3AED0] h-[50px]  rounded-[16px] w-full text-base outline-none   border-[1px] focus:border-primary"
                 type={type}
                 id="otp"
