@@ -1104,7 +1104,7 @@ export const adminAlertsData = [
     {
         title: "Security Sensor Triggered!",
         name: "Kari Daughetry",
-        id: "453453",
+        id: "1",
         CATEGORY: "Camera",
         AFFECTEDDEVICES: "05",
         DATE: "July 24, 2023",
@@ -1114,7 +1114,7 @@ export const adminAlertsData = [
     {
         title: "Emergency: Away too long!",
         name: "Tom Harry",
-        id: "453478",
+        id: "2",
         CATEGORY: "Sensor",
         AFFECTEDDEVICES: "05",
         DATE: "July 24, 2023",
@@ -1124,7 +1124,7 @@ export const adminAlertsData = [
     {
         title: "Deviation in Bathroom Visits Trends!",
         name: "Tom Harry",
-        id: "453478",
+        id: "3",
         CATEGORY: "Thermostat",
         AFFECTEDDEVICES: "02",
         DATE: "July 23, 2023",
@@ -1134,7 +1134,7 @@ export const adminAlertsData = [
     {
         title: "SOS Emergency Alert! ",
         name: "Bikash Roy",
-        id: "453477",
+        id: "4",
         CATEGORY: "Plug",
         AFFECTEDDEVICES: "03",
         DATE: "July 23, 2023",
@@ -1144,7 +1144,7 @@ export const adminAlertsData = [
     {
         title: "Emergency: No Visits to Elderly!",
         name: "Kari Daughetry",
-        id: "453453",
+        id: "5",
         CATEGORY: "Router",
         AFFECTEDDEVICES: "05",
         DATE: "July 26, 2023",
@@ -1154,7 +1154,7 @@ export const adminAlertsData = [
     {
         title: "Stove is still turned on ",
         name: "Tom Harry",
-        id: "453478",
+        id: "6",
         CATEGORY: "Router",
         AFFECTEDDEVICES: "05",
         DATE: "July 26, 2023",
@@ -1164,7 +1164,7 @@ export const adminAlertsData = [
     {
         title: "Unusual Cabinet Openings!",
         name: "Tom Harry",
-        id: "453478",
+        id: "7",
         CATEGORY: "Sensor",
         AFFECTEDDEVICES: "02",
         DATE: "July 25, 2023",
@@ -1174,7 +1174,7 @@ export const adminAlertsData = [
     {
         title: "Elderly are sleeping outside the Tageted time",
         name: "Bikash Roy",
-        id: "453477",
+        id: "8",
         CATEGORY: "Plug",
         AFFECTEDDEVICES: "08",
         DATE: "July 24, 2023",
@@ -1184,7 +1184,7 @@ export const adminAlertsData = [
     {
         title: "Emergency: No Visits to Elderly!",
         name: "Kari Daughetry",
-        id: "453453",
+        id: "9",
         CATEGORY: "Router",
         AFFECTEDDEVICES: "05",
         DATE: "July 26, 2023",
@@ -1194,7 +1194,7 @@ export const adminAlertsData = [
     {
         title: "Stove is still turned on ",
         name: "Tom Harry",
-        id: "453478",
+        id: "10",
         CATEGORY: "Router",
         AFFECTEDDEVICES: "05",
         DATE: "July 26, 2023",
@@ -1204,7 +1204,7 @@ export const adminAlertsData = [
     {
         title: "Emergency: No Visits to Elderly!",
         name: "Kari Daughetry",
-        id: "453453",
+        id: "11",
         CATEGORY: "Router",
         AFFECTEDDEVICES: "05",
         DATE: "July 26, 2023",
@@ -1214,7 +1214,7 @@ export const adminAlertsData = [
     {
         title: "Stove is still turned on ",
         name: "Tom Harry",
-        id: "453478",
+        id: "12",
         CATEGORY: "Router",
         AFFECTEDDEVICES: "05",
         DATE: "July 26, 2023",
