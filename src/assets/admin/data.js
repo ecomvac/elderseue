@@ -513,7 +513,6 @@ export const SupportAgents = [
 ] 
 
 
-
 export const suspendedErrorData = [
     {
         id:1,
@@ -693,11 +692,10 @@ export const bandUserData = [
 
 
 
-
-
 export const Elderlies = [
     {
         id:1,
+        possition:'good',
         firstName:"Aeraldine",
         lastName:"Kemmer",
         email:"Lucio.Rosenbaum12@gmail.com",
@@ -711,6 +709,7 @@ export const Elderlies = [
     },
     {
         id:2,
+        possition:'problem',
         firstName:"Bikash",
         lastName:"Roy",
         email:"Lucio.Rosenbaum12@gmail.com",
@@ -726,6 +725,7 @@ export const Elderlies = [
     },
     {
         id:3,
+        possition:'critical',
         firstName:"Aubrey",
         lastName:"Kuvalis",
         email:"Ephraim.Wunsch8@example.com",
@@ -741,6 +741,7 @@ export const Elderlies = [
     },
     {
         id:4,
+        possition:'warning',
         firstName:"Richard",
         lastName:"Breitenberg",
         email:"Catharine52@example.org",
@@ -756,6 +757,7 @@ export const Elderlies = [
     },
     {
         id:5,
+        possition:'good',
         firstName:"Iris",
         lastName:"Ondricka",
         email:"Salma_Hintz89@example.com",
@@ -771,6 +773,7 @@ export const Elderlies = [
     },
     {
         id:6,
+        possition:'problem',
         firstName:"Sheryl",
         lastName:"Watsica",
         email:"Alexandra.Ortiz0@example.org",
@@ -786,6 +789,7 @@ export const Elderlies = [
     },
     {
         id:7,
+        possition:'critical',
         firstName:"Myrtle",
         lastName:"Monahan",
         email:"Rubye49@example.com",
@@ -801,6 +805,7 @@ export const Elderlies = [
     },
     {
         id:8,
+        possition:'warning',
         firstName:"Aeraldine",
         lastName:"Kemmer",
         email:"Lucio.Rosenbaum12@gmail.com",
@@ -816,6 +821,7 @@ export const Elderlies = [
     },
     {
         id:9,
+        possition:'good',
         firstName:"Aeraldine",
         lastName:"Kemmer",
         email:"Lucio.Rosenbaum12@gmail.com",
@@ -831,6 +837,7 @@ export const Elderlies = [
     },
     {
         id:10,
+        possition:'problem',
         firstName:"Aeraldine",
         lastName:"Kemmer",
         email:"Ephraim.Wunsch8@example.com",
@@ -846,6 +853,7 @@ export const Elderlies = [
     },
     {
         id:11,
+        possition:'critical',
         firstName:"Aeraldine",
         lastName:"Kemmer",
         email:"Ephraim.Wunsch8@example.com",

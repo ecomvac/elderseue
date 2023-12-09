@@ -1,8 +1,11 @@
 import { Icon } from '@iconify/react';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ElderlyConditionsChart from './ElderlyConditionsChart';
+import SortDat from '../../../../../Shared/sort/SortDat';
 
 const Chart = () => {
+    const [selected, setSelected] = useState('Weekly');
+    const dataDay = ["Weekly", "Monthly"];
     const monthlyData = [
         { day: "Week 1", value: 25 },
         { day: "Week 2", value: 30 },
@@ -18,18 +21,16 @@ const Chart = () => {
         { day: "Fri", value: 2 },
         { day: "sat", value: 7 }
     ]
-    const [selectedTime, setSelectedTime] = useState("Weekly");
     const [data, setData] = useState(weeklyData);
-    const handleTime = (e) => {
-        if (e.target.value === 'Weekly') {
+    useEffect(() => {
+        if (selected === "Weekly") {
             setData(weeklyData)
-            setSelectedTime('Weekly')
-        } else {
-            setData(monthlyData)
-            setSelectedTime('Monthly')
         }
+        if (selected === "Monthly") {
+            setData(monthlyData)
+        }
+    }, [selected])
 
-    }
     return (
         <div className='bg-primary rounded-[20px]  px-[22px] py-6'>
             <div>
@@ -61,12 +62,12 @@ const Chart = () => {
             <div>
                 <div className='flex items-center justify-between'>
                     <h1 className='font-bold text-white/95 text-xl'>Elderly Visits</h1>
-                    <div className='py-2 px-3  text-xs bg-white/20 rounded-[10px]'>
-                        <select className=' bg-white/5 text-white cursor-pointer outline-none' onChange={handleTime} value={selectedTime}>
-                            <option className='text-primary' value="Weekly">Weekly</option>
-                            <option className='text-primary' value="Monthly">Monthly</option>
-                        </select>
-                    </div>
+                    <SortDat
+                        className="text-white bg-white/10"
+                        selected={selected}
+                        setSelected={setSelected}
+                        data={dataDay}
+                    />
                 </div>
                 <div className='mt-[70px]'>
                     <ElderlyConditionsChart data={data} />

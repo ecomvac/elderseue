@@ -59,7 +59,6 @@ const AddTask = ({ modalOPen, setModalOpen }) => {
     }
   };
 
-  console.log(activeDay)
 
   return (
     <CustomModal

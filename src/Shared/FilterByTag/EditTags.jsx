@@ -66,7 +66,7 @@ const EditTags = ({ item, setModalOpen, modalOPen }) => {
         >
           Move Tag
         </label>
-        <CustomSelect width={"w-[520px]"} className={" rounded-[16px] w-[520px] text-base outline-none text-text-primary h-[50px] border-[1px] focus:border-primary "} selected={selected} setSelected={setSelected} data={data} />
+        <CustomSelect  width={"max-w-[520px]"} className={" rounded-[16px] w-full text-base outline-none text-text-primary h-[50px] border-[1px] focus:border-primary "} selected={selected} setSelected={setSelected} data={data} />
       </div>
     </CustomModal>
   );
