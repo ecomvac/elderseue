@@ -315,9 +315,14 @@ body {
 
 /* --------------------ant table pagination---------------- */
 
-:where(.css-dev-only-do-not-override-nllxry).ant-table-wrapper .ant-table-pagination.ant-pagination {
+/* :where(.css-dev-only-do-not-override-nllxry).ant-table-wrapper .ant-table-pagination.ant-pagination {
   padding-right: 22px !important;
+} */
+/* here all table pagination gap problem */
+.ant-pagination-next{
+  margin-right:22px !important ;
 }
+
 
 .ant-pagination-prev {
   border: 1px solid rgb(185, 182, 182);
