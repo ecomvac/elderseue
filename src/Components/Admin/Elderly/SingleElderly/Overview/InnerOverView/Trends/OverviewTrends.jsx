@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Icon } from '@iconify/react';
 import { SidebarContext } from '../../../../../../../Context/CustomContext';
 import { Table } from 'antd';
-const OverviewTrends = ({ overviewData }) => {
+const OverviewTrends = ({ overviewData,setHandleTrendClick  }) => {
     const { activeTrend, setActiveTrend } = useContext(SidebarContext)
 
 
@@ -23,7 +23,7 @@ const OverviewTrends = ({ overviewData }) => {
         {
             render: (trend) => (
                 <div>
-                    <div onClick={() => setActiveTrend({ title: trend.title, index:1})} className={`cursor-pointer rounded-lg px-5 py-4  flex justify-between ${activeTrend.title === trend.title ? 'bg-primary/5' : 'bg-transparent'}`}>
+                    <div onClick={() => {setActiveTrend({ title: trend.title, index:1});setHandleTrendClick(true)}} className={`cursor-pointer rounded-lg px-5 py-3  flex justify-between ${activeTrend.title === trend.title ? 'bg-primary/5' : 'bg-transparent'}`}>
                         <div className='flex items-center'>
                             <div className='mr-2.5 bg-secondary/5 border rounded-[9px] text-text-primary text-lg p-2'>
                                 {trend.title === 'Fall Detection' && (<Icon icon="material-symbols:falling-rounded" />)}

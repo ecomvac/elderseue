@@ -1,16 +1,31 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Table, Progress, DatePicker, Space } from 'antd';
 import { Icon } from '@iconify/react';
 import { Area, G2 } from '@ant-design/plots';
 import { configuration } from '../../../../../../../../Shared/areaChartThemeConfiguration';
 const { RangePicker } = DatePicker;
 
-const OverViewChart = ({ data }) => {
-
+const OverViewChart = ({ data, handleTrendClick }) => {
     const [chartData, setChartData] = useState(data?.table)
+    const ref = useRef(null);
     useEffect(() => {
         setChartData(data?.table);
     }, [data?.table]);
+
+    const scrollToTop = () => {
+        if (ref.current) {
+            ref.current.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+    };
+
+    useEffect(() => {
+        if (handleTrendClick) {
+            scrollToTop()
+        }
+    }, [handleTrendClick])
 
     const handleDate = (date) => {
         // const startDate = start.format('MMM DD, YYYY');
@@ -28,7 +43,7 @@ const OverViewChart = ({ data }) => {
 
             });
             setChartData(filteredData);
-        }else{
+        } else {
             setChartData(data.table)
         }
 
@@ -86,7 +101,7 @@ const OverViewChart = ({ data }) => {
                 return (
                     <div>
                         {items?.map((item, index) => {
-                            const { data,title } = item;
+                            const { data, title } = item;
                             return (
                                 <span
                                     key={index}
@@ -140,7 +155,7 @@ const OverViewChart = ({ data }) => {
 
 
     return (
-        <div className=''>
+        <div ref={ref} className=''>
             {/* --------------title--------------------- */}
             <div className='lg2:flex justify-between md:flex py-6 px-8 border-b'>
                 <div className='flex flex-wrap items-center mr-2'>
@@ -251,7 +266,7 @@ const OverViewChart = ({ data }) => {
                 </div>
             </div>
             {/* ----------------table------------------- */}
-            <div className='border mb-6  mx-6 relative'>
+            <div className='border mx-6 relative'>
                 <Table id="chart-table" columns={columns} dataSource={chartData} pagination={paginationConfig} />
                 <div className='lg:block text-[#90969D] font-medium text-[13px] lg:absolute bottom-[25px] left-6 hidden '>Showing {start} to {end} of {chartData?.length} entries</div>
             </div>
