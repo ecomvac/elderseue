@@ -1,7 +1,7 @@
 import React from 'react'
 import AdminFiled from '../../../Shared/AdminFiled/AdminFiled';
-import CustomTable from '../../../Shared/Table/CustomTable';
 import SuperAdminUserTableAction from './SuperAdminUserTableAction';
+import CustomNotHoverTable from '../../../Shared/Table/CustomNotHoverTable';
 
 const SuperAdminUserTable = ({tableData}) => {
     const columns = [
@@ -35,7 +35,7 @@ const SuperAdminUserTable = ({tableData}) => {
 
   return (
     <div>
-        <CustomTable tableData={tableData} columns={columns} scroll={{x:"800px"}}/>
+        <CustomNotHoverTable tableData={tableData} columns={columns} scroll={{x:"800px"}} show={8}/>
     </div>
   )
 }

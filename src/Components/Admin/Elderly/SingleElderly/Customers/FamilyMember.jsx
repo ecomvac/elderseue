@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { customerTable } from "../../../../../assets/singleElderlyData";
-import CustomTable from '../../../../../Shared/Table/CustomTable';
 import { Icon } from '@iconify/react';
 import SectionWrapper from '../../../../../Shared/SectionWrapper';
 import CustomButton from '../../../../../Shared/button/CustomButton';
 import TableActions from './TableActions';
 import CustomModal from '../../../../../Shared/modal/CustomModal';
 import AddFamilyMember from './AddFamilyMember';
+import CustomNotHoverTable from '../../../../../Shared/Table/CustomNotHoverTable';
 const FamilyMember = () => {
     const [tableData, setTableData] = useState(customerTable);
     const [memberId, setMemberId] = useState(null)
@@ -58,7 +58,7 @@ const FamilyMember = () => {
                         </span>
                     </CustomButton>
                 </div>
-                <CustomTable tableData={tableData} columns={columns} scroll={{ x: "750px" }} />
+                <CustomNotHoverTable tableData={tableData} columns={columns} scroll={{ x: "750px" }} show={8}/>
             </SectionWrapper>
             <CustomModal
                 modalOPen={modalOpen}
