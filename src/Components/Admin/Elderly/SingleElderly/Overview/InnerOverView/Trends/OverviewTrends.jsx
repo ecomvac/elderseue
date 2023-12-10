@@ -67,7 +67,7 @@ const OverviewTrends = ({ overviewData, setHandleTrendClick, scrollToSecond }) =
                                 }
                             </div>
                         </div>
-                   </a>
+                    </a>
                 </div>
             )
         }
