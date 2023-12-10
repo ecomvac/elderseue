@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom'
 import { SidebarContext } from '../../../../Context/CustomContext'
 
 const ElderlyTableAction = ({data,role}) => {
-  const {setelderlyPossition}=useContext(SidebarContext)
+  const{setShowNotificationTab}=useContext(SidebarContext)
     const [edit,setEdit] = useState(false)
     const [deleteModal,setDeleteModal] = useState(false)
     const navigate = useNavigate()
@@ -46,7 +46,10 @@ const ElderlyTableAction = ({data,role}) => {
         </Tooltip>
 
         <Tooltip placement="topLeft" title="View">
-        <button onClick={()=>{navigate(role==="support-agent" ? `/support-agent/dashboard/elderly/${data?.id}`: `/admin/dashboard/elderly/${data?.id}`);setelderlyPossition(data?.possition)}}>
+        <button onClick={()=>{
+          navigate(role==="support-agent" ? `/support-agent/dashboard/elderly/${data?.id}`: `/admin/dashboard/elderly/${data?.id}`);
+          setShowNotificationTab(false)
+          }}>
              <Icon icon="carbon:view-filled" className='text-[20px] text-light-black hover:text-[#0070F0]' />
         </button>
         </Tooltip>
