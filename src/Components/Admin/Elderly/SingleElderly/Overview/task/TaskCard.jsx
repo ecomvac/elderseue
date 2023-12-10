@@ -76,7 +76,7 @@ const TaskCard = ({task,message,setMessage,sentMessage,index}) => {
       </div>
 
       <div className=" w-full h-[1px] bg-[#E7E8EA]"></div>
-      <div className=" flex flex-col gap-5 mt-5">
+      <div className=" flex flex-col gap-5 mt-5 max-h-[140px] overflow-y-auto">
         {task.message.map((mess, index) => (
           <div key={index} className=" flex items-start gap-3">
             <div>

@@ -110,7 +110,7 @@ export const NotificationsData = [
         time: "3h ago",
         alert: 1,
         role: "admin",
-        userId: 101
+        userId: 1
     },
     {
         title: "Long stay in the room!",
@@ -118,7 +118,7 @@ export const NotificationsData = [
         time: "1h ago",
         alert: 1,
         role: "admin",
-        userId: 102
+        userId: 2
     },
     {
         title: "SOS Emergency Alert!",
@@ -126,7 +126,7 @@ export const NotificationsData = [
         time: "1h ago",
         alert: 2,
         role: "admin",
-        userId: 103
+        userId: 3
     },
     {
         title: "super admin alert 1",
@@ -134,7 +134,7 @@ export const NotificationsData = [
         time: "1h ago",
         alert: 2,
         role: "superAdmin",
-        userId: 104
+        userId: 4
     },
     {
         title: "super admin alert 2",
@@ -142,7 +142,7 @@ export const NotificationsData = [
         time: "1h ago",
         alert: 1,
         role: "superAdmin",
-        userId: 15
+        userId: 5
     },
     {
         title: "super admin alert 3",
@@ -150,7 +150,7 @@ export const NotificationsData = [
         time: "1h ago",
         alert: 1,
         role: "superAdmin",
-        userId: 19
+        userId: 9
     },
     {
         title: "super admin alert 4",
@@ -158,7 +158,7 @@ export const NotificationsData = [
         time: "2h ago",
         alert: 2,
         role: "superAdmin",
-        userId: 1088
+        userId: 11
     },
     {
         title: "Elderly Fall Detected!",
@@ -166,7 +166,7 @@ export const NotificationsData = [
         time: "Just Now",
         alert: 1,
         role: "supportAgent",
-        userId: 1014
+        userId: 6
     },
     {
         title: "Elderly Slip Detected!",
@@ -174,7 +174,7 @@ export const NotificationsData = [
         time: "2h ago",
         alert: 1,
         role: "supportAgent",
-        userId: 1034
+        userId: 7
     },
     {
         title: "Long stay in the room!",
@@ -182,7 +182,7 @@ export const NotificationsData = [
         time: "3h ago",
         alert: 1,
         role: "supportAgent",
-        userId: 102
+        userId: 8
     },
     {
         title: "SOS Emergency Alert! ",
@@ -190,7 +190,7 @@ export const NotificationsData = [
         time: "4h ago",
         alert: 2,
         role: "supportAgent",
-        userId: 103
+        userId: 12
     },
     {
         title: "support agent notification 5",
@@ -198,7 +198,7 @@ export const NotificationsData = [
         time: "4h ago",
         alert: 1,
         role: "supportAgent",
-        userId: 105
+        userId: 13
     },
 
     // You now have a total of 12 data items

@@ -1,11 +1,15 @@
 import { Icon } from "@iconify/react";
-import React from "react";
+import React, { useState } from "react";
 import SectionWrapper from "../../../../../Shared/SectionWrapper";
+import AllActivityModal from "./AllActivityModal";
 
 const Activities = () => {
+  // ----------all activities modal open--------------
+  const [modalOPen,setModalOpen]=useState(false)
   const data = [
     {
       id: 1,
+      date:'June 01, 2023; 09:45',
       time: "09:45 AM",
       title: "Elderly enters the living room",
       items: [],
@@ -14,14 +18,16 @@ const Activities = () => {
     {
       id: 2,
       time: "09:45 AM",
-      title: "Elderly enters the living room",
+      date:'June 02, 2023; 10:45',
+      title: "Stove is still turned on",
       items: [],
       status: "warning",
     },
     {
       id: 3,
       time: "09:45 AM",
-      title: "Elderly enters the living room",
+      date:'June 03, 2023; 11:05',
+      title: "Stove turned on",
       items: [
         {
           time: "09:45 AM",
@@ -34,6 +40,47 @@ const Activities = () => {
       ],
       status: "normal",
     },
+    {
+      id:4,
+      date:'June 04, 2023; 12:45',
+      time: "09:45 AM",
+      title: "Elderly Woke up in The Morning at 8:01 am",
+      items: [],
+      status: "normal",
+    },
+    {
+      id: 5,
+      date:'June 05, 2023; 09:45',
+      time: "09:45 AM",
+      title: "Elderly enters the living room",
+      items: [],
+      status: "normal",
+    },
+    {
+      id: 6,
+      date:'June 06, 2023; 09:45',
+      time: "09:45 AM",
+      title: "Elderly enters the living room",
+      items: [],
+      status: "normal",
+    },
+    {
+      id: 7,
+      date:'June 07, 2023; 09:45',
+      time: "09:45 AM",
+      title: "Elderly enters the living room",
+      items: [],
+      status: "normal",
+    },
+    {
+      id: 8,
+      date:'June 08, 2023; 09:45',
+      time: "09:45 AM",
+      title: "Elderly enters the living room",
+      items: [],
+      status: "normal",
+    },
+  
   ];
 
   return (
@@ -78,7 +125,7 @@ const Activities = () => {
           </div>
 
           <div className=" mt-[0px]">
-            {data.map((activitie, index) => (
+            {data.slice(0,3).map((activitie, index) => (
               <div
                 key={index}
                 className=" flex items-start flex-col gap-[33px]"
@@ -111,7 +158,7 @@ const Activities = () => {
 
             <div className=" mb-5 relative">
               <div className="w-[20px] h-[2px] absolute top-[9px] bg-[#E8E9EE] left-[-30px]"></div>
-              <button className=" text-sm font-bold text-primary flex items-center gap-1">
+              <button onClick={()=>setModalOpen(true)} className=" text-sm font-bold text-primary flex items-center gap-1">
                 <span className=" w-[19px] h-[19px] bg-primary rounded-full flex items-center justify-center text-white">
                   <Icon icon="ic:round-add" className=" text-white text-[16px]"/>
                 </span>{" "}
@@ -121,6 +168,7 @@ const Activities = () => {
           </div>
         </div>
       </div>
+      <AllActivityModal data={data} setModalOpen={setModalOpen} modalOPen={modalOPen} />
     </SectionWrapper>
   );
 };

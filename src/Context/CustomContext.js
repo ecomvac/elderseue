@@ -4,10 +4,10 @@ export const SidebarContext = createContext()
 const SidebarContextProvider = ({ children }) => {
   // -------------handle elderly back button and elderly trends click------------
   const [innerOverView, setinnerOverView] = useState(true)
-  const [activeTrend, setActiveTrend] = useState({title:"Fall Detection"})
+  const [activeTrend, setActiveTrend] = useState({title:"Fall Detection", index:1})
 
-  // ----------------set single elderly condition------------
-  const [elderlyId,setElderlyId]=useState('')
+  // --------------show notification tab------------
+  const [showNotificationTab,setShowNotificationTab]=useState(false)
 
   // -------------inner device show---------------
   const [deviceInner,setDeviceInner]=useState('');
@@ -27,12 +27,13 @@ const SidebarContextProvider = ({ children }) => {
     innerOverView,
     activeTrend,
     setActiveTrend,
-    elderlyId,
-    setElderlyId,
     sidebarShow,
     setSidebarShow,
     setDeviceInner,
-    deviceInner
+    deviceInner,
+    setShowNotificationTab,
+    showNotificationTab
+
   }
 
   return (

@@ -1,25 +1,77 @@
-import React, { useContext } from 'react';
+import React, { useEffect, useState } from 'react';
 import SectionWrapper from '../../../../../Shared/SectionWrapper';
 import { Icon } from '@iconify/react';
-import { SidebarContext } from '../../../../../Context/CustomContext';
+import { Popover } from 'antd';
+import {Elderlies}from '../../../../../assets/admin/data'
+import RecordedCallHistory from './RecordedCallHistory';
+const Status = ({userId}) => {
+    // --------recorded call history modal-------------
+    const [modalOPen,setModalOpen]=useState(false)
 
-const Status = () => {
-    const { elderlyId } = useContext(SidebarContext)
+    const [position,setPosition]=useState('')
+    const Id = Number(userId);
+    useEffect(() => {
+        const singleUser = Elderlies.find(user => user.id === Id);
+        if(singleUser){
+            setPosition(singleUser.possition)
+        }
+    }, [Id]);
+    
+    const [selected, setSelected] = useState("");
+    const data = ['Call To', '911', 'Family']
+    const [popupShow, setPopupShow] = useState(false);
+
+    const handleOpenChange = (newOpen) => {
+        setPopupShow(newOpen);
+    };
+
+    const content = (
+        <div className=" w-[135px] p-2 max-h-[150px] overflow-y-scroll">
+            {data.map((item, index) => (
+                <button
+                    disabled={item === 'Call To'}
+                    key={index}
+                    onClick={() => {
+                        setPopupShow(false);
+                        setSelected(item)
+                    }}
+                    className={`${item === "Call To" ? " cursor-not-allowed" : ""} text-sm w-full items-start rounded-[10px] font-medium text-light-black hover:bg-primary/10 hover:text-[#9039FF] flex  py-3 px-5`}
+                >
+                    {item}
+                </button>
+            ))}
+        </div>
+    );
     return (
         <>
             <SectionWrapper>
                 <div className='px-[22px] py-6'>
-                    <div style={{ backgroundImage: 'url("/images/satusImg.png")', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }} className={`mb-5 p-5 rounded-[17px] ${elderlyId === (2 || 4 || 6) ? 'bg-primary' : 'bg-[#F43E3E]'}`}>
+                    <div style={{ backgroundImage: 'url("/images/satusImg.png")', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }} className={`mb-5 p-5 rounded-[17px] 
+                    ${position === 'good' && 'bg-primary'}
+                    ${position === 'critical' && 'bg-[#F43E3E]'}
+                    ${position === 'problem' && 'bg-[#627BFF]'}
+                    ${position === 'warning' && 'bg-[#FF8C3A]'}
+                    
+                    `}>
                         <div className='flex items-center gap-[14px]'>
                             <span className='p-4 rounded-full bg-white'>
-                                {elderlyId === (2 || 4 || 6) ? <Icon className='text-[22px] text-primary' icon="octicon:shield-check-16" />: <Icon className='text-[22px] text-[#F43E3E] ' icon="lucide:siren" />}
-
+                                {position === 'good' && <Icon className='text-[22px] text-primary ' icon="iconamoon:check-bold" />}
+                                {position === 'critical' && <Icon className='text-[22px] text-[#F43E3E] ' icon="lucide:siren" />}
+                                {position === 'problem' && <Icon className='text-[22px] text-[#627BFF] ' icon="lucide:bug" />}
+                                {position === 'warning' && <Icon className='text-[22px] text-[#FF8C3A] ' icon="quill:warning" />}
                             </span>
                             <span className='flex flex-col'>
                                 <span className='font-bold text-2xl text-white'>
-                                    {elderlyId === (2 || 4 || 6) ? <span>All Good</span> : <span>Critical</span>}
+                                    {position === 'good' && <span>All Good</span>}
+                                    {position === 'critical' && <span>Critical</span>}
+                                    {position === 'problem' && <span>Problem</span>}
+                                    {position === 'warning' && <span>Warning</span>}
                                 </span>
-                                <span className='text-sm text-white opacity-80'>Something Went Wrong With Elderly</span>
+                                {position === 'good' && <span className='text-sm text-white opacity-80'>Everything Fine With Elderly</span>}
+                                {position === 'critical' && <span className='text-sm text-white opacity-80'>Something Went Wrong With Elderly</span>}
+                                {position === 'problem' && <span className='text-sm text-white opacity-80'>Some Problem Detected, Fix ASAP</span>}
+                                {position === 'warning' && <span className='text-sm text-white opacity-80'>Please Check, Is Everything Fine With Elderly</span>}
+
                             </span>
                         </div>
                         <div className='mt-[72px] px-0 xl:px-12 grid grid-cols-3 xl:grid-cols-3 lg:grid-cols-2'>
@@ -55,19 +107,35 @@ const Status = () => {
                             </span>
                         </div>
                         <div className='flex items-center gap-2'>
-                            <div className='flex items-center bg-primary text-white rounded-[10px] py-[7px] px-3'>
-                                <span className='text-[19px]'><Icon icon="lucide:phone-call" /></span>
-                                <select className='bg-primary text-white rounded-[10px] text-[13px] font-medium' style={{ border: 'none', outline: 'none' }}>
-                                    <option >Call To</option>
-                                    <option>Admin</option>
-                                    <option>Super</option>
-                                </select>
+                            <div className="relative h-[37px]">
+                                <Popover
+                                    open={popupShow}
+                                    onOpenChange={handleOpenChange}
+                                    content={content}
+                                    placement="bottomRight"
+                                    trigger="click"
+                                >
+                                    <button
+                                        className={`bg-primary text-white w-[120px] text-[13px] font-medium cursor-pointer px-2 py-2 flex items-center rounded-[10px] justify-between`}
+                                    >
+                                        <div className="flex items-center gap-1">
+                                            <Icon icon="lucide:phone-call" className='text-[18px] mt-[-1px]' />
+                                            {selected
+                                                ? selected?.length > 25
+                                                    ? selected?.substring(0, 25) + "..."
+                                                    : selected
+                                                : data[0]}
+                                        </div>
+                                        <Icon icon="basil:caret-down-solid" className={`${popupShow && "rotate-180"} text-[20px]`} />
+                                    </button>
+                                </Popover>
                             </div>
-                            <div className='p-[7px] bg-primary/10 text-primary rounded-[10px] text-[19px]'><Icon icon="material-symbols:history" /></div>
+                            <button onClick={()=>setModalOpen(true)} className='p-[7px] bg-primary/10 text-primary rounded-[10px] text-[19px]'><Icon icon="material-symbols:history" /></button>
                         </div>
                     </div>
                 </div>
             </SectionWrapper>
+            <RecordedCallHistory setModalOpen={setModalOpen} modalOPen={modalOPen} />
         </>
     );
 };

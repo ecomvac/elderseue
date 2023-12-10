@@ -7,7 +7,7 @@ import { SupportAgents } from "../../../../assets/admin/data";
 const AdminDashBoardSupportAgents = () => {
   const [search, setSearch] = React.useState("");
   const [selected, setSelected] = useState("");
-  const data = ["Top Rated", "top name",];
+  const data = ["Top Rated", "Top Name",];
   return (
     <div>
       <div className="px-[22px] flex md:items-center md:flex-row flex-col gap-3 justify-between">
@@ -18,7 +18,7 @@ const AdminDashBoardSupportAgents = () => {
           <SearchInput
             search={search}
             setSearch={setSearch}
-            placeholder="Search Support Agent"
+            placeholder="Search Support Agents"
           />
           <Sort width="140px" selected={selected} setSelected={setSelected} data={data} />
         </div>

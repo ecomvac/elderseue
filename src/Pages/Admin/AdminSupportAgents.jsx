@@ -12,7 +12,7 @@ const AdminSupportAgents = () => {
     const [search, setSearch] = React.useState("");
     const [modalOPen,setModalOpen] = useState(false)
     const [selected, setSelected] = useState("");
-    const data = ["Sort", "name", "type"]
+    const data = ["Sort", "Name", "Number"]
   
   
     const handelOpenModal = ()=>{

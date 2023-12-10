@@ -32,7 +32,7 @@ const Notes = () => {
             </button>
           </div>
 
-          <div className="mt-7 flex flex-col gap-1">
+          <div className="mt-7 flex flex-col gap-1 max-h-[250px] overflow-y-auto">
             {notes.map((note, index) => (
               <NotesCard key={index} note={note} deleteNotes={deleteNotes}/>
             ))}

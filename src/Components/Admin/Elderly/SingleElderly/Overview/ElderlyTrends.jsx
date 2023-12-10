@@ -31,11 +31,11 @@ const ElderlyTrends = () => {
                 <h2 className=' text-[19px] font-bold text-text-primary'>Average</h2>
                 <p className=' text-[13px] font-normal text-text-primary/60 min-h-[40px]'>Everything is stable with elderly trends.</p>
               </div>
-              <div className='mt-6'>
-                <div className='flex flex-col gap-[14px]'>
+              <div className='mt-6 '>
+                <div className='flex flex-col gap-[14px] max-h-[645px] overflow-y-auto'>
                   {
                     averageTrends.slice(0, loadAverage).map((trend, index) => <>
-                      <button onClick={() => handleTrend({title:trend?.title, index:trend.id})}>
+                      <button onClick={() => handleTrend({ title: trend?.title, index: trend.id })}>
                         <div className='border rounded-[18px] p-[14px]'>
                           <div className='flex items-center gap-2 pb-2.5 border-b'>
                             <span className='bg-[#58CB6C] text-white p-2.5 rounded-[10px] text-[19px]'>
@@ -46,15 +46,15 @@ const ElderlyTrends = () => {
                               {trend.title === 'Not in bed' && (<Icon icon="lets-icons:bed" />)}
                               {trend.title === 'Sleep Monitoring' && (<Icon icon="fa6-solid:bed-pulse" />)}
                               {trend.title === 'Breath Rate' && (<Icon icon="healthicons:lungs" />)}
-                              {trend.title === 'Heart Rate' && (<img className='h-[19px] w-[19px]' src={'/images/heart.svg'} alt='icon' />)}
+                              {trend.title === 'Heart Rate' && (<img className='h-[19px] w-[19px]' src={'/images/heart2.svg'} alt='icon' />)}
                               {trend.title === 'Nutrition' && (<Icon icon="icon-park-solid:cook" />)}
-                              {trend.title === 'Frequent Toileting' && (<img className='h-[19px] w-[19px]' src={'/images/toilet.svg'} alt='icon' />)}
+                              {trend.title === 'Frequent Toileting' && (<img className='h-[19px] w-[19px]' src={'/images/toilet2.svg'} alt='icon' />)}
                               {trend.title === 'Extended Toileting' && (<Icon icon="ph:toilet-fill" />)}
-                              {trend.title === 'Wandering at Day' && (<img className='h-[19px] w-[19px]' src={'/images/dayWork.svg'} alt='icon' />)}
+                              {trend.title === 'Wandering at Day' && (<img className='h-[19px] w-[19px]' src={'/images/dayWork2.svg'} alt='icon' />)}
                               {trend.title === 'Bedtime' && (<Icon icon="lets-icons:bed-light" />)}
-                              {trend.title === 'Sedentary' && (<img className='h-[19px] w-[19px]' src={'/images/sitting.svg'} alt='icon' />)}
-                              {trend.title === 'Wandering at Night' && (<img className='h-[19px] w-[19px]' src={'/images/nightRun.svg'} alt='icon' />)}
-                              {trend.title === 'Frequent Night Activity' && (<img className='h-[19px] w-[19px]' src={'/images/nightAcitivity.svg'} alt='icon' />)}
+                              {trend.title === 'Sedentary' && (<img className='h-[19px] w-[19px]' src={'/images/sitting2.svg'} alt='icon' />)}
+                              {trend.title === 'Wandering at Night' && (<img className='h-[19px] w-[19px]' src={'/images/nightRun2.svg'} alt='icon' />)}
+                              {trend.title === 'Frequent Night Activity' && (<img className='h-[19px] w-[19px]' src={'/images/nightAcitivity2.svg'} alt='icon' />)}
                               {trend.title === 'Oversleeping' && (<Icon icon="solar:sleeping-bold" />)}
                               {trend.title === 'Surveillance Mode' && (<Icon icon="mdi:camera-party-mode" />)}
                               {trend.title === 'Device Offline' && (<Icon icon="heroicons-outline:status-offline" />)}
@@ -149,13 +149,12 @@ const ElderlyTrends = () => {
                       </button>
                     </>)
                   }
-                  {
-                    (averageTrends.length >4 &&  averageTrends.length > loadAverage) && <>
-                      <button onClick={() => setLoadAverage(averageTrends.length)} className='border rounded-lg p-2.5 w-full flex items-center justify-center gap-1 text-[13px] font-normal text-text-primary/50'>Load More <span><Icon className='text-lg' icon="ant-design:arrow-down-outlined" /></span></button>
-                    </>
-                  }
-
                 </div>
+                {
+                  (averageTrends.length > 4 && averageTrends.length > loadAverage) && <>
+                    <button onClick={() => setLoadAverage(averageTrends.length)} className='border mt-[14px] rounded-lg p-2.5 w-full flex items-center justify-center gap-1 text-[13px] font-normal text-text-primary/50'>Load More <span><Icon className='text-lg' icon="ant-design:arrow-down-outlined" /></span></button>
+                  </>
+                }
               </div>
             </div>
             {/* -------------------------warning trends-------------------- */}
@@ -165,31 +164,30 @@ const ElderlyTrends = () => {
                 <h2 className=' text-[19px] font-bold text-text-primary'>Warning</h2>
                 <p className=' text-[13px] font-normal text-text-primary/60 min-h-[40px]'>Emerging concerns in elderly trends, monitor closely.</p>
               </div>
-              <div className='mt-6'>
-                <div className='flex flex-col gap-[14px]'>
+              <div className='mt-6 '>
+                <div className='flex flex-col gap-[14px] max-h-[645px] overflow-y-auto'>
                   {
-                    warningTrends.slice(0,loadwarning).map((trend, index) => <>
-                      <button onClick={() => handleTrend({title:trend?.title, index:trend.id})}>
+                    warningTrends.slice(0, loadwarning).map((trend, index) => <>
+                      <button onClick={() => handleTrend({ title: trend?.title, index: trend.id })}>
                         <div className='border rounded-[18px] p-[14px]'>
                           <div className='flex items-center gap-2 border-b pb-2.5'>
                             <span className='bg-Warning text-white p-2.5 rounded-[10px] text-[19px]'>
                               {trend.title === 'Fall Detection' && (<Icon icon="material-symbols:falling-rounded" />)}
                               {trend.title === 'Sleep Score' && (<Icon icon="icon-park-solid:sleep" />)}
                               {trend.title === 'Abnormal Sleep' && (<Icon icon="material-symbols-light:respiratory-rate-rounded" />)}
-
                               {trend.title === 'Abnormal Biorhythm' && (<Icon icon="material-symbols-light:respiratory-rate-rounded" />)}
                               {trend.title === 'Not in bed' && (<Icon icon="lets-icons:bed" />)}
                               {trend.title === 'Sleep Monitoring' && (<Icon icon="fa6-solid:bed-pulse" />)}
                               {trend.title === 'Breath Rate' && (<Icon icon="healthicons:lungs" />)}
-                              {trend.title === 'Heart Rate' && (<img className='h-[19px] w-[19px]' src={'/images/heart.svg'} alt='icon' />)}
+                              {trend.title === 'Heart Rate' && (<img className='h-[19px] w-[19px]' src={'/images/heart2.svg'} alt='icon' />)}
                               {trend.title === 'Nutrition' && (<Icon icon="icon-park-solid:cook" />)}
-                              {trend.title === 'Frequent Toileting' && (<img className='h-[19px] w-[19px]' src={'/images/toilet.svg'} alt='icon' />)}
+                              {trend.title === 'Frequent Toileting' && (<img className='h-[19px] w-[19px]' src={'/images/toilet2.svg'} alt='icon' />)}
                               {trend.title === 'Extended Toileting' && (<Icon icon="ph:toilet-fill" />)}
-                              {trend.title === 'Wandering at Day' && (<img className='h-[19px] w-[19px]' src={'/images/dayWork.svg'} alt='icon' />)}
+                              {trend.title === 'Wandering at Day' && (<img className='h-[19px] w-[19px]' src={'/images/dayWork2.svg'} alt='icon' />)}
                               {trend.title === 'Bedtime' && (<Icon icon="lets-icons:bed-light" />)}
-                              {trend.title === 'Sedentary' && (<img className='h-[19px] w-[19px]' src={'/images/sitting.svg'} alt='icon' />)}
-                              {trend.title === 'Wandering at Night' && (<img className='h-[19px] w-[19px]' src={'/images/nightRun.svg'} alt='icon' />)}
-                              {trend.title === 'Frequent Night Activity' && (<img className='h-[19px] w-[19px]' src={'/images/nightAcitivity.svg'} alt='icon' />)}
+                              {trend.title === 'Sedentary' && (<img className='h-[19px] w-[19px]' src={'/images/sitting2.svg'} alt='icon' />)}
+                              {trend.title === 'Wandering at Night' && (<img className='h-[19px] w-[19px]' src={'/images/nightRun2.svg'} alt='icon' />)}
+                              {trend.title === 'Frequent Night Activity' && (<img className='h-[19px] w-[19px]' src={'/images/nightAcitivity2.svg'} alt='icon' />)}
                               {trend.title === 'Oversleeping' && (<Icon icon="solar:sleeping-bold" />)}
                               {trend.title === 'Surveillance Mode' && (<Icon icon="mdi:camera-party-mode" />)}
                               {trend.title === 'Device Offline' && (<Icon icon="heroicons-outline:status-offline" />)}
@@ -288,12 +286,13 @@ const ElderlyTrends = () => {
                       </button>
                     </>)
                   }
-                  {
-                    (warningTrends.length >4 && warningTrends.length > loadwarning) && <>
-                      <button onClick={() => setLoadwarning(averageTrends.length)} className='border rounded-lg p-2.5 w-full flex items-center justify-center gap-1 text-[13px] font-normal text-text-primary/50'>Load More <span><Icon className='text-lg' icon="ant-design:arrow-down-outlined" /></span></button>
-                    </>
-                  }
+
                 </div>
+                {
+                  (warningTrends.length > 4 && warningTrends.length > loadwarning) && <>
+                    <button onClick={() => setLoadwarning(averageTrends.length)} className='border mt-[14px] rounded-lg p-2.5 w-full flex items-center justify-center gap-1 text-[13px] font-normal text-text-primary/50'>Load More <span><Icon className='text-lg' icon="ant-design:arrow-down-outlined" /></span></button>
+                  </>
+                }
               </div>
             </div>
             {/* -------------------Critical trends----------------- */}
@@ -303,11 +302,11 @@ const ElderlyTrends = () => {
                 <h2 className=' text-[19px] font-bold text-text-primary'>Critical</h2>
                 <p className=' text-[13px] font-normal text-text-primary/60 min-h-[40px]'>Urgent action required, elderly trends have reached a critical point.</p>
               </div>
-              <div className='mt-6'>
-                <div className='flex flex-col gap-[14px]'>
+              <div className='mt-6 '>
+                <div className='flex flex-col gap-[14px] max-h-[645px] overflow-y-auto'>
                   {
-                    criticalTrends.slice(0,loadCritical).map((trend, index) => <>
-                      <button onClick={() => handleTrend({title:trend?.title, index:trend.id})}>
+                    criticalTrends.slice(0, loadCritical).map((trend, index) => <>
+                      <button onClick={() => handleTrend({ title: trend?.title, index: trend.id })}>
                         <div className='border rounded-[18px] p-[14px]'>
                           <div className='flex items-center gap-2 border-b pb-2.5'>
                             <span className='bg-Critical text-white p-2.5 rounded-[10px] text-[19px]'>
@@ -318,15 +317,15 @@ const ElderlyTrends = () => {
                               {trend.title === 'Not in bed' && (<Icon icon="lets-icons:bed" />)}
                               {trend.title === 'Sleep Monitoring' && (<Icon icon="fa6-solid:bed-pulse" />)}
                               {trend.title === 'Breath Rate' && (<Icon icon="healthicons:lungs" />)}
-                              {trend.title === 'Heart Rate' && (<img className='h-[19px] w-[19px]' src={'/images/heart.svg'} alt='icon' />)}
+                              {trend.title === 'Heart Rate' && (<img className='h-[19px] w-[19px]' src={'/images/heart2.svg'} alt='icon' />)}
                               {trend.title === 'Nutrition' && (<Icon icon="icon-park-solid:cook" />)}
-                              {trend.title === 'Frequent Toileting' && (<img className='h-[19px] w-[19px]' src={'/images/toilet.svg'} alt='icon' />)}
+                              {trend.title === 'Frequent Toileting' && (<img className='h-[19px] w-[19px]' src={'/images/toilet2.svg'} alt='icon' />)}
                               {trend.title === 'Extended Toileting' && (<Icon icon="ph:toilet-fill" />)}
-                              {trend.title === 'Wandering at Day' && (<img className='h-[19px] w-[19px]' src={'/images/dayWork.svg'} alt='icon' />)}
+                              {trend.title === 'Wandering at Day' && (<img className='h-[19px] w-[19px]' src={'/images/dayWork2.svg'} alt='icon' />)}
                               {trend.title === 'Bedtime' && (<Icon icon="lets-icons:bed-light" />)}
-                              {trend.title === 'Sedentary' && (<img className='h-[19px] w-[19px]' src={'/images/sitting.svg'} alt='icon' />)}
-                              {trend.title === 'Wandering at Night' && (<img className='h-[19px] w-[19px]' src={'/images/nightRun.svg'} alt='icon' />)}
-                              {trend.title === 'Frequent Night Activity' && (<img className='h-[19px] w-[19px]' src={'/images/nightAcitivity.svg'} alt='icon' />)}
+                              {trend.title === 'Sedentary' && (<img className='h-[19px] w-[19px]' src={'/images/sitting2.svg'} alt='icon' />)}
+                              {trend.title === 'Wandering at Night' && (<img className='h-[19px] w-[19px]' src={'/images/nightRun2.svg'} alt='icon' />)}
+                              {trend.title === 'Frequent Night Activity' && (<img className='h-[19px] w-[19px]' src={'/images/nightAcitivity2.svg'} alt='icon' />)}
                               {trend.title === 'Oversleeping' && (<Icon icon="solar:sleeping-bold" />)}
                               {trend.title === 'Surveillance Mode' && (<Icon icon="mdi:camera-party-mode" />)}
                               {trend.title === 'Device Offline' && (<Icon icon="heroicons-outline:status-offline" />)}
@@ -424,12 +423,13 @@ const ElderlyTrends = () => {
                       </button>
                     </>)
                   }
-                  {
-                    (criticalTrends.length >4 && criticalTrends.length > loadCritical) && <>
-                      <button onClick={() => setLoadCritical(averageTrends.length)} className='border rounded-lg p-2.5 w-full flex items-center justify-center gap-1 text-[13px] font-normal text-text-primary/50'>Load More <span><Icon className='text-lg' icon="ant-design:arrow-down-outlined" /></span></button>
+                  
+                </div>
+                {
+                    (criticalTrends.length > 4 && criticalTrends.length > loadCritical) && <>
+                      <button onClick={() => setLoadCritical(averageTrends.length)} className='border mt-[14px] rounded-lg p-2.5 w-full flex items-center justify-center gap-1 text-[13px] font-normal text-text-primary/50'>Load More <span><Icon className='text-lg' icon="ant-design:arrow-down-outlined" /></span></button>
                     </>
                   }
-                </div>
               </div>
             </div>
           </div>

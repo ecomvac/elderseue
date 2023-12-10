@@ -10,7 +10,7 @@ const SuspendedSuperAdmin = () => {
     const [search, setSearch] = React.useState("");
     const [selected, setSelected] = useState("");
     const [modalOPen,setModalOpen] = useState(false)
-    const data = ["Sort", "name", "type"]
+    const data = ["Sort", "Name", "Number"]
 
     const setAdminData = [
         {
@@ -29,7 +29,7 @@ const SuspendedSuperAdmin = () => {
 
   return (
     <>
-      <BreadCrumb title={"Dashboard"} links={[{title:"Home",url:"/super-admin/dashboard"},{title:"Dashboard",url:"/super-admin/dashboard"}]}/>
+      <BreadCrumb title={"Suspended Admin"} links={[{title:"Home",url:"/super-admin/dashboard"},{title:"Suspended Admin",url:"/super-admin/dashboard/suspended-admin"}]}/>
       <div className=" lg:mt-[-30px] mb-[30px]">
         <div className=" bg-white rounded-2xl py-6 px-[22px] relative">
     
@@ -48,7 +48,7 @@ const SuspendedSuperAdmin = () => {
                                 <h2 className=" text-dark-black font-bold text-lg">{data.title}</h2>
                             </div>
                             <div>
-                                <button onClick={()=>setModalOpen(true)} className=" py-3 px-4 text-[13px] hover:bg-text-primary/30 duration-200 font-bold rounded-[10px] text-primary bg-primary/10">Set New Admin</button>
+                                <button onClick={()=>setModalOpen(true)} className=" py-3 px-4 text-[13px] hover:bg-primary hover:text-white duration-200 font-bold rounded-[10px] text-primary bg-primary/10">Set New Admin</button>
                             </div>
                         </div>
                     ))}

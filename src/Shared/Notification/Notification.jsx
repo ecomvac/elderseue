@@ -1,18 +1,18 @@
-import React, { useState} from 'react';
+import React, { useContext, useState} from 'react';
 import { Icon } from '@iconify/react';
 import { useNavigate } from 'react-router-dom';
+import { SidebarContext } from '../../Context/CustomContext';
 
 const Notification = ({ filterNotificationData,role }) => {
+    const{setShowNotificationTab}=useContext(SidebarContext)
     
     const [parPage,setPaePage]= useState(4)
 
     const navigate = useNavigate()
 
-
-
     const handleNavigateNotificaitonDetails = (userId) => {
         if (role === 'supportAgent') {
-            navigate(`/support-agent/dashboard/user/${userId}`)
+            navigate(`/support-agent/dashboard/elderly/${userId}`)
         }
         if (role === 'admin') {
             navigate(`/admin/dashboard/elderly/${userId}`)
@@ -31,7 +31,7 @@ const Notification = ({ filterNotificationData,role }) => {
             {
                 filterNotificationData.slice(0,parPage).map((item, i) => (
                     <>
-                        <div onClick={() => handleNavigateNotificaitonDetails(item?.userId)} key={i} className='flex cursor-pointer items-start gap-2 px-4 '>
+                        <button onClick={() => {handleNavigateNotificaitonDetails(item?.userId); setShowNotificationTab(true)}} key={i} className='flex cursor-pointer items-start gap-2 px-4 '>
                             <div>
                                 {
                                     item.alert === 1 && (
@@ -62,9 +62,9 @@ const Notification = ({ filterNotificationData,role }) => {
                                         }
                                     </div>
                                 </div>
-                                <p className='text-[13px] font-[400] text-[#666D90]'>{item.sub}</p>
+                                <p className='text-[13px] font-[400]  text-start text-[#666D90]'>{item.sub}</p>
                             </div>
-                        </div>
+                        </button>
                         <div className='py-2'>
                         </div>
                     </>

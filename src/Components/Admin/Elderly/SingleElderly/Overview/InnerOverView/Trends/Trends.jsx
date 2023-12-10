@@ -34,11 +34,12 @@ const Trends = () => {
         }
     ]
     return (
-        <div className='bg-white'>
+        <div className='bg-white rounded-b-[30px] pb-10'>
             <div className='my-6 w-full xl:w-1/3 px-4'>
-                <div className=' mb-6'>
+                <div className=' mb-6 relative'>
+
+                    <Icon icon="material-symbols:search" className=' text-2xl text-[#B8BBCC] absolute top-2 right-2' />
                     <input type="text" placeholder='Search Trends' className='text-[13px] font-medium outline-none w-full  py-[9px] px-3 pr-10 flex items-center justify-between border-[1px] focus:border-primary rounded-[10px]' />
-                    <span className='flex justify-end px-3 -mt-8'><Icon icon="material-symbols:search" className=' text-2xl text-[#B8BBCC]' /></span>
                 </div>
                 <div className='bg-[#F6F8FF] p-1 rounded-[50px] flex'>
                     {tabs?.map(tab => <button onClick={() => { setActiveTab(tab?.title) }} className={`rounded-[20px] text-sm w-full font-medium py-2 ${tab?.title === activeTab ? 'bg-primary text-white' : 'text-text-primary/60'}`}>{tab?.title}</button>)}
