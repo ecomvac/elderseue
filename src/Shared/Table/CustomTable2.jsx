@@ -21,6 +21,7 @@ const CustomTable2 = ({ tableData, columns, scroll }) => {
   return (
     <div className="lg:relative text-secondary text-base w-full">
       <Table
+        id="admin__support__agent" 
         columns={columns}
         className="admin__Table"
         dataSource={tableData}

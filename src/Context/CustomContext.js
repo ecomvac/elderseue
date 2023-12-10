@@ -16,6 +16,7 @@ const SidebarContextProvider = ({ children }) => {
   const [sidebarShow,setSidebarShow] = useState(false)
   const [overView, setOverView] = useState(true)
   const [overViewActive, setOverViewActive] = useState("")
+  const [BreadCrumbData,setBreadCrumb] = useState({title:"",url:""})
   const contextInfo = {
     show,
     setShow,
@@ -32,8 +33,9 @@ const SidebarContextProvider = ({ children }) => {
     setDeviceInner,
     deviceInner,
     setShowNotificationTab,
-    showNotificationTab
-
+    showNotificationTab,
+    setBreadCrumb,
+    BreadCrumbData,
   }
 
   return (
