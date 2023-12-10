@@ -23,7 +23,7 @@ const AllOverview = ({ trendsData, chartData }) => {
             <div id='add_zoom_90' className='w-full xl:w-1/3 '>
                 <OverviewTrends scrollToSecond={scrollToSecond} setHandleTrendClick={setHandleTrendClick} overviewData={trendsData}></OverviewTrends>
             </div>
-            <div className='h-[120vh] xl:w-2/3  border-l mt-0 xl:-mt-[150px]  second  overflow-y-auto'>
+            <div className='md:h-[120vh] xxl:h-[95vh] xl:w-2/3  border-l mt-0 xl:-mt-[150px]  second  overflow-y-auto'>
                 <OverViewChart handleTrendClick={handleTrendClick} data={chartData}></OverViewChart>
             </div>
         </div>

@@ -618,9 +618,7 @@ font-size: 16px !important;
     }
 } */
 
- #add_zoom_90{
-      zoom: 90% !important;
-    }
+
   @media only screen and (min-width:1020px) and (max-width: 1580px) {
     #add_zoom{
       zoom: 80% !important;
@@ -628,4 +626,7 @@ font-size: 16px !important;
    #admin-overview{
     height: 780px !important;
    }
+    #add_zoom_90{
+      zoom: 90% !important;
+    }
   }
