@@ -10,7 +10,7 @@ const ResolvingAlerms = () => {
     const data = [
         {
             id: 1,
-            alarm: {
+            type:'bed',alarm: {
                 title: 'Bedtime: Hasn’t gone to bed yet',
                 description: 'It seems bedtime has eluded you tonight, reminding you to rest and rejuvenate for a brighter tomorrow.',
             },
@@ -21,7 +21,7 @@ const ResolvingAlerms = () => {
         {
             id: 2,
             time: '06:26 am',
-            alarm:{
+            type:'out',alarm:{
                 
             title: 'Elderly Out The Room More Then Target',
             description: 'It seems bedtime has eluded you tonight, reminding you to rest and rejuvenate for a brighter tomorrow.',
@@ -32,7 +32,7 @@ const ResolvingAlerms = () => {
         {
             id: 3,
             time: '06:26 am',
-            alarm:{
+            type:'out',alarm:{
                 
             title: 'Bedtime: Hasn’t gone to bed yet',
             description: 'It seems bedtime has eluded you tonight, reminding you to rest and rejuvenate for a brighter tomorrow.',
@@ -43,7 +43,7 @@ const ResolvingAlerms = () => {
         {
             id: 4,
             time: '06:26 am',
-            alarm:{
+            type:'bed',alarm:{
                 
             title: 'Elderly Out The Room More Then Target',
             description: 'It seems bedtime has eluded you tonight, reminding you to rest and rejuvenate for a brighter tomorrow.',
@@ -54,7 +54,7 @@ const ResolvingAlerms = () => {
         {
             id: 5,
             time: '06:26 am',
-            alarm:{
+            type:'bed',alarm:{
                 
             title: 'Bedtime: Hasn’t gone to bed yet',
             description: 'It seems bedtime has eluded you tonight, reminding you to rest and rejuvenate for a brighter tomorrow.',
@@ -65,7 +65,7 @@ const ResolvingAlerms = () => {
         {
             id: 6,
             time: '06:26 am',
-            alarm:{
+            type:'out',alarm:{
                 
             title: 'Elderly Out The Room More Then Target',
             description: 'It seems bedtime has eluded you tonight, reminding you to rest and rejuvenate for a brighter tomorrow.',
@@ -76,7 +76,7 @@ const ResolvingAlerms = () => {
         {
             id: 7,
             time: '06:26 am',
-            alarm:{
+            type:'out',alarm:{
                 
             title: 'Elderly Out The Room More Then Target',
             description: 'It seems bedtime has eluded you tonight, reminding you to rest and rejuvenate for a brighter tomorrow.',

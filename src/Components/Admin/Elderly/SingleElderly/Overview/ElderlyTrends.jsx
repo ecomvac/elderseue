@@ -32,7 +32,7 @@ const ElderlyTrends = () => {
                 <p className=' text-[13px] font-normal text-text-primary/60 min-h-[40px]'>Everything is stable with elderly trends.</p>
               </div>
               <div className='mt-6 '>
-                <div className='flex flex-col gap-[14px] max-h-[645px] overflow-y-auto'>
+                <div className='flex flex-col gap-[14px] max-h-[610px] overflow-y-auto'>
                   {
                     averageTrends.slice(0, loadAverage).map((trend, index) => <>
                       <button onClick={() => handleTrend({ title: trend?.title, index: trend.id })}>
@@ -165,7 +165,7 @@ const ElderlyTrends = () => {
                 <p className=' text-[13px] font-normal text-text-primary/60 min-h-[40px]'>Emerging concerns in elderly trends, monitor closely.</p>
               </div>
               <div className='mt-6 '>
-                <div className='flex flex-col gap-[14px] max-h-[645px] overflow-y-auto'>
+                <div className='flex flex-col gap-[14px] max-h-[610px] overflow-y-auto'>
                   {
                     warningTrends.slice(0, loadwarning).map((trend, index) => <>
                       <button onClick={() => handleTrend({ title: trend?.title, index: trend.id })}>
@@ -303,7 +303,7 @@ const ElderlyTrends = () => {
                 <p className=' text-[13px] font-normal text-text-primary/60 min-h-[40px]'>Urgent action required, elderly trends have reached a critical point.</p>
               </div>
               <div className='mt-6 '>
-                <div className='flex flex-col gap-[14px] max-h-[645px] overflow-y-auto'>
+                <div className='flex flex-col gap-[14px] max-h-[610px] overflow-y-auto'>
                   {
                     criticalTrends.slice(0, loadCritical).map((trend, index) => <>
                       <button onClick={() => handleTrend({ title: trend?.title, index: trend.id })}>
