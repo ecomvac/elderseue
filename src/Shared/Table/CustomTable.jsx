@@ -6,7 +6,7 @@ const CustomTable = ({ tableData, columns, scroll }) => {
   const [end, setend] = React.useState(10);
 
 
-  const scrollTop = ()=>{
+  const scrollTop = () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth"
@@ -29,7 +29,6 @@ const CustomTable = ({ tableData, columns, scroll }) => {
   return (
     <div className="lg:relative text-secondary text-base w-full">
       <Table
-        id="admin__support__agent" 
         columns={columns}
         className="admin__Table"
         dataSource={tableData}
