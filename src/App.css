@@ -239,6 +239,9 @@ body {
 
 
 /* -----------------style for switch------------- */
+:where(.css-dev-only-do-not-override-nllxry).ant-switch:hover{
+  background-color: #9039FF !important;
+}
 :where(.css-dev-only-do-not-override-nllxry).ant-switch.ant-switch-checked {
   background: #9039FF;
 }
