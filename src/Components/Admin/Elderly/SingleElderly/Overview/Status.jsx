@@ -46,7 +46,7 @@ const Status = ({userId}) => {
         <>
             <SectionWrapper>
                 <div className='px-[22px] py-6'>
-                    <div style={{ backgroundImage: 'url("/images/satusImg.png")', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }} className={`mb-5 p-5 rounded-[17px] 
+                    <div id='add_zoom' style={{ backgroundImage: 'url("/images/satusImg.png")', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }} className={`mb-5 p-5 rounded-[17px] 
                     ${position === 'good' && 'bg-primary'}
                     ${position === 'critical' && 'bg-[#F43E3E]'}
                     ${position === 'problem' && 'bg-[#627BFF]'}
@@ -98,15 +98,15 @@ const Status = ({userId}) => {
                             </span>
                         </div>
                     </div>
-                    <div className='flex justify-between items-center gap-4 flex-wrap'>
-                        <div>
+                    <div className='flex justify-between items-center gap-4 flex-wrap md:flex-nowrap'>
+                        <div id='add_zoom'>
                             <span className='text-xl font-bold text-dark-black'>Kari Daughetry</span>
                             <span className='flex items-center gap-1'>
                                 <span className='text-[15px] text-text-secondary'><Icon icon="system-uicons:location" /></span>
                                 <span className='text-[13px] text-text-secondary'>Newport Beach, CA 92660, USA</span>
                             </span>
                         </div>
-                        <div className='flex items-center gap-2'>
+                        <div className='flex items-center gap-2 '>
                             <div className="relative h-[37px]">
                                 <Popover
                                     open={popupShow}

@@ -8,7 +8,7 @@ import { SidebarContext } from "../../Context/CustomContext";
 const AdminElderlySinglePage = () => {
   const params = useParams();
   const [data, setData] = useState();
-  const {BreadCrumbData} = useContext(SidebarContext)
+  const { BreadCrumbData } = useContext(SidebarContext)
   const Id = Number(params.id);
   useEffect(() => {
     const singleUser = Elderlies.find((user) => user.id === Id);
@@ -23,7 +23,7 @@ const AdminElderlySinglePage = () => {
         title={"Elderly"}
         links={[
           { title: "Home", url: "/admin/dashboard" },
-          { title: `${BreadCrumbData.title}`, url: `${BreadCrumbData.url}`},
+          { title: `${BreadCrumbData.title}`, url: `${BreadCrumbData.url}` },
           { title: `${data?.firstName} ${data?.lastName}`, url: "" },
         ]}
       />
