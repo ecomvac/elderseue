@@ -25,7 +25,7 @@ const ElderliesOverview = () => {
       <h2 className=" font-bold text-[24px] text-white">Elderlies Overview</h2>
       <div className=" flex flex-col justify-between h-full">
         <div className=" w-full grid grid-cols-1">
-          <div className=" flex items-center justify-center">
+          <div id="add_zoom" className=" flex items-center justify-center">
             <ElderliesOverviewPieCharts data={data} />
           </div>
           <div className=" flex items-center justify-center mt-10">
@@ -72,7 +72,7 @@ const ElderliesOverview = () => {
             />
           </div>
 
-          <div className=" grid grid-cols-1 mt-16 mb-9">
+          <div id="add_zoom" className=" grid grid-cols-1 mt-16 mb-9">
             <ElderlyCharts data={elderyOverview} />
           </div>
         </div>

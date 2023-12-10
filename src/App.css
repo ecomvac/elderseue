@@ -612,7 +612,10 @@ font-size: 16px !important;
 
 
   @media only screen and (min-width:1020px) and (max-width: 1580px) {
- #add_zoom{
+    #add_zoom{
       zoom: 80% !important;
     }
+   #admin-overview{
+    height: 780px !important;
+   }
   }

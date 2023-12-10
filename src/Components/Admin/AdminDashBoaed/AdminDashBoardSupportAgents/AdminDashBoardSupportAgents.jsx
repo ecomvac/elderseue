@@ -24,7 +24,7 @@ const AdminDashBoardSupportAgents = () => {
         </div>
       </div>
 
-      <div className=" grid grid-cols-1 mt-6">
+      <div id='add_zoom'   className=" grid grid-cols-1 mt-6">
           <AdminDashBoardSupportAgentsTable tableData={SupportAgents}/>
       </div>
     </div>

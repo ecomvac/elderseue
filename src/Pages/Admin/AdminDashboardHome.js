@@ -10,7 +10,7 @@ const AdminDashboardHome = () => {
     return (
         <>
             <BreadCrumb title={"Dashboard"} links={[{ title: "Home", url: "/admin/dashboard" }, { title: "Dashboard", url: "/admin/dashboard" }]} />
-            <div id="add_zoom" className=" lg:mt-[-30px] mb-[30px]">
+            <div className=" lg:mt-[-30px] mb-[30px]">
                 <div className='flex items-start gap-[30px] lg:flex-row flex-col justify-between'>
                     <div className='lg:w-[65%] w-full '>
                         <div className=' bg-white py-[30px] rounded-[20px] px-[22px]'>
@@ -20,8 +20,8 @@ const AdminDashboardHome = () => {
                             <AlertsOverview />
                         </div>
                     </div>
-                    <div className='lg:w-[35%] w-full  '>
-                        <div className=' bg-primary py-[30px] h-[850px] rounded-[20px] px-[22px]'>
+                    <div className='lg:w-[35%] w-full '>
+                        <div id='admin-overview' className=' bg-primary py-[30px] h-[850px] rounded-[20px] px-[22px]'>
                             <ElderliesOverview />
                         </div>
                     </div>

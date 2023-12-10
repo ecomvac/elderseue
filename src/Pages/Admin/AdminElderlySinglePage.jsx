@@ -5,12 +5,12 @@ import { useParams } from 'react-router-dom'
 
 
 const AdminElderlySinglePage = () => {
-const params = useParams();
+  const params = useParams();
   return (
     <>
       <BreadCrumb title={"Elderly"} links={[{ title: "Home", url: "/admin/dashboard" }, { title: "Elderly", url: "/admin/dashboard/elderly" }, { title: "Kari Daughetry #453453", url: "" }]} />
       <div className='grid grid-cols-1 lg:mt-[-30px]'>
-        <SingleElderly userId={params.id}/>
+        <SingleElderly userId={params.id} />
       </div>
     </>
   )

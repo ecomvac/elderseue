@@ -6,7 +6,7 @@ const CustomTable = ({ tableData, columns, scroll }) => {
   const [end, setend] = React.useState(10);
 
 
-  const scrollTop = ()=>{
+  const scrollTop = () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth"
