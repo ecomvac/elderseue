@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import CustomButton from '../../../../../../Shared/button/CustomButton';
-import { Icon } from '@iconify/react';
 import CustomModal from '../../../../../../Shared/modal/CustomModal';
 import ResolvingMessageModal from './ResolvingMessageModal';
 
@@ -15,7 +14,13 @@ const Alarms = ({ data }) => {
                 data.map((singleAlarm) => <div className='py-[22px] border-b'>
                     <div className='flex items-center gap-2'>
                         <div className='w-[37px] h-[37px] rounded-[10px] bg-primary/10 flex items-center justify-center text-primary'>
-                            <Icon className='w-[19px]' icon="octicon:mail-16" />
+                            {
+                                singleAlarm.type==='bed' && <img className='w-[19px]' src={'/images/bed2.svg'} alt="icon" />
+                            }
+                            {
+                                singleAlarm.type==='out' && <img className='w-[19px]' src={'/images/out.svg'} alt="icon" />
+                            }
+                            {/* <Icon className='w-[19px]' icon="octicon:mail-16" /> */}
                         </div>
                         <div>
                             <p className='text-[#969BB3] font-medium'>{singleAlarm.time}</p>
