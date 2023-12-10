@@ -5,6 +5,10 @@
   padding: 0;
 } */
 
+*{
+  scroll-behavior: smooth;
+}
+
 
 @layer {
   .scrollbar::-webkit-scrollbar {
@@ -240,7 +244,6 @@ body {
 }
 
 
-/* -------------------single Elderly tabs---------------------- */
 
 
 /* -------------------devices tabs---------------------- */
@@ -316,9 +319,14 @@ body {
 
 /* --------------------ant table pagination---------------- */
 
-:where(.css-dev-only-do-not-override-nllxry).ant-table-wrapper .ant-table-pagination.ant-pagination {
+/* :where(.css-dev-only-do-not-override-nllxry).ant-table-wrapper .ant-table-pagination.ant-pagination {
   padding-right: 22px !important;
+} */
+/* here all table pagination gap problem */
+.ant-pagination-next{
+  margin-right:22px !important ;
 }
+
 
 .ant-pagination-prev {
   border: 1px solid rgb(185, 182, 182);
@@ -406,7 +414,7 @@ color: rgba(157, 158, 163, 0.8) !important;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgb(190, 190, 190);
+  background: rgb(245, 244, 244);
   border-radius: 10px;
 }
 
@@ -609,3 +617,13 @@ font-size: 16px !important;
       zoom: 80% !important;
     }
 } */
+
+
+  @media only screen and (min-width:1020px) and (max-width: 1580px) {
+    #add_zoom{
+      zoom: 80% !important;
+    }
+   #admin-overview{
+    height: 780px !important;
+   }
+  }

@@ -28,7 +28,7 @@ const SubscriptionType = ({ data, plan }) => {
                     <div className='mr-2'>{d?.title}</div>
                     <div className='flex items-center'>
                         {/* <Switch defaultChecked={d.value} onChange={handleToggle} color="primary" disabled={d.category !== 'essential Plan'} /> */}
-                        <Switch defaultChecked={true} onChange={handleToggle} color={"primary"} size={'small'} />
+                        <Switch className='bg-gray-400' defaultChecked={true} onChange={handleToggle} color={"primary"} size={'small'} />
                     </div>
                 </div>)}
             </div>

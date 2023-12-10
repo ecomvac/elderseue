@@ -34,7 +34,7 @@ const Trends = () => {
         }
     ]
     return (
-        <div className='bg-white rounded-b-[30px] pb-10'>
+        <div className='bg-white rounded-b-[30px]'>
             <div className='my-6 w-full xl:w-1/3 px-4'>
                 <div className=' mb-6 relative'>
 

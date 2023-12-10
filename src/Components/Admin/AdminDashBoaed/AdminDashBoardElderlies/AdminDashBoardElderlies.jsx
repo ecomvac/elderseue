@@ -23,7 +23,7 @@ const AdminDashBoardElderlies = () => {
         </div>
       </div>
 
-      <div className=" grid grid-cols-1 mt-6">
+      <div id='add_zoom' className=" grid grid-cols-1 mt-6">
           <AdminDashBoardElderliesTables tableData={Elderlies}/>
       </div>
     </div>

@@ -6,7 +6,7 @@ import { AlertsOverviewMonth, AlertsOverviewWeek } from "../../../assets/support
 
 const AlertsOverview = () => {
   const [selected, setSelected] = useState("Last Week");
-  const [chartData,setChartData] = useState(AlertsOverviewWeek)
+  const [chartData, setChartData] = useState(AlertsOverviewWeek)
   const data = ["Last Week", "Last Month"];
 
   const alertsData = [
@@ -25,24 +25,24 @@ const AlertsOverview = () => {
   ];
 
 
-  useEffect(()=>{
-    if(selected==="Last Week"){
+  useEffect(() => {
+    if (selected === "Last Week") {
       setChartData(AlertsOverviewWeek)
     }
-    if(selected==="Last Month"){
+    if (selected === "Last Month") {
       setChartData(AlertsOverviewMonth)
     }
-  },[selected])
+  }, [selected])
 
   return (
-    <div>
+    <div  >
       <div className=" flex md:items-center md:flex-row flex-col gap-2 justify-between">
         <h2 className=" text-2xl font-bold text-text-primary">
           Alerts Overview
         </h2>
         <SortDat className={" bg-primary/10 text-primary"} selected={selected} setSelected={setSelected} data={data} />
       </div>
-      <div className=" flex items-start lg:flex-row gap-5 flex-col justify-between mt-8">
+      <div id='add_zoom' className=" flex items-start lg:flex-row gap-5 flex-col justify-between mt-8">
         <div className="lg:w-[30%] w-full ml-5">
           <div>
             <h3 className=" text-[13px] font-medium text-text-secondary">
@@ -64,15 +64,15 @@ const AlertsOverview = () => {
                   <div className={` w-2 h-2 rounded-full bg-[#F83333]`}></div>
                 )}
                 <div className="mt-[-4px]">
-                    <h3 className="text-[12px] font-medium text-[#A3AED0]">{alert.type}</h3>
-                    <h3 className="text-[18px] font-bold text-dark-black">{alert.value}</h3>
+                  <h3 className="text-[12px] font-medium text-[#A3AED0]">{alert.type}</h3>
+                  <h3 className="text-[18px] font-bold text-dark-black">{alert.value}</h3>
                 </div>
               </div>
             ))}
           </div>
         </div>
         <div className="lg:w-[70%] w-full">
-          <AlertsOverviewCharts data={chartData}/>
+          <AlertsOverviewCharts data={chartData} />
         </div>
       </div>
     </div>
