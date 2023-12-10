@@ -25,7 +25,7 @@ const AllNotifications = () => {
                     </div>
                 </div>
 
-                <div>
+                <div className='max-h-[100vh] overflow-y-auto'>
                     <div className='px-[22px]  lg2:flex justify-between  md:flex  py-5'>
                         <div className='flex'>
                             <div className="bg-[#F8F8F8] rounded-lg h-8 mr-2.5 p-1.5">

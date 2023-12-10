@@ -20,89 +20,83 @@ const NotificationSetting = () => {
                                 setSearch={setSearch}
                                 placeholder={'Search Notifications'}
                             />
-                            {/* <Search
-                                className='font-bold'
-                                placeholder="Search"
-                                onSearch={onSearch}
-                                style={{
-                                    width: 200,
-                                }}
-                            /> */}
                         </div>
                     </div>
-                    {/* ----------Email Notifications----------- */}
-                    <div className=''>
-                        <div>
-                            <h1 className='text-text-primary font-bold text-xl py-[18px] border-b'>Email Notifications</h1>
+                    <div  className='max-h-[100vh] overflow-y-auto'>
+                        {/* ----------Email Notifications----------- */}
+                        <div className=''>
+                            <div>
+                                <h1 className='text-text-primary font-bold text-xl py-[18px] border-b'>Email Notifications</h1>
+                            </div>
+                            <div className='mt-5'>
+                                <div className='flex justify-between py-5'>
+                                    <div>
+                                        <h1 className='text-[#49517A] text-lg font-bold'>News and Updates</h1>
+                                        <p className='text-text-secondary text-base'>News about product and feature updates</p>
+                                    </div>
+                                    <div className='flex items-center'>
+                                        <Switch className='bg-gray-400' size="small" defaultChecked />
+                                    </div>
+
+                                </div>
+                                <div className='  flex justify-between py-5'>
+                                    <div>
+                                        <h1 className='text-[#49517A] text-lg font-bold'>Tips and tutorials</h1>
+                                        <p className='text-text-secondary text-base'>News about product and feature updates</p>
+                                    </div>
+                                    <div className='flex items-center'>
+                                        <Switch className='bg-gray-400' size="small" defaultChecked />
+                                    </div>
+
+                                </div>
+                                <div className='  flex justify-between py-5'>
+                                    <div>
+                                        <h1 className='text-[#49517A] text-lg font-bold'>User research</h1>
+                                        <p className='text-text-secondary text-base'>Get involved in our beta testing program or participate in paid product user research.</p>
+                                    </div>
+                                    <div className='flex items-center'>
+                                        <Switch className='bg-gray-400' size="small" defaultChecked />
+                                    </div>
+
+                                </div>
+                                <div className='  flex justify-between py-5'>
+                                    <div>
+                                        <h1 className='text-[#49517A] text-lg font-bold'>Comments</h1>
+                                        <p className='text-text-secondary text-base'>News about product and feature updates</p>
+                                    </div>
+                                    <div className='flex items-center'>
+                                        <Switch className='bg-gray-400' size="small" defaultChecked />
+                                    </div>
+
+                                </div>
+                                <div className='  flex justify-between py-5'>
+                                    <div>
+                                        <h1 className='text-[#49517A] text-lg font-bold'>Reminders</h1>
+                                        <p className='text-text-secondary text-base'>News about product and feature updates</p>
+                                    </div>
+                                    <div className='flex items-center'>
+                                        <Switch className='bg-gray-400' size="small" defaultChecked />
+                                    </div>
+
+                                </div>
+                            </div>
+
                         </div>
-                        <div className='mt-5'> 
-                            <div className='flex justify-between py-5'>
-                                <div>
-                                    <h1 className='text-[#49517A] text-lg font-bold'>News and Updates</h1>
-                                    <p className='text-text-secondary text-base'>News about product and feature updates</p>
-                                </div>
-                                <div className='flex items-center'>
-                                    <Switch className='bg-primary' size="small"  defaultChecked />
-                                </div>
 
+                        {/* ----------Push Notifications----------- */}
+                        <div className='mt-12'>
+                            <div>
+                                <h1 className='text-text-primary font-bold text-xl py-[18px] border-b'>Push Notifications</h1>
                             </div>
-                            <div className='  flex justify-between py-5'>
-                                <div>
-                                    <h1 className='text-[#49517A] text-lg font-bold'>Tips and tutorials</h1>
-                                    <p className='text-text-secondary text-base'>News about product and feature updates</p>
-                                </div>
-                                <div className='flex items-center'>
-                                    <Switch size="small" defaultChecked />
-                                </div>
-
-                            </div>
-                            <div className='  flex justify-between py-5'>
-                                <div>
-                                    <h1 className='text-[#49517A] text-lg font-bold'>User research</h1>
-                                    <p className='text-text-secondary text-base'>Get involved in our beta testing program or participate in paid product user research.</p>
-                                </div>
-                                <div className='flex items-center'>
-                                    <Switch size="small" defaultChecked />
-                                </div>
-
-                            </div>
-                            <div className='  flex justify-between py-5'>
-                                <div>
-                                    <h1 className='text-[#49517A] text-lg font-bold'>Comments</h1>
-                                    <p className='text-text-secondary text-base'>News about product and feature updates</p>
-                                </div>
-                                <div className='flex items-center'>
-                                    <Switch size="small" defaultChecked />
-                                </div>
-
-                            </div>
-                            <div className='  flex justify-between py-5'>
-                                <div>
-                                    <h1 className='text-[#49517A] text-lg font-bold'>Reminders</h1>
-                                    <p className='text-text-secondary text-base'>News about product and feature updates</p>
-                                </div>
-                                <div className='flex items-center'>
-                                    <Switch size="small" defaultChecked />
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </div>
-
-                    {/* ----------Push Notifications----------- */}
-                    <div className='mt-12'>
-                        <div>
-                            <h1 className='text-text-primary font-bold text-xl py-[18px] border-b'>Push Notifications</h1>
-                        </div>
-                        <div>
-                            <div className='  flex justify-between py-5'>
-                                <div>
-                                    <h1 className='text-[#49517A] text-lg font-bold'>Comments</h1>
-                                    <p className='text-text-secondary text-base'>News about product and feature updates</p>
-                                </div>
-                                <div className='flex items-center'>
-                                    <Switch size="small" defaultChecked />
+                            <div>
+                                <div className='  flex justify-between py-5'>
+                                    <div>
+                                        <h1 className='text-[#49517A] text-lg font-bold'>Comments</h1>
+                                        <p className='text-text-secondary text-base'>News about product and feature updates</p>
+                                    </div>
+                                    <div className='flex items-center'>
+                                        <Switch className='bg-gray-400' size="small" defaultChecked />
+                                    </div>
                                 </div>
                             </div>
                         </div>
