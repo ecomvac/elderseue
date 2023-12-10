@@ -143,12 +143,13 @@ body {
 }
 
 .admin__Table .ant-table-cell {
-  padding: 15px 22px !important;
+  padding: 16px 22px !important;
 }
 
 .ant-table-thead .ant-table-cell {
   background-color: #F7F7F9 !important;
   border-radius: 0px !important;
+  padding: 16px 27px !important;
 }
 
 /* -----------support agent > dashboard > activity > elderly conditions date picker------------- */
@@ -597,6 +598,10 @@ font-size: 16px !important;
 /* ------------modal table--------- */
 #modal-table .ant-table-cell{
   padding-left: 30px !important;
+}
+
+#admin__support__agent .ant-table-tbody tr{
+  cursor:  pointer !important;
 }
 
 /* @media screen and (min-device-width: 1020px) and (max-device-width: 1580px) { 

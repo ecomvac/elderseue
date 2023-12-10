@@ -13,6 +13,11 @@ const AdminDashBoardElderliesTables = ({tableData}) => {
         {
             title: 'ELDERLY',
             key: "id",
+            onCell:(record, rowIndex) => {
+                return {
+                    onClick: (event) => {handelClick(record, rowIndex)}, // click row
+                };
+                },
             render: (row) => (
                 <button onClick={()=>handelClick(row)} className='w-full  cursor-pointer'>
 
@@ -22,6 +27,11 @@ const AdminDashBoardElderliesTables = ({tableData}) => {
         },
         {
             title: 'MANAGED BY ',
+            onCell:(record, rowIndex) => {
+                return {
+                    onClick: (event) => {handelClick(record, rowIndex)}, // click row
+                };
+                },
             render: (row) => <button onClick={()=>handelClick(row)} className='w-full  cursor-pointer'>
                 <span className='text-[16px] font-[400] text-secondary2'>{row.MANAGEDBY}</span>,
             </button>
@@ -29,6 +39,11 @@ const AdminDashBoardElderliesTables = ({tableData}) => {
         },
         {
             title: 'ALERTS',
+            onCell:(record, rowIndex) => {
+                return {
+                    onClick: (event) => {handelClick(record, rowIndex)}, // click row
+                };
+                },
             key: "id",
             render: (row) => (<button onClick={()=>handelClick(row)} className='w-full  cursor-pointer'>
                 <AdminDashBoardElderliesTablesAlerts data={row}/>
@@ -38,6 +53,11 @@ const AdminDashBoardElderliesTables = ({tableData}) => {
         {
             title: '',
             key: "id",
+            onCell:(record, rowIndex) => {
+                return {
+                    onClick: (event) => {handelClick(record, rowIndex)}, // click row
+                };
+                },
             render: (row) => (<button onClick={()=>handelClick(row)} className='w-full  cursor-pointer'>
                 <Icon icon="basil:share-box-outline"  className='text-[20px] cursor-pointer text-secondary2 hover:text-[#0070F0]' />
             </button>

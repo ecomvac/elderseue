@@ -50,6 +50,11 @@ const AlertsTable = ({tableData}) => {
         {
             title: 'ALERT',
             key: "id",
+            onCell:(record, rowIndex) => {
+                return {
+                    onClick: (event) => {handelClick(record, rowIndex)}, // click row
+                };
+                },
             render: (row) => (<div onClick={()=>handelClick(row)} className='w-full  cursor-pointer'>
                 <Alerts row={row} />
             </div>
@@ -57,6 +62,11 @@ const AlertsTable = ({tableData}) => {
         },
         {
             title: 'ALERT TYPE',
+            onCell:(record, rowIndex) => {
+                return {
+                    onClick: (event) => {handelClick(record, rowIndex)}, // click row
+                };
+                },
             render: (row) =><button onClick={()=>handelClick(row)} className='w-full  cursor-pointer'> 
                 <span className='text-[16px] font-[400] capitalize text-dark-black/80'>{row.alert}</span>
                 </button>,
@@ -64,6 +74,11 @@ const AlertsTable = ({tableData}) => {
         },
         {
             title: 'DATE',
+            onCell:(record, rowIndex) => {
+                return {
+                    onClick: (event) => {handelClick(record, rowIndex)}, // click row
+                };
+                },
             render: (row) =><button onClick={()=>handelClick(row)} className='w-full  cursor-pointer'> 
             <span className='text-[16px] font-[400] text-dark-black/80'>{row.DATE}</span>
             </button>,
@@ -72,6 +87,11 @@ const AlertsTable = ({tableData}) => {
         {
             title: 'ACTION',
             key: "id",
+            onCell:(record, rowIndex) => {
+                return {
+                    onClick: (event) => {handelClick(record, rowIndex)}, // click row
+                };
+                },
             render: (row) => (
                 <Tooltip title="View">
                     <button onClick={() => {navigate(`/support-agent/dashboard/elderly/${row.id}`);setBreadCrumb({title:"Alerts",url:"/support-agent/dashboard"})}}>

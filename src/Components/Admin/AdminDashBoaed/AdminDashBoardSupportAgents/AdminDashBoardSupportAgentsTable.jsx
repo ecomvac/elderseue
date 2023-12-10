@@ -12,31 +12,51 @@ const AdminDashBoardSupportAgentsTable = ({ tableData }) => {
         {
             title: 'SUPPORT AGENT',
             key: "id",
+            onCell:(record, rowIndex) => {
+                return {
+                    onClick: (event) => {handelClick(record, rowIndex)}, // click row
+                };
+                },
             render: (row) => (
-                <button onClick={() => handelClick(row.id)}>
+                <button >
                     <AdminFiled data={row} />
                 </button>
             )
         },
         {
             title: 'CLOSED CASES',
-            render: (row) => <button onClick={() => handelClick(row.id)}>
+            onCell:(record, rowIndex) => {
+                return {
+                    onClick: (event) => {handelClick(record, rowIndex)}, // click row
+                };
+                },
+            render: (row) => <button>
                 <span className='text-[16px] cursor-pointer font-[400] text-secondary2'>{row.CLOSEDCASES}</span>
             </button>,
             sorter: (a, b) => a.CLOSEDCASES - b.CLOSEDCASES,
         },
         {
             title: 'RATING',
-            render: (row) => <button onClick={() => handelClick(row.id)}>
+            onCell:(record, rowIndex) => {
+                return {
+                    onClick: (event) => {handelClick(record, rowIndex)}, // click row
+                };
+                },
+            render: (row) => <button >
                 <span className='text-[16px] font-[400] text-secondary2'>{row.RATING}</span>
             </button>,
             sorter: (a, b) => a.RATING - b.RATING,
         },
         {
             title: 'COMMENTS',
+            onCell:(record, rowIndex) => {
+                return {
+                    onClick: (event) => {handelClick(record, rowIndex)}, // click row
+                };
+                },
             key: "id",
             render: (row) => (
-                <button onClick={() => handelClick(row.id)}>
+                <button >
                     <div className=' flex items-center gap-1'>
                         <Icon icon="basil:chat-outline" className='text-[20px]' />
                         <span>{row.COMMENTS}</span>
@@ -46,8 +66,8 @@ const AdminDashBoardSupportAgentsTable = ({ tableData }) => {
             )
         },
     ];
-    const handelClick = (id) => {
-        navigate(`/admin/dashboard/Support-Agents/${id}`)
+    const handelClick = (record) => {
+        navigate(`/admin/dashboard/Support-Agents/${record.id}`)
         setBreadCrumb({title:"Dashboard",url:"/admin/dashboard"})
     }
 
