@@ -604,3 +604,10 @@ font-size: 16px !important;
       zoom: 80% !important;
     }
 } */
+
+
+  @media only screen and (min-width:1020px) and (max-width: 1580px) {
+ #add_zoom{
+      zoom: 80% !important;
+    }
+  }

@@ -19,7 +19,7 @@ const SuperAdminDashboardLayout = () => {
         <div className='bg-[#F4F7FE] w-full min-h-[100vh] '>
             {/* Admin dashboard outlet create */}
             <DashboardNav name={"Jeos Sola"} user="Super Admin" role={"superAdmin"}/>
-            <div className='xl:px-[30px] px-4 add_zoom'>
+            <div className='xl:px-[30px] px-4 '>
                 <Outlet></Outlet>
             </div>
         </div>
