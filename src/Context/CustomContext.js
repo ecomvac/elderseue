@@ -6,8 +6,8 @@ const SidebarContextProvider = ({ children }) => {
   const [innerOverView, setinnerOverView] = useState(true)
   const [activeTrend, setActiveTrend] = useState({title:"Fall Detection", index:1})
 
-  // ----------------set single elderly condition------------
-  const [elderlyPossition,setelderlyPossition]=useState('')
+  // --------------show notification tab------------
+  const [showNotificationTab,setShowNotificationTab]=useState(false)
 
   // -------------inner device show---------------
   const [deviceInner,setDeviceInner]=useState('');
@@ -27,12 +27,13 @@ const SidebarContextProvider = ({ children }) => {
     innerOverView,
     activeTrend,
     setActiveTrend,
-    elderlyPossition,
-    setelderlyPossition,
     sidebarShow,
     setSidebarShow,
     setDeviceInner,
-    deviceInner
+    deviceInner,
+    setShowNotificationTab,
+    showNotificationTab
+
   }
 
   return (

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Customers from './Customers/Customers';
 import Notifications from './Notifications/Notifications';
 import Devices from './Devices/Devices';
@@ -11,9 +11,16 @@ import Report from './Report/Report';
 import InnerAssistant from './Devices/InnerAssistant/InnerAssistant';
 import InnerWave from './Devices/InnerWave/InnerWave';
 const SingleElderly = ({userId}) => {
-    const { innerOverView, deviceInner } = useContext(SidebarContext)
-    const [activeTab, setActiveTab] = useState('Overview')
-
+    const { innerOverView, deviceInner,showNotificationTab } = useContext(SidebarContext)
+    const [activeTab, setActiveTab] = useState('')
+    
+   useEffect(()=>{
+    if(showNotificationTab){
+        setActiveTab('Notifications')
+    }else{
+        setActiveTab('Overview')
+    }
+   },[showNotificationTab])
     
     const tabs = [
         {
