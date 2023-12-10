@@ -11,8 +11,8 @@ const TableActions = ({ data, removeMember, setMemberId }) => {
     };
     const content = (
         <div className=" w-[190px]">
-            {data.role === 'admin' ? '' : <button className=" text-sm flex  w-full items-start rounded-[10px] font-medium text-light-black hover:bg-primary/10 hover:text-[#9039FF] py-3 px-5">Make Admin</button>}
-            <button onClick={() => { setDeleteModal(true);; setPopupShow(false); setMemberId(data?.id) }} className=" text-sm w-full flex  items-start rounded-[10px] font-medium text-light-black hover:bg-danger/10 hover:text-danger py-3 px-5">Delete Member</button>
+            <button disabled={data.role === 'admin'} className={`${data.role==='admin'&&'cursor-not-allowed'} text-sm flex  w-full items-start rounded-[10px] font-medium text-light-black hover:bg-primary/10 hover:text-[#9039FF] py-3 px-5`}>Make Admin</button>
+            <button disabled={data.role === 'admin'} onClick={() => { setDeleteModal(true);; setPopupShow(false); setMemberId(data?.id) }} className={`${data.role==='admin'&&'cursor-not-allowed'} text-sm w-full flex  items-start rounded-[10px] font-medium text-light-black hover:bg-danger/10 hover:text-danger py-3 px-5`}>Delete Member</button>
         </div>
     );
 
