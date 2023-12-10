@@ -1,11 +1,13 @@
 import { Icon } from '@iconify/react';
-import React from 'react'
+import React, { useContext } from 'react'
 import AdminFiled from '../../../../Shared/AdminFiled/AdminFiled';
 import CustomTable2 from '../../../../Shared/Table/CustomTable2';
 import AdminDashBoardElderliesTablesAlerts from './AdminDashBoardElderliesTablesAlerts';
 import { useNavigate } from 'react-router-dom';
+import { SidebarContext } from '../../../../Context/CustomContext';
 
 const AdminDashBoardElderliesTables = ({tableData}) => {
+    const {setBreadCrumb} = useContext(SidebarContext)
     const navigate = useNavigate()
     const columns = [
         {
@@ -45,6 +47,7 @@ const AdminDashBoardElderliesTables = ({tableData}) => {
 
     const handelClick = (record) => {
         navigate(`/admin/dashboard/elderly/${record?.id}`)
+        setBreadCrumb({title:"Dashboard",url:"/admin/dashboard"})
     }
   return (
     <div>

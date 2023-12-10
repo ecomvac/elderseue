@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import AdminFiled from '../../../../Shared/AdminFiled/AdminFiled';
 import ElderlyTableAction from './ElderlyTableAction';
 import CustomTable from '../../../../Shared/Table/CustomTable';
 import { useNavigate } from 'react-router-dom';
+import { SidebarContext } from '../../../../Context/CustomContext';
 
 const ElderlyTable = ({tableData,role}) => {
     const navigate = useNavigate()
+    const {setBreadCrumb} = useContext(SidebarContext)
     const columns = [
         {
             title: 'ELDERLY',
@@ -45,7 +47,7 @@ const ElderlyTable = ({tableData,role}) => {
         {
             title: 'PROBLEM',
             responsive: ['xl'],
-            render: (row) =><button onClick={()=>handelClick(row)} className='w-full  cursor-pointer'>
+            render: (row) =><button onClick={()=>handelClick(row)} className='w-full h-full cursor-pointer'>
                  <span className=' text-base font-normal text-text-secondary'>{row.PROBLEM}</span>
                  </button>
         },
@@ -60,6 +62,7 @@ const ElderlyTable = ({tableData,role}) => {
 
     const handelClick = (record) => {
         navigate(role==="support-agent" ? `/support-agent/dashboard/elderly/${record?.id}`: `/admin/dashboard/elderly/${record?.id}`)
+        setBreadCrumb(role==="support-agent" ? {title:"Elderly",url:"/support-agent/dashboard/elderly"} : {title:"Elderly",url:"/admin/dashboard/elderly"})
     }
 
 

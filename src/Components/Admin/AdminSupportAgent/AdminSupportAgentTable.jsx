@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import AdminSupportAgentTableAction from './AdminSupportAgentTableAction';
 import AdminFiled from '../../../Shared/AdminFiled/AdminFiled';
 import CustomTable from '../../../Shared/Table/CustomTable';
 import { useNavigate } from 'react-router-dom';
+import { SidebarContext } from '../../../Context/CustomContext';
 
 const AdminSupportAgentTable = ({ tableData }) => {
     const navigate = useNavigate()
+    const {setBreadCrumb} = useContext(SidebarContext)
     const columns = [
         {
             title: 'SUPPORT AGENT',
@@ -61,6 +63,7 @@ const AdminSupportAgentTable = ({ tableData }) => {
     ];
     const handelClick = (id) => {
         navigate(`${id}`)
+        setBreadCrumb({title:"Support Agents",url:"/admin/dashboard/Support-Agents"})
     }
     return (
         <div>
