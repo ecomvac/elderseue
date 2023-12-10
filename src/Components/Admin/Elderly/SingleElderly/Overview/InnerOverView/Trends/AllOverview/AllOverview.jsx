@@ -19,9 +19,13 @@ const AllOverview = ({ trendsData, chartData }) => {
 
 
     return (
-        <div id='add_zoom' className='xl:flex  rounded-b-[30px]'>
-            <div className='w-full xl:w-1/3 '><OverviewTrends scrollToSecond={scrollToSecond} setHandleTrendClick={setHandleTrendClick} overviewData={trendsData}></OverviewTrends></div>
-            <div className='w-full xl:w-2/3  border-l mt-0 xl:-mt-[150px] h-[100vh] second  overflow-y-auto'><OverViewChart handleTrendClick={handleTrendClick} data={chartData}></OverViewChart></div>
+        <div className='xl:flex  rounded-b-[30px]'>
+            <div id='add_zoom_90' className='w-full xl:w-1/3 '>
+                <OverviewTrends scrollToSecond={scrollToSecond} setHandleTrendClick={setHandleTrendClick} overviewData={trendsData}></OverviewTrends>
+            </div>
+            <div className='md:h-[120vh] xxl:h-[95vh] xl:w-2/3  border-l mt-0 xl:-mt-[150px]  second  overflow-y-auto'>
+                <OverViewChart handleTrendClick={handleTrendClick} data={chartData}></OverViewChart>
+            </div>
         </div>
     );
 };
