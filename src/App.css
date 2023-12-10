@@ -239,7 +239,6 @@ body {
 }
 
 
-/* -------------------single Elderly tabs---------------------- */
 
 
 /* -------------------devices tabs---------------------- */
@@ -405,7 +404,7 @@ color: rgba(157, 158, 163, 0.8) !important;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgb(190, 190, 190);
+  background: rgb(245, 244, 244);
   border-radius: 10px;
 }
 
