@@ -1,21 +1,25 @@
 import React, { useContext, useState} from 'react';
 import { Icon } from '@iconify/react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { SidebarContext } from '../../Context/CustomContext';
 
 const Notification = ({ filterNotificationData,role }) => {
-    const{setShowNotificationTab}=useContext(SidebarContext)
-    
+    const{setShowNotificationTab,setBreadCrumb}=useContext(SidebarContext)
+    const path = useLocation();
     const [parPage,setPaePage]= useState(4)
 
     const navigate = useNavigate()
 
+    console.log(path)
+
     const handleNavigateNotificaitonDetails = (userId) => {
         if (role === 'supportAgent') {
             navigate(`/support-agent/dashboard/elderly/${userId}`)
+            setBreadCrumb({title:`${path.pathname.slice(25,path.pathname.length)==="" ? "Alerts" :path.pathname.slice(24,path.pathname.length)}`,url:`${path.pathname}`})
         }
         if (role === 'admin') {
             navigate(`/admin/dashboard/elderly/${userId}`)
+            setBreadCrumb({title:`${path.pathname.slice(18,path.pathname.length)==="" ? "dashboard" :path.pathname.slice(17,path.pathname.length)}`,url:`${path.pathname}`})
         }
         if (role === 'superAdmin') {
             // navigate(`/support-agent/dashboard/user/${id}`)

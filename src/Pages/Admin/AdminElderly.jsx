@@ -50,7 +50,7 @@ const AdminElderly = () => {
 
       {/* =============Admin Support Agent data table============== */}
       <div className=" grid grid-cols-1"> 
-        <ElderlyTable tableData={Elderlies} />
+        <ElderlyTable tableData={Elderlies}/>
       </div>
     </div>
   </div>
