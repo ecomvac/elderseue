@@ -11,8 +11,8 @@ const TableActions = ({ data, removeMember, setMemberId }) => {
     };
     const content = (
         <div className=" w-[190px]">
-            <button disabled={data.role === 'admin'} className={`${data.role==='admin'&&'cursor-not-allowed'} text-sm flex  w-full items-start rounded-[10px] font-medium text-light-black hover:bg-primary/10 hover:text-[#9039FF] py-3 px-5`}>Make Admin</button>
-            <button disabled={data.role === 'admin'} onClick={() => { setDeleteModal(true);; setPopupShow(false); setMemberId(data?.id) }} className={`${data.role==='admin'&&'cursor-not-allowed'} text-sm w-full flex  items-start rounded-[10px] font-medium text-light-black hover:bg-danger/10 hover:text-danger py-3 px-5`}>Delete Member</button>
+            <button disabled={data.role === 'admin'} className={`${data.role === 'admin' && 'cursor-not-allowed'} text-sm flex  w-full items-start rounded-[10px] font-medium text-light-black hover:bg-primary/10 hover:text-[#9039FF] py-3 px-5`}>Make Admin</button>
+            <button disabled={data.role === 'admin'} onClick={() => { setDeleteModal(true);; setPopupShow(false); setMemberId(data?.id) }} className={`${data.role === 'admin' && 'cursor-not-allowed'} text-sm w-full flex  items-start rounded-[10px] font-medium text-light-black hover:bg-danger/10 hover:text-danger py-3 px-5`}>Delete Member</button>
         </div>
     );
 
@@ -21,7 +21,7 @@ const TableActions = ({ data, removeMember, setMemberId }) => {
             <div>
                 <div>
                     <Popover open={popupShow} onOpenChange={handleOpenChange} content={content} placement="leftTop" trigger="click">
-                        <button className=" hover:bg-primary/10 rounded-full w-[40px] h-[40px] flex items-center justify-center"><Icon icon="basil:other-2-outline" className=" text-[35px]" /></button>
+                        <button disabled={data?.role === 'admin'} className={` hover:bg-primary/10 rounded-full w-[40px] h-[40px] flex items-center justify-center ${data?.role === 'admin' && 'cursor-not-allowed'}`}><Icon icon="basil:other-2-outline" className=" text-[35px]" /></button>
                     </Popover>
                 </div>
             </div>
