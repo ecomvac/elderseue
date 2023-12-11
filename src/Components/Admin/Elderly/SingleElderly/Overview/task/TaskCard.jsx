@@ -92,7 +92,7 @@ const TaskCard = ({ task, message, setMessage, sentMessage, index }) => {
                 </>
               ) : (
                 <>
-                  <div className=" w-[30px] font-semibold mt-[-4px] text-[10px] h-[30px] border-[2px] z-30 border-white rounded-full flex items-center justify-center text-white bg-[#802DEA]">
+                  <div className=" w-[30px] font-semibold mt-[-4px] text-[10px] h-[30px] border-[2px] z-30 border-white rounded-full flex items-center justify-center text-white bg-primary">
                     PR
                   </div>
                 </>
