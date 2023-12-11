@@ -2,21 +2,21 @@ import React, { useEffect, useState } from 'react';
 import SectionWrapper from '../../../../../Shared/SectionWrapper';
 import { Icon } from '@iconify/react';
 import { Popover } from 'antd';
-import {Elderlies}from '../../../../../assets/admin/data'
+import { Elderlies } from '../../../../../assets/admin/data'
 import RecordedCallHistory from './RecordedCallHistory';
-const Status = ({userId}) => {
+const Status = ({ userId }) => {
     // --------recorded call history modal-------------
-    const [modalOPen,setModalOpen]=useState(false)
+    const [modalOPen, setModalOpen] = useState(false)
 
-    const [position,setPosition]=useState('')
+    const [position, setPosition] = useState('')
     const Id = Number(userId);
     useEffect(() => {
         const singleUser = Elderlies.find(user => user.id === Id);
-        if(singleUser){
+        if (singleUser) {
             setPosition(singleUser.possition)
         }
     }, [Id]);
-    
+
     const [selected, setSelected] = useState("");
     const data = ['Call To', '911', 'Family']
     const [popupShow, setPopupShow] = useState(false);
@@ -26,7 +26,7 @@ const Status = ({userId}) => {
     };
 
     const content = (
-        <div className=" w-[135px] p-2 max-h-[150px] overflow-y-scroll">
+        <div className=" w-[135px] p-2 max-h-[150px] overflow-y-scroll -mt-2">
             {data.map((item, index) => (
                 <button
                     disabled={item === 'Call To'}
@@ -35,7 +35,7 @@ const Status = ({userId}) => {
                         setPopupShow(false);
                         setSelected(item)
                     }}
-                    className={`${item === "Call To" ? " cursor-not-allowed" : ""} text-sm w-full items-start rounded-[10px] font-medium text-light-black hover:bg-primary/10 hover:text-[#9039FF] flex  py-3 px-5`}
+                    className={`${item === "Call To" ? " hidden" : ""}  text-sm w-full items-start rounded-[10px] font-medium text-light-black hover:bg-primary/10 hover:text-[#9039FF] flex  py-3 px-5`}
                 >
                     {item}
                 </button>
@@ -130,7 +130,7 @@ const Status = ({userId}) => {
                                     </button>
                                 </Popover>
                             </div>
-                            <button onClick={()=>setModalOpen(true)} className='p-[7px] bg-primary/10 text-primary rounded-[10px] text-[19px]'><Icon icon="material-symbols:history" /></button>
+                            <button onClick={() => setModalOpen(true)} className='p-[7px] bg-primary/10 text-primary rounded-[10px] text-[19px]'><Icon icon="material-symbols:history" /></button>
                         </div>
                     </div>
                 </div>
