@@ -198,7 +198,7 @@ const MembersOverview = () => {
                            
                         </div>
                     </div>
-                    <div className='mt-[106px]'>
+                    <div className='mt-[56px]'>
                         <div className='mb-2.5 px-[35px] flex items-center justify-between'>
                             <span className='flex flex-col'>
                                 <span className='text-[28px] font-bold text-white'>01</span>

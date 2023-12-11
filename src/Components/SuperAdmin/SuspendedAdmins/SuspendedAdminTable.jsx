@@ -1,6 +1,6 @@
 import React from 'react'
 import AdminFiled from '../../../Shared/AdminFiled/AdminFiled';
-import CustomTable from '../../../Shared/Table/CustomTable';
+import CustomNotHoverTable from '../../../Shared/Table/CustomNotHoverTable';
 
 const SuspendedAdminTable = ({tableData}) => {
     const columns = [
@@ -38,7 +38,7 @@ const SuspendedAdminTable = ({tableData}) => {
 
   return (
     <div>
-        <CustomTable tableData={tableData} columns={columns} scroll={{x:"800px"}}/>
+        <CustomNotHoverTable tableData={tableData} columns={columns} scroll={{x:"800px"}}/>
     </div>
   )
 }

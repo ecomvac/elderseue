@@ -36,7 +36,7 @@ const MemberChat = () => {
     },
     {
       id: '06',
-      age: 85,
+      age: 70,
       name: 'Rahima',
       title: 'Elderly'
     },
@@ -154,7 +154,7 @@ const MemberChat = () => {
     },
   };
   return (
-    <div className='h-[459px]'>
+    <div className='h-[355px]'>
       <Column {...config} />
     </div>
   );
