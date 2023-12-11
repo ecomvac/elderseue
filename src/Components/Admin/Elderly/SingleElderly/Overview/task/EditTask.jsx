@@ -114,9 +114,9 @@ const AddTask = ({ modalOPen, setModalOpen,task }) => {
             Task Type
           </label>
           <CustomSelect
-            width={"w-[250px]"}
+            width={"max-w-[520px]"}
             className={
-              " rounded-[16px] w-[250px] text-base outline-none text-text-primary h-[50px] border-[1px] focus:border-primary "
+              " rounded-[16px] w-full text-base outline-none text-text-primary h-[50px] border-[1px] focus:border-primary "
             }
             selected={selected}
             setSelected={setSelected}

@@ -59,9 +59,7 @@ const TaskCard = ({ task, message, setMessage, sentMessage, index }) => {
             </div>
           </div>
           <div className=" flex items-center gap-2 text-[#0070F0]">
-            {(!showComment) ?
-              <button onClick={() => setShowComment(true)}><Icon icon="eva:message-square-outline" className=" text-[20px]" /></button> :
-              <button onClick={() => setShowComment(false)}><Icon icon="eva:message-square-outline" className=" text-[20px]" /></button>}
+            <button onClick={() => setShowComment((pre) => !pre)}><Icon icon="eva:message-square-outline" className=" text-[20px]" /></button>
             <h3 className=" text-[13px] font-medium">{task.message.length}</h3>
           </div>
         </div>
@@ -77,47 +75,46 @@ const TaskCard = ({ task, message, setMessage, sentMessage, index }) => {
       </div>
 
       <div className=" w-full h-[1px] bg-[#E7E8EA]"></div>
-      {
-        showComment ? <div className=" flex flex-col gap-5 mt-5 max-h-[120px] overflow-y-auto">
-          {task.message.map((mess, index) => (
-            <div key={index} className=" flex items-start gap-3">
-              <div>
-                {mess.user === "You" ? (
-                  <>
-                    <div className="w-[25px] h-[25px] overflow-hidden rounded-full">
-                      <img
-                        src="/images/user1.png"
-                        alt=""
-                        className="w-full h-full"
-                      />
-                    </div>
-                  </>
-                ) : (
-                  <>
-                    <div className=" w-[30px] font-semibold mt-[-4px] text-[10px] h-[30px] border-[2px] z-30 border-white rounded-full flex items-center justify-center text-white bg-[#802DEA]">
-                      PR
-                    </div>
-                  </>
-                )}
-              </div>
-              <div className="">
-                <div className="flex items-center gap-2">
-                  <h2 className=" text-[15px] font-medium text-text-primary">
-                    {mess.user}
-                  </h2>
-                  <div className="w-[5px] h-[5px] rounded-full bg-[#969BB3]"></div>{" "}
-                  <span className=" text-[13px] font-medium text-light-black">
-                    {mess.time}
-                  </span>
-                </div>
-                <p className=" text-sm font-normal text-[#666D90] mt-1">
-                  {mess.text}
-                </p>
-              </div>
+      <div className={`flex flex-col gap-5 mt-5 overflow-y-auto duration-500 ${showComment?'h-[120px] ':'h-0'}`}>
+        {task.message.map((mess, index) => (
+          <div key={index} className=" flex items-start gap-3">
+            <div>
+              {mess.user === "You" ? (
+                <>
+                  <div className="w-[25px] h-[25px] overflow-hidden rounded-full">
+                    <img
+                      src="/images/user1.png"
+                      alt=""
+                      className="w-full h-full"
+                    />
+                  </div>
+
+                </>
+              ) : (
+                <>
+                  <div className=" w-[30px] font-semibold mt-[-4px] text-[10px] h-[30px] border-[2px] z-30 border-white rounded-full flex items-center justify-center text-white bg-[#802DEA]">
+                    PR
+                  </div>
+                </>
+              )}
             </div>
-          ))}
-        </div> : <></>
-      }
+            <div className="">
+              <div className="flex items-center gap-2">
+                <h2 className=" text-[15px] font-medium text-text-primary">
+                  {mess.user}
+                </h2>
+                <div className="w-[5px] h-[5px] rounded-full bg-[#969BB3]"></div>{" "}
+                <span className=" text-[13px] font-medium text-light-black">
+                  {mess.time}
+                </span>
+              </div>
+              <p className=" text-sm font-normal text-[#666D90] mt-1">
+                {mess.text}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
 
 
       <div className=" flex items-center gap-4 mt-[18px]">

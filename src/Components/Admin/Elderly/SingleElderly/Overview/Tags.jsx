@@ -60,8 +60,8 @@ const Tags = () => {
       <div className=" p-5">
         <div className=" flex items-center justify-between">
           <h2 className=" text-2xl font-bold text-dark-black">Tags</h2>
-          <div>
-          <CustomSelect width={"w-[200px]"} className={"w-[200px] py-[8px] px-3 outline-none border-none text-primary bg-primary/10 rounded-[10px]"} selected={selected} setSelected={setSelected} data={dataSelete} />
+          <div className="">
+          <CustomSelect width={"max-w-[520px]"} className={"w-full py-[8px] px-3 outline-none border-none text-primary bg-primary/10 rounded-[10px]"} selected={selected} setSelected={setSelected} data={dataSelete} />
           </div>
         </div>
 
@@ -78,7 +78,7 @@ const Tags = () => {
           </form>
         </div>
       {/* ======Elderly category tags======= */}
-        <div>
+        <div className="max-h-[120px] overflow-y-auto">
           <div className=" flex items-center gap-2">
             <div className=" bg-[#E19438]/20 w-[30px] h-[30px] rounded-full flex items-center justify-center">
               <div className=" bg-[#E19438] w-[15px] h-[15px] rounded-full border-[3px] border-white"></div>
@@ -106,7 +106,7 @@ const Tags = () => {
           </div>
         </div>
         {/* ======system category tags======= */}
-        <div className=" mt-5">
+        <div className=" mt-5 max-h-[120px] overflow-y-auto">
           <div className=" flex items-center gap-2">
             <div className=" bg-[#5F78AD]/20 w-[30px] h-[30px] rounded-full flex items-center justify-center">
               <div className=" bg-[#5F78AD] w-[15px] h-[15px] rounded-full border-[3px] border-white"></div>
