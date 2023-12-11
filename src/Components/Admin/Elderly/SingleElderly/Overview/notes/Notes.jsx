@@ -5,7 +5,7 @@ import NotesCard from "./NotesCard";
 import AddNotes from "./AddNotes";
 
 const Notes = () => {
-  const [addNote,setAddNote] = useState(false)
+  const [addNote, setAddNote] = useState(false)
   const [notes, setNotes] = useState([
     {
       id: 1,
@@ -16,8 +16,8 @@ const Notes = () => {
   ]);
 
 
-  const deleteNotes=(id)=>{
-    const newNote = notes.filter((note)=>note.id !==id)
+  const deleteNotes = (id) => {
+    const newNote = notes.filter((note) => note.id !== id)
     setNotes(newNote)
   }
 
@@ -27,14 +27,14 @@ const Notes = () => {
         <div className="p-5">
           <div className=" flex items-center justify-between">
             <h2 className=" text-2xl font-bold text-dark-black">Notes</h2>
-            <button onClick={()=>setAddNote(true)} className="py-[8px] px-3 text-[13px] font-medium flex items-center justify-center gap-1 h-[37px] outline-none border-none text-primary bg-primary/10 rounded-[10px]">
+            <button onClick={() => setAddNote(true)} className="py-[8px] px-3 text-[13px] font-medium flex items-center justify-center gap-1 h-[37px] outline-none border-none text-primary bg-primary/10 rounded-[10px]">
               <Icon icon="ic:round-add" className=" text-[18px]" /> Add Note
             </button>
           </div>
 
-          <div className="mt-7 flex flex-col gap-1 max-h-[250px] overflow-y-auto">
+          <div className="mt-7 flex flex-col gap-1 max-h-[365px] overflow-y-auto">
             {notes.map((note, index) => (
-              <NotesCard key={index} note={note} deleteNotes={deleteNotes}/>
+              <NotesCard key={index} note={note} deleteNotes={deleteNotes} />
             ))}
           </div>
         </div>

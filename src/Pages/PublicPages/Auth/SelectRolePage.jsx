@@ -102,11 +102,10 @@ const SelectRolePage = () => {
                   <div
                     key={role.roll}
                     onClick={() => setActive(role.roll)}
-                    className={` gap-[12px] cursor-pointer hover:border-[3px] hover:border-primary rounded-[16px] flex items-center justify-start md:justify-center md:flex-col py-2 md:py-6 px-[10px] ${
-                      role.roll === active
-                        ? " border-[3px] shadow-shadowOne border-primary"
-                        : "border border-primary/25"
-                    }`}
+                    className={` gap-[12px] cursor-pointer hover:border-[3px] hover:border-primary rounded-[16px] flex items-center justify-start md:justify-center md:flex-col py-2 md:py-6 px-[10px] ${role.roll === active
+                      ? " border-[3px] shadow-shadowOne border-primary"
+                      : "border border-primary/25"
+                      }`}
                   >
                     <div className=" w-[53px] h-[53px] bg-[#F9F5FF] rounded-full flex items-center justify-center">
                       {role?.icon}
@@ -168,20 +167,20 @@ const SelectRolePage = () => {
                     })}
                   />
                   <div className=" absolute top-[27%] right-[10px]">
-                  <button type="button" onClick={() => setShow((pre) => !pre)}>
-                    {show ? (
-                      <Icon
-                        icon="ic:outline-visibility"
-                        className="text-[25px] text-black"
-                      />
-                    ) : (
-                      <Icon
-                        icon="mdi:visibility-off-outline"
-                        className="text-[25px] text-black"
-                      />
-                    )}
-                  </button>
-                </div>
+                    <button type="button" onClick={() => setShow((pre) => !pre)}>
+                      {show ? (
+                        <Icon
+                          icon="ic:outline-visibility"
+                          className="text-[25px] text-black"
+                        />
+                      ) : (
+                        <Icon
+                          icon="mdi:visibility-off-outline"
+                          className="text-[25px] text-black"
+                        />
+                      )}
+                    </button>
+                  </div>
                 </div>
 
                 <label className="label">
@@ -213,9 +212,9 @@ const SelectRolePage = () => {
           </div>
         </div>
       </div>
-      <div className="hidden relative md:h-[100vh] w-full h-full md:w-[50%] md:flex items-center">
+      <div className="hidden relative -right md:h-[100vh] w-full h-full md:w-[50%] md:flex justify-end">
         <img
-          className="mx-auto h-full w-full object-content"
+          className=" h-full w-full object-cover"
           src={"/images/login_image.svg"}
           alt="logo"
         />
