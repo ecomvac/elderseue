@@ -41,7 +41,7 @@ const ElderliesOverviewPieCharts = ({ data }) => {
         startAngle: (-5 / 5) * Math.PI,
         endAngle: (0 / 5) * Math.PI,
         innerRadius: 0.60,
-        color: ['#ffffff', '#d3b0ff'],
+        color: ['#ffffff', '#9297B3'],
         label: {
             type: 'inner',
             offset: '-50%',

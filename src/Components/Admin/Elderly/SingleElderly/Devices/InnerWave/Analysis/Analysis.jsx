@@ -36,7 +36,7 @@ const Analysis = ({ waveData }) => {
                 <h2 className='text-text-primary text-2xl font-semibold'>Analysis</h2>
                 <div className=' w-[160px] bg-primary/20 rounded-[9px] p-1'>
                     {tabData.map((tab) => (
-                        <button onClick={() => setActive(tab.title)} key={tab.id} className={` w-[75px] py-2 px-5 font-normal text-[12px] rounded-[9px] ${tab.title === active ? " bg-text-primary text-white" : "text-[#8F6ABC]"}`}>{tab.title}</button>
+                        <button onClick={() => setActive(tab.title)} key={tab.id} className={` w-[75px] py-2 px-5 font-normal text-[12px] rounded-[9px] ${tab.title === active ? " bg-text-primary text-white" : "text-primary"}`}>{tab.title}</button>
                     ))}
                 </div>
             </div>

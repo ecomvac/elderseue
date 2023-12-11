@@ -23,8 +23,8 @@ const SuperAdminUserTableAction = ({data}) => {
     // =====Action button Edit Reset Delete=====
     const content = (
         <div className=" w-[175px] p-2">
-            <button onClick={()=>{setEdit(true);setPopupShow(false)}} className=" text-sm w-full items-start rounded-[10px] font-medium text-light-black hover:bg-primary/10 hover:text-[#9039FF] flex  py-3 px-5">Edit Details</button>
-            <button onClick={()=>{setResetMOdal(true);setPopupShow(false)}} className=" text-sm flex  w-full items-start rounded-[10px] font-medium text-light-black hover:bg-primary/10 hover:text-[#9039FF] py-3 px-5">Reset password</button>
+            <button onClick={()=>{setEdit(true);setPopupShow(false)}} className=" text-sm w-full items-start rounded-[10px] font-medium text-light-black hover:bg-primary/10 hover:text-[#252F67] flex  py-3 px-5">Edit Details</button>
+            <button onClick={()=>{setResetMOdal(true);setPopupShow(false)}} className=" text-sm flex  w-full items-start rounded-[10px] font-medium text-light-black hover:bg-primary/10 hover:text-[#252F67] py-3 px-5">Reset password</button>
             <button onClick={()=>{setDeleteModal(true);;setPopupShow(false)}} className=" text-sm w-full flex  items-start rounded-[10px] font-medium text-light-black hover:bg-danger/10 hover:text-danger py-3 px-5">Delete Admin</button>
         </div>
       );

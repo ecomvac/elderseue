@@ -18,7 +18,6 @@ const SupportAgentsElderlySinglePage = () => {
     }
   }, [Id]);
 
-  console.log(BreadCrumbData)
 
   return (
     <>
@@ -31,7 +30,7 @@ const SupportAgentsElderlySinglePage = () => {
         ]}
       />
       <div className="grid grid-cols-1 lg:mt-[-30px]">
-        <SingleElderly />
+        <SingleElderly userId={Id} />
       </div>
     </>
   );

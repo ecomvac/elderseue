@@ -80,10 +80,10 @@ const Tags = () => {
       {/* ======Elderly category tags======= */}
         <div className="max-h-[120px] overflow-y-auto">
           <div className=" flex items-center gap-2">
-            <div className=" bg-[#E19438]/20 w-[30px] h-[30px] rounded-full flex items-center justify-center">
-              <div className=" bg-[#E19438] w-[15px] h-[15px] rounded-full border-[3px] border-white"></div>
+            <div className=" bg-[#4683C4]/20 w-[30px] h-[30px] rounded-full flex items-center justify-center">
+              <div className=" bg-[#4683C4] w-[15px] h-[15px] rounded-full border-[3px] border-white"></div>
             </div>
-            <h2 className=" text-[13px] font-bold text-[#E19438]">
+            <h2 className=" text-[13px] font-bold text-[#4683C4]">
               Elderly Tags
             </h2>
           </div>
@@ -92,7 +92,7 @@ const Tags = () => {
               return (
                 <div
                   key={i}
-                  className="flex items-center gap-3 bg-[#E19438] rounded-full h-[37px] px-3"
+                  className="flex items-center gap-3 bg-[#4683C4] rounded-full h-[37px] px-3"
                 >
                   <span className="text-[13px] font-bold text-white">
                     {item.title}
@@ -108,10 +108,10 @@ const Tags = () => {
         {/* ======system category tags======= */}
         <div className=" mt-5 max-h-[120px] overflow-y-auto">
           <div className=" flex items-center gap-2">
-            <div className=" bg-[#5F78AD]/20 w-[30px] h-[30px] rounded-full flex items-center justify-center">
-              <div className=" bg-[#5F78AD] w-[15px] h-[15px] rounded-full border-[3px] border-white"></div>
+            <div className=" bg-[#662466]/20 w-[30px] h-[30px] rounded-full flex items-center justify-center">
+              <div className=" bg-[#662466] w-[15px] h-[15px] rounded-full border-[3px] border-white"></div>
             </div>
-            <h2 className=" text-[13px] font-bold text-[#5F78AD]">
+            <h2 className=" text-[13px] font-bold text-[#662466]">
             System Tags
             </h2>
           </div>
@@ -120,7 +120,7 @@ const Tags = () => {
               return (
                 <div
                   key={i}
-                  className="flex items-center gap-3 bg-[#5F78AD] rounded-full h-[37px] px-3"
+                  className="flex items-center gap-3 bg-[#662466] rounded-full h-[37px] px-3"
                 >
                   <span className="text-[13px] font-bold text-white">
                     {item.title}

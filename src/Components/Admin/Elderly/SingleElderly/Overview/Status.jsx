@@ -35,7 +35,7 @@ const Status = ({userId}) => {
                         setPopupShow(false);
                         setSelected(item)
                     }}
-                    className={`${item === "Call To" ? " cursor-not-allowed" : ""} text-sm w-full items-start rounded-[10px] font-medium text-light-black hover:bg-primary/10 hover:text-[#9039FF] flex  py-3 px-5`}
+                    className={`${item === "Call To" ? " cursor-not-allowed" : ""} text-sm w-full items-start rounded-[10px] font-medium text-light-black hover:bg-primary/10 hover:text-[#252F67] flex  py-3 px-5`}
                 >
                     {item}
                 </button>
@@ -47,18 +47,18 @@ const Status = ({userId}) => {
             <SectionWrapper>
                 <div className='px-[22px] py-6'>
                     <div id='add_zoom' style={{ backgroundImage: 'url("/images/satusImg.png")', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }} className={`mb-5 p-5 rounded-[17px] 
-                    ${position === 'good' && 'bg-primary'}
+                    ${position === 'good' && 'bg-Average'}
                     ${position === 'critical' && 'bg-[#F43E3E]'}
                     ${position === 'problem' && 'bg-[#627BFF]'}
-                    ${position === 'warning' && 'bg-[#FF8C3A]'}
+                    ${position === 'warning' && 'bg-Warning'}
                     
                     `}>
                         <div className='flex items-center gap-[14px]'>
                             <span className='p-4 rounded-full bg-white'>
-                                {position === 'good' && <Icon className='text-[22px] text-primary ' icon="iconamoon:check-bold" />}
+                                {position === 'good' && <Icon className='text-[22px] text-Average ' icon="iconamoon:check-bold" />}
                                 {position === 'critical' && <Icon className='text-[22px] text-[#F43E3E] ' icon="lucide:siren" />}
                                 {position === 'problem' && <Icon className='text-[22px] text-[#627BFF] ' icon="lucide:bug" />}
-                                {position === 'warning' && <Icon className='text-[22px] text-[#FF8C3A] ' icon="quill:warning" />}
+                                {position === 'warning' && <Icon className='text-[22px] text-Warning ' icon="quill:warning" />}
                             </span>
                             <span className='flex flex-col'>
                                 <span className='font-bold text-2xl text-white'>

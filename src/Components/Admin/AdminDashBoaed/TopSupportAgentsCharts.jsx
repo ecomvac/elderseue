@@ -13,7 +13,7 @@ const TopSupportAgentsCharts = ({ data }) => {
     yField: 'caseSolved',
     smooth: true,
     legend: false,
-    color: '#9039FF',
+    color: '#252F67',
     xAxis: {
       grid: {
         line: {
@@ -31,7 +31,7 @@ const TopSupportAgentsCharts = ({ data }) => {
       grid: {
         line: {
           style: {
-            stroke: '#9039FF',
+            stroke: '#252F67',
             lineWidth: 0,
             cursor: 'pointer',
           },
@@ -40,7 +40,8 @@ const TopSupportAgentsCharts = ({ data }) => {
     },
     areaStyle: () => {
       return {
-        fill: 'l(270) 0:#ffffff 0.5:#8f39ff67 1:#9039FF',
+        fill: 'l(270) 0:#ffffff 0.5:#D3D5E1 1:#252F67',
+        // fill: 'l(270) 0:#ffffff 0.5:#8f39ff67 1:#252F67',
       };
     },
     tooltip: {

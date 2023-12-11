@@ -54,7 +54,7 @@ const SettingsModal = ({ modalOPen, setModalOpen }) => {
                   background: 'transparent',
                 },
                 tracks: {
-                  background: `#9039FF`,
+                  background: `#252F67`,
                   borderRadius:"10px",
                 },
               }}
@@ -81,7 +81,7 @@ const SettingsModal = ({ modalOPen, setModalOpen }) => {
                   background: 'transparent',
                 },
                 tracks: {
-                  background: `#9039FF`,
+                  background: `#252F67`,
                   borderRadius:"10px",
                 },
               }}
@@ -108,11 +108,11 @@ const SettingsModal = ({ modalOPen, setModalOpen }) => {
                   background: 'transparent',
                 },
                 tracks: {
-                  background: `#9039FF`,
+                  background: `#252F67`,
                   borderRadius:"10px",
                 },
                 handle:{
-                    background: `#9039FF`,
+                    background: `#252F67`,
                     width:"10px"
                 }
               }}

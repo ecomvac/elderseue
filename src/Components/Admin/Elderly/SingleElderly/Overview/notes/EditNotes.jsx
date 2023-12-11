@@ -37,7 +37,7 @@ const EditNotes = ({note, modalOPen, setModalOpen }) => {
       setModalOpen={setModalOpen}
       handleSubmit={handleSubmit(onSubmit)}
       width={600}
-      title="Create New Note"
+      title="Edit Note"
       buttonText={"Create Note"}
     >
       <div className="flex flex-col items-start w-full mt-3">

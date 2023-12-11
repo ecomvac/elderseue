@@ -26,7 +26,7 @@ const Video = () => {
           </h1>
           <button
             onClick={() => setModalOpen(true)}
-            className="flex items-center bg-[#F4EBFF] text-[#9039FF] font-medium text-sm rounded-[10px] px-3 py-2 gap-[10px]"
+            className="flex items-center bg-primary/10 text-primary font-medium text-sm rounded-[10px] px-3 py-2 gap-[10px]"
           >
             <Icon icon="material-symbols:history" />
             <span>Recorded History</span>

@@ -41,7 +41,7 @@ const TopSupportAgents = () => {
 
             <div className=' w-[235px] bg-primary/20 rounded-[9px] p-1'>
                 {tabData.map((tab)=>(
-                    <button onClick={()=>setActive(tab.id)} key={tab.id} className={` w-[75px] py-2 px-5 font-normal text-[12px] rounded-[9px] ${tab.id===active ? " bg-text-primary text-white" :"text-[#8F6ABC]"}`}>{tab.title}</button>
+                    <button onClick={()=>setActive(tab.id)} key={tab.id} className={` w-[75px] py-2 px-5 font-normal text-[12px] rounded-[9px] ${tab.id===active ? " bg-text-primary text-white" :"text-primary"}`}>{tab.title}</button>
                 ))}
             </div>
         </div>

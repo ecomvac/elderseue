@@ -68,7 +68,7 @@ const OverViewChart = ({ data, handleTrendClick }) => {
         yField: 'value',
         smooth: true,
         legend: false,
-        color: '#9039FF',
+        color: '#252F67',
         xAxis: {
             grid: {
                 line: {
@@ -86,7 +86,7 @@ const OverViewChart = ({ data, handleTrendClick }) => {
             grid: {
                 line: {
                     style: {
-                        stroke: '#9039FF',
+                        stroke: '#252F67',
                         lineWidth: 0,
                         cursor: 'pointer',
                     },
@@ -94,7 +94,8 @@ const OverViewChart = ({ data, handleTrendClick }) => {
             },
         },
         areaStyle: () => ({
-            fill: 'l(270) 1:#9039FF 0.2:#fff',
+            // fill: 'l(270) 1:#D3D5E1 0.2:#fff',
+        fill: 'l(270) 0:#ffffff 0.5:#D3D5E1 1:#252F67',
         }),
         tooltip: {
             customContent: (title, items) => {
@@ -162,7 +163,7 @@ const OverViewChart = ({ data, handleTrendClick }) => {
                     <h1 className='text-[22px] mr-2.5 font-bold text-text-primary'>{data?.title}</h1>
                     <div className={`rounded-xl px-1.5  flex items-center 
                         ${(data?.category) === 'Critical' && 'bg-[#FF5959] '}
-                        ${(data?.category) === 'Average' && 'bg-[#01BE4F]'}
+                        ${(data?.category) === 'Average' && 'bg-Average'}
                         ${(data?.category) === 'Warning' && 'bg-[#EF9D00]'}
                     `}>
                         <span className='mr-1 text-white'>
@@ -223,29 +224,29 @@ const OverViewChart = ({ data, handleTrendClick }) => {
                 <div className='lg2:flex items-center md:flex  py-2'>
                     {/* ----------average-------------- */}
                     <div className='flex items-center gap-3'>
-                        <div className='w-3 h-6 justify-center bg-green-200 rounded-xl flex items-center'>
-                            <div className='w-1.5 h-4 rounded-2xl bg-green-600'></div>
+                        <div className='w-3 h-6 justify-center bg-Average/30 rounded-xl flex items-center'>
+                            <div className='w-1.5 h-4 rounded-2xl bg-Average'></div>
                         </div>
                         <div className='flex items-center lg2:mr-7 md:mr-7'>
                             <div>
                                 <p className='  text-text-secondary text-base font-medium'>Average</p>
                                 <p className='text-2xl font-bold text-text-primary'>17%</p>
                             </div>
-                            <Progress className='mr-2.5' type="circle" percent={16} showInfo={false} size={40} strokeWidth={13} strokeColor={'#01BE4F'} />
+                            <Progress className='mr-2.5' type="circle" percent={16} showInfo={false} size={40} strokeWidth={13} strokeColor={'#4cb585'} />
 
                         </div>
                     </div>
                     {/* -----------warning----------- */}
                     <div className='flex items-center gap-3 '>
-                        <div className='w-3 h-6 justify-center bg-[#FF974D]/30 rounded-xl flex items-center'>
-                            <div className='w-1.5 h-4 rounded-2xl bg-[#FF974D]'></div>
+                        <div className='w-3 h-6 justify-center bg-Warning/30 rounded-xl flex items-center'>
+                            <div className='w-1.5 h-4 rounded-2xl bg-Warning'></div>
                         </div>
                         <div className='flex items-center lg2:mr-7 md:mr-7 lg2:my-0 md:my-0 sm:my-2'>
                             <div>
                                 <p className=' text-text-secondary text-base font-medium'>Warning</p>
                                 <p className='text-2xl font-bold text-text-primary'>35%</p>
                             </div>
-                            <Progress className='mr-2.5' type="circle" percent={45} showInfo={false} size={40} strokeWidth={13} strokeColor={'#FF974D'} />
+                            <Progress className='mr-2.5' type="circle" percent={45} showInfo={false} size={40} strokeWidth={13} strokeColor={'#FAB515'} />
 
                         </div>
                     </div>

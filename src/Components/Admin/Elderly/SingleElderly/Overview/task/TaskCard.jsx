@@ -18,9 +18,9 @@ const TaskCard = ({ task, message, setMessage, sentMessage, index }) => {
       <div className=" flex items-center gap-1 justify-between">
         <h2
           className={`py-1 px-2 rounded-full ${task.TaskPriority === "Low Priority" &&
-            " bg-[#8EBF00]/10 text-[#8EBF00]"
+            " bg-Average/10 text-Average"
             } ${task.TaskPriority === "Medium Priority" &&
-            " bg-[#FF974D]/10 text-[#FF974D]"
+            " bg-Warning/10 text-Warning"
             } ${task.TaskPriority === "High Priority" &&
             " bg-[#FF5959]/10 text-[#FF5959]"
             }`}
@@ -36,7 +36,7 @@ const TaskCard = ({ task, message, setMessage, sentMessage, index }) => {
           {task.title}
         </h2>
         <div className="flex items-center mt-1 ">
-          <div className=" w-[28px] h-[28px] border-[2px] z-30 border-white rounded-full flex items-center justify-center text-white bg-[#802DEA]">
+          <div className=" w-[28px] h-[28px] border-[2px] z-30 border-white rounded-full flex items-center justify-center text-white bg-primary">
             <Icon icon="mingcute:check-fill" />
           </div>
           <div className=" w-[28px] ml-[-7px] h-[28px] z-20 border-[2px] border-white rounded-full flex items-center justify-center text-white bg-[#E7E8EA]">
@@ -54,7 +54,7 @@ const TaskCard = ({ task, message, setMessage, sentMessage, index }) => {
             <div className="w-[25px] h-[25px] overflow-hidden rounded-full">
               <img src="/images/user1.png" alt="" className="w-full h-full" />
             </div>
-            <div className=" ml-[-7px] w-[30px] font-semibold text-[10px] h-[30px] border-[2px] z-30 border-white rounded-full flex items-center justify-center text-white bg-[#802DEA]">
+            <div className=" ml-[-7px] w-[30px] font-semibold text-[10px] h-[30px] border-[2px] z-30 border-white rounded-full flex items-center justify-center text-white bg-primary">
               PR
             </div>
           </div>

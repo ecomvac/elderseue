@@ -38,7 +38,7 @@ const LogOutModal = ({
             <div className=" w-[110px] h-[110px] rounded-full border-[5px] border-dashed border-[#EDE5FF] bg-[#FAF6FF] flex items-center justify-center">
               <Icon
                 icon="line-md:log-out"
-                className="text-[45px] text-[#9039FF]"
+                className="text-[45px] text-[#252F67]"
               />
             </div>
           </div>

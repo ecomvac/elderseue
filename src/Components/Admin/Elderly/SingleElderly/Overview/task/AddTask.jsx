@@ -135,18 +135,18 @@ const AddTask = ({ modalOPen, setModalOpen }) => {
           <button
             onClick={() => setPriorityActive("Low Priority")}
             type="button"
-            className={`text-[#8EBF00] text-[16px] py-2 px-3 rounded-full
-            font-medium flex items-center gap-2 hover:bg-[#8EBF00] hover:text-white group ${
+            className={`text-Average text-[16px] py-2 px-3 rounded-full
+            font-medium flex items-center gap-2 hover:bg-Average hover:text-white group ${
               priorityActive === "Low Priority"
-                ? "bg-[#8EBF00] text-white"
-                : "bg-[#8EBF00]/20 text-[#8EBF00]"
+                ? "bg-Average text-white"
+                : "bg-Average/20 text-Average"
             }`}
           >
             <div
               className={`w-[18px] h-[18px] rounded-full flex items-center justify-center border-2 border-dashed  group-hover:border-white ${
                 priorityActive === "Low Priority"
                   ? " border-white"
-                  : "border-[#8EBF00]"
+                  : "border-Average"
               }`}
             ></div>
             <h2 className="mt-[-3px]">Low Priority</h2>
@@ -155,25 +155,25 @@ const AddTask = ({ modalOPen, setModalOpen }) => {
           <button
             onClick={() => setPriorityActive("Medium Priority")}
             type="button"
-            className={`text-[#FF974D] text-[16px] py-2 px-3 rounded-full
-            font-medium flex items-center gap-2 hover:bg-[#FF974D] hover:text-white group ${
+            className={`text-Warning text-[16px] py-2 px-3 rounded-full
+            font-medium flex items-center gap-2 hover:bg-Warning hover:text-white group ${
               priorityActive === "Medium Priority"
-                ? "bg-[#FF974D] text-white"
-                : "bg-[#FF974D]/20 text-[#FF974D]"
+                ? "bg-Warning text-white"
+                : "bg-Warning/20 text-Warning"
             }`}
           >
             <div
               className={`w-[18px] h-[18px] rounded-full flex items-center justify-center border-2 border-dashed  group-hover:border-white ${
                 priorityActive === "Medium Priority"
                   ? " border-white"
-                  : "border-[#FF974D]"
+                  : "border-Warning"
               }`}
             >
               <div
                 className={`w-[5px] h-[5px] rounded-full  group-hover:bg-white ${
                   priorityActive === "Medium Priority"
                     ? " bg-white"
-                    : "bg-[#FF974D]"
+                    : "bg-Warning"
                 }`}
               ></div>
             </div>

@@ -12,11 +12,11 @@ const AdminDashBoardElderliesTablesAlerts = ({ data }) => {
                 </div>
         }
                 {   data.WARNING!=="00" &&
-                    <div className=" py-1 px-3 bg-[#FF974D]/10 flex items-center gap-1 rounded-full">
-                    <div className=" bg-[#FF974D] h-[15px] w-[15px] rounded-full border-[4px] border-white">
+                    <div className=" py-1 px-3 bg-Warning/10 flex items-center gap-1 rounded-full">
+                    <div className=" bg-Warning h-[15px] w-[15px] rounded-full border-[4px] border-white">
         
                     </div>
-                    <h3 className=" text-[#FF974D] font-bold text-[13px]">{data.WARNING}</h3>
+                    <h3 className=" text-Warning font-bold text-[13px]">{data.WARNING}</h3>
                 </div>
         }
                 {   data.CRITICAL!=="00" &&

@@ -57,8 +57,8 @@ const OverviewTrends = ({ overviewData, setHandleTrendClick, scrollToSecond }) =
                                 {
                                     activeTrend.title === trend.title ? <Icon className='text-primary text-xl' icon="iconamoon:arrow-right-2-bold" /> :
                                         <div className={`h-[10px] w-[10px] rounded-full
-                        ${(trend?.category) === 'Average' && 'bg-[#01BE4F]'} 
-                        ${(trend?.category) === 'Warning' && 'bg-[#FF974D]'}
+                        ${(trend?.category) === 'Average' && 'bg-Average'} 
+                        ${(trend?.category) === 'Warning' && 'bg-Warning'}
                         ${(trend?.category) === 'Critical' && 'bg-[#FF5959]'}
                         `}>
 

@@ -19,7 +19,7 @@ const Profile = () => {
                             </span>
                         </div>
                         <div>
-                            <CustomButton className={`bg-secondLightPrimary`}>
+                            <CustomButton className={`bg-primary/10`}>
                                 <span className='flex items-center text-primary  h-[33px] '>
                                     <span><Icon className='text-normal md:text-[19px]' icon="lucide:phone-call" /></span>
                                     <span>Call</span>

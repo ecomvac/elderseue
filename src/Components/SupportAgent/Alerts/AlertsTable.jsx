@@ -20,8 +20,8 @@ const Alerts = ({ row }) => {
                 }
                 {
                     row.alert === "Warning" && (
-                        <div className={`w-[40px] h-[40px] rounded-[10px] flex items-center justify-center bg-[#FF974D]/10`}>
-                            <Icon icon="ri:alert-line" className="text-[20px] text-[#FF974D]" />
+                        <div className={`w-[40px] h-[40px] rounded-[10px] flex items-center justify-center bg-Warning/10`}>
+                            <Icon icon="ri:alert-line" className="text-[20px] text-Warning" />
                         </div>
                     )
                 }

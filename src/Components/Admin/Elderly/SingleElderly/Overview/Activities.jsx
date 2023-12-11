@@ -95,7 +95,7 @@ const Activities = () => {
         <div className=" mt-[30px] flex items-start">
           <div>
             <div className=" flex items-center w-[60px] gap-1 justify-center flex-col">
-              <div className=" w-[36px] h-[36px] mt-1 relative rounded-full flex items-center  justify-center bg-success">
+              <div className=" w-[36px] h-[36px] mt-1 relative rounded-full flex items-center  justify-center bg-Average">
                 <Icon
                   icon="lets-icons:check-fill"
                   className=" text-[25px] text-white"
@@ -104,7 +104,7 @@ const Activities = () => {
               <div className={` h-[40px] w-[2px] mb-1 rounded-full bg-[#E8E9EE]`} />
             </div>
             <div className=" flex items-center w-[60px] gap-1 justify-center flex-col">
-              <div className=" w-[36px] h-[36px] relative rounded-full flex items-center  justify-center bg-[#FF974D]">
+              <div className=" w-[36px] h-[36px] relative rounded-full flex items-center  justify-center bg-Warning">
                 <Icon
                   icon="lets-icons:check-fill"
                   className=" text-[25px] text-white"
@@ -113,7 +113,7 @@ const Activities = () => {
               <div className={` h-[40px] w-[2px] mb-1 rounded-full bg-[#E8E9EE]`} />
             </div>
             <div className=" flex items-center w-[60px] gap-1 justify-center flex-col">
-              <div className=" w-[36px] h-[36px] relative rounded-full flex items-center  justify-center bg-success">
+              <div className=" w-[36px] h-[36px] relative rounded-full flex items-center  justify-center bg-Average">
                 <Icon
                   icon="lets-icons:check-fill"
                   className=" text-[25px] text-white"

@@ -20,7 +20,7 @@ const AlartsSort = ({ selected, setSelected, data, width, bg }) => {
             setPopupShow(false);
             setSelected(item)
           }}
-          className=" text-sm w-full items-start rounded-[10px] font-medium text-light-black hover:bg-primary/10 hover:text-[#9039FF] flex  py-3 px-5"
+          className=" text-sm w-full items-start rounded-[10px] font-medium text-light-black hover:bg-primary/10 hover:text-[#252F67] flex  py-3 px-5"
         >
           {item}
         </button>

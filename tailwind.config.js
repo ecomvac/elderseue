@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#9039FF",
+        primary: "#252F67",
         secondLightPrimary: "#F4EBFF",
         "text-primary": "#1B2559",
         "light-primary": "#8ABDF8",
@@ -15,9 +15,9 @@ module.exports = {
         danger: "#FF4747",
         lightGray: "#8386A8",
         black: "#3D4854",
-        success: "#01BE4F",
-        Average: "#58CB6C",
-        Warning: "#FF974D",
+        success: "#4cb585",
+        Average: "#4cb585",
+        Warning: "#FAB515",
         Critical: "#FF5959",
         white: "#fff",
         "sidebar-bg": "linear-gradient(90deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.00) 104.88%)",

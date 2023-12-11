@@ -9,7 +9,7 @@ const BioVitaSammary = ({ waveData }) => {
         yField: 'value',
         smooth: true,
         legend: false,
-        color: '#FF974D',
+        color: '#FAB515',
         xAxis: {
             grid: {
                 line: {
@@ -46,7 +46,7 @@ const BioVitaSammary = ({ waveData }) => {
 
         },
         areaStyle: () => ({
-            fill: 'l(270) 1:#FF974D 0.2:#fff',
+            fill: 'l(270) 1:#FAB515 0.2:#fff',
         }),
         tooltip: {
             customContent: (title, items) => {

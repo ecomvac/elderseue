@@ -26,7 +26,7 @@ const ElderlyTrends = () => {
           <div className=' grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8'>
             {/* -----------------------average trends---------------------- */}
             <div className=''>
-              <div className=' bg-[#58CB6C] w-full h-[4px] rounded-[18px]'></div>
+              <div className=' bg-Average w-full h-[4px] rounded-[18px]'></div>
               <div className='mt-[8px]'>
                 <h2 className=' text-[19px] font-bold text-text-primary'>Average</h2>
                 <p className=' text-[13px] font-normal text-text-primary/60 min-h-[40px]'>Everything is stable with elderly trends.</p>
@@ -38,7 +38,7 @@ const ElderlyTrends = () => {
                       <button onClick={() => handleTrend({ title: trend?.title, index: trend.id })}>
                         <div className='border rounded-[18px] p-[14px]'>
                           <div className='flex items-center gap-2 pb-2.5 border-b'>
-                            <span className='bg-[#58CB6C] text-white p-2.5 rounded-[10px] text-[19px]'>
+                            <span className='bg-Average text-white p-2.5 rounded-[10px] text-[19px]'>
                               {trend.title === 'Fall Detection' && (<Icon icon="material-symbols:falling-rounded" />)}
                               {trend.title === 'Sleep Score' && (<Icon icon="icon-park-solid:sleep" />)}
                               {trend.title === 'Abnormal Sleep' && (<Icon icon="material-symbols-light:respiratory-rate-rounded" />)}
@@ -114,7 +114,7 @@ const ElderlyTrends = () => {
                               </span>
                             </span>
                             <span className='flex flex-col'>
-                              <span className='flex items-center justify-center text-[#58CB6C] text-xl font-bold gap-1'>
+                              <span className='flex items-center justify-center text-Average text-xl font-bold gap-1'>
                                 <img src={'/images/avrg2.svg'} alt="" />
                                 <span>
                                   {Number(trend.present) > Number(trend.target) ? '+' : '-'}

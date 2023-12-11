@@ -21,19 +21,20 @@ const ElderlyConditionsChart = ({ data }) => {
         minColumnWidth: 20,
         maxColumnWidth: 45,
         columnStyle: {
-            fill: '#dec4ff',
+            fill: '#9297B3',
+            // fill: '#dec4ff',
             radius: [10, 10, 10, 10], // Set the radius for rounded corners
         },
         yAxis: {
             label: {
                 style: {
-                    fill: '#9039FF',
+                    fill: '#252F67',
                 },
             },
             grid: {
                 line: {
                     style: {
-                        stroke: '#9039FF',
+                        stroke: '#252F67',
                         lineWidth: 0,
                         cursor: 'pointer',
                     },
@@ -48,12 +49,12 @@ const ElderlyConditionsChart = ({ data }) => {
             },
             tickLine: {
                 style: {
-                    stroke: '#9039FF', // Set the tick line color to white
+                    stroke: '#252F67', // Set the tick line color to white
                 },
             },
             line: {
                 style: {
-                    stroke: '#9039FF', // Set the axis line color to white
+                    stroke: '#252F67', // Set the axis line color to white
                 },
             },
         },

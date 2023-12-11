@@ -33,9 +33,9 @@ const AllDevices = ({ data }) => {
     const content = (index, device) => (
         <div className=" w-[190px]">
             {
-                ((device.name === 'Wave – Vital Signs Monitor') || (device.name === 'Home Care Assistant')) && <button onClick={() => setDeviceInner(device.name)} className="text-sm flex w-full items-start rounded-[10px] font-medium text-light-black hover:bg-primary/10 hover:text-[#9039FF] py-3 px-5">Show Details</button>
+                ((device.name === 'Wave – Vital Signs Monitor') || (device.name === 'Home Care Assistant')) && <button onClick={() => setDeviceInner(device.name)} className="text-sm flex w-full items-start rounded-[10px] font-medium text-light-black hover:bg-primary/10 hover:text-[#252F67] py-3 px-5">Show Details</button>
             }
-            <button onClick={() =>{setOpenModal(true); setEditedDevice(device); setPopoverStates(Array(data.length).fill(false))}} className="text-sm flex w-full items-start rounded-[10px] font-medium text-light-black hover:bg-primary/10 hover:text-[#9039FF] py-3 px-5">Edit Device</button>
+            <button onClick={() =>{setOpenModal(true); setEditedDevice(device); setPopoverStates(Array(data.length).fill(false))}} className="text-sm flex w-full items-start rounded-[10px] font-medium text-light-black hover:bg-primary/10 hover:text-[#252F67] py-3 px-5">Edit Device</button>
             <button onClick={() => { setDeleteModal(true); handleOpenChange(index, false); setDeviceId(device.id) }} className="text-sm w-full flex items-start rounded-[10px] font-medium text-light-black hover:bg-danger/10 hover:text-danger py-3 px-5">Delete Device</button>
         </div>
     );
@@ -62,7 +62,7 @@ const AllDevices = ({ data }) => {
                             </div>
                             <div className='mt-5 flex flex-wrap gap-3 items-center justify-between'>
                                 <span className='flex items-center gap-1'>
-                                    <span className={`text-green-500 p-[2px] bg-green-200 rounded-full text-[14px]`}>
+                                    <span className={`text-Average p-[2px] bg-green-200 rounded-full text-[14px]`}>
                                         <Icon icon="octicon:dot-fill-24" />
                                     </span>
                                     <span className='text-base font-medium text-[#969BB3]'>{device?.title}</span>

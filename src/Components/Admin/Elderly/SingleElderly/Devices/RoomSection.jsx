@@ -27,7 +27,7 @@ const RoomSection = () => {
     };
     const content = (index, id) => (
         <div className=" w-[190px]">
-            <button className="text-sm flex w-full items-start rounded-[10px] font-medium text-light-black hover:bg-primary/10 hover:text-[#9039FF] py-3 px-5">Edit Room</button>
+            <button className="text-sm flex w-full items-start rounded-[10px] font-medium text-light-black hover:bg-primary/10 hover:text-[#252F67] py-3 px-5">Edit Room</button>
             <button onClick={() => { setDeleteModal(true); handleOpenChange(index, false); setRoomId(id) }} className="text-sm w-full flex items-start rounded-[10px] font-medium text-light-black hover:bg-danger/10 hover:text-danger py-3 px-5">Delete Room</button>
         </div>
     );
@@ -37,7 +37,7 @@ const RoomSection = () => {
                 <div className='px-[22px] py-6'>
                     <div className='mb-5 flex items-center justify-between'>
                         <span className='text-dark-black text-[23px] font-bold mr-1.5'>Rooms <span className='text-white bg-primary text-[13px] font-bold px-1.5 py-[3px] rounded-xl'>08</span></span>
-                        <button onClick={()=>setOpenModal(true)} className='flex items-center font-medium text-primary bg-secondLightPrimary px-4 py-[7px] rounded-[10px]'><span className='text-[19px]'><Icon icon="ic:sharp-add" /></span> <span className='text-[13px]'>Add Room</span></button>
+                        <button onClick={()=>setOpenModal(true)} className='flex items-center font-medium text-primary bg-primary/10 px-4 py-[7px] rounded-[10px]'><span className='text-[19px]'><Icon icon="ic:sharp-add" /></span> <span className='text-[13px]'>Add Room</span></button>
                     </div>
                     <div className='p-[18px] rounded-[30px] bg-[#F6F8FF] grid grid-cols-1 gap-4 max-h-[730px] overflow-y-auto'>
                         {data.map((singleRoom, index) => <>

@@ -72,7 +72,7 @@ const DeviceSection = () => {
                 <div className='px-[22px] py-6'>
                     <div className='mb-5 flex items-center justify-between'>
                         <span className='text-dark-black text-[23px] font-bold'>Devices</span>
-                        <button onClick={() => setModalOpen(true)} className='flex items-center font-medium text-primary bg-secondLightPrimary px-4 py-[7px] rounded-[10px]'><span className='text-[19px]'><Icon icon="ic:sharp-add" /></span> <span className='text-[13px]'>Add Device</span></button>
+                        <button onClick={() => setModalOpen(true)} className='flex items-center font-medium text-primary bg-primary/10 px-4 py-[7px] rounded-[10px]'><span className='text-[19px]'><Icon icon="ic:sharp-add" /></span> <span className='text-[13px]'>Add Device</span></button>
                     </div>
                     <div className='p-[18px] rounded-[30px] bg-[#F6F8FF]'>
                         {/* ---------tabs------------ */}

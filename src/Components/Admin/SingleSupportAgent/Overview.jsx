@@ -45,7 +45,7 @@ const Overview = () => {
         yField: 'caseSolved',
         smooth: true,
         legend: false,
-        color: '#9039FF',
+        color: '#252F67',
         xAxis: {
             grid: {
                 line: {
@@ -63,7 +63,7 @@ const Overview = () => {
             grid: {
                 line: {
                     style: {
-                        stroke: '#9039FF',
+                        stroke: '#252F67',
                         lineWidth: 0,
                         cursor: 'pointer',
                     },
@@ -72,7 +72,8 @@ const Overview = () => {
         },
         areaStyle: () => {
             return {
-                fill: 'l(270) 0:#ffffff 0.5:#8f39ff67 1:#9039FF',
+                // fill: 'l(270) 0:#ffffff 0.5:#8f39ff67 1:#252F67',
+        fill: 'l(270) 0:#ffffff 0.5:#D3D5E1 1:#252F67',
             };
         },
         tooltip: {
@@ -112,11 +113,11 @@ const Overview = () => {
         <SectionWrapper>
             <div className='px-[22px] py-[24px]'>
                 <div className=' flex md:items-center md:flex-row flex-col gap-3 justify-between'>
-                    <h2 className=' text-2xl font-bold text-text-primary'>Top Support Agents</h2>
+                    <h2 className=' text-2xl font-bold text-text-primary'>Overview</h2>
 
                     <div className=' w-[235px] bg-primary/20 rounded-[9px] p-1'>
                         {tabData.map((tab) => (
-                            <button onClick={() => setActive(tab.id)} key={tab.id} className={` w-[75px] py-2 px-5 font-normal text-[12px] rounded-[9px] ${tab.id === active ? " bg-text-primary text-white" : "text-[#8F6ABC]"}`}>{tab.title}</button>
+                            <button onClick={() => setActive(tab.id)} key={tab.id} className={` w-[75px] py-2 px-5 font-normal text-[12px] rounded-[9px] ${tab.id === active ? " bg-text-primary text-white" : "text-primary"}`}>{tab.title}</button>
                         ))}
                     </div>
                 </div>

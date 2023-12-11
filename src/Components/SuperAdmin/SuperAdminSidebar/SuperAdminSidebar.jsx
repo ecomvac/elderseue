@@ -35,12 +35,12 @@ const SuperAdminSidebar = () => {
   };
   return (
     <>
-      <div className="flex flex-col justify-between bg-[#2C0064] h-[100vh] sticky top-0">
+      <div className="flex flex-col justify-between bg-[#252F67] h-[100vh] sticky top-0">
         <section className="w-[280px] ">
           <div className="h-[80px] flex mt-5 items-center justify-center">
             {" "}
             <img
-              src="/images/sidebarlogo.png"
+              src="/images/sidebarlogo.svg"
               alt="logo"
               className="max-w-[143px] mx-auto"
             />

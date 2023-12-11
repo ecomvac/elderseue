@@ -10,12 +10,12 @@ const ProgressOverView = ({waveData}) => {
             <div className='grid grid-cols-2 gap-y-6'>
                 <div className='flex items-center gap-2'>
                     <div className='relative'>
-                        <div className='flex justify-center text-primary '><Icon className='absolute top-4 text-2xl' icon="solar:moon-sleep-bold" /></div>
-                        <Progress type="circle" showInfo={false} percent={overview.sleepTime.score} size={55} strokeWidth={13} strokeColor={'#9A4BFF'} />
+                        <div className='flex justify-center text-[#4683C4] '><Icon className='absolute top-4 text-2xl' icon="solar:moon-sleep-bold" /></div>
+                        <Progress type="circle" showInfo={false} percent={overview.sleepTime.score} size={55} strokeWidth={13} strokeColor={'#4683C4'} />
                     </div>
                     <div className='flex flex-col'>
                         <span className='text-[#969BB3] text-base font-medium'>Sleep Time</span>
-                        <span className='text-[#9A4BFF] text-[22px] font-semibold -mt-1'>{overview.sleepTime.main}</span>
+                        <span className='text-[#4683C4] text-[22px] font-semibold -mt-1'>{overview.sleepTime.main}</span>
                     </div>
                 </div>
                 <div className='flex items-center gap-2'>

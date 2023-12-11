@@ -9,7 +9,7 @@ const SUpportAgentAlertChart = () => {
     xField: "day",
     yField: "value",
     seriesField: "name",
-    color: ["#F4664A", "#FF974D", "#5973FF"],
+    color: ["#F4664A", "#FAB515", "#5973FF"],
     xAxis: {
       grid: {
         line: {
@@ -65,7 +65,7 @@ const SUpportAgentAlertChart = () => {
                     </div>
                     <div className="flex items-center justify-between">
                         <div className=" flex items-center gap-2">
-                          <div className="w-[4px] h-[7px] rounded-full bg-[#FF974D]"></div>
+                          <div className="w-[4px] h-[7px] rounded-full bg-Warning"></div>
                           <h2 className="text-[13px] font-normal text-white">Warning</h2>
                         </div>
                         <h2 className="text-[11px] font-bold text-white">{items[1].data.value}</h2>

@@ -240,10 +240,10 @@ body {
 
 /* -----------------style for switch------------- */
 :where(.css-dev-only-do-not-override-nllxry).ant-switch:hover{
-  background-color: #9039FF !important;
+  background-color: #252F67 !important;
 }
 :where(.css-dev-only-do-not-override-nllxry).ant-switch.ant-switch-checked {
-  background: #9039FF;
+  background: #252F67;
 }
 
 
@@ -277,7 +277,7 @@ body {
 }
 
 #device :where(.css-dev-only-do-not-override-nllxry).ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
-  color: #9039FF !important;
+  color: #252F67 !important;
 }
 
 #device :where(.css-dev-only-do-not-override-nllxry).ant-tabs-top>.ant-tabs-nav,
@@ -289,7 +289,7 @@ body {
 }
 
 #device .ant-tabs-ink-bar {
-  background: #9039FF !important;
+  background: #252F67 !important;
 }
 
 
@@ -400,8 +400,8 @@ color: rgba(157, 158, 163, 0.8) !important;
 
 }
 .ant-pagination-item-active {
-  background-color: #9039FF !important;
-  border: 1px solid #9039FF !important;
+  background-color: #252F67 !important;
+  border: 1px solid #252F67 !important;
 }
 
 .ant-pagination-item-active a {
@@ -582,7 +582,7 @@ color: rgba(157, 158, 163, 0.8) !important;
 /* -------------------ant slider style------------------------------ */
 
 .ant-slider-handle::after{
-  box-shadow: 0 0 0 3px #9039FF !important;
+  box-shadow: 0 0 0 3px #252F67 !important;
 }
 
 /* ------------------------trend table --------------- */

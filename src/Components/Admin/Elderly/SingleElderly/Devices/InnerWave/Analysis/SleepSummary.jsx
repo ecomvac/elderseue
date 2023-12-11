@@ -304,7 +304,7 @@ const SleepSummary = ({ activeTab }) => {
             {/* -----------average----------------- */}
             <div className='w-full md:w-1/3'>
                 <div className='flex items-center gap-1'>
-                    <Icon className='text-2xl  text-primary' icon="icon-park-solid:sleep" />
+                    <Icon className='text-2xl  text-[#4683C4]' icon="icon-park-solid:sleep" />
                     <p className='text-text-primary font-semibold'>Sleep Summery</p>
                 </div>
                 <div className='flex flex-col mt-[25px] mb-[35px]'>

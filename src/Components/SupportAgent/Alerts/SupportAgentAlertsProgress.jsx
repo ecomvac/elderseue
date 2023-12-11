@@ -8,7 +8,7 @@ const SupportAgentAlertsProgress = ({data}) => {
     <div className='py-[22px]'>
         <div className='px-[22px] flex items-center gap-2'>
             <h2 className=' text-[24px] text-text-primary font-bold'>Alerts In Progress</h2>
-            <div className=" bg-[#5F78AD]/20 w-[30px] h-[30px] rounded-full flex items-center justify-center">
+            <div className=" bg-primary/20 w-[30px] h-[30px] rounded-full flex items-center justify-center">
               <div className=" bg-dark-black/80 w-[15px] h-[15px] rounded-full border-[3px] border-white"></div>
             </div>
         </div>
@@ -28,8 +28,8 @@ const SupportAgentAlertsProgress = ({data}) => {
                         }
                         {
                             row.alert==="Warning" && (
-                                <div className={`w-[40px] h-[40px] rounded-[10px] flex items-center justify-center bg-[#FF974D]/10`}>
-                                <Icon icon="ri:alert-line" className="text-[20px] text-[#FF974D]"/>
+                                <div className={`w-[40px] h-[40px] rounded-[10px] flex items-center justify-center bg-Warning/10`}>
+                                <Icon icon="ri:alert-line" className="text-[20px] text-Warning"/>
                                 </div>
                             )
                         }

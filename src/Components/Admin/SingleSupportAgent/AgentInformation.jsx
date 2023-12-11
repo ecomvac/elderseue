@@ -23,7 +23,7 @@ const AgentInformation = () => {
                     <div className='flex items-center justify-between'>
                         <h2 className='text-text-primary font-bold text-2xl'>Agent Information</h2>
                         <div>
-                            <CustomButton onClick={() => setModalOpen(true)} className={`bg-secondLightPrimary group`}>
+                            <CustomButton onClick={() => setModalOpen(true)} className={`bg-primary/10 group`}>
                                 <span className='flex items-center gap-2.5 text-primary duration-300 group-hover:text-white  h-[33px] '>
                                     <span><Icon className='text-normal md:text-[19px]' icon="uil:edit" /></span>
                                     <span className='text-[14px]'>Edit</span>

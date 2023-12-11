@@ -71,7 +71,7 @@ const AddDevice = ({ modalOpen, setModalOpen }) => {
                                 <div className=" flex items-center justify-between px-9 pt-6 pb-6 mb-2.5">
                                     <div className='flex items-center gap-2'>
                                         <div>
-                                            <Icon className='text-3xl text-green-500' icon="el:ok-sign" />
+                                            <Icon className='text-3xl text-Average' icon="el:ok-sign" />
                                         </div>
                                         <div>
 

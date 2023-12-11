@@ -7,7 +7,7 @@ const CustomToast = ({ t,text }) => {
   return (
     <div
       className={`${t.visible ? 'animate-enter' : 'animate-leave'
-        } max-w-md w-full bg-[#01BE4F] shadow-lg relative overflow-hidden rounded-lg pointer-events-auto flex items-center justify-between ring-1 ring-black ring-opacity-5`}
+        } max-w-md w-full bg-Average shadow-lg relative overflow-hidden rounded-lg pointer-events-auto flex items-center justify-between ring-1 ring-black ring-opacity-5`}
     >
         <div className=' absolute top-[-5px] left-[-10px]'>
           <img src={image} alt="" className=' w-[65px] h-[65px] opacity-30'/>

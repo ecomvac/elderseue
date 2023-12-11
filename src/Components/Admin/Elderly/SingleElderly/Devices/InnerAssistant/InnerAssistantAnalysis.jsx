@@ -41,7 +41,7 @@ const InnerAssistantAnalysis = () => {
               className={` w-[75px] py-2 px-5 font-normal text-[12px] rounded-[9px] ${
                 tab.id === active
                   ? " bg-text-primary text-white"
-                  : "text-[#8F6ABC]"
+                  : "text-primary"
               }`}
             >
               {tab.title}

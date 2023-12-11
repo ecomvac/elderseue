@@ -19,7 +19,7 @@ const DashboardNav = ({name,user,role}) => {
            
                 <NavNotification role={role}/>
 
-            <button className=" text-sm flex  w-full items-center gap-2 rounded-[10px] font-medium text-light-black hover:bg-primary/10 hover:text-[#9039FF] py-2 px-5">
+            <button className=" text-sm flex  w-full items-center gap-2 rounded-[10px] font-medium text-light-black hover:bg-primary/10 hover:text-[#252F67] py-2 px-5">
                 <Icon icon="mingcute:world-2-fill" className=' text-light-black text-[25px]'/>
                 Language
             </button>

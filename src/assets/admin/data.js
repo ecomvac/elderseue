@@ -526,7 +526,7 @@ export const suspendedErrorData = [
         name:"ABC co",
         data:"7 July, 2023; 10:34 PM",
         dec:'No admin assigned to “XYZ Solutions” business account. To regain control, set a new admin promptly using the "Set New Admin" button. Ensure smooth operations and oversight of the account. Thank you for your attention!',
-        bg:"#FF974D",
+        bg:"#FAB515",
     },
     {
         id:3,

@@ -21,7 +21,7 @@ const Profile = () => {
                         </span>
                     </div>
                     <div>
-                        <CustomButton onClick={()=>setModalOpen(true)} className={`bg-secondLightPrimary group`}>
+                        <CustomButton onClick={()=>setModalOpen(true)} className={`bg-primary/10 group`}>
                             <span className='flex items-center text-primary group-hover:text-white duration-300  h-[33px] '>
                                 {/* <span><Icon className='text-normal md:text-[19px]' icon="lucide:phone-call" /></span> */}
                                 <span>Reset Password</span>
