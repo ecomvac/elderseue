@@ -9,7 +9,7 @@ const ReportPage = ({ id, selectedTime, data }) => {
             <div className=' p-[30px]'>
                 <div className='lg2:flex md:flex items-center  justify-between'>
                     <div>
-                        <img className='w-[138px]' src={'/images/reportLogo.png'} alt="logo" />
+                        <img className='w-[138px]' src={'/images/reportLogo.svg'} alt="logo" />
                         <div className='max-w-[325px] mt-5 mb-[30px]'>
                             <h1 className='font-bold text-[22px] text-text-primary'>EldersEye</h1>
                             <p className='text-[13px] text-[#666D90]'>Bracken Business Park, Bracken Rd, Sandyford Business Park, Sandyford, Dublin, 18, Ireland</p>

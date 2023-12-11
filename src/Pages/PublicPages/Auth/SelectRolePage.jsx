@@ -90,7 +90,7 @@ const SelectRolePage = () => {
       <div className="flex items-center h-[100vh] md:w-[50%] w-full justify-center">
         <div className="lg:w-[470px] h-full flex items-center justify-center px-5">
           <div className="">
-            <h1 className="font-bold text-[36px] text-secondary">Sign In</h1>
+            <h1 className="font-bold text-[36px] text-primary">Sign In</h1>
             <p className=" text-light-black text-[16px] font-[400] mt-2">
               Select Your Role And Enter Additional Information To Sign In To
               Your Account
@@ -111,7 +111,7 @@ const SelectRolePage = () => {
                     <div className=" w-[53px] h-[53px] bg-[#F9F5FF] rounded-full flex items-center justify-center">
                       {role?.icon}
                     </div>
-                    <h4 className=" text-black font-[500] text-[14px]">
+                    <h4 className=" text-black text-center font-[500] text-[14px]">
                       {role.title}
                     </h4>
                   </div>
@@ -213,15 +213,15 @@ const SelectRolePage = () => {
           </div>
         </div>
       </div>
-      <div className="hidden relative md:h-[100vh] w-full md:w-[50%] md:flex items-center">
+      <div className="hidden relative md:h-[100vh] w-full h-full md:w-[50%] md:flex items-center">
         <img
           className="mx-auto h-full w-full object-content"
-          src={"/images/login_image.png"}
+          src={"/images/login_image.svg"}
           alt="logo"
         />
         <div className=" absolute top-[50%] left-[50%] flex items-center flex-col justify-center translate-x-[-50%] translate-y-[-50%]">
-          <img src="/images/logo.png" alt="" className="w-[267px] h-[51px]" />
-          <p className=" font-[500] text-[18px] text-[#fff] text-center pt-[15px] w-[500px]">
+          <img src="/images/roleLogo.svg" alt="" className="w-[267px] h-[51px]" />
+          <p className=" font-[500] text-[18px] text-white/80 text-center pt-[15px] w-[500px]">
             Caring Connections, Empowering Lives: Nurturing Well-being Through
             Every Click.
           </p>
