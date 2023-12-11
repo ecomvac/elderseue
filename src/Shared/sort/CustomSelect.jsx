@@ -30,7 +30,7 @@ const CustomSelect = ({ selected, setSelected, data, className, width}) => {
   );
 
   return (
-    <div className="relative">
+    <div className="relative w-full">
       <Popover
         open={popupShow}
         onOpenChange={handleOpenChange}

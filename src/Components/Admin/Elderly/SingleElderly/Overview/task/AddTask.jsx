@@ -107,7 +107,7 @@ const AddTask = ({ modalOPen, setModalOpen }) => {
           >
             Task Type
           </label>
-          <CustomSelect width={"w-[250px]"} className={" rounded-[16px] w-[250px] text-base outline-none text-text-primary h-[50px] border-[1px] focus:border-primary "} selected={selected} setSelected={setSelected} data={data} />
+          <CustomSelect width={"max-w-[520px]"} className={" rounded-[16px] w-full text-base outline-none text-text-primary h-[50px] border-[1px] focus:border-primary "} selected={selected} setSelected={setSelected} data={data} />
         </div>
         <CustomInput
           label={"Event Occurrences"}
