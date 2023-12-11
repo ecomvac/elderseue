@@ -19,7 +19,7 @@ const FamilyMember = () => {
     const columns = [
         {
             title: 'NAME',
-            render: (row) => <span className=' text-base font-normal text-text-secondary flex items-center gap-2.5'><span>{row.name}</span>{row?.role && <span className='text-primary primary/10 text-[13px] py-[3px] px-1.5 rounded-lg'>Admin</span>}</span>
+            render: (row) => <span className=' text-base font-normal text-text-secondary flex items-center gap-2.5'><span>{row.name}</span>{row?.role && <span className='text-primary bg-primary/10 text-[13px] py-[3px] px-1.5 rounded-lg'>Admin</span>}</span>
         },
         {
             title: 'RELATION',
@@ -51,14 +51,14 @@ const FamilyMember = () => {
             <SectionWrapper>
                 <div className='flex items-center justify-between px-[22px] pt-[22px] pb-5'>
                     <span className='text-2xl font-bold text-text-primary'>Family Members</span>
-                    <CustomButton onClick={()=>setModalOpen(true)}>
+                    <CustomButton onClick={() => setModalOpen(true)}>
                         <span className='flex gap-1 items-center'>
                             <span><Icon icon="ic:twotone-add" /></span>
                             <span>Add Member</span>
                         </span>
                     </CustomButton>
                 </div>
-                <CustomNotHoverTable tableData={tableData} columns={columns} scroll={{ x: "750px" }} show={8}/>
+                <CustomNotHoverTable tableData={tableData} columns={columns} scroll={{ x: "750px" }} show={8} />
             </SectionWrapper>
             <CustomModal
                 modalOPen={modalOpen}

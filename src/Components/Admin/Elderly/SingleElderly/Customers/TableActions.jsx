@@ -21,7 +21,7 @@ const TableActions = ({ data, removeMember, setMemberId }) => {
             <div>
                 <div>
                     <Popover open={popupShow} onOpenChange={handleOpenChange} content={content} placement="leftTop" trigger="click">
-                        <button className=" hover:bg-primary/10 rounded-full w-[40px] h-[40px] flex items-center justify-center"><Icon icon="basil:other-2-outline" className=" text-[35px]" /></button>
+                        <button disabled={data?.role==='admin'} className={` hover:bg-primary/10 rounded-full w-[40px] h-[40px] flex items-center justify-center ${data?.role==='admin'&&'cursor-not-allowed'}`}><Icon icon="basil:other-2-outline" className=" text-[35px]" /></button>
                     </Popover>
                 </div>
             </div>
