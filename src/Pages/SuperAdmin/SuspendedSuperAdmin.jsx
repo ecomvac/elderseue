@@ -37,7 +37,7 @@ const SuspendedSuperAdmin = () => {
                 <h2 className=" text-dark-black text-2xl font-bold">No admin assigned to those business account !</h2>
                 <p className=" text-light-black max-w-[698px] text-base font-medium z-10">Set new admin to those business, To regain control, set a new admin promptly using the <span className=" text-text-primary">"Set New Admin"</span> button. Ensure smooth operations and oversight of the account. Thank you for your attention!</p>
             </div>
-            <img src="/images/icon/suspent.svg" alt="" className=" absolute top-0 right-0 z-0"/>
+            <img src="/images/devices/alert.svg" alt="" className=" absolute top-0 right-0 z-0 opacity-5"/>
 
             <div className="pt-8">
                 <div className=" grid xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-6">
