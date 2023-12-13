@@ -12,9 +12,9 @@ const SubscriptionType = ({ data, plan }) => {
                 :
                 <div className='px-7 py-5 mt-5 flex justify-between border border-primary rounded-[20px] bg-primary/10'>
                     <div className='flex items-center gap-[14px]'>
-                        {plan==='standard'&&<img className='w-4 h-[25px]' src={'/images/premium.svg'} alt="icon" />}
-                        {plan==='premium'&& <img className='w-4 h-[25px]' src={'/images/standard.svg'} alt="icon" />}
-                        {plan==='essential'&&<img className='w-4 h-[25px]' src={'/images/essential.svg'} alt="icon" />}
+                        {plan==='standard'&&<img className='w-4 h-[25px]' src={'/images/standard.svg'} alt="icon" />}
+                        {plan==='premium'&& <img className='w-4 h-[25px]' src={'/images/premium.svg'} alt="icon" />}
+                        {plan==='enterprise'&&<img className='w-[30px] h-[28px]' src={'/images/enterprise.svg'} alt="icon" />}
                         <h1 className="text-[#252F67] font-bold text-lg flex items-center">Upgrade to {plan} and Unleash Powerful New Features!</h1>
                     </div>
                     <button className='bg-primary gap-[10px] flex items-center text-white px-3 rounded-[10px] py-2'><Icon icon="basil:lightning-outline" />Upgrade</button>

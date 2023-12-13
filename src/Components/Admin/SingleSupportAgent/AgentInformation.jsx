@@ -7,14 +7,14 @@ import SupportAgentsEdit from '../AdminSupportAgent/SupportAgentsEdit';
 const AgentInformation = () => {
     // -------------information adit modal--------------
     const [modalOPen, setModalOpen] = useState(false)
-    const item={
-        firstName:'Tawsif',
-        lastName:'Ahmed',
-        email:'tawsifsupport@email.com',
-        contactNumber:'445-124-121',
-        contactPerson:'Lauren Thiel PhD',
-        businessAdress:'7156 Appleby Line, Milton, Ontario, L9T 2Y1',
-        businessName:'Schinner, Brakus and Ziemann'
+    const item = {
+        firstName: 'Tawsif',
+        lastName: 'Ahmed',
+        email: 'tawsifsupport@email.com',
+        contactNumber: '445-124-121',
+        contactPerson: 'Lauren Thiel PhD',
+        businessAdress: '7156 Appleby Line, Milton, Ontario, L9T 2Y1',
+        businessName: 'Schinner, Brakus and Ziemann'
     }
     return (
         <div>
@@ -23,12 +23,7 @@ const AgentInformation = () => {
                     <div className='flex items-center justify-between'>
                         <h2 className='text-text-primary font-bold text-2xl'>Agent Information</h2>
                         <div>
-                            <CustomButton onClick={() => setModalOpen(true)} className={`bg-primary/10 group`}>
-                                <span className='flex items-center gap-2.5 text-primary duration-300 group-hover:text-white  h-[33px] '>
-                                    <span><Icon className='text-normal md:text-[19px]' icon="uil:edit" /></span>
-                                    <span className='text-[14px]'>Edit</span>
-                                </span>
-                            </CustomButton>
+                            <button onClick={() => setModalOpen(true)} className='flex items-center font-medium text-primary bg-primary/10 px-4 py-[7px] rounded-[10px]'> <span><Icon className='text-normal md:text-[19px] mr-1' icon="uil:edit" /></span><span className='text-[14px]'>Edit</span></button>
                         </div>
                     </div>
                     <div className='flex flex-col mt-4'>

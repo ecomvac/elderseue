@@ -10,10 +10,10 @@ const ReportPage = ({ id, selectedTime, data }) => {
                 <div className='lg2:flex md:flex items-center  justify-between'>
                     <div>
                         <img className='w-[138px]' src={'/images/reportLogo.svg'} alt="logo" />
-                        <div className='max-w-[325px] mt-5 mb-[30px]'>
+                        {/* <div className='max-w-[325px] mt-5 mb-[30px]'>
                             <h1 className='font-bold text-[22px] text-text-primary'>EldersEye</h1>
                             <p className='text-[13px] text-[#666D90]'>Bracken Business Park, Bracken Rd, Sandyford Business Park, Sandyford, Dublin, 18, Ireland</p>
-                        </div>
+                        </div> */}
                     </div>
                     <div className='lg2:mt-0 md:mt-0 sm:mt-5'>
                         <p className='font-medium text-text-primary text-lg'>{selectedTime} Report</p>
@@ -21,7 +21,7 @@ const ReportPage = ({ id, selectedTime, data }) => {
                         <p><span className='font-medium text-text-primary text-lg'>Date: </span><span className=' text-[#5D6670] text-lg'>{today}</span></p>
                     </div>
                 </div>
-                <div className=''>
+                <div className='mt-5 md:mt-0'>
                     <p className='border-b font-medium text-lg text-text-primary py-2.5'>Elderly Information </p>
                     <div className='mt-5'>
                         <p><span className='font-medium text-lg text-text-primary'>ID: </span><span className='text-[#5D6670] text-lg'>#234234</span></p>

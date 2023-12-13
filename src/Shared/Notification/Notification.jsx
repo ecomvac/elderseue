@@ -10,7 +10,6 @@ const Notification = ({ filterNotificationData,role }) => {
 
     const navigate = useNavigate()
 
-    console.log(path)
 
     const handleNavigateNotificaitonDetails = (userId) => {
         if (role === 'supportAgent') {

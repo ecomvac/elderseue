@@ -58,7 +58,7 @@ const SleepTimeline = ({ waveData }) => {
             <div className='mt-4'>
                 <div className='w-full h-[30px] flex items-center gap-1'>
                     {
-                        sleepTimeline.map((data, index) => <div style={{ width: data.percent }} className={`rounded-[2px] h-[29px]
+                        sleepTimeline.map((data, index) => <div key={index} style={{ width: data.percent }} className={`rounded-[2px] h-[29px] relative group
                         
                         ${data.type === 'deep' && 'bg-[#3964FF]'}
                         ${data.type === 'core' && 'bg-[#80E005]'}
@@ -66,7 +66,24 @@ const SleepTimeline = ({ waveData }) => {
                         ${data.type === 'rem' && 'bg-[#FF62C0]'}
                         ${data.type === 'out' && 'bg-[#FF0000]'}
 
-                        `}></div>)
+                        `}>
+
+                            <div className=' bg-text-primary rounded-[10px] z-20 p-2.5  text-white absolute top-[-10px] left-1 group-hover:flex items-center gap-2 duration-300 hidden '>
+                                <div className={`h-2 w-2 rounded-full bg-[#5C76FF]
+                                ${data.type === 'deep' && 'bg-[#3964FF]'}
+                                ${data.type === 'core' && 'bg-[#80E005]'}
+                                ${data.type === 'awake' && 'bg-[#FF8D24]'}
+                                ${data.type === 'rem' && 'bg-[#FF62C0]'}
+                                ${data.type === 'out' && 'bg-[#FF0000]'}
+                                `}></div>
+                                {data.type === 'deep' && <p className='text-white text-[13px]'>Deep</p>}
+                                {data.type === 'core' && <p className='text-white text-[13px]'>Core</p>}
+                                {data.type === 'awake' && <p className='text-white text-[13px]'>Awake</p>}
+                                {data.type === 'rem' && <p className='text-white text-[13px]'>Rem</p>}
+                                {data.type === 'out' && <p className='text-white text-[13px]'>Out of Bed</p>}
+
+                            </div>
+                        </div>)
                     }
                 </div>
             </div>

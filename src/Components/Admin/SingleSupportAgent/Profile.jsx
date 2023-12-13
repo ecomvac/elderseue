@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import SectionWrapper from '../../../Shared/SectionWrapper';
 import CustomButton from '../../../Shared/button/CustomButton';
-import { Icon } from '@iconify/react';
 import SupportAgentsResetPasswordModal from '../AdminSupportAgent/SupportAgentsResetPasswordModal';
 
 const Profile = () => {
@@ -21,12 +20,12 @@ const Profile = () => {
                         </span>
                     </div>
                     <div>
-                        <CustomButton onClick={()=>setModalOpen(true)} className={`bg-primary/10 group`}>
+                        {/* <CustomButton onClick={()=>setModalOpen(true)} className={`bg-primary/10 group`}>
                             <span className='flex items-center text-primary group-hover:text-white duration-300  h-[33px] '>
-                                {/* <span><Icon className='text-normal md:text-[19px]' icon="lucide:phone-call" /></span> */}
                                 <span>Reset Password</span>
                             </span>
-                        </CustomButton>
+                        </CustomButton> */}
+                        <button  onClick={()=>setModalOpen(true)} className='flex items-center font-medium text-primary bg-primary/10 px-4 py-[7px] rounded-[10px]'> <span>Reset Password</span></button>
                     </div>
 
 

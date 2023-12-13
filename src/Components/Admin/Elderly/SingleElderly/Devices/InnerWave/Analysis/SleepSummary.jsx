@@ -294,7 +294,37 @@ const SleepSummary = ({ activeTab }) => {
         tooltip: {
             customContent: (title, items) => {
                 return (
-                    <></>
+                    <div className='bg-text-primary rounded-[10px] py-3 px-5'>
+                        <div className='text-white/80  rounded-t-[10px]'><span className='text-base font-bold'>{title}</span></div>
+                        <div>
+                            {items?.map((item, index) => {
+                                return (
+                                    <span
+                                        key={index}
+                                        className="flex flex-col  bg-text-primary rounded-b-[10px] mx-0"
+                                        data-index={index}
+                                    >
+                                        <span className='flex flex-col gap-2 mt-2'>
+                                            <span className='flex gap-3 items-center '>
+                                                <span className={`
+                              ${item.data.type === 'deep' && 'bg-[#3964FF]'}
+                              ${item.data.type === 'core' && ' bg-[#80E005]'}
+                              ${item.data.type === 'awake' && 'bg-[#FF8D24]'}
+                              ${item.data.type === 'rem' && ' bg-[#FF62C0]'}
+                               h-2 w-2 rounded-full`}></span>
+                                                {item.data.type === 'deep' && <span className='text-sm font-bold text-white/80'>Deep</span>}
+                                                {item.data.type === 'core' && <span className='text-sm font-bold text-white/80'>Core</span>}
+                                                {item.data.type === 'awake' && <span className='text-sm font-bold text-white/80'>Awake</span>}
+                                                {item.data.type === 'rem' && <span className='text-sm font-bold text-white/80'>Rem</span>}
+                                                <span className='text-white/80 text-sm font-bold'>{item?.value}hr</span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                );
+                            })}
+
+                        </div>
+                    </div>
                 );
             },
         },

@@ -19,12 +19,9 @@ const Profile = () => {
                             </span>
                         </div>
                         <div>
-                            <CustomButton className={`bg-primary/10`}>
-                                <span className='flex items-center text-primary  h-[33px] '>
-                                    <span><Icon className='text-normal md:text-[19px]' icon="lucide:phone-call" /></span>
-                                    <span>Call</span>
-                                </span>
-                            </CustomButton>
+                            <div>
+                                <button className='flex items-center font-medium text-primary bg-primary/10 px-4 py-[7px] rounded-[10px]'> <span><Icon className='text-normal md:text-[19px] mr-1' icon="lucide:phone-call" /></span><span className='text-[14px]'>Call</span></button>
+                            </div>
                         </div>
 
 
@@ -47,7 +44,7 @@ const Profile = () => {
                         <span className='text-normal md:text-[19px] font-bold text-text-primary'>B+</span>
                         <span className='font-medium text-[13px] text-text-secondary'>Blood Group</span>
                     </span>
-                    
+
                 </div>
             </SectionWrapper>
         </>

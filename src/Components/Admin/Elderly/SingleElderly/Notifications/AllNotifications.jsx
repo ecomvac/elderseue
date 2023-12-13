@@ -15,21 +15,14 @@ const AllNotifications = () => {
             <div className=''>
                 <div className="px-[22px] py-6 gap-2 flex justify-between ">
                     <h1 className="text-text-primary text-2xl font-bold " >Notifications</h1>
-                    <div className='group'>
-                        <CustomButton onClick={() => setOpenModal(true)} className={'bg-primary/10 '}>
-                            <span className='flex items-center group-hover:text-white duration-300 text-primary'>
-                                <span>Create Notification</span>
-                                <span><Icon className='ml-2 font-bold' icon="basil:send-outline" /></span>
-                            </span>
-                        </CustomButton>
-                    </div>
+                    <button onClick={() => setOpenModal(true)} className='flex items-center font-medium text-primary bg-primary/10 px-4 py-[7px] rounded-[10px]'> <span>Create Notification</span><span><Icon className='ml-2 font-bold' icon="basil:send-outline" /></span></button>
                 </div>
 
                 <div className='max-h-[100vh] overflow-y-auto'>
                     <div className='px-[22px]  lg2:flex justify-between  md:flex  py-5'>
                         <div className='flex'>
-                            <div className="bg-[#F8F8F8] rounded-lg h-8 mr-2.5 p-1.5">
-                                <Icon className='text-Warning' icon="basil:info-triangle-outline" />
+                            <div className="bg-Warning/10 rounded-[9px] w-10 h-10 mr-2.5 p-2">
+                                <Icon className='text-Warning text-[20px]' icon="basil:info-triangle-outline" />
                             </div>
                             <div>
                                 <div className='flex items-center flex-wrap'>
@@ -52,8 +45,8 @@ const AllNotifications = () => {
                     </div>
                     <div className='px-6 lg2:flex justify-between  md:flex     py-5'>
                         <div className='flex'>
-                            <div className="bg-[#F8F8F8] rounded-lg h-8 mr-2.5 p-1.5">
-                                <Icon className='text-[#FF2727]' icon="jam:alert" />
+                            <div className="bg-Critical/10 rounded-[9px] w-10 h-10 mr-2.5 p-2">
+                                <Icon className='text-[#FF2727] text-[20px]' icon="jam:alert" />
                             </div>
                             <div>
                                 <div className='flex items-center flex-wrap'>
@@ -71,8 +64,8 @@ const AllNotifications = () => {
                     </div>
                     <div className='px-6 lg2:flex justify-between  md:flex    py-5'>
                         <div className='flex'>
-                            <div className="bg-[#F8F8F8] rounded-lg h-8 mr-2.5 p-1.5">
-                                <Icon className='text-primary' icon="mdi:bed-time" />
+                            <div className="bg-primary/10 rounded-[9px] w-10 h-10 mr-2.5 p-2">
+                                <Icon className='text-primary text-[20px]' icon="mdi:bed-time" />
                             </div>
                             <div>
                                 <div className='flex items-center flex-wrap'>
@@ -90,8 +83,8 @@ const AllNotifications = () => {
                     </div>
                     <div className='px-6  lg2:flex justify-between  md:flex   py-5'>
                         <div className='flex'>
-                            <div className="bg-[#F8F8F8] rounded-lg h-8 mr-2.5 p-1.5">
-                                <Icon className='text-Warning' icon="basil:info-triangle-outline" />
+                            <div className="bg-Warning/10  rounded-[9px] w-10 h-10 mr-2.5 p-2">
+                                <Icon className='text-Warning text-[20px]' icon="basil:info-triangle-outline" />
                             </div>
                             <div>
                                 <div className='flex items-center flex-wrap'>
@@ -109,8 +102,8 @@ const AllNotifications = () => {
                     </div>
                     <div className='px-6  lg2:flex justify-between  md:flex    py-5'>
                         <div className='flex'>
-                            <div className="bg-[#F8F8F8] rounded-lg h-8 mr-2.5 p-1.5">
-                                <Icon className='text-[#FF2727]' icon="jam:alert" />
+                            <div className="bg-Critical/10 rounded-[9px] w-10 h-10 mr-2.5 p-2">
+                                <Icon className='text-[#FF2727] text-[20px]' icon="jam:alert" />
                             </div>
                             <div>
                                 <div className='flex items-center flex-wrap'>
@@ -128,8 +121,8 @@ const AllNotifications = () => {
                     </div>
                     <div className='px-6 lg2:flex justify-between  md:flex    py-5'>
                         <div className='flex'>
-                            <div className="bg-[#F8F8F8] rounded-lg h-8 mr-2.5 p-1.5">
-                                <Icon className='text-primary' icon="mdi:toilet" />
+                            <div className="bg-primary/10 rounded-[9px] w-10 h-10 mr-2.5 p-2">
+                                <Icon className='text-primary text-[20px]' icon="mdi:toilet" />
                             </div>
                             <div>
                                 <div className='flex items-center flex-wrap'>
@@ -147,8 +140,8 @@ const AllNotifications = () => {
                     </div>
                     <div className='px-6 lg2:flex justify-between  md:flex    py-5'>
                         <div className='flex'>
-                            <div className="bg-[#F8F8F8] rounded-lg h-8 mr-2.5 p-1.5">
-                                <Icon className='text-primary' icon="mdi:bed-time" />
+                            <div className="bg-primary/10 rounded-[9px] w-10 h-10 mr-2.5 p-2">
+                                <Icon className='text-primary text-[20px]' icon="mdi:bed-time" />
                             </div>
                             <div>
                                 <div className='flex items-center flex-wrap'>

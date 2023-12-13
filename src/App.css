@@ -328,6 +328,11 @@ border: 1px solid #252F67 !important;
   box-shadow: 0px 0px 0px rgba(255, 255, 255, 0) !important;
 }
 
+#alert .g2-tooltip {
+  background-color: #252F67 !important;
+  color: white;
+}
+
 /* --------------------ant table pagination---------------- */
 
 /* :where(.css-dev-only-do-not-override-nllxry).ant-table-wrapper .ant-table-pagination.ant-pagination {

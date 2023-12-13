@@ -1,7 +1,7 @@
 import { Column } from '@ant-design/plots';
 import React from 'react'
 
-const AlertsOverviewCharts = ({data}) => {
+const AlertsOverviewCharts = ({ data }) => {
 
   const config = {
     data,
@@ -54,14 +54,42 @@ const AlertsOverviewCharts = ({data}) => {
     tooltip: {
       customContent: (title, items) => {
         return (
-          <></>
+          <div className='bg-text-primary rounded-[10px] py-3 px-5'>
+            <div className='text-white/80  rounded-t-[10px]'><span className='text-base font-bold'>{title}</span></div>
+            <div>
+              {items?.map((item, index) => {
+                return (
+                  <span
+                    key={index}
+                    className="flex flex-col  bg-text-primary rounded-b-[10px] mx-0"
+                    data-index={index}
+                  >
+                    <span className='flex flex-col gap-2 mt-2'>
+                      <span className='flex gap-2 items-center justify-between'>
+                        <span className={`
+                        ${item.data.type === 'Problem' && 'bg-[#5C76FF]'}
+                        ${item.data.type === 'Critical' && 'bg-Critical'}
+                        ${item.data.type === 'Warning' && 'bg-Warning'}
+                         h-2 w-2 rounded-full`}></span>
+                        {item.data.type === 'Problem' && <span  className='text-sm font-bold text-white/80'>Problem</span>}
+                        {item.data.type === 'Critical' && <span className='text-sm font-bold text-white/80'>Critical</span>}
+                        {item.data.type === 'Warning' && <span className='text-sm font-bold text-white/80'>Warning</span>}
+                        <span className='text-white/80 text-sm font-bold'>{item?.value}</span>
+                      </span>
+                    </span>
+                  </span>
+                );
+              })}
+
+            </div>
+          </div>
         );
       },
     },
   };
 
   return (
-    <div className='h-[280px]'>
+    <div id='' className='h-[280px]'>
       <Column {...config} />
     </div>
   )
