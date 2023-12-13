@@ -35,7 +35,7 @@ module.exports = {
         xl2: "2000px"
       },
       boxShadow: {
-        shadowOne: "11px 16px 42px 0px rgba(85, 52, 221, 0.15)",
+        shadowOne: "2px 2px 5px 1px rgba(85, 52, 221, 0.15)",
         shadowTwo: "0px 4px 15px 0px rgba(0, 0, 0, 0.08)",
       },
     },

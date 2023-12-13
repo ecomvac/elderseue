@@ -35,7 +35,7 @@ const LogOutModal = ({
           </div>
 
           <div style={{borderRadius:"16px"}} className=" w-full flex items-center justify-center py-3 pb-[40px]">
-            <div className=" w-[110px] h-[110px] rounded-full border-[5px] border-dashed border-[#EDE5FF] bg-[#FAF6FF] flex items-center justify-center">
+            <div className=" w-[110px] h-[110px] rounded-full border-[5px] border-dashed border-primary/20 bg-primary/10 flex items-center justify-center">
               <Icon
                 icon="line-md:log-out"
                 className="text-[45px] text-[#252F67]"

@@ -107,7 +107,7 @@ const SelectRolePage = () => {
                       : "border border-primary/25"
                       }`}
                   >
-                    <div className=" w-[53px] h-[53px] bg-[#F9F5FF] rounded-full flex items-center justify-center">
+                    <div className=" w-[53px] h-[53px] bg-primary/10 rounded-full flex items-center justify-center">
                       {role?.icon}
                     </div>
                     <h4 className=" text-black text-center font-[500] text-[14px]">
