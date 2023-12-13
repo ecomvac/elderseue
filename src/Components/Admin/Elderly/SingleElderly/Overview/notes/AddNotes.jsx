@@ -18,7 +18,6 @@ const AddNotes = ({ modalOPen, setModalOpen,setNotes }) => {
   
 
       const newNote= {
-        id: Math.random(),
         time: "09:25 am",
         text: data?.description,
         user: "You",

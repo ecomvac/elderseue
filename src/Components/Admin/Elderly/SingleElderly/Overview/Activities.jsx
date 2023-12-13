@@ -106,8 +106,8 @@ const Activities = () => {
             <div className=" flex items-center w-[60px] gap-1 justify-center flex-col">
               <div className=" w-[36px] h-[36px] relative rounded-full flex items-center  justify-center bg-Warning">
                 <Icon
-                  icon="lets-icons:check-fill"
-                  className=" text-[25px] text-white"
+                   icon="mingcute:alert-fill"
+                  className=" text-[20px] text-white"
                 />
               </div>
               <div className={` h-[40px] w-[2px] mb-1 rounded-full bg-[#E8E9EE]`} />

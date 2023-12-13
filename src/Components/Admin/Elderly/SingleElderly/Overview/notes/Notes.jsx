@@ -8,7 +8,6 @@ const Notes = () => {
   const [addNote, setAddNote] = useState(false)
   const [notes, setNotes] = useState([
     {
-      id: 1,
       time: "09:25 am",
       text: "Please manage IoT devices and ensure efficient home security system operation. Familiarize yourself, troubleshoot, collaborate, and report",
       user: "You",
@@ -16,8 +15,8 @@ const Notes = () => {
   ]);
 
 
-  const deleteNotes = (id) => {
-    const newNote = notes.filter((note) => note.id !== id)
+  const deleteNotes = (index) => {
+    const newNote = notes.filter((note,i) => i!== index)
     setNotes(newNote)
   }
 
@@ -34,7 +33,7 @@ const Notes = () => {
 
           <div className="mt-7 flex flex-col gap-1 max-h-[365px] overflow-y-auto">
             {notes.map((note, index) => (
-              <NotesCard key={index} note={note} deleteNotes={deleteNotes} />
+              <NotesCard key={index} note={note} index={index} deleteNotes={deleteNotes} />
             ))}
           </div>
         </div>

@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import EditNotes from "./EditNotes";
 import DeleteModal from "../../../../../../Shared/delete/DeleteModal";
 
-const NotesCard = ({ note, deleteNotes }) => {
+const NotesCard = ({ note, deleteNotes,index }) => {
     const [edit,setEdit] = useState(false)
     const [deleteShow,setDeleteShow] = useState(false)
 
@@ -40,7 +40,7 @@ const NotesCard = ({ note, deleteNotes }) => {
       {/* =======edit Notes modal======= */}
       <EditNotes note={note} modalOPen={edit} setModalOpen={setEdit}/>
        {/* ====== Delete Notes modal ======= */}
-       <DeleteModal onDelete={()=>{deleteNotes(note.id);setDeleteShow(false)}} modalOPen={deleteShow} setModalOpen={setDeleteShow} title={"Are you sure to delete this Nots account? This"} title2={" process can be undo."}/>
+       <DeleteModal onDelete={()=>{deleteNotes(index);setDeleteShow(false)}} modalOPen={deleteShow} setModalOpen={setDeleteShow} title={"Are you sure to delete this Nots account? This"} title2={" process can be undo."}/>
     </>
   );
 };

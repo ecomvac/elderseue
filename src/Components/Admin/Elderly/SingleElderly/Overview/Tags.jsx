@@ -11,27 +11,22 @@ const Tags = () => {
   const dataSelete = ["Add as Elderly Tag", "Add ad System Tags"];
   const [data, setData] = useState([
     {
-      id: 1,
       title: "High blood sugar",
       category: "elderly",
     },
     {
-      id: 2,
       title: "low blood pressure",
       category: "elderly",
     },
     {
-      id: 3,
       title: "UWB/BLE tracking systems",
       category: "system",
     },
     {
-      id: 4,
       title: "Real-time location systems",
       category: "system",
     },
     {
-      id: 5,
       title: "RFID reader",
       category: "system",
     },
@@ -45,13 +40,13 @@ const Tags = () => {
         <CustomErrorToast t={t} text={"Please add a tags"} title={"Error"} />
       ));
     } else {
-      setData((pre) => [...pre, { id: Math.random(), title: tags,category:selected==="Add as Elderly Tag" ? "elderly" : "system" }]);
+      setData((pre) => [...pre, { title: tags,category:selected==="Add as Elderly Tag" ? "elderly" : "system" }]);
       setTags("");
     }
   };
 
-  const removeTags = (id) => {
-    const finalTags = data.filter((item) => item.id !== id);
+  const removeTags = (title) => {
+    const finalTags = data.filter((item) => item.title !== title);
     setData(finalTags);
   };
 
@@ -97,7 +92,7 @@ const Tags = () => {
                   <span className="text-[13px] font-bold text-white">
                     {item.title}
                   </span>
-                  <button onClick={() => removeTags(item.id)}>
+                  <button onClick={() => removeTags(item.title)}>
                     <Icon icon="mi:close" className="text-[17px] text-white" />
                   </button>
                 </div>
@@ -125,7 +120,7 @@ const Tags = () => {
                   <span className="text-[13px] font-bold text-white">
                     {item.title}
                   </span>
-                  <button onClick={() => removeTags(item.id)}>
+                  <button onClick={() => removeTags(item.title)}>
                     <Icon icon="mi:close" className="text-[17px] text-white" />
                   </button>
                 </div>
