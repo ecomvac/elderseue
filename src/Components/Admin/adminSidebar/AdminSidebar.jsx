@@ -21,7 +21,7 @@ const AdminSidebar = () => {
   return (
     <>
       <div className="flex flex-col justify-between bg-[#252F67] h-[100vh] sticky top-0">
-        <section className="w-[280px] ">
+        <section className="w-[200px] ">
           <div className="h-[80px] flex mt-5 items-center justify-center">
             {" "}
             <img

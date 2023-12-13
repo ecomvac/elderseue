@@ -9,7 +9,7 @@ const SuperAdminDashboardLayout = () => {
     const { sidebarShow, setSidebarShow } = useContext(SidebarContext)
     return (
         <div className="flex bg-[#F4F7FE]">
-            <div className='xl:w-[280px] w-[240px] lg:block hidden'>
+            <div className='xl:w-[200px] w-[200px] lg:block hidden'>
                 {/* ----------------admin Dashboard sidebar here----------------- */}
                 <SuperAdminSidebar />
                 <CustomDrawer open={sidebarShow} setOpen={setSidebarShow}>
