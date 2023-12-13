@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import CustomModal from "../../../../../../Shared/modal/CustomModal";
-import toast from "react-hot-toast";
-import CustomToast from "../../../../../../Shared/Tosat/CustomToast";
 import { useForm } from "react-hook-form";
 import CustomInput from "../../../../../../Shared/input/CustomInput";
 import { Icon } from "@iconify/react";
 import CustomSelect from "../../../../../../Shared/sort/CustomSelect";
 
-const AddTask = ({ modalOPen, setModalOpen }) => {
+const AddTask = ({ modalOPen, setModalOpen,tasks,setTasks }) => {
   const [priorityActive, setPriorityActive] = useState("Medium Priority");
   const [activeRecurrence, setActiveRecurrence] = useState("One Time");
   const [selected, setSelected] = useState("");
@@ -25,28 +23,20 @@ const AddTask = ({ modalOPen, setModalOpen }) => {
   } = useForm();
 
   const onSubmit = (data) => {
-    try {
-      // Simulate an API call
-      // Replace this with your actual API call
-      // await apiCallFunction(data);
-
-      reset();
-      setModalOpen(false);
-
-      // Display the success toast
-      setTimeout(() => {
-        toast.custom((t) => (
-          <CustomToast
-            t={t}
-            text="New Support Agent has been created Successfully!"
-          />
-        ));
-      }, 900);
-    } catch (error) {
-      // Handle API call or other errors
-      console.error("An error occurred:", error);
-      toast.error("An error occurred while creating a new admin.");
+    const newTask = {
+      title: data?.title,
+      description: data?.description,
+      taskType: selected,
+      TaskPriority: priorityActive,
+      eventOccurrences: data?.eventOccurrences,
+      Recurrence: "Today",
+      message: [],
     }
+
+    setTasks((prevTasks) => [...prevTasks, newTask]);
+
+    reset();
+    setModalOpen(false);
   };
 
   const handelDay = (day) => {

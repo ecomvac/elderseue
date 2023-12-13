@@ -9,7 +9,7 @@ const Alarms = ({ data }) => {
 
     return (
        <>
-        <div className='max-h-[365px] overflow-y-auto mt-5'>
+        <div className='max-h-[370px] overflow-y-auto mt-5'>
             {
                 data.map((singleAlarm) => <div className='py-[22px] border-b'>
                     <div className='flex items-center gap-2'>

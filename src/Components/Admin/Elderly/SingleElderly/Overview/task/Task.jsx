@@ -29,8 +29,7 @@ const Task = () => {
           user: "Papon Rabish",
         },
       ],
-    }
-   
+    },
   ]);
 
   const sentMessage = (index) => {
@@ -51,10 +50,16 @@ const Task = () => {
     }
   };
 
+
+  const taskDelete = (index)=>{
+    const updateTask = tasks.filter((task,i)=>i !== index)
+    setTasks(updateTask)
+  }
+
   return (
     <>
       <SectionWrapper>
-        <div className="p-5">
+        <div className="pt-5 px-5 pb-3">
           <div className=" flex items-center justify-between">
             <h2 className=" text-2xl font-bold text-dark-black">Tasks</h2>
             <button onClick={()=>setOpen(true)} className="py-[8px] px-3 text-[13px] font-medium flex items-center justify-center gap-1 h-[37px] outline-none border-none text-primary bg-primary/10 rounded-[10px]">
@@ -62,14 +67,14 @@ const Task = () => {
             </button>
           </div>
 
-          <div className=" mt-7">
+          <div className=" mt-7 overflow-y-auto max-h-[380px]">
             {tasks.map((task, index) => (
-              <TaskCard key={index} task={task} message={message} setMessage={setMessage} sentMessage={sentMessage} index={index}/>
+              <TaskCard key={index} task={task} message={message} taskDelete={taskDelete} setMessage={setMessage} sentMessage={sentMessage} index={index}/>
             ))}
           </div>
         </div>
       </SectionWrapper>
-      <AddTask modalOPen={open} setModalOpen={setOpen}/>
+      <AddTask modalOPen={open} setModalOpen={setOpen} task={tasks} setTasks={setTasks}/>
     </>
   );
 };

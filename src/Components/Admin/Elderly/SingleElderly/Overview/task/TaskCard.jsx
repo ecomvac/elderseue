@@ -4,13 +4,14 @@ import { Icon } from "@iconify/react";
 import EditTask from "./EditTask";
 import DeleteModal from "../../../../../../Shared/delete/DeleteModal";
 
-const TaskCard = ({ task, message, setMessage, sentMessage, index }) => {
+const TaskCard = ({ task, message, setMessage, sentMessage, index,taskDelete }) => {
   const [editOpen, setEditOpen] = useState(false)
   const [deleteOPen, setDeleteOpen] = useState(false)
 
   const [showComment, setShowComment] = useState(false)
 
   const handalDelete = () => {
+    taskDelete(index)
     setDeleteOpen(false)
   }
   return (
@@ -76,8 +77,8 @@ const TaskCard = ({ task, message, setMessage, sentMessage, index }) => {
 
       <div className=" w-full h-[1px] bg-[#E7E8EA]"></div>
       <div className={`flex flex-col gap-5 mt-5 overflow-y-auto duration-500 ${showComment?'h-[120px] ':'h-0'}`}>
-        {task.message.map((mess, index) => (
-          <div key={index} className=" flex items-start gap-3">
+        {task.message.map((mess, i) => (
+          <div key={i} className=" flex items-start gap-3">
             <div>
               {mess.user === "You" ? (
                 <>
@@ -114,9 +115,6 @@ const TaskCard = ({ task, message, setMessage, sentMessage, index }) => {
             </div>
           </div>
         ))}
-      </div>
-
-
       <div className=" flex items-center gap-4 mt-[18px]">
         <input
           className="py-[18px] text-sm px-4 text-text-primary placeholder:text-[#A3AED0] h-[39px]  rounded-[10px] w-full outline-none   border-[1px] focus:border-primary"
@@ -130,6 +128,8 @@ const TaskCard = ({ task, message, setMessage, sentMessage, index }) => {
           Send
         </CustomButton>
       </div>
+      </div>
+
 
       {/* ====== Edit task modal ======= */}
       <EditTask task={task} modalOPen={editOpen} setModalOpen={setEditOpen} />
