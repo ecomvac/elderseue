@@ -10,11 +10,11 @@ const AddRoom = () => {
         <div className='mt-[38px] flex flex-col gap-4'>
             <div>
                 <p className='text-text-primary text-[13px] font-medium mb-1.5'>Room Name</p>
-                <CustomSelect width={"max-w-[520px]"} className={" rounded-[16px] w-full text-base outline-none text-text-primary h-[50px] border-[1px] focus:border-primary "} selected={roomName} setSelected={setRoomName} data={rooms}/>
+                <CustomSelect width={"md:w-[520px] w-[280px]"} className={" rounded-[16px] w-full text-base outline-none text-text-primary h-[50px] border-[1px] focus:border-primary "} selected={roomName} setSelected={setRoomName} data={rooms}/>
             </div>
             <div>
             <p className='text-text-primary text-[13px] font-medium mb-1.5'>Room Type</p>
-                <CustomSelect width={"max-w-[520px]"} className={" rounded-[16px] w-full text-base outline-none text-text-primary h-[50px] border-[1px] focus:border-primary "} selected={roomType} setSelected={setRoomType} data={names} />
+                <CustomSelect width={"md:w-[520px] w-[280px]"} className={" rounded-[16px] w-full text-base outline-none text-text-primary h-[50px] border-[1px] focus:border-primary "} selected={roomType} setSelected={setRoomType} data={names} />
             </div>
         </div>
     );

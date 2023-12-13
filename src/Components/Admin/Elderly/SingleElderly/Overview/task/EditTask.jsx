@@ -114,7 +114,7 @@ const AddTask = ({ modalOPen, setModalOpen,task }) => {
             Task Type
           </label>
           <CustomSelect
-            width={"max-w-[520px]"}
+            width={"lg:w-[250px] w-[260px]"}
             className={
               " rounded-[16px] w-full text-base outline-none text-text-primary h-[50px] border-[1px] focus:border-primary "
             }
@@ -145,7 +145,7 @@ const AddTask = ({ modalOPen, setModalOpen,task }) => {
           Task Priority
         </label>
 
-        <div className=" flex itemc justify-between mt-2">
+        <div className=" flex items-center flex-wrap gap-2 justify-between mt-2">
           <button
             onClick={() => setPriorityActive("Low Priority")}
             type="button"
@@ -231,7 +231,7 @@ const AddTask = ({ modalOPen, setModalOpen,task }) => {
           Task Type
         </label>
 
-        <div className=" flex items-center gap-[14px] mt-2">
+        <div className=" flex items-center flex-wrap gap-[14px] mt-2">
           {Recurrence.map((item, index) => (
             <button
               key={index}
@@ -259,7 +259,7 @@ const AddTask = ({ modalOPen, setModalOpen,task }) => {
           ))}
         </div>
 
-        <div className=" flex items-center gap-[10px] mt-5">
+        <div className=" flex items-center flex-wrap gap-[10px] mt-5">
           {dayData.map((item, index) => {
             const isSelected = Boolean(
               activeDay.find((grpStud) => grpStud === item)

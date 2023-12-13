@@ -61,7 +61,7 @@ const EditDevice = ({ editedDevice }) => {
                 />
                 <div className='mt-4'>
                     <p className='text-text-primary text-[13px] font-medium mb-1.5'>Room Type</p>
-                    <CustomSelect width={"max-w-[520px]"} className={" rounded-[16px] w-full text-base outline-none text-text-primary h-[50px] border-[1px] focus:border-primary "} selected={roomName} setSelected={setRoomName} data={rooms} />
+                    <CustomSelect width={"md:w-[520px] w-[280px]"} className={" rounded-[16px] w-full text-base outline-none text-text-primary h-[50px] border-[1px] focus:border-primary "} selected={roomName} setSelected={setRoomName} data={rooms} />
                 </div>
             </div>
         </div>
