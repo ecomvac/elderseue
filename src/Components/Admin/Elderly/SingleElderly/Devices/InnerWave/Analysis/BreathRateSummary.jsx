@@ -38,7 +38,29 @@ const BreathRateSummary = ({data,activeTab}) => {
         tooltip: {
             customContent: (title, items) => {
                 return (
-                    <></>
+                    <div className='bg-text-primary rounded-[10px] py-3 px-5'>
+                        <div className='text-white/80  rounded-t-[10px]'><span className='text-base font-bold'>{title}</span></div>
+                        <div>
+                            {items?.map((item, index) => {
+                                console.log("from chart", item)
+                                return (
+                                    <span
+                                        key={index}
+                                        className="flex flex-col  bg-text-primary rounded-b-[10px] mx-0"
+                                        data-index={index}
+                                    >
+                                        <span className='flex flex-col gap-2 mt-2'>
+                                            <span className='flex gap-2 items-center justify-between'>
+                                                <span className={`bg-Warning h-2 w-2 rounded-full`}></span>
+                                                <span className='text-white/80 text-sm font-bold'>{item?.value } bpm</span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                );
+                            })}
+
+                        </div>
+                    </div>
                 );
             },
         },

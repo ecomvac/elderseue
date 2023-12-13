@@ -36,13 +36,24 @@ const DailyOverviewBar = () => {
           <div
             key={index}
             style={{ width: item.value }}
-            className={`h-[83px] rounded-sm 
+            className={`h-[83px] rounded-sm  relative group
                   ${item.type === "Normal Activity" && "bg-[#9A4BFF]"}
                   ${item.type === "Sedentary" && "bg-[#00D192]"}
                   ${item.type === "Wandering at Day" && "bg-[#FF8A35]"}
                   ${item.type === "Wandering at Night" && "bg-[#888888]"}
               `}
-          />
+          >
+            <div className=' bg-text-primary rounded-[10px] z-20 p-2.5  text-white absolute top-[-10px] left-1 group-hover:flex items-center gap-2 duration-300 hidden '>
+              <div className={`h-2 w-2 rounded-full 
+                                ${item.type === 'Normal Activity' && 'bg-[#9A4BFF]'}
+                                ${item.type === 'Sedentary' && 'bg-Average'}
+                                ${item.type === 'Wandering at Day' && 'bg-[#FF8A35]'}
+                                ${item.type === 'Wandering at Night' && 'bg-[#888888]'}
+                                `}></div>
+              <p className='text-white text-[13px]'>{item.type}</p>
+
+            </div>
+          </div>
         ))}
       </div>
 

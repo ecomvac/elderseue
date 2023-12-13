@@ -616,7 +616,6 @@ export const AlertsOverviewWeek = [
 
 
   export const InnerAssistantAnalysisChartsDataYearly = [
-    { type: 'WanderingNight', year: 0, value: 20 },
     { type: 'WanderingNight', year: 1, value: 20 },
     { type: 'WanderingNight', year: 2, value: 30 },
     { type: 'WanderingNight', year: 3, value: 40 },
